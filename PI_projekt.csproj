@@ -44,17 +44,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PocetnaForma_login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PocetnaForma_login.Designer.cs">
-      <DependentUpon>PocetnaForma_login.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PocetnaForma_login.resx">
-      <DependentUpon>PocetnaForma_login.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Sucelja\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucelja\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sucelja\Zaposlenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucelja\Zaposlenik.Designer.cs">
+      <DependentUpon>Zaposlenik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sucelja\Pocetno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucelja\Pocetno.Designer.cs">
+      <DependentUpon>Pocetno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ulaznica\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ulaznica\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -64,7 +79,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
+    <EmbeddedResource Include="Sucelja\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sucelja\Zaposlenik.resx">
+      <DependentUpon>Zaposlenik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sucelja\Pocetno.resx">
+      <DependentUpon>Pocetno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ulaznica\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
