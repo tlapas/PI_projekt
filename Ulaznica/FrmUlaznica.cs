@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PI_projekt.Sucelja
+namespace PI_projekt.Ulaznica
 {
-    public partial class zaposlenik : Form
+    public partial class FrmUlaznica : Form
     {
-        public zaposlenik()
+        public FrmUlaznica()
         {
             InitializeComponent();
         }
