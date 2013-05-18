@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PI_projekt.Sucelja
 {
-    public partial class FrmPocetna : Form
+    public partial class prijava : Form
     {
-        public FrmPocetna()
+        public prijava()
         {
             InitializeComponent();
         }
