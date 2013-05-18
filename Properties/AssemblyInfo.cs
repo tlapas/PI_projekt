@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PI_kino")]
+[assembly: AssemblyTitle("PI_projekt")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PI_kino")]
+[assembly: AssemblyProduct("PI_projekt")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("bac1de4f-e149-48dc-bd21-675f76dc0de2")]
+[assembly: Guid("099ec0cb-759e-4535-a542-5aad5e5d2994")]
 
 // Version information for an assembly consists of the following four values:
 //
