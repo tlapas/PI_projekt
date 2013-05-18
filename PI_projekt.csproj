@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Artikli\Artikli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Artikli\Artikli.Designer.cs">
+      <DependentUpon>Artikli.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sucelja\Admin.cs">
@@ -70,6 +76,9 @@
     <Compile Include="Ulaznica\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Artikli\Artikli.resx">
+      <DependentUpon>Artikli.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
