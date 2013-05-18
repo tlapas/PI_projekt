@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Artikli));
             this.Naziv_artikla = new System.Windows.Forms.Label();
             this.Cijena = new System.Windows.Forms.Label();
             this.Naziv = new System.Windows.Forms.ComboBox();
@@ -84,7 +85,7 @@
             // 
             // Dodaj
             // 
-            this.Dodaj.Location = new System.Drawing.Point(54, 328);
+            this.Dodaj.Location = new System.Drawing.Point(36, 273);
             this.Dodaj.Name = "Dodaj";
             this.Dodaj.Size = new System.Drawing.Size(75, 23);
             this.Dodaj.TabIndex = 5;
@@ -94,7 +95,7 @@
             // 
             // Ponisti
             // 
-            this.Ponisti.Location = new System.Drawing.Point(159, 328);
+            this.Ponisti.Location = new System.Drawing.Point(127, 272);
             this.Ponisti.Name = "Ponisti";
             this.Ponisti.Size = new System.Drawing.Size(75, 23);
             this.Ponisti.TabIndex = 6;
@@ -122,7 +123,7 @@
             this.Stavke_racun.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Stavke_racun.Location = new System.Drawing.Point(36, 130);
             this.Stavke_racun.Name = "Stavke_racun";
-            this.Stavke_racun.Size = new System.Drawing.Size(465, 183);
+            this.Stavke_racun.Size = new System.Drawing.Size(438, 126);
             this.Stavke_racun.TabIndex = 9;
             this.Stavke_racun.TabStop = false;
             this.Stavke_racun.Text = "Stavke računa";
@@ -130,7 +131,7 @@
             // Iznos_racun
             // 
             this.Iznos_racun.AutoSize = true;
-            this.Iznos_racun.Location = new System.Drawing.Point(303, 331);
+            this.Iznos_racun.Location = new System.Drawing.Point(297, 274);
             this.Iznos_racun.Name = "Iznos_racun";
             this.Iznos_racun.Size = new System.Drawing.Size(71, 13);
             this.Iznos_racun.TabIndex = 10;
@@ -138,7 +139,7 @@
             // 
             // Ukupno
             // 
-            this.Ukupno.Location = new System.Drawing.Point(391, 328);
+            this.Ukupno.Location = new System.Drawing.Point(374, 271);
             this.Ukupno.Name = "Ukupno";
             this.Ukupno.Size = new System.Drawing.Size(100, 20);
             this.Ukupno.TabIndex = 11;
@@ -160,6 +161,7 @@
             this.Controls.Add(this.Naziv);
             this.Controls.Add(this.Cijena);
             this.Controls.Add(this.Naziv_artikla);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Artikli";
             this.Text = "Artikli";
             this.ResumeLayout(false);
