@@ -27,11 +27,11 @@ namespace PI_projekt
         /// <summary>
         /// Destruktor klase.
         /// </summary>
-        ~DB()
+        /*~DB()
         {
             Connection.Close();
             Connection = null;
-        }
+        }*/
 
         #endregion
 

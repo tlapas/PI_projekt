@@ -3,5 +3,6 @@ PI_projekt
 
 Projekt za kino
 
-radna - za isprobavanje raznih stvari, svaku promjenu spremati u radna
-      - finalni kod koji radi u master
+baza - rješenja za spajanje ne bazi i rad s njom
+     - obavezno sve novitete staviti i u radno
+     - finalni kod koji radi u master

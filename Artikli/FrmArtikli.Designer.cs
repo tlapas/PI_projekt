@@ -90,7 +90,7 @@
             this.Naziv.Name = "Naziv";
             this.Naziv.Size = new System.Drawing.Size(254, 24);
             this.Naziv.TabIndex = 3;
-            this.Naziv.Text = "Odabir artikla...";
+            this.Naziv.SelectedIndexChanged += new System.EventHandler(this.Naziv_SelectedIndexChanged);
             // 
             // Kolicina
             // 
@@ -298,7 +298,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PI_projekt.Properties.Resources.BCKground_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(463, 481);
+            this.ClientSize = new System.Drawing.Size(463, 482);
             this.Controls.Add(this.Nazad);
             this.Controls.Add(this.Opcije);
             this.Controls.Add(this.Odjava);
@@ -319,6 +319,7 @@
             this.Name = "FrmArtikli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Artikli";
+            this.Load += new System.EventHandler(this.FrmArtikli_Load);
             this.Opcije.ResumeLayout(false);
             this.Opcije.PerformLayout();
             this.ResumeLayout(false);
