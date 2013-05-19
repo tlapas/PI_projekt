@@ -51,18 +51,7 @@ namespace PI_projekt.Artikli
         private void Naziv_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<Artikl> listaArtikala = Artikl.DohvatiArtikle();
-            if (Naziv.SelectedIndex == 0)
-                Cijena_box.Text = listaArtikala[0].Cijena.ToString() + " kn";
-            else if (Naziv.SelectedIndex == 1)
-                Cijena_box.Text = listaArtikala[1].Cijena.ToString() + " kn";
-            else if (Naziv.SelectedIndex == 2)
-                Cijena_box.Text = listaArtikala[2].Cijena.ToString() + " kn";
-            else if (Naziv.SelectedIndex == 3)
-                Cijena_box.Text = listaArtikala[3].Cijena.ToString() + " kn";
-            else if (Naziv.SelectedIndex == 4)
-                Cijena_box.Text = listaArtikala[4].Cijena.ToString() + " kn";
-            else if (Naziv.SelectedIndex == 5)
-                Cijena_box.Text = listaArtikala[5].Cijena.ToString() + " kn";
+            Cijena_box.Text = listaArtikala[Naziv.SelectedIndex].Cijena.ToString() + " kn";
         }
     }
 }
