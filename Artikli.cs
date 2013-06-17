@@ -163,8 +163,9 @@ namespace PI_projekt
 
         public static int DodajArtikl(Artikl noviArtikl)
         {
+            
             string sqlUpit = "INSERT INTO Artikl ('naziv','cijena','id_mjerne_jedinice') VALUES ('" 
-                            + noviArtikl.Naziv + "','"+noviArtikl.Cijena+"', '"+noviArtikl.IdMjerneJedinice+"');";
+                            + noviArtikl.Naziv + "','"+Kino.PretvoriCijenu(noviArtikl.Cijena)+"', '"+noviArtikl.IdMjerneJedinice+"');";
             int izvrsenUpit = DB.Instance.IzvrsiUpit(sqlUpit);
 
             return izvrsenUpit;

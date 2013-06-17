@@ -8,6 +8,12 @@ namespace PI_projekt
 {
     class Kino
     {
-
+        public static string PretvoriCijenu(float cijenaFloat)
+        {
+            string cijenaString = cijenaFloat.ToString();
+            if (cijenaString.Contains(","))
+                cijenaString = cijenaString.Replace(",", ".");
+            return cijenaString;
+        }
     }
 }

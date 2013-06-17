@@ -49,9 +49,8 @@ namespace PI_projekt.Sucelja
            try
            {
                 
-                //noviArtikl.Cijena = float.Parse(txtCijenaDodajArtikl.Text.ToString());
-               decimal proba= decimal.Parse(txtCijenaDodajArtikl.Text.ToString());
-                MessageBox.Show(proba.ToString());
+                noviArtikl.Cijena = float.Parse(txtCijenaDodajArtikl.Text.ToString());
+                
                 noviArtikl.IdMjerneJedinice = int.Parse(listaMjernihJedinica[cbMjerneJedinice.SelectedIndex].IdMjerneJedinice.ToString());
                 if (Artikl.DodajArtikl(noviArtikl)!=0)
                 { //OVO:nakon što se sredi mjerna jedinica
