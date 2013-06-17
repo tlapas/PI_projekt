@@ -161,6 +161,11 @@ namespace PI_projekt
             return artikl;
         }
 
+        /// <summary>
+        /// Dodaje novi artikl u bazu
+        /// </summary>
+        /// <param name="noviArtikl">Objekt klase artikl</param>
+        /// <returns>Vraća int, broj zahvaćenih redova upitom</returns>
         public static int DodajArtikl(Artikl noviArtikl)
         {
             
@@ -170,6 +175,11 @@ namespace PI_projekt
 
             return izvrsenUpit;
         }
+        /// <summary>
+        /// Ažurira artikl u bazi podakaka
+        /// </summary>
+        /// <param name="artikl">Objekt klase Artikl</param>
+        /// <returns>Broj zahvaćenih redova</returns>
         public static int AzurirajArtikl(Artikl artikl)
         {
             string sqlUpit = "UPDATE  Artikl SET naziv='" + artikl.Naziv + "' , cijena='" + Kino.PretvoriCijenu(artikl.Cijena)
