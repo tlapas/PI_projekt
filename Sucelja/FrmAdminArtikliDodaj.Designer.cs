@@ -104,7 +104,7 @@
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(85, 24);
             this.btnDodaj.TabIndex = 8;
-            this.btnDodaj.Text = "Dodaj";
+            this.btnDodaj.Text = "Spremi";
             this.btnDodaj.UseVisualStyleBackColor = true;
             this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 

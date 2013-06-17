@@ -57,7 +57,7 @@ namespace PI_projekt
             {
                 return id_artikla;
             }
-            private set
+            set
             {
                 if (id_artikla != value)
                 {
@@ -166,6 +166,14 @@ namespace PI_projekt
             
             string sqlUpit = "INSERT INTO Artikl ('naziv','cijena','id_mjerne_jedinice') VALUES ('" 
                             + noviArtikl.Naziv + "','"+Kino.PretvoriCijenu(noviArtikl.Cijena)+"', '"+noviArtikl.IdMjerneJedinice+"');";
+            int izvrsenUpit = DB.Instance.IzvrsiUpit(sqlUpit);
+
+            return izvrsenUpit;
+        }
+        public static int AzurirajArtikl(Artikl artikl)
+        {
+            string sqlUpit = "UPDATE  Artikl SET naziv='" + artikl.Naziv + "' , cijena='" + Kino.PretvoriCijenu(artikl.Cijena)
+                + "' ,id_mjerne_jedinice=" + artikl.IdMjerneJedinice + " WHERE id_artikla=" + artikl.IdArtikla + ";";
             int izvrsenUpit = DB.Instance.IzvrsiUpit(sqlUpit);
 
             return izvrsenUpit;

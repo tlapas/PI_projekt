@@ -36,7 +36,7 @@
             this.lblMjernaJedinica = new System.Windows.Forms.Label();
             this.lblCijenaArtikla = new System.Windows.Forms.Label();
             this.lblNazivArtikla = new System.Windows.Forms.Label();
-            this.lbMjerneJedinice = new System.Windows.Forms.ListBox();
+            this.cbMjerneJedinice = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblNaslovAzurirajArtikl
@@ -70,7 +70,7 @@
             // 
             this.txtCijena.Location = new System.Drawing.Point(129, 101);
             this.txtCijena.Name = "txtCijena";
-            this.txtCijena.Size = new System.Drawing.Size(110, 22);
+            this.txtCijena.Size = new System.Drawing.Size(141, 22);
             this.txtCijena.TabIndex = 14;
             // 
             // txtNaziv
@@ -107,22 +107,20 @@
             this.lblNazivArtikla.TabIndex = 10;
             this.lblNazivArtikla.Text = "Naziv:";
             // 
-            // lbMjerneJedinice
+            // cbMjerneJedinice
             // 
-            this.lbMjerneJedinice.AllowDrop = true;
-            this.lbMjerneJedinice.FormattingEnabled = true;
-            this.lbMjerneJedinice.ItemHeight = 16;
-            this.lbMjerneJedinice.Location = new System.Drawing.Point(129, 154);
-            this.lbMjerneJedinice.Name = "lbMjerneJedinice";
-            this.lbMjerneJedinice.Size = new System.Drawing.Size(116, 20);
-            this.lbMjerneJedinice.TabIndex = 18;
+            this.cbMjerneJedinice.FormattingEnabled = true;
+            this.cbMjerneJedinice.Location = new System.Drawing.Point(125, 151);
+            this.cbMjerneJedinice.Name = "cbMjerneJedinice";
+            this.cbMjerneJedinice.Size = new System.Drawing.Size(145, 24);
+            this.cbMjerneJedinice.TabIndex = 18;
             // 
             // FrmAdminArtikliAzuriraj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 269);
-            this.Controls.Add(this.lbMjerneJedinice);
+            this.Controls.Add(this.cbMjerneJedinice);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnAzuriraj);
             this.Controls.Add(this.txtCijena);
@@ -133,6 +131,7 @@
             this.Controls.Add(this.lblNaslovAzurirajArtikl);
             this.Name = "FrmAdminArtikliAzuriraj";
             this.Text = "Ažuriraj Artikl";
+            this.Load += new System.EventHandler(this.FrmAdminArtikliAzuriraj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,6 +147,6 @@
         private System.Windows.Forms.Label lblMjernaJedinica;
         private System.Windows.Forms.Label lblCijenaArtikla;
         private System.Windows.Forms.Label lblNazivArtikla;
-        private System.Windows.Forms.ListBox lbMjerneJedinice;
+        private System.Windows.Forms.ComboBox cbMjerneJedinice;
     }
 }
