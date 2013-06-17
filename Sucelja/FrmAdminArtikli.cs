@@ -69,5 +69,11 @@ namespace PI_projekt.Sucelja
             FrmAdminArtikliDodaj formaDodaj = new FrmAdminArtikliDodaj();
             formaDodaj.Show();
         }
+
+        private void btnAzurirajArtikl_Click(object sender, EventArgs e)
+        {
+            FrmAdminArtikliAzuriraj formaAzuriraj = new FrmAdminArtikliAzuriraj();
+            formaAzuriraj.Show();
+        }
     }
 }

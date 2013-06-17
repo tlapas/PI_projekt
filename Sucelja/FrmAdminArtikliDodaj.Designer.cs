@@ -106,6 +106,7 @@
             this.btnDodaj.TabIndex = 8;
             this.btnDodaj.Text = "Dodaj";
             this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // btnOdustani
             // 
@@ -121,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 232);
+            this.ClientSize = new System.Drawing.Size(454, 271);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.cbMjerneJedinice);
@@ -133,6 +134,7 @@
             this.Controls.Add(this.lblNaslovDodajArtikl);
             this.Name = "FrmAdminArtikliDodaj";
             this.Text = "FrmAdminArtikliDodaj";
+            this.Load += new System.EventHandler(this.FrmAdminArtikliDodaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

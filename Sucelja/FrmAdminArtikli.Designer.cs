@@ -74,6 +74,7 @@
             this.btnAzurirajArtikl.TabIndex = 3;
             this.btnAzurirajArtikl.Text = "Ažuriraj";
             this.btnAzurirajArtikl.UseVisualStyleBackColor = true;
+            this.btnAzurirajArtikl.Click += new System.EventHandler(this.btnAzurirajArtikl_Click);
             // 
             // lblSviArtikli
             // 

@@ -111,7 +111,7 @@ namespace PI_projekt
             {
                 return id_mjerne_jedinice;
             }
-            private set
+            set
             {
                 if (id_mjerne_jedinice != value)
                 {
@@ -159,6 +159,15 @@ namespace PI_projekt
             }
             dr.Close();     //Zatvaranje DataReader objekta.
             return artikl;
+        }
+
+        public static int DodajArtikl(Artikl noviArtikl)
+        {
+            string sqlUpit = "INSERT INTO Artikl ('naziv','cijena','id_mjerne_jedinice') VALUES ('" 
+                            + noviArtikl.Naziv + "','"+noviArtikl.Cijena+"', '"+noviArtikl.IdMjerneJedinice+"');";
+            int izvrsenUpit = DB.Instance.IzvrsiUpit(sqlUpit);
+
+            return izvrsenUpit;
         }
 
         #endregion
