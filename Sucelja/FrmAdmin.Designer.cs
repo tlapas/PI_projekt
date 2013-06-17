@@ -71,6 +71,7 @@
             this.Artikli.Text = "Artikli";
             this.Artikli.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Artikli.UseVisualStyleBackColor = true;
+            this.Artikli.Click += new System.EventHandler(this.Artikli_Click);
             // 
             // Filmovi
             // 
@@ -145,7 +146,7 @@
             this.user.Margin = new System.Windows.Forms.Padding(4);
             this.user.Name = "user";
             this.user.ReadOnly = true;
-            this.user.Size = new System.Drawing.Size(147, 22);
+            this.user.Size = new System.Drawing.Size(147, 26);
             this.user.TabIndex = 0;
             // 
             // Odjava
@@ -158,7 +159,7 @@
             this.Odjava.Location = new System.Drawing.Point(420, 9);
             this.Odjava.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Odjava.Name = "Odjava";
-            this.Odjava.Size = new System.Drawing.Size(56, 16);
+            this.Odjava.Size = new System.Drawing.Size(63, 20);
             this.Odjava.TabIndex = 2;
             this.Odjava.TabStop = true;
             this.Odjava.Text = "odjava";
@@ -172,7 +173,7 @@
             this.Prijava.Location = new System.Drawing.Point(13, 9);
             this.Prijava.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Prijava.Name = "Prijava";
-            this.Prijava.Size = new System.Drawing.Size(136, 16);
+            this.Prijava.Size = new System.Drawing.Size(165, 20);
             this.Prijava.TabIndex = 1;
             this.Prijava.Text = "Prijavljeni ste kao:";
             this.Prijava.Click += new System.EventHandler(this.label1_Click);
@@ -192,11 +193,11 @@
             // 
             // FrmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PI_projekt.Properties.Resources.BCKground_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(489, 315);
+            this.ClientSize = new System.Drawing.Size(487, 309);
             this.Controls.Add(this.Statistika);
             this.Controls.Add(this.Opcije);
             this.Controls.Add(this.Odjava);

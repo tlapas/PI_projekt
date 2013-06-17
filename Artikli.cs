@@ -142,6 +142,25 @@ namespace PI_projekt
             return lista;
         }
 
+        /// <summary>
+        /// Dohvaća artikl iz sa odgovarajućim id-em iz baze podataka 
+        /// </summary>
+        /// <param name="idArtikla">Id artikla tipa integer</param>
+        /// <returns>Vraća objekt tipa Artikli ukoliko artikl postoji u bazi, a ako ne postoji vraća null</returns>
+        public static Artikl DohvatiArtikl(int idArtikla)
+        {
+            Artikl artikl = new Artikl();
+            string sqlUpit = "SELECT * FROM Artikl WHERE id_artikla="+idArtikla+";";
+            DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
+            while (dr.Read())
+            {
+                artikl = new Artikl(dr);
+                
+            }
+            dr.Close();     //Zatvaranje DataReader objekta.
+            return artikl;
+        }
+
         #endregion
     }
 }

@@ -36,5 +36,11 @@ namespace PI_projekt.Sucelja
         {
 
         }
+
+        private void Artikli_Click(object sender, EventArgs e)
+        {
+            FrmAdminArtikli adminArtikli = new FrmAdminArtikli();
+            adminArtikli.Show();
+        }
     }
 }
