@@ -57,6 +57,7 @@
     </Compile>
     <Compile Include="DB.cs" />
     <Compile Include="Dvorane.cs" />
+    <Compile Include="Film.cs" />
     <Compile Include="FilmZanrovi.cs" />
     <Compile Include="Kino.NET.cs" />
     <Compile Include="MjerneJedinice.cs" />

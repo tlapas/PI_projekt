@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 
 namespace PI_projekt
 {
-    class FilmZanrovi
+    class Film
     {
-
-        #region Constructors
+       #region Constructors
 
         /// <summary>
-        /// Konstruktor za kreiranje žanra za film
+        /// Konstruktor za kreiranje  filma
         /// </summary>
-        public FilmZanrovi()
+        public Film()
         {
 
         }
@@ -24,13 +23,13 @@ namespace PI_projekt
         /// Puni objekt sa podacima iz DataReader objekta.
         /// </summary>
         /// <param name="dr">DataReader objekt sa podacima za film-Zanr.</param>
-        public FilmZanrovi(DbDataReader dr)
+        public Film(DbDataReader dr)
         {
             if (dr != null)
             {
-                IdZanra = int.Parse(dr["id_zanra"].ToString());
-                IdFilma = int.Parse(dr["id_filma"].ToString());
-
+                IdFilma= int.Parse(dr["id_filma"].ToString());
+                Naziv = dr["naziv"].ToString();
+                VrijemeTrajanja = int.Parse(dr["vrijeme_trajanja"].ToString());
             }
 
         }
@@ -39,34 +38,16 @@ namespace PI_projekt
 
         #region Private Fields
 
-        private int id_zanra;
+        private int vrijeme_trajanja;
         private int id_filma;
-
-
+        private string naziv;
+        
         #endregion
 
         #region Properties
 
         /// <summary>
         /// Jedinstveni identifikator žanra
-        /// </summary>
-        public int IdZanra
-        {
-            get
-            {
-                return id_zanra;
-            }
-            private set
-            {
-                if (id_zanra != value)
-                {
-                    id_zanra = value;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Jedinstveni identifikator filma
         /// </summary>
         public int IdFilma
         {
@@ -79,6 +60,38 @@ namespace PI_projekt
                 if (id_filma != value)
                 {
                     id_filma = value;
+                }
+            }
+        }
+
+        /// <summary>
+        /// trajanja filma u minutama
+        /// </summary>
+        public int VrijemeTrajanja
+        {
+            get
+            {
+                return vrijeme_trajanja;
+            }
+            private set
+            {
+                if (vrijeme_trajanja != value)
+                {
+                    vrijeme_trajanja = value;
+                }
+            }
+        }
+        public string Naziv
+        {
+            get
+            {
+                return naziv;
+            }
+            private set
+            {
+                if (naziv != value)
+                {
+                    naziv = value;
                 }
             }
         }
@@ -130,4 +143,7 @@ namespace PI_projekt
     }
 
 
+}
+
+    }
 }
