@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PI_projekt.Artikli;
+using PI_projekt.Ulaznica;
 
 namespace PI_projekt.Sucelja
 {
@@ -46,6 +48,18 @@ namespace PI_projekt.Sucelja
                     this.Close();
                 }
             }
+        }
+
+        private void Artikli_Click(object sender, EventArgs e)
+        {
+            FrmArtikli prodavacArtikli = new FrmArtikli();
+            prodavacArtikli.Show();
+        }
+
+        private void Ulaznica_Click(object sender, EventArgs e)
+        {
+            FrmUlaznica prodavacUlaznica = new FrmUlaznica();
+            prodavacUlaznica.Show();
         } 
     }
 }
