@@ -108,6 +108,7 @@
     <Compile Include="Sucelja\FrmProdavac.Designer.cs">
       <DependentUpon>FrmProdavac.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ulaznica.cs" />
     <Compile Include="Ulaznica\FrmUlaznica.cs">
       <SubType>Form</SubType>
     </Compile>
