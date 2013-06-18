@@ -31,33 +31,35 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUlaznica));
             this.Odjava = new System.Windows.Forms.LinkLabel();
             this.Prijava = new System.Windows.Forms.Label();
-            this.user = new System.Windows.Forms.TextBox();
-            this.DatumProjekcije = new System.Windows.Forms.Label();
-            this.NazivProjekcije = new System.Windows.Forms.Label();
-            this.ProjekcijaNaziv = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblDatumProjekcije = new System.Windows.Forms.Label();
+            this.lblNazivProjekcije = new System.Windows.Forms.Label();
+            this.cbNazivProjekcije = new System.Windows.Forms.ComboBox();
             this.Nazad = new System.Windows.Forms.Button();
             this.Dalje = new System.Windows.Forms.Button();
             this.Opcije = new System.Windows.Forms.GroupBox();
-            this.Sjedalo = new System.Windows.Forms.Label();
-            this.Sjediste = new System.Windows.Forms.ComboBox();
-            this.Dvorana = new System.Windows.Forms.Label();
-            this.Dvorane = new System.Windows.Forms.ComboBox();
-            this.Sjedala = new System.Windows.Forms.GroupBox();
+            this.btnUkloni = new System.Windows.Forms.Button();
+            this.btnDodaj = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbSjedala = new System.Windows.Forms.ListBox();
+            this.cbDatum = new System.Windows.Forms.ComboBox();
+            this.lblSjedalo = new System.Windows.Forms.Label();
+            this.lblDvorana = new System.Windows.Forms.Label();
+            this.cbDvorana = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.Opcije.SuspendLayout();
             this.SuspendLayout();
             // 
             // Odjava
             // 
             this.Odjava.AutoSize = true;
-            this.Odjava.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Odjava.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Odjava.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Odjava.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Odjava.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Odjava.LinkColor = System.Drawing.Color.Yellow;
-            this.Odjava.Location = new System.Drawing.Point(523, 9);
+            this.Odjava.Location = new System.Drawing.Point(1074, 9);
             this.Odjava.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Odjava.Name = "Odjava";
-            this.Odjava.Size = new System.Drawing.Size(56, 16);
+            this.Odjava.Size = new System.Drawing.Size(63, 20);
             this.Odjava.TabIndex = 18;
             this.Odjava.TabStop = true;
             this.Odjava.Text = "odjava";
@@ -65,86 +67,69 @@
             // Prijava
             // 
             this.Prijava.AutoSize = true;
-            this.Prijava.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Prijava.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Prijava.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Prijava.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Prijava.Location = new System.Drawing.Point(9, 9);
             this.Prijava.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Prijava.Name = "Prijava";
-            this.Prijava.Size = new System.Drawing.Size(136, 16);
+            this.Prijava.Size = new System.Drawing.Size(165, 20);
             this.Prijava.TabIndex = 17;
             this.Prijava.Text = "Prijavljeni ste kao:";
             // 
-            // user
+            // lblDatumProjekcije
             // 
-            this.user.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.user.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.user.Location = new System.Drawing.Point(170, 6);
-            this.user.Margin = new System.Windows.Forms.Padding(4);
-            this.user.Name = "user";
-            this.user.ReadOnly = true;
-            this.user.Size = new System.Drawing.Size(188, 22);
-            this.user.TabIndex = 16;
+            this.lblDatumProjekcije.AutoSize = true;
+            this.lblDatumProjekcije.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblDatumProjekcije.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDatumProjekcije.Location = new System.Drawing.Point(7, 67);
+            this.lblDatumProjekcije.Name = "lblDatumProjekcije";
+            this.lblDatumProjekcije.Size = new System.Drawing.Size(157, 20);
+            this.lblDatumProjekcije.TabIndex = 19;
+            this.lblDatumProjekcije.Text = "Datum projekcije:";
             // 
-            // DatumProjekcije
+            // lblNazivProjekcije
             // 
-            this.DatumProjekcije.AutoSize = true;
-            this.DatumProjekcije.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DatumProjekcije.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DatumProjekcije.Location = new System.Drawing.Point(7, 22);
-            this.DatumProjekcije.Name = "DatumProjekcije";
-            this.DatumProjekcije.Size = new System.Drawing.Size(129, 16);
-            this.DatumProjekcije.TabIndex = 19;
-            this.DatumProjekcije.Text = "Datum projekcije:";
+            this.lblNazivProjekcije.AutoSize = true;
+            this.lblNazivProjekcije.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblNazivProjekcije.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblNazivProjekcije.Location = new System.Drawing.Point(7, 33);
+            this.lblNazivProjekcije.Name = "lblNazivProjekcije";
+            this.lblNazivProjekcije.Size = new System.Drawing.Size(151, 20);
+            this.lblNazivProjekcije.TabIndex = 20;
+            this.lblNazivProjekcije.Text = "Naziv Projekcije:";
             // 
-            // NazivProjekcije
+            // cbNazivProjekcije
             // 
-            this.NazivProjekcije.AutoSize = true;
-            this.NazivProjekcije.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.NazivProjekcije.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.NazivProjekcije.Location = new System.Drawing.Point(7, 62);
-            this.NazivProjekcije.Name = "NazivProjekcije";
-            this.NazivProjekcije.Size = new System.Drawing.Size(125, 16);
-            this.NazivProjekcije.TabIndex = 20;
-            this.NazivProjekcije.Text = "Naziv Projekcije:";
-            // 
-            // ProjekcijaNaziv
-            // 
-            this.ProjekcijaNaziv.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ProjekcijaNaziv.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ProjekcijaNaziv.FormattingEnabled = true;
-            this.ProjekcijaNaziv.Location = new System.Drawing.Point(165, 59);
-            this.ProjekcijaNaziv.Name = "ProjekcijaNaziv";
-            this.ProjekcijaNaziv.Size = new System.Drawing.Size(200, 24);
-            this.ProjekcijaNaziv.TabIndex = 21;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(165, 22);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 22;
+            this.cbNazivProjekcije.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cbNazivProjekcije.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cbNazivProjekcije.FormattingEnabled = true;
+            this.cbNazivProjekcije.Location = new System.Drawing.Point(165, 30);
+            this.cbNazivProjekcije.Name = "cbNazivProjekcije";
+            this.cbNazivProjekcije.Size = new System.Drawing.Size(333, 28);
+            this.cbNazivProjekcije.TabIndex = 21;
             // 
             // Nazad
             // 
-            this.Nazad.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Nazad.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Nazad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Nazad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Nazad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Nazad.Location = new System.Drawing.Point(12, 639);
+            this.Nazad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Nazad.Location = new System.Drawing.Point(6, 547);
             this.Nazad.Margin = new System.Windows.Forms.Padding(4);
             this.Nazad.Name = "Nazad";
             this.Nazad.Size = new System.Drawing.Size(112, 35);
             this.Nazad.TabIndex = 26;
             this.Nazad.Text = "Nazad";
             this.Nazad.UseVisualStyleBackColor = false;
+            this.Nazad.Click += new System.EventHandler(this.Nazad_Click);
             // 
             // Dalje
             // 
-            this.Dalje.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Dalje.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Dalje.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Dalje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Dalje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Dalje.Location = new System.Drawing.Point(467, 639);
+            this.Dalje.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Dalje.Location = new System.Drawing.Point(830, 547);
             this.Dalje.Margin = new System.Windows.Forms.Padding(4);
             this.Dalje.Name = "Dalje";
             this.Dalje.Size = new System.Drawing.Size(112, 35);
@@ -154,102 +139,139 @@
             // 
             // Opcije
             // 
-            this.Opcije.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Opcije.Controls.Add(this.Sjedalo);
-            this.Opcije.Controls.Add(this.Sjediste);
-            this.Opcije.Controls.Add(this.Dvorana);
-            this.Opcije.Controls.Add(this.Dvorane);
-            this.Opcije.Controls.Add(this.dateTimePicker1);
-            this.Opcije.Controls.Add(this.DatumProjekcije);
-            this.Opcije.Controls.Add(this.NazivProjekcije);
-            this.Opcije.Controls.Add(this.ProjekcijaNaziv);
+            this.Opcije.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Opcije.Controls.Add(this.label1);
+            this.Opcije.Controls.Add(this.btnUkloni);
+            this.Opcije.Controls.Add(this.btnDodaj);
+            this.Opcije.Controls.Add(this.listBox1);
+            this.Opcije.Controls.Add(this.lbSjedala);
+            this.Opcije.Controls.Add(this.cbDatum);
+            this.Opcije.Controls.Add(this.lblSjedalo);
+            this.Opcije.Controls.Add(this.lblDvorana);
+            this.Opcije.Controls.Add(this.cbDvorana);
+            this.Opcije.Controls.Add(this.lblDatumProjekcije);
+            this.Opcije.Controls.Add(this.lblNazivProjekcije);
+            this.Opcije.Controls.Add(this.cbNazivProjekcije);
             this.Opcije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Opcije.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Opcije.Location = new System.Drawing.Point(78, 46);
+            this.Opcije.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Opcije.Location = new System.Drawing.Point(34, 46);
             this.Opcije.Margin = new System.Windows.Forms.Padding(4);
             this.Opcije.Name = "Opcije";
             this.Opcije.Padding = new System.Windows.Forms.Padding(4);
-            this.Opcije.Size = new System.Drawing.Size(436, 182);
+            this.Opcije.Size = new System.Drawing.Size(754, 472);
             this.Opcije.TabIndex = 27;
             this.Opcije.TabStop = false;
             this.Opcije.Text = "Opcije";
             // 
-            // Sjedalo
+            // btnUkloni
             // 
-            this.Sjedalo.AutoSize = true;
-            this.Sjedalo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Sjedalo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Sjedalo.Location = new System.Drawing.Point(7, 142);
-            this.Sjedalo.Name = "Sjedalo";
-            this.Sjedalo.Size = new System.Drawing.Size(66, 16);
-            this.Sjedalo.TabIndex = 31;
-            this.Sjedalo.Text = "Sjedalo:";
+            this.btnUkloni.Location = new System.Drawing.Point(129, 268);
+            this.btnUkloni.Name = "btnUkloni";
+            this.btnUkloni.Size = new System.Drawing.Size(43, 30);
+            this.btnUkloni.TabIndex = 36;
+            this.btnUkloni.Text = "<--";
+            this.btnUkloni.UseVisualStyleBackColor = true;
             // 
-            // Sjediste
+            // btnDodaj
             // 
-            this.Sjediste.BackColor = System.Drawing.SystemColors.MenuText;
-            this.Sjediste.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Sjediste.FormattingEnabled = true;
-            this.Sjediste.Location = new System.Drawing.Point(165, 139);
-            this.Sjediste.Name = "Sjediste";
-            this.Sjediste.Size = new System.Drawing.Size(200, 24);
-            this.Sjediste.TabIndex = 30;
+            this.btnDodaj.Location = new System.Drawing.Point(129, 223);
+            this.btnDodaj.Name = "btnDodaj";
+            this.btnDodaj.Size = new System.Drawing.Size(43, 28);
+            this.btnDodaj.TabIndex = 35;
+            this.btnDodaj.Text = "-->";
+            this.btnDodaj.UseVisualStyleBackColor = true;
             // 
-            // Dvorana
+            // listBox1
             // 
-            this.Dvorana.AutoSize = true;
-            this.Dvorana.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Dvorana.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Dvorana.Location = new System.Drawing.Point(7, 101);
-            this.Dvorana.Name = "Dvorana";
-            this.Dvorana.Size = new System.Drawing.Size(71, 16);
-            this.Dvorana.TabIndex = 29;
-            this.Dvorana.Text = "Dvorana:";
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(23, 181);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(93, 164);
+            this.listBox1.TabIndex = 34;
             // 
-            // Dvorane
+            // lbSjedala
             // 
-            this.Dvorane.BackColor = System.Drawing.SystemColors.MenuText;
-            this.Dvorane.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Dvorane.FormattingEnabled = true;
-            this.Dvorane.Location = new System.Drawing.Point(165, 98);
-            this.Dvorane.Name = "Dvorane";
-            this.Dvorane.Size = new System.Drawing.Size(200, 24);
-            this.Dvorane.TabIndex = 28;
+            this.lbSjedala.AccessibleRole = System.Windows.Forms.AccessibleRole.DropList;
+            this.lbSjedala.FormattingEnabled = true;
+            this.lbSjedala.ItemHeight = 20;
+            this.lbSjedala.Location = new System.Drawing.Point(188, 181);
+            this.lbSjedala.Name = "lbSjedala";
+            this.lbSjedala.Size = new System.Drawing.Size(83, 164);
+            this.lbSjedala.TabIndex = 33;
             // 
-            // Sjedala
+            // cbDatum
             // 
-            this.Sjedala.BackgroundImage = global::PI_projekt.Properties.Resources.sjedala;
-            this.Sjedala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Sjedala.Location = new System.Drawing.Point(32, 244);
-            this.Sjedala.Name = "Sjedala";
-            this.Sjedala.Size = new System.Drawing.Size(526, 382);
-            this.Sjedala.TabIndex = 28;
-            this.Sjedala.TabStop = false;
-            this.Sjedala.Text = "Sjedala";
+            this.cbDatum.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cbDatum.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cbDatum.FormattingEnabled = true;
+            this.cbDatum.Location = new System.Drawing.Point(165, 64);
+            this.cbDatum.Name = "cbDatum";
+            this.cbDatum.Size = new System.Drawing.Size(200, 28);
+            this.cbDatum.TabIndex = 32;
+            // 
+            // lblSjedalo
+            // 
+            this.lblSjedalo.AutoSize = true;
+            this.lblSjedalo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblSjedalo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSjedalo.Location = new System.Drawing.Point(19, 152);
+            this.lblSjedalo.Name = "lblSjedalo";
+            this.lblSjedalo.Size = new System.Drawing.Size(92, 20);
+            this.lblSjedalo.TabIndex = 31;
+            this.lblSjedalo.Text = "Slobodno:";
+            // 
+            // lblDvorana
+            // 
+            this.lblDvorana.AutoSize = true;
+            this.lblDvorana.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblDvorana.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDvorana.Location = new System.Drawing.Point(7, 101);
+            this.lblDvorana.Name = "lblDvorana";
+            this.lblDvorana.Size = new System.Drawing.Size(85, 20);
+            this.lblDvorana.TabIndex = 29;
+            this.lblDvorana.Text = "Dvorana:";
+            // 
+            // cbDvorana
+            // 
+            this.cbDvorana.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cbDvorana.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cbDvorana.FormattingEnabled = true;
+            this.cbDvorana.Location = new System.Drawing.Point(165, 98);
+            this.cbDvorana.Name = "cbDvorana";
+            this.cbDvorana.Size = new System.Drawing.Size(200, 28);
+            this.cbDvorana.TabIndex = 28;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(184, 152);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 20);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Odabrano:";
             // 
             // FrmUlaznica
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PI_projekt.Properties.Resources.BCKground_2;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(592, 683);
-            this.Controls.Add(this.Sjedala);
+            this.ClientSize = new System.Drawing.Size(1150, 613);
             this.Controls.Add(this.Opcije);
             this.Controls.Add(this.Nazad);
             this.Controls.Add(this.Dalje);
             this.Controls.Add(this.Odjava);
             this.Controls.Add(this.Prijava);
-            this.Controls.Add(this.user);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(608, 722);
-            this.MinimumSize = new System.Drawing.Size(608, 722);
             this.Name = "FrmUlaznica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ulaznica";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmUlaznica_FormClosed);
+            this.Load += new System.EventHandler(this.FrmUlaznica_Load);
             this.Opcije.ResumeLayout(false);
             this.Opcije.PerformLayout();
             this.ResumeLayout(false);
@@ -261,18 +283,20 @@
 
         private System.Windows.Forms.LinkLabel Odjava;
         private System.Windows.Forms.Label Prijava;
-        private System.Windows.Forms.TextBox user;
-        private System.Windows.Forms.Label DatumProjekcije;
-        private System.Windows.Forms.Label NazivProjekcije;
-        private System.Windows.Forms.ComboBox ProjekcijaNaziv;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lblDatumProjekcije;
+        private System.Windows.Forms.Label lblNazivProjekcije;
+        private System.Windows.Forms.ComboBox cbNazivProjekcije;
         private System.Windows.Forms.Button Nazad;
         private System.Windows.Forms.Button Dalje;
         private System.Windows.Forms.GroupBox Opcije;
-        private System.Windows.Forms.Label Dvorana;
-        private System.Windows.Forms.ComboBox Dvorane;
-        private System.Windows.Forms.Label Sjedalo;
-        private System.Windows.Forms.ComboBox Sjediste;
-        private System.Windows.Forms.GroupBox Sjedala;
+        private System.Windows.Forms.Label lblDvorana;
+        private System.Windows.Forms.ComboBox cbDvorana;
+        private System.Windows.Forms.Label lblSjedalo;
+        private System.Windows.Forms.ComboBox cbDatum;
+        private System.Windows.Forms.ListBox lbSjedala;
+        private System.Windows.Forms.Button btnUkloni;
+        private System.Windows.Forms.Button btnDodaj;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
