@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PI_projekt.Sucelja;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace PI_projekt.Ulaznica
         public FrmUlaznica()
         {
             InitializeComponent();
+        }
+
+        private void Nazad_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FrmUlaznica_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FrmProdavac prodavac = new FrmProdavac();
+            prodavac.Show();
         }
     }
 }

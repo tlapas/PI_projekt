@@ -137,6 +137,7 @@
             this.Nazad.TabIndex = 26;
             this.Nazad.Text = "Nazad";
             this.Nazad.UseVisualStyleBackColor = false;
+            this.Nazad.Click += new System.EventHandler(this.Nazad_Click);
             // 
             // Dalje
             // 
@@ -233,7 +234,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PI_projekt.Properties.Resources.BCKground_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(592, 683);
+            this.ClientSize = new System.Drawing.Size(592, 684);
             this.Controls.Add(this.Sjedala);
             this.Controls.Add(this.Opcije);
             this.Controls.Add(this.Nazad);
@@ -250,6 +251,7 @@
             this.Name = "FrmUlaznica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ulaznica";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmUlaznica_FormClosed);
             this.Opcije.ResumeLayout(false);
             this.Opcije.PerformLayout();
             this.ResumeLayout(false);

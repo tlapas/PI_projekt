@@ -290,6 +290,7 @@
             this.Nazad.TabIndex = 16;
             this.Nazad.Text = "Nazad";
             this.Nazad.UseVisualStyleBackColor = false;
+            this.Nazad.Click += new System.EventHandler(this.Nazad_Click);
             // 
             // userRole
             // 
@@ -343,7 +344,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PI_projekt.Properties.Resources.BCKground_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(463, 481);
+            this.ClientSize = new System.Drawing.Size(463, 482);
             this.Controls.Add(this.userRole);
             this.Controls.Add(this.uloga);
             this.Controls.Add(this.userName);
@@ -366,6 +367,7 @@
             this.Name = "FrmArtikli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Artikli";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmArtikli_FormClosed);
             this.Load += new System.EventHandler(this.FrmArtikli_Load);
             this.Stavke_racun.ResumeLayout(false);
             this.Stavke_racun.PerformLayout();

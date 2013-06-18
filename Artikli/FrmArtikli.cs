@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PI_projekt.Sucelja;
 
 namespace PI_projekt.Artikli
 {
@@ -118,6 +119,17 @@ namespace PI_projekt.Artikli
                     this.Close();
                 }
             }
-        }       
+        }
+
+        private void Nazad_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FrmArtikli_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FrmProdavac prodavac = new FrmProdavac();
+            prodavac.Show();
+        }
     }
 }
