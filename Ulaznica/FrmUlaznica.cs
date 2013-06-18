@@ -28,5 +28,20 @@ namespace PI_projekt.Ulaznica
             FrmProdavac prodavac = new FrmProdavac();
             prodavac.Show();
         }
+
+        private void FrmUlaznica_Load(object sender, EventArgs e)
+        {
+            /*
+            List<Projekcija> listaProjekcija = new List<Projekcija>();
+            listaProjekcija = Projekcija.DohvatiAktualneProjekcije();
+            */
+            List<Film> filmovi= new List<Film>();
+            filmovi = Film.DohvatiAktualneFilmove();
+            foreach (Film film in filmovi)
+            {
+                cbNazivProjekcije.Items.Add(film.Naziv);
+            }
+
+        }
     }
 }
