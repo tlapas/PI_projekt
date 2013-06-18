@@ -29,12 +29,14 @@ namespace PI_projekt.Sucelja
                     {
                         if (listaKorisnika[i].Uloga == 2)
                         {
+                            SpremnikPodataka.Uloga = "administrator";
                             FrmAdmin admin = new FrmAdmin();
                             admin.Show();
                             this.Hide();
                         }
                         else if (listaKorisnika[i].Uloga == 1)
                         {
+                            SpremnikPodataka.Uloga = "prodavač";
                             FrmProdavac prodavac = new FrmProdavac();
                             prodavac.Show();
                             this.Hide();
@@ -47,6 +49,7 @@ namespace PI_projekt.Sucelja
         public static class SpremnikPodataka
         {
             public static String Zaposlenik;
+            public static String Uloga;
         }
 
 
@@ -57,9 +60,40 @@ namespace PI_projekt.Sucelja
             Pass.Clear();
         }
 
+        //funkcija za izlaz iz aplikacije
+        int izlaz = 0;
         private void btnIzlaz_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            izlaz = 1;
+            izlazak();
         }
+        private void izlazak()
+        {
+            if (izlaz == 1)
+            {
+                string message = "Želite li ugasiti aplikaciju?";
+                string caption = "Gašenje aplikacije";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                // Displays the MessageBox.
+                result = MessageBox.Show(this, message, caption, buttons);
+
+                if (result == DialogResult.Yes)
+                {
+                  Application.Exit();
+                }
+            }
+        } 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       
     }
 }
