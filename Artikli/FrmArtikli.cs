@@ -45,11 +45,9 @@ namespace PI_projekt.Artikli
 
         private void OsvjeziArtikle()
         {
-            int brojac = 0;
-            foreach (Artikl Id in listaArtikala)
+            foreach (Artikl artikl in listaArtikala)
             {
-                Naziv.Items.Add(listaArtikala[brojac].Naziv);
-                brojac++;
+                Naziv.Items.Add(artikl.Naziv);
             }
         }
 
@@ -58,11 +56,17 @@ namespace PI_projekt.Artikli
             Cijena_box.Text = listaArtikala[Naziv.SelectedIndex].Cijena.ToString() + " kn";
         }
 
+        private int redak = 0;
         private void DodajStavke()
         {
             try
             {
-                Stavke.Text += listaArtikala[Naziv.SelectedIndex].Naziv + "\t Cijena: " + listaArtikala[Naziv.SelectedIndex].Cijena + "\t Količina:" + KolicinaBox.Text + "\r\n";
+                int stupac = 0;
+                this.Stavke.Rows.Add();
+                this.Stavke.Rows[redak].Cells[stupac++].Value = listaArtikala[Naziv.SelectedIndex].Naziv;
+                this.Stavke.Rows[redak].Cells[stupac++].Value = listaArtikala[Naziv.SelectedIndex].Cijena;
+                this.Stavke.Rows[redak++].Cells[stupac++].Value = KolicinaBox.Text;
+                //Stavke.Text += listaArtikala[Naziv.SelectedIndex].Naziv + "\t Cijena: " + listaArtikala[Naziv.SelectedIndex].Cijena + "\t Količina:" + KolicinaBox.Text + "\r\n";
                 CijenaUkupno += listaArtikala[Naziv.SelectedIndex].Cijena * Convert.ToInt32(KolicinaBox.Text);
                 Ukupno.Text = CijenaUkupno.ToString() + " kn";
             }
@@ -71,22 +75,26 @@ namespace PI_projekt.Artikli
                 MessageBox.Show("Greška! Niste odabrali artikl.");
             }
         }
-
+        
         private void KolicinaBox_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                int temp = Convert.ToInt32(KolicinaBox.Text);
+                if (KolicinaBox.Text != "")
+                {
+                    int temp = Convert.ToInt32(KolicinaBox.Text);
+                }
             }
             catch (Exception)
             {
-                MessageBox.Show("Greška! Količina ne smije biti slovo. Unesite broj.");
+                MessageBox.Show("Greška! Količina ne smije biti slovo ili znak. Unesite broj.");
             }
         }
 
         private void Ponisti_Click(object sender, EventArgs e)
         {
-            Stavke.Text = "";
+            Stavke.Rows.Clear();
+            redak = 0;
             Ukupno.Text = "0,00 kn";
         }
 
