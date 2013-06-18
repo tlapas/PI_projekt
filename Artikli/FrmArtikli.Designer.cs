@@ -36,16 +36,32 @@
             this.Dodaj = new System.Windows.Forms.Button();
             this.Ponisti = new System.Windows.Forms.Button();
             this.Cijena_box = new System.Windows.Forms.TextBox();
+<<<<<<< HEAD
             this.Kolicina_box = new System.Windows.Forms.TextBox();
             this.Stavke_racun = new System.Windows.Forms.GroupBox();
+=======
+            this.KolicinaBox = new System.Windows.Forms.TextBox();
+            this.Stavke_racun = new System.Windows.Forms.GroupBox();
+            this.Stavke = new System.Windows.Forms.TextBox();
+>>>>>>> origin/baza
             this.Iznos_racun = new System.Windows.Forms.Label();
             this.Ukupno = new System.Windows.Forms.TextBox();
             this.Dalje = new System.Windows.Forms.Button();
             this.Odjava = new System.Windows.Forms.LinkLabel();
+<<<<<<< HEAD
             this.Prijava = new System.Windows.Forms.Label();
             this.user = new System.Windows.Forms.TextBox();
             this.Opcije = new System.Windows.Forms.GroupBox();
             this.Nazad = new System.Windows.Forms.Button();
+=======
+            this.Opcije = new System.Windows.Forms.GroupBox();
+            this.Nazad = new System.Windows.Forms.Button();
+            this.userRole = new System.Windows.Forms.Label();
+            this.uloga = new System.Windows.Forms.Label();
+            this.userName = new System.Windows.Forms.Label();
+            this.korisnik = new System.Windows.Forms.Label();
+            this.Stavke_racun.SuspendLayout();
+>>>>>>> origin/baza
             this.Opcije.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +78,10 @@
             this.Naziv_artikla.Size = new System.Drawing.Size(98, 16);
             this.Naziv_artikla.TabIndex = 0;
             this.Naziv_artikla.Text = "Naziv artikla:";
+<<<<<<< HEAD
             this.Naziv_artikla.Click += new System.EventHandler(this.label1_Click);
+=======
+>>>>>>> origin/baza
             // 
             // Cijena
             // 
@@ -90,7 +109,11 @@
             this.Naziv.Name = "Naziv";
             this.Naziv.Size = new System.Drawing.Size(254, 24);
             this.Naziv.TabIndex = 3;
+<<<<<<< HEAD
             this.Naziv.Text = "Odabir artikla...";
+=======
+            this.Naziv.SelectedIndexChanged += new System.EventHandler(this.Naziv_SelectedIndexChanged);
+>>>>>>> origin/baza
             // 
             // Kolicina
             // 
@@ -112,7 +135,11 @@
             this.Dodaj.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Dodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Dodaj.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+<<<<<<< HEAD
             this.Dodaj.Location = new System.Drawing.Point(118, 184);
+=======
+            this.Dodaj.Location = new System.Drawing.Point(118, 211);
+>>>>>>> origin/baza
             this.Dodaj.Margin = new System.Windows.Forms.Padding(4);
             this.Dodaj.Name = "Dodaj";
             this.Dodaj.Size = new System.Drawing.Size(112, 28);
@@ -128,13 +155,21 @@
             this.Ponisti.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Ponisti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Ponisti.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+<<<<<<< HEAD
             this.Ponisti.Location = new System.Drawing.Point(238, 184);
+=======
+            this.Ponisti.Location = new System.Drawing.Point(238, 211);
+>>>>>>> origin/baza
             this.Ponisti.Margin = new System.Windows.Forms.Padding(4);
             this.Ponisti.Name = "Ponisti";
             this.Ponisti.Size = new System.Drawing.Size(112, 28);
             this.Ponisti.TabIndex = 6;
             this.Ponisti.Text = "Poništi";
             this.Ponisti.UseVisualStyleBackColor = false;
+<<<<<<< HEAD
+=======
+            this.Ponisti.Click += new System.EventHandler(this.Ponisti_Click);
+>>>>>>> origin/baza
             // 
             // Cijena_box
             // 
@@ -149,6 +184,7 @@
             this.Cijena_box.TabIndex = 7;
             this.Cijena_box.Text = " kn";
             // 
+<<<<<<< HEAD
             // Kolicina_box
             // 
             this.Kolicina_box.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -161,14 +197,37 @@
             this.Kolicina_box.Size = new System.Drawing.Size(139, 22);
             this.Kolicina_box.TabIndex = 8;
             this.Kolicina_box.Text = "0,00";
+=======
+            // KolicinaBox
+            // 
+            this.KolicinaBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.KolicinaBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.KolicinaBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.KolicinaBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.KolicinaBox.Location = new System.Drawing.Point(154, 101);
+            this.KolicinaBox.Margin = new System.Windows.Forms.Padding(4);
+            this.KolicinaBox.Name = "KolicinaBox";
+            this.KolicinaBox.Size = new System.Drawing.Size(139, 22);
+            this.KolicinaBox.TabIndex = 8;
+            this.KolicinaBox.Text = "0";
+            this.KolicinaBox.TextChanged += new System.EventHandler(this.KolicinaBox_TextChanged);
+>>>>>>> origin/baza
             // 
             // Stavke_racun
             // 
             this.Stavke_racun.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+<<<<<<< HEAD
             this.Stavke_racun.Cursor = System.Windows.Forms.Cursors.Default;
             this.Stavke_racun.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Stavke_racun.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Stavke_racun.Location = new System.Drawing.Point(8, 220);
+=======
+            this.Stavke_racun.Controls.Add(this.Stavke);
+            this.Stavke_racun.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Stavke_racun.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Stavke_racun.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Stavke_racun.Location = new System.Drawing.Point(8, 247);
+>>>>>>> origin/baza
             this.Stavke_racun.Margin = new System.Windows.Forms.Padding(4);
             this.Stavke_racun.Name = "Stavke_racun";
             this.Stavke_racun.Padding = new System.Windows.Forms.Padding(4);
@@ -177,6 +236,23 @@
             this.Stavke_racun.TabStop = false;
             this.Stavke_racun.Text = "Stavke";
             // 
+<<<<<<< HEAD
+=======
+            // Stavke
+            // 
+            this.Stavke.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Stavke.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Stavke.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Stavke.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Stavke.Location = new System.Drawing.Point(8, 23);
+            this.Stavke.Margin = new System.Windows.Forms.Padding(4);
+            this.Stavke.Multiline = true;
+            this.Stavke.Name = "Stavke";
+            this.Stavke.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Stavke.Size = new System.Drawing.Size(432, 124);
+            this.Stavke.TabIndex = 8;
+            // 
+>>>>>>> origin/baza
             // Iznos_racun
             // 
             this.Iznos_racun.AutoSize = true;
@@ -184,7 +260,11 @@
             this.Iznos_racun.Cursor = System.Windows.Forms.Cursors.Default;
             this.Iznos_racun.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Iznos_racun.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+<<<<<<< HEAD
             this.Iznos_racun.Location = new System.Drawing.Point(252, 386);
+=======
+            this.Iznos_racun.Location = new System.Drawing.Point(252, 412);
+>>>>>>> origin/baza
             this.Iznos_racun.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Iznos_racun.Name = "Iznos_racun";
             this.Iznos_racun.Size = new System.Drawing.Size(48, 16);
@@ -197,9 +277,16 @@
             this.Ukupno.Cursor = System.Windows.Forms.Cursors.Default;
             this.Ukupno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Ukupno.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+<<<<<<< HEAD
             this.Ukupno.Location = new System.Drawing.Point(308, 383);
             this.Ukupno.Margin = new System.Windows.Forms.Padding(4);
             this.Ukupno.Name = "Ukupno";
+=======
+            this.Ukupno.Location = new System.Drawing.Point(308, 409);
+            this.Ukupno.Margin = new System.Windows.Forms.Padding(4);
+            this.Ukupno.Name = "Ukupno";
+            this.Ukupno.ReadOnly = true;
+>>>>>>> origin/baza
             this.Ukupno.Size = new System.Drawing.Size(148, 22);
             this.Ukupno.TabIndex = 11;
             this.Ukupno.Text = "0,00 kn";
@@ -233,6 +320,7 @@
             this.Odjava.TabIndex = 15;
             this.Odjava.TabStop = true;
             this.Odjava.Text = "odjava";
+<<<<<<< HEAD
             // 
             // Prijava
             // 
@@ -256,6 +344,9 @@
             this.user.ReadOnly = true;
             this.user.Size = new System.Drawing.Size(147, 22);
             this.user.TabIndex = 13;
+=======
+            this.Odjava.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Odjava_LinkClicked);
+>>>>>>> origin/baza
             // 
             // Opcije
             // 
@@ -265,11 +356,19 @@
             this.Opcije.Controls.Add(this.Cijena);
             this.Opcije.Controls.Add(this.Kolicina);
             this.Opcije.Controls.Add(this.Cijena_box);
+<<<<<<< HEAD
             this.Opcije.Controls.Add(this.Kolicina_box);
             this.Opcije.Cursor = System.Windows.Forms.Cursors.Default;
             this.Opcije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Opcije.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Opcije.Location = new System.Drawing.Point(8, 37);
+=======
+            this.Opcije.Controls.Add(this.KolicinaBox);
+            this.Opcije.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Opcije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Opcije.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Opcije.Location = new System.Drawing.Point(8, 64);
+>>>>>>> origin/baza
             this.Opcije.Margin = new System.Windows.Forms.Padding(4);
             this.Opcije.Name = "Opcije";
             this.Opcije.Padding = new System.Windows.Forms.Padding(4);
@@ -292,6 +391,55 @@
             this.Nazad.Text = "Nazad";
             this.Nazad.UseVisualStyleBackColor = false;
             // 
+<<<<<<< HEAD
+=======
+            // userRole
+            // 
+            this.userRole.AutoSize = true;
+            this.userRole.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.userRole.ForeColor = System.Drawing.Color.Red;
+            this.userRole.Location = new System.Drawing.Point(68, 35);
+            this.userRole.Name = "userRole";
+            this.userRole.Size = new System.Drawing.Size(47, 16);
+            this.userRole.TabIndex = 20;
+            this.userRole.Text = "uloga";
+            // 
+            // uloga
+            // 
+            this.uloga.AutoSize = true;
+            this.uloga.BackColor = System.Drawing.Color.Black;
+            this.uloga.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.uloga.Location = new System.Drawing.Point(10, 35);
+            this.uloga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.uloga.Name = "uloga";
+            this.uloga.Size = new System.Drawing.Size(54, 16);
+            this.uloga.TabIndex = 19;
+            this.uloga.Text = "Uloga:";
+            // 
+            // userName
+            // 
+            this.userName.AutoSize = true;
+            this.userName.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.userName.ForeColor = System.Drawing.Color.Red;
+            this.userName.Location = new System.Drawing.Point(153, 9);
+            this.userName.Name = "userName";
+            this.userName.Size = new System.Drawing.Size(108, 16);
+            this.userName.TabIndex = 18;
+            this.userName.Text = "korisničko ime";
+            // 
+            // korisnik
+            // 
+            this.korisnik.AutoSize = true;
+            this.korisnik.BackColor = System.Drawing.Color.Black;
+            this.korisnik.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.korisnik.Location = new System.Drawing.Point(10, 9);
+            this.korisnik.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.korisnik.Name = "korisnik";
+            this.korisnik.Size = new System.Drawing.Size(136, 16);
+            this.korisnik.TabIndex = 17;
+            this.korisnik.Text = "Prijavljeni ste kao:";
+            // 
+>>>>>>> origin/baza
             // FrmArtikli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -299,11 +447,21 @@
             this.BackgroundImage = global::PI_projekt.Properties.Resources.BCKground_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(463, 481);
+<<<<<<< HEAD
             this.Controls.Add(this.Nazad);
             this.Controls.Add(this.Opcije);
             this.Controls.Add(this.Odjava);
             this.Controls.Add(this.Prijava);
             this.Controls.Add(this.user);
+=======
+            this.Controls.Add(this.userRole);
+            this.Controls.Add(this.uloga);
+            this.Controls.Add(this.userName);
+            this.Controls.Add(this.korisnik);
+            this.Controls.Add(this.Nazad);
+            this.Controls.Add(this.Opcije);
+            this.Controls.Add(this.Odjava);
+>>>>>>> origin/baza
             this.Controls.Add(this.Dalje);
             this.Controls.Add(this.Ukupno);
             this.Controls.Add(this.Ponisti);
@@ -319,6 +477,12 @@
             this.Name = "FrmArtikli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Artikli";
+<<<<<<< HEAD
+=======
+            this.Load += new System.EventHandler(this.FrmArtikli_Load);
+            this.Stavke_racun.ResumeLayout(false);
+            this.Stavke_racun.PerformLayout();
+>>>>>>> origin/baza
             this.Opcije.ResumeLayout(false);
             this.Opcije.PerformLayout();
             this.ResumeLayout(false);
@@ -335,16 +499,30 @@
         private System.Windows.Forms.Button Dodaj;
         private System.Windows.Forms.Button Ponisti;
         private System.Windows.Forms.TextBox Cijena_box;
+<<<<<<< HEAD
         private System.Windows.Forms.TextBox Kolicina_box;
+=======
+        private System.Windows.Forms.TextBox KolicinaBox;
+>>>>>>> origin/baza
         private System.Windows.Forms.GroupBox Stavke_racun;
         private System.Windows.Forms.Label Iznos_racun;
         private System.Windows.Forms.TextBox Ukupno;
         private System.Windows.Forms.Button Dalje;
         private System.Windows.Forms.LinkLabel Odjava;
+<<<<<<< HEAD
         private System.Windows.Forms.Label Prijava;
         private System.Windows.Forms.TextBox user;
         private System.Windows.Forms.GroupBox Opcije;
         private System.Windows.Forms.Button Nazad;
+=======
+        private System.Windows.Forms.GroupBox Opcije;
+        private System.Windows.Forms.Button Nazad;
+        private System.Windows.Forms.TextBox Stavke;
+        private System.Windows.Forms.Label userRole;
+        private System.Windows.Forms.Label uloga;
+        private System.Windows.Forms.Label userName;
+        private System.Windows.Forms.Label korisnik;
+>>>>>>> origin/baza
 
     }
 }

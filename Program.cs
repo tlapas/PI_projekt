@@ -17,10 +17,17 @@ namespace PI_projekt
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Sucelja.FrmPocetna());
+<<<<<<< HEAD
             Application.Run(new Sucelja.FrmAdmin());
             Application.Run(new Sucelja.FrmProdavac());
             Application.Run(new Artikli.FrmArtikli());
             Application.Run(new Ulaznica.FrmUlaznica());
+=======
+            //Application.Run(new Sucelja.FrmAdmin());
+            //Application.Run(new Sucelja.FrmProdavac());
+            //Application.Run(new Artikli.FrmArtikli());
+            //Application.Run(new Ulaznica.FrmUlaznica());
+>>>>>>> origin/baza
         }
     }
 }
