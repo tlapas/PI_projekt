@@ -20,19 +20,20 @@ namespace PI_projekt.Sucelja
         private void Prijava_Click(object sender, EventArgs e)
         {
             List<Zaposlenici> listaKorisnika = Zaposlenici.DohvatiZaposlenike();
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 4; i++)
             {
                 if (KorIme.Text == listaKorisnika[i].KorIme)
                 {
+                    SpremnikPodataka.Zaposlenik = KorIme.Text;
                     if (Pass.Text == listaKorisnika[i].Lozinka)
                     {
-                        if (listaKorisnika[i].KorIme == "inovak")
+                        if (listaKorisnika[i].Uloga == 2)
                         {
                             FrmAdmin admin = new FrmAdmin();
                             admin.Show();
                             this.Hide();
                         }
-                        else if (listaKorisnika[i].KorIme != "inovak")
+                        else if (listaKorisnika[i].Uloga == 1)
                         {
                             FrmProdavac prodavac = new FrmProdavac();
                             prodavac.Show();
@@ -42,6 +43,13 @@ namespace PI_projekt.Sucelja
                 }
             }
         }
+
+        public static class SpremnikPodataka
+        {
+            public static String Zaposlenik;
+        }
+
+
 
         private void Ponisti_Click(object sender, EventArgs e)
         {

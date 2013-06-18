@@ -35,6 +35,7 @@ namespace PI_projekt
                 Email = dr["email"].ToString();
                 KorIme = dr["kor_ime"].ToString();
                 Lozinka = dr["lozinka"].ToString();
+                Uloga = int.Parse(dr["uloga"].ToString());
             }
 
         }
@@ -51,6 +52,7 @@ namespace PI_projekt
         private string email;
         private string kor_ime;
         private string lozinka;
+        private int uloga;
 
         #endregion
 
@@ -183,7 +185,7 @@ namespace PI_projekt
         }
 
         /// <summary>
-        /// Ime zaposlenika.
+        ///Lozinka zaposlenika.
         /// </summary>
         public string Lozinka
         {
@@ -196,6 +198,24 @@ namespace PI_projekt
                 if (lozinka != value)
                 {
                     lozinka = value;
+                }
+            }
+        }
+
+        /// <summary>
+        ///uloga zaposlenika.
+        /// </summary>
+        public int Uloga
+        {
+            get
+            {
+                return uloga;
+            }
+            set
+            {
+                if (uloga != value)
+                {
+                    uloga = value;
                 }
             }
         }

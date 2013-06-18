@@ -15,6 +15,7 @@ namespace PI_projekt.Sucelja
         public FrmAdmin()
         {
             InitializeComponent();
+            user.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik;
         }
 
         private void label1_Click(object sender, EventArgs e)

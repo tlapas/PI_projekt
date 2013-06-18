@@ -15,6 +15,7 @@ namespace PI_projekt.Sucelja
         public FrmProdavac()
         {
             InitializeComponent();
+            user.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik;
         }
     }
 }
