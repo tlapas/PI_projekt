@@ -37,6 +37,7 @@
             this.Nazad = new System.Windows.Forms.Button();
             this.Dalje = new System.Windows.Forms.Button();
             this.Opcije = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnUkloni = new System.Windows.Forms.Button();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -45,7 +46,6 @@
             this.lblSjedalo = new System.Windows.Forms.Label();
             this.lblDvorana = new System.Windows.Forms.Label();
             this.cbDvorana = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Opcije.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,12 +101,14 @@
             // cbNazivProjekcije
             // 
             this.cbNazivProjekcije.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cbNazivProjekcije.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNazivProjekcije.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cbNazivProjekcije.FormattingEnabled = true;
             this.cbNazivProjekcije.Location = new System.Drawing.Point(165, 30);
             this.cbNazivProjekcije.Name = "cbNazivProjekcije";
             this.cbNazivProjekcije.Size = new System.Drawing.Size(333, 28);
             this.cbNazivProjekcije.TabIndex = 21;
+            this.cbNazivProjekcije.SelectedIndexChanged += new System.EventHandler(this.cbNazivProjekcije_SelectedIndexChanged);
             // 
             // Nazad
             // 
@@ -163,6 +165,15 @@
             this.Opcije.TabStop = false;
             this.Opcije.Text = "Opcije";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(184, 152);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 20);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Odabrano:";
+            // 
             // btnUkloni
             // 
             this.btnUkloni.Location = new System.Drawing.Point(129, 268);
@@ -203,12 +214,14 @@
             // cbDatum
             // 
             this.cbDatum.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cbDatum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDatum.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cbDatum.FormattingEnabled = true;
             this.cbDatum.Location = new System.Drawing.Point(165, 64);
             this.cbDatum.Name = "cbDatum";
             this.cbDatum.Size = new System.Drawing.Size(200, 28);
             this.cbDatum.TabIndex = 32;
+            this.cbDatum.SelectedIndexChanged += new System.EventHandler(this.cbDatum_SelectedIndexChanged);
             // 
             // lblSjedalo
             // 
@@ -235,21 +248,13 @@
             // cbDvorana
             // 
             this.cbDvorana.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cbDvorana.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDvorana.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cbDvorana.FormattingEnabled = true;
             this.cbDvorana.Location = new System.Drawing.Point(165, 98);
             this.cbDvorana.Name = "cbDvorana";
             this.cbDvorana.Size = new System.Drawing.Size(200, 28);
             this.cbDvorana.TabIndex = 28;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(184, 152);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 20);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Odabrano:";
             // 
             // FrmUlaznica
             // 

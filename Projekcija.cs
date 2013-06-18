@@ -188,7 +188,6 @@ namespace PI_projekt
         #endregion
 
           #region Methods
-
         /// <summary>
         /// Dohvaća sve projekcije
         /// </summary>
@@ -218,7 +217,7 @@ namespace PI_projekt
             DateTime sada = DateTime.Now;
             sada.AddMinutes(15);
 
-            string sqlUpit = "SELECT * FROM Projekcija WHERE datum="+sada.ToString()+";";
+            string sqlUpit = "SELECT * FROM Projekcija WHERE datum=>" + sada.ToString() + ";";
             DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
             while (dr.Read())
             {
@@ -228,7 +227,27 @@ namespace PI_projekt
             dr.Close();     //Zatvaranje DataReader objekta.
             return lista;
         }
+        /// <summary>
+        /// Dohvaća sve aktualne projekcije za određeni film 
+        /// </summary>
+        /// <param name="idFilma">Id filma</param>
+        /// <returns>Lista projekcija za određeni film</returns>
+        public static List<Projekcija> DohvatiProjekcijeFilm(int idFilma)
+        {
+            List<Projekcija> lista = new List<Projekcija>();
+            DateTime sada = DateTime.Now;
+            sada.AddMinutes(15);
 
+            string sqlUpit = "SELECT * FROM Projekcija WHERE datum >= '" + sada.ToString() + "' AND id_filma=" + idFilma + ";";
+            DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
+            while (dr.Read())
+            {
+                Projekcija projekcija = new Projekcija(dr);
+                lista.Add(projekcija);
+            }
+            dr.Close();     //Zatvaranje DataReader objekta.
+            return lista;
+        }
         /// <summary>
         /// Unesi projekciju u bazu podataka
         /// </summary>
