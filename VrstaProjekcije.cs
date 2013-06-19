@@ -87,8 +87,25 @@ namespace PI_projekt
         #endregion
 
         #region Methods
-
-       
+        /// <summary>
+        /// Dohvaca vrste projekcije za određenu projekciju
+        /// </summary>
+        /// <param name="idProjekcije">int id projekcije</param>
+        /// <returns>lista vrsti projekcije</returns>
+        public static List<VrstaProjekcije> DohvatiVrste(int idProjekcije)
+        {
+            List<VrstaProjekcije> lista = new List<VrstaProjekcije>();
+            string sqlUpit = "SELECT Vrsta_projekcije.* FROM Vrsta_projekcije LEFT JOIN projekcija_vrsta ON Vrsta_projekcije.id_vrste=projekcija_vrsta.id_vrste WHERE projekcija_vrsta.id_projekcije="
+                + idProjekcije + ";";
+            DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
+            while (dr.Read())
+            {
+                VrstaProjekcije vrstaProjekcije = new VrstaProjekcije(dr);
+                lista.Add(vrstaProjekcije);
+            }
+            dr.Close();     //Zatvaranje DataReader objekta.
+            return lista;
+        }
 
 
         

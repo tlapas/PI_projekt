@@ -31,7 +31,7 @@ namespace PI_projekt
                 IdFilma= int.Parse(dr["id_filma"].ToString());
                 BrojDvorane= int.Parse(dr["broj_dvorane"].ToString());
                 VrijemeTrajanja= int.Parse(dr["vrijeme_trajanja"].ToString());
-                BrojMjesta= int.Parse(dr["broje_mjesta"].ToString());
+                BrojMjesta= int.Parse(dr["broj_mjesta"].ToString());
                 ProdanoUlaznica= int.Parse(dr["prodano_ulaznica"].ToString());
                 Cijena =float.Parse(dr["cijena"].ToString());
                 Datum = DateTime.Parse(dr["datum"].ToString());

@@ -128,23 +128,30 @@ namespace PI_projekt
         /// Dohvaća sve ulaznice za određenu projekciju
        /// </summary>
        /// <param name="idProjekcije">Id projekcije za koju se dohvaćaju sve ulaznice</param>
-       /// <returns>vrća listu ulaznica</returns>
-        public static List<Ulaznice> DohvatiUlazniceProjekciju(int idProjekcije)
+       /// <returns>int vraća listu sjedala</returns>
+        public static List<int> DohvatiUlazniceProjekciju(int idProjekcije)
         {
-            List<Ulaznice> lista = new List<Ulaznice>();
+            List<int> lista = new List<int>();
             string sqlUpit = "SELECT Karta.* FROM Karta LEFT JOIN Projekcija ON Karta.id_projekcije=Projekcija.id_projekcije WHERE Projekcija.id_projekcije=" 
                 + idProjekcije + ";";
             DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
             while (dr.Read())
             {
                 Ulaznice ulaznica = new Ulaznice(dr);
-                lista.Add(ulaznica);
+                lista.Add(ulaznica.Sjedalo);
             }
             dr.Close();     //Zatvaranje DataReader objekta.
             return lista;
         }
-       
 
+        public static int UnesiUlaznicu(int sjedalo, int idProjekcije)
+        {
+            
+            string sqlUpit = "INSERT INTO Karta ('sjedalo','id_projekcije') VALUES ('"+ sjedalo + "','" + idProjekcije + "');";
+            int idUlaznice = DB.Instance.IzvrsiUpitID(sqlUpit);
+
+            return idUlaznice;
+        }
         
         #endregion
     }
