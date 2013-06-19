@@ -129,7 +129,7 @@ namespace PI_projekt.Ulaznica
                 {
                     odabranaProjekcija = projekcija2;
                 }
-
+            }
   //napravi metodu koja ce dohvatit za taj ID dvorane Naziv dvorane umjesto linije ispod!!!
                 txtDvorana.Text = odabranaProjekcija.BrojDvorane.ToString();
                 txtFilm.Text = odabraniFilm.Naziv;
@@ -163,7 +163,7 @@ namespace PI_projekt.Ulaznica
                 }
 
 
-            }
+            
         }
 
         private void btnDodaj_Click(object sender, EventArgs e)
