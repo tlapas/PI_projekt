@@ -66,6 +66,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Projekcija.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Racun.cs" />
+    <Compile Include="RacunArtikl.cs" />
     <Compile Include="RacunUlaznica.cs" />
     <Compile Include="Sucelja\FrmAdmin.cs">
       <SubType>Form</SubType>
