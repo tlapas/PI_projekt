@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PI_projekt.Sucelja
 {
-    public partial class FrmAdminDvorane : Form
+    public partial class FrmAdminProjekcijeDodaj : Form
     {
-        public FrmAdminDvorane()
+        public FrmAdminProjekcijeDodaj()
         {
             InitializeComponent();
             userName.Text = FrmPocetna.SpremnikPodataka.Zaposlenik;
@@ -20,22 +20,6 @@ namespace PI_projekt.Sucelja
         }
 
         private bool pomOdjava = false;
-
-        private void btnDvoranePovratak_Click(object sender, EventArgs e)
-        {
-            pomOdjava = true;
-            FrmAdmin admin = new FrmAdmin();
-            admin.Show();
-            this.Close();
-        }
-
-        private void btnDvoraneDodaj_Click(object sender, EventArgs e)
-        {
-            pomOdjava = true;
-            FrmAdminDvoraneDodaj formaDodaj = new FrmAdminDvoraneDodaj();
-            formaDodaj.Show();
-            this.Close(); ;
-        }
 
         /// <summary>
         /// funkcija za odjavu iz sustava, klikom na odjava se postavlja parametar na 1
@@ -69,13 +53,21 @@ namespace PI_projekt.Sucelja
                 }
             }
         }
-        private void FrmAdminDvorane_FormClosed(object sender, FormClosedEventArgs e)
+        private void FrmAdminProjekcijeDodaj_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (!pomOdjava)
             {
-                FrmAdmin admin = new FrmAdmin();
-                admin.Show();
+                FrmAdminProjekcije adminProjekcije = new FrmAdminProjekcije();
+                adminProjekcije.Show();
             }
-        }     
+        }
+
+        private void btnProjekcijeDodajOdustani_Click(object sender, EventArgs e)
+        {
+            pomOdjava = true;
+            FrmAdminProjekcije adminProjekcije = new FrmAdminProjekcije();
+            adminProjekcije.Show();
+            this.Close();
+        }
     }
 }

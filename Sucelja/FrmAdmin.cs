@@ -19,30 +19,54 @@ namespace PI_projekt.Sucelja
             userRole.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Uloga;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Opcije_Enter(object sender, EventArgs e)
-        {
-
-        }
+        private bool pomOdjava = false;
 
         private void Dvorane_Click(object sender, EventArgs e)
         {
-
+            pomOdjava = true;
+            FrmAdminDvorane adminDvorane = new FrmAdminDvorane();
+            adminDvorane.Show();
+            this.Close();
         }
 
         private void Artikli_Click(object sender, EventArgs e)
         {
+            pomOdjava = true;
             FrmAdminArtikli adminArtikli = new FrmAdminArtikli();
             adminArtikli.Show();
+            this.Close();
         }
 
-        //funkcija za odjavu iz sustava, klikom na odjava se postavlja parametar na 1
-        // i prosljeđuje funkciji koja će ispisati poruku i pitati želi li se korisnik odjaviti
-        // u slučaju klika na yes, korisnik se odjavljuje i vraća na početnu stranicu (login)
+        private void Zaposlenici_Click(object sender, EventArgs e)
+        {
+            pomOdjava = true;
+            FrmAdminZaposlenici adminZaposlenici = new FrmAdminZaposlenici();
+            adminZaposlenici.Show();
+            this.Close();
+        }        
+
+        private void Filmovi_Click(object sender, EventArgs e)
+        {
+            pomOdjava = true;
+            FrmAdminFilmovi adminFilmovi = new FrmAdminFilmovi();
+            adminFilmovi.Show();
+            this.Close();
+        }
+
+        private void Projekcije_Click(object sender, EventArgs e)
+        {
+            pomOdjava = true;
+            FrmAdminProjekcije adminProjekcije = new FrmAdminProjekcije();
+            adminProjekcije.Show();
+            this.Close();
+        }
+
+
+        /// <summary>
+        /// funkcija za odjavu iz sustava, klikom na odjava se postavlja parametar na 1
+        /// i prosljeđuje funkciji koja će ispisati poruku i pitati želi li se korisnik odjaviti
+        /// u slučaju klika na yes, korisnik se odjavljuje i vraća na početnu stranicu (login)
+        /// </summary>
         int odjavljivanje = 0;
         private void Odjava_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -63,12 +87,21 @@ namespace PI_projekt.Sucelja
 
                 if (result == DialogResult.Yes)
                 {
+                    pomOdjava = true;
                     PI_projekt.Sucelja.FrmPocetna pocetna = new PI_projekt.Sucelja.FrmPocetna();
                     pocetna.Show();
                     this.Close();
                 }
             }
-        } 
+        }
+
+        private void FrmAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!pomOdjava) {
+                FrmPocetna pocetna = new FrmPocetna();
+                pocetna.Show();
+            }
+        }       
     }
 }
     

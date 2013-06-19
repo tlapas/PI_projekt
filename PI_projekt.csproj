@@ -97,6 +97,42 @@
     <Compile Include="Sucelja\FrmAdminDvoraneDodaj.Designer.cs">
       <DependentUpon>FrmAdminDvoraneDodaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sucelja\FrmAdminFilmovi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucelja\FrmAdminFilmovi.Designer.cs">
+      <DependentUpon>FrmAdminFilmovi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sucelja\FrmAdminFilmoviDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucelja\FrmAdminFilmoviDodaj.Designer.cs">
+      <DependentUpon>FrmAdminFilmoviDodaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sucelja\FrmAdminProjekcije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucelja\FrmAdminProjekcije.Designer.cs">
+      <DependentUpon>FrmAdminProjekcije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sucelja\FrmAdminProjekcijeDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucelja\FrmAdminProjekcijeDodaj.Designer.cs">
+      <DependentUpon>FrmAdminProjekcijeDodaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sucelja\FrmAdminZaposlenici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucelja\FrmAdminZaposlenici.Designer.cs">
+      <DependentUpon>FrmAdminZaposlenici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sucelja\FrmAdminZaposleniciDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucelja\FrmAdminZaposleniciDodaj.Designer.cs">
+      <DependentUpon>FrmAdminZaposleniciDodaj.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sucelja\FrmPocetna.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +177,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sucelja\FrmAdminArtikliDodaj.resx">
       <DependentUpon>FrmAdminArtikliDodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sucelja\FrmAdminDvorane.resx">
+      <DependentUpon>FrmAdminDvorane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sucelja\FrmAdminDvoraneDodaj.resx">
+      <DependentUpon>FrmAdminDvoraneDodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sucelja\FrmAdminFilmovi.resx">
+      <DependentUpon>FrmAdminFilmovi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sucelja\FrmAdminFilmoviDodaj.resx">
+      <DependentUpon>FrmAdminFilmoviDodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sucelja\FrmAdminProjekcije.resx">
+      <DependentUpon>FrmAdminProjekcije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sucelja\FrmAdminProjekcijeDodaj.resx">
+      <DependentUpon>FrmAdminProjekcijeDodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sucelja\FrmAdminZaposlenici.resx">
+      <DependentUpon>FrmAdminZaposlenici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sucelja\FrmAdminZaposleniciDodaj.resx">
+      <DependentUpon>FrmAdminZaposleniciDodaj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sucelja\FrmPocetna.resx">
       <DependentUpon>FrmPocetna.cs</DependentUpon>

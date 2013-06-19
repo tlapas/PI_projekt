@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PI_projekt.Sucelja
 {
-    public partial class FrmAdminDvorane : Form
+    public partial class FrmAdminProjekcije : Form
     {
-        public FrmAdminDvorane()
+        public FrmAdminProjekcije()
         {
             InitializeComponent();
             userName.Text = FrmPocetna.SpremnikPodataka.Zaposlenik;
@@ -21,7 +21,7 @@ namespace PI_projekt.Sucelja
 
         private bool pomOdjava = false;
 
-        private void btnDvoranePovratak_Click(object sender, EventArgs e)
+        private void btnProjekcijePovratak_Click(object sender, EventArgs e)
         {
             pomOdjava = true;
             FrmAdmin admin = new FrmAdmin();
@@ -29,10 +29,10 @@ namespace PI_projekt.Sucelja
             this.Close();
         }
 
-        private void btnDvoraneDodaj_Click(object sender, EventArgs e)
+        private void btnProjekcijeDodaj_Click(object sender, EventArgs e)
         {
             pomOdjava = true;
-            FrmAdminDvoraneDodaj formaDodaj = new FrmAdminDvoraneDodaj();
+            FrmAdminProjekcijeDodaj formaDodaj = new FrmAdminProjekcijeDodaj();
             formaDodaj.Show();
             this.Close(); ;
         }
@@ -69,13 +69,14 @@ namespace PI_projekt.Sucelja
                 }
             }
         }
-        private void FrmAdminDvorane_FormClosed(object sender, FormClosedEventArgs e)
+        private void FrmAdminProjekcije_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (!pomOdjava)
             {
                 FrmAdmin admin = new FrmAdmin();
                 admin.Show();
             }
-        }     
+
+        }
     }
 }
