@@ -49,6 +49,7 @@
             this.btnSpremi.TabIndex = 0;
             this.btnSpremi.Text = "Spremi";
             this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
             // btnOdustani
             // 
@@ -174,6 +175,7 @@
             this.Name = "FrmAdminDvoraneDodaj";
             this.Text = "Administrator Dodaj Dvoranu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAdminDvoraneDodaj_FormClosed);
+            this.Load += new System.EventHandler(this.FrmAdminDvoraneDodaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

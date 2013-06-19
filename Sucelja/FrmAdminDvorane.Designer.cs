@@ -60,6 +60,7 @@
             this.btnDvoraneAzuriraj.TabIndex = 1;
             this.btnDvoraneAzuriraj.Text = "Ažuriraj";
             this.btnDvoraneAzuriraj.UseVisualStyleBackColor = true;
+            this.btnDvoraneAzuriraj.Click += new System.EventHandler(this.btnDvoraneAzuriraj_Click);
             // 
             // btnDvoraneDodaj
             // 
@@ -79,6 +80,7 @@
             this.btnDvoraneOsvjezi.TabIndex = 3;
             this.btnDvoraneOsvjezi.Text = "Osvježi";
             this.btnDvoraneOsvjezi.UseVisualStyleBackColor = true;
+            this.btnDvoraneOsvjezi.Click += new System.EventHandler(this.btnDvoraneOsvjezi_Click);
             // 
             // dgvSveDvorane
             // 
@@ -87,6 +89,7 @@
             this.dgvSveDvorane.Name = "dgvSveDvorane";
             this.dgvSveDvorane.Size = new System.Drawing.Size(757, 282);
             this.dgvSveDvorane.TabIndex = 4;
+            this.dgvSveDvorane.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSveDvorane_CellClick);
             // 
             // lblDvorane
             // 
@@ -178,6 +181,7 @@
             this.Name = "FrmAdminDvorane";
             this.Text = "Administrator Dvorane";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAdminDvorane_FormClosed);
+            this.Load += new System.EventHandler(this.FrmAdminDvorane_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSveDvorane)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

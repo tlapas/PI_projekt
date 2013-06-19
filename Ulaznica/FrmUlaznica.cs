@@ -25,10 +25,7 @@ namespace PI_projekt.Ulaznica
         private Projekcija odabranaProjekcija = new Projekcija();
         private Film odabraniFilm = new Film();
         private int idProjekcije = 0;
-        private Popust odabraniPopust;
-        private float ukupno = 0;
-        private float popust = 0;
-        private float suma = 0;
+        private Popust popust;
         
 
         private void Osvjezi()
@@ -51,16 +48,6 @@ namespace PI_projekt.Ulaznica
             txtSuma.Clear();
         
         }
-        private void UracunajPopust()
-        {
-            ukupno = lbOdabrana.Items.Count * odabranaProjekcija.Cijena;
-            suma = ukupno - (odabraniPopust.PopustPostotak * ukupno);
-            popust = odabraniPopust.PopustPostotak * 100;
-            txtSuma.Text = ukupno.ToString();
-            txtPopust.Text = popust.ToString() + "%";
-            txtUkupno.Text = suma.ToString();
-        }
-
         private void PostaviDetalje()
         {
 
@@ -75,7 +62,6 @@ namespace PI_projekt.Ulaznica
             {
                 cbPopust.Items.Add(popust.Naziv);
             }
-            cbPopust.SelectedIndex = cbPopust.FindStringExact("Bez Popusta");
 
         }
 
@@ -169,8 +155,8 @@ namespace PI_projekt.Ulaznica
                 lbOdabrana.Items.Add(lbSlobodna.SelectedItem);
                 lbSlobodna.Items.Remove(lbSlobodna.SelectedItem);
                 //lbSlobodna.Sorted = true;
-                UracunajPopust();
-
+                txtSuma.Text = (lbOdabrana.Items.Count *odabranaProjekcija.Cijena).ToString();
+                
             }
             else
             {
@@ -186,8 +172,7 @@ namespace PI_projekt.Ulaznica
                 lbSlobodna.Items.Add(lbOdabrana.SelectedItem);
                 lbOdabrana.Items.Remove(lbOdabrana.SelectedItem);
                 //lbOdabrana.Sorted = true;
-                UracunajPopust();
-                
+                txtSuma.Text = (lbOdabrana.Items.Count * odabranaProjekcija.Cijena).ToString();
             }
             else
             {
@@ -202,7 +187,6 @@ namespace PI_projekt.Ulaznica
                 List<int> odabranaSjedala = new List<int>();
                 for (int i = 0; i < lbOdabrana.Items.Count; i++)
                 {
-                    
                     odabranaSjedala.Add(int.Parse(lbOdabrana.Items[i].ToString()));
                 }
                 Kino.IzradiUlaznicu(odabranaSjedala, odabranaProjekcija);
@@ -215,9 +199,7 @@ namespace PI_projekt.Ulaznica
 
         private void cbPopust_SelectedIndexChanged(object sender, EventArgs e)
         {
-            odabraniPopust = popusti[cbPopust.SelectedIndex];
-            UracunajPopust();
+            popust = popusti[cbPopust.SelectedIndex];
         }
-
     }
 }
