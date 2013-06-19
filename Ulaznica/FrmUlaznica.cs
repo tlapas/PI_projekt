@@ -117,7 +117,11 @@ namespace PI_projekt.Ulaznica
 
         private void cbDatum_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            odabranaMjesta = null;
+            zauzetaMjesta = null;
+            lbOdabrana.Items.Clear();
+            lbSlobodna.Items.Clear();
+
             idProjekcije = projekcije[cbDatum.SelectedIndex].IdProjekcije;
             foreach (Projekcija projekcija2 in projekcije)
             {
@@ -206,7 +210,10 @@ namespace PI_projekt.Ulaznica
                     
                     odabranaSjedala.Add(int.Parse(lbOdabrana.Items[i].ToString()));
                 }
-                Kino.IzradiUlaznicu(odabranaSjedala, odabranaProjekcija);
+                listaIdUlaznica = Kino.IzradiUlaznicu(odabranaSjedala, odabranaProjekcija);
+                Artikli.FrmArtikli formaArtikli = new Artikli.FrmArtikli(listaIdUlaznica, odabraniPopust.IdPopusta);
+                formaArtikli.Show();
+                this.Close();
             }
             else
             {

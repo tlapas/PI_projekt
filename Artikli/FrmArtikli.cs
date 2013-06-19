@@ -13,12 +13,35 @@ namespace PI_projekt.Artikli
 {
     public partial class FrmArtikli : Form
     {
+        //postavimo na null i -1 i kasnije kod kreiranja računa ukoliko su te vrijednosti i dalje iste tada nema kupljenih ulaznica
+        private List<int> listaIdUlaznica = null;
+        private Popust  odabraniPopust = null;
+
+
+
+        /// <summary>
+        /// Konstruktor za FrmArtikli ukoliko se pristupa direktno iz izbornika prodavača
+        /// </summary>
         public FrmArtikli()
         {
             InitializeComponent();
             userName.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik;
             userRole.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Uloga;
         }
+
+
+        public FrmArtikli(List<int> listaIdUlaznicaArg, int idPopustArg)
+        {
+            InitializeComponent();
+            userName.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik;
+            userRole.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Uloga;
+            listaIdUlaznica = listaIdUlaznicaArg;
+            odabraniPopust =Popust.DohvatiPopust(idPopustArg);
+        }
+
+
+
+
 
         private float CijenaUkupno = 0;
         List<Artikl> listaArtikala = Artikl.DohvatiArtikle();
@@ -40,7 +63,15 @@ namespace PI_projekt.Artikli
 
         private void Dalje_Click(object sender, EventArgs e)
         {
-
+            //Ako se na račun unose i ulaznice
+            if (listaIdUlaznica != null && odabraniPopust != null)
+            {
+                MessageBox.Show("Lista ulaznica id i id popusta"+listaIdUlaznica[0].ToString()+", "+odabraniPopust.Naziv.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Samo artikli bez karte!");
+            }
         }
 
         private void OsvjeziArtikle()
