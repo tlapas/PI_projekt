@@ -40,7 +40,6 @@ namespace PI_projekt.Sucelja
         {
             InitializeComponent();
             filmAzuriraj = Film.DohvatiFilm(odabraniFilm);
-            listaZanrova2 = Zanrovi.DohvatiZanrove(odabraniFilm);
             txtDodajFilmNaziv.Text = filmAzuriraj.Naziv.ToString();
             txtFilmoviDodajTrajanje.Text = filmAzuriraj.VrijemeTrajanja.ToString();     
         }
