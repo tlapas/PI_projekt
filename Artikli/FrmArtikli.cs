@@ -62,7 +62,7 @@ namespace PI_projekt.Artikli
         private void Dalje_Click(object sender, EventArgs e)
         {
             Zaposlenici zaposlenik = Zaposlenici.DohvatiZaposlenika(userName.Text);
-            Kino.KreirajRacun(zaposlenik.OIB, IdNacinaPlacanja, listaOdabranihArtikala, listaKolicina);
+            Kino.KreirajRacun(zaposlenik.OIB, IdNacinaPlacanja, listaOdabranihArtikala, listaKolicina, listaIdUlaznica, odabraniPopust);
             MessageBox.Show("OIB zaposlenika: " + zaposlenik.OIB.ToString());
         }
 

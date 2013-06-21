@@ -142,6 +142,11 @@ namespace PI_projekt
             return lista;
         }
 
+        public static void UnesiRacunUlaznica(int IdRacuna, int IdKarte, int Popust)
+        {
+            string sqlUpit = "INSERT INTO racun_karta VALUES (" + IdRacuna + ", " + IdKarte + ", " + Popust + ");";
+            int idRacuna = DB.Instance.IzvrsiUpitID(sqlUpit);
+        }
         
         #endregion
     }

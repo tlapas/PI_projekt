@@ -41,9 +41,21 @@ namespace PI_projekt
             return listaIdUlaznica;
         }
 
-        public static void KreirajRacun(long OIB, int idNacinaPlacanja, List<Artikl> listaArtikala, List<int> listaKolicina)
+        public static void KreirajRacun(long OIB, int idNacinaPlacanja, List<Artikl> listaArtikala, List<int> listaKolicina, List<int> listaIdUlaznica, Popust popust)
         {
-            Racun.UnesiRacun(OIB, idNacinaPlacanja);
+            int IdRacun = Racun.UnesiRacun(OIB, idNacinaPlacanja);
+            int brojElemenata = listaArtikala.Count;
+            for (int i = 0; i < brojElemenata; i++)
+            {
+                RacunArtikl.UnesiRacunArtikl(IdRacun, listaArtikala[i].IdArtikla, listaKolicina[i]);
+            }
+            if (listaIdUlaznica != null)
+            {
+                foreach (int ID in listaIdUlaznica)
+                {
+                    RacunUlaznica.UnesiRacunUlaznica(IdRacun, ID, popust.IdPopusta);
+                }
+            }
         }
     }
 }

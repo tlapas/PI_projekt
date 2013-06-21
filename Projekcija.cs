@@ -238,7 +238,7 @@ namespace PI_projekt
             DateTime sada = DateTime.Now;
             sada.AddMinutes(15);
 
-            string sqlUpit = "SELECT * FROM Projekcija WHERE datum >= '" + sada.ToString() + "' AND id_filma=" + idFilma + ";";
+            string sqlUpit = "SELECT * FROM Projekcija WHERE datum >= '" + sada.ToString("yyyy-MM-dd HH:mm:ss") + "' AND id_filma=" + idFilma + ";";
             DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
             while (dr.Read())
             {
