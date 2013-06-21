@@ -106,7 +106,7 @@
             this.dgvSveProjekcije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSveProjekcije.Location = new System.Drawing.Point(14, 98);
             this.dgvSveProjekcije.Name = "dgvSveProjekcije";
-            this.dgvSveProjekcije.Size = new System.Drawing.Size(693, 226);
+            this.dgvSveProjekcije.Size = new System.Drawing.Size(758, 226);
             this.dgvSveProjekcije.TabIndex = 23;
             this.dgvSveProjekcije.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSveProjekcije_CellClick);
             // 
@@ -163,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 373);
+            this.ClientSize = new System.Drawing.Size(784, 373);
             this.Controls.Add(this.lblSveProjekcije);
             this.Controls.Add(this.btnProjekcijeAžuriraj);
             this.Controls.Add(this.btnProjekcijeDodaj);

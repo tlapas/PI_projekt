@@ -272,15 +272,15 @@ namespace PI_projekt
         /// Unesi projekciju u bazu podataka
         /// </summary>
         /// <param name="novaProjekcija">Objekt klase projekcija sa podacima potrebnim za unos</param>
-       /// <returns>Broj zahvaćenih redova</returns>
+       /// <returns>Broj ID unešene projekcije redova</returns>
         public static int UnesiProjekciju(Projekcija novaProjekcija)
         {
             string sqlUpit = "INSERT INTO Projekcija ('broj_dvorane','id_filma','vrijeme_trajanja','broj_mjesta','prodano_ulaznica','cijena','datum') VALUES ('"
                 + novaProjekcija.BrojDvorane + "','" + novaProjekcija.IdFilma + "','" + novaProjekcija.VrijemeTrajanja + "','" + novaProjekcija.BrojMjesta
                 + "','" + novaProjekcija.ProdanoUlaznica + "','" + Kino.PretvoriCijenu(novaProjekcija.Cijena) + "','" + novaProjekcija.Datum.ToString("yyyy-MM-dd HH:mm:ss") + "');";
-              int  zahvaceno = DB.Instance.IzvrsiUpit(sqlUpit);
+              int  IDProjekcije = DB.Instance.IzvrsiUpitID(sqlUpit);
 
-            return zahvaceno;
+            return IDProjekcije;
         
         }
 
@@ -292,8 +292,8 @@ namespace PI_projekt
         public static int AzurirajProjekciju(Projekcija novaProjekcija)
         {
             string sqlUpit = "UPDATE  Projekcija SET broj_dvorane='"+novaProjekcija.BrojDvorane+"',id_filma='"+novaProjekcija.IdFilma
-                +"',vrijeme_trajanja='"+ novaProjekcija.VrijemeTrajanja+"','broj_mjesta='"+novaProjekcija.BrojMjesta
-                + "','prodano_ulaznica='" + novaProjekcija.ProdanoUlaznica + "',cijena='" + Kino.PretvoriCijenu(novaProjekcija.Cijena)
+                +"',vrijeme_trajanja='"+ novaProjekcija.VrijemeTrajanja+"',broj_mjesta='"+novaProjekcija.BrojMjesta
+                + "',prodano_ulaznica='" + novaProjekcija.ProdanoUlaznica + "',cijena='" + Kino.PretvoriCijenu(novaProjekcija.Cijena)
                 + "',datum='" + novaProjekcija.Datum.ToString("yyyy-MM-dd HH:mm:ss") + "' WHERE id_projekcije=" + novaProjekcija.IdProjekcije + ";";
           
             int zahvaceno = DB.Instance.IzvrsiUpit(sqlUpit);

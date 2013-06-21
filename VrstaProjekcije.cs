@@ -124,6 +124,19 @@ namespace PI_projekt
             return lista;
         }
 
+        public static int UnesiVrsteProjekcija(int IdProjekcije, List<int> IdVrsta)
+        {
+            int brojUmetanja = 0;
+            foreach (int vrsta in IdVrsta)
+            {
+                string sqlUpit = "INSERT INTO projekcija_vrsta ('id_projekcije','id_vrste') VALUES ('" + IdProjekcije.ToString() + "','" + vrsta.ToString() + "');";
+                brojUmetanja += DB.Instance.IzvrsiUpit(sqlUpit);
+            }
+
+            return brojUmetanja;
+
+        }
+
         
         #endregion
     }
