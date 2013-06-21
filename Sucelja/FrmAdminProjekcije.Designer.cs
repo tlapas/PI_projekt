@@ -127,6 +127,7 @@
             this.btnProjekcijeOsvjezi.TabIndex = 25;
             this.btnProjekcijeOsvjezi.Text = "Osvježi";
             this.btnProjekcijeOsvjezi.UseVisualStyleBackColor = true;
+            this.btnProjekcijeOsvjezi.Click += new System.EventHandler(this.btnProjekcijeOsvjezi_Click);
             // 
             // btnProjekcijeDodaj
             // 
@@ -175,6 +176,7 @@
             this.Name = "FrmAdminProjekcije";
             this.Text = "FrmAdminProjekcije";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAdminProjekcije_FormClosed);
+            this.Load += new System.EventHandler(this.FrmAdminProjekcije_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSveProjekcije)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

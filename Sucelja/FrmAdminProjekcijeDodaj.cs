@@ -12,6 +12,12 @@ namespace PI_projekt.Sucelja
 {
     public partial class FrmAdminProjekcijeDodaj : Form
     {
+        List<int> listaOdabraneVrste = new List<int>();
+        List<VrstaProjekcije> listaVrste = new List<VrstaProjekcije>();
+        List<Dvorana> listaDvorana = new List<Dvorana>();
+        Projekcija novaProjekcija = new Projekcija();
+        List<Film> listaFilmova = new List<Film>();
+
         public FrmAdminProjekcijeDodaj()
         {
             InitializeComponent();
@@ -68,6 +74,105 @@ namespace PI_projekt.Sucelja
             FrmAdminProjekcije adminProjekcije = new FrmAdminProjekcije();
             adminProjekcije.Show();
             this.Close();
+        }
+
+        private void FrmAdminProjekcijeDodaj_Load(object sender, EventArgs e)
+        {
+            
+            listaVrste = VrstaProjekcije.DohvatiSveVrste();
+
+            foreach (VrstaProjekcije vrste in listaVrste) 
+            {
+                lbVrsteProjekcija.Items.Add(vrste);
+            }
+
+            listaDvorana = Dvorana.DohvatiDvorane();
+            foreach (Dvorana dvorana in listaDvorana) 
+            {
+                cbBrojDvorana.Items.Add(dvorana.Naziv);
+            }
+
+            listaFilmova = Film.DohvatiFilmove();
+
+            foreach (Film filmovi in listaFilmova) 
+            {
+                cbNazivFilma.Items.Add(filmovi.Naziv);
+            } 
+
+       }
+        /// <summary>
+        /// Dodaje vrste projekcija za određeni film
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void lblDodaj_Click(object sender, EventArgs e)
+        {
+            if (lbVrsteProjekcija.SelectedItem != null)
+            {
+                lbOdabrane.Items.Add(lbVrsteProjekcija.SelectedItem);
+                lbVrsteProjekcija.Items.Remove(lbVrsteProjekcija.SelectedItem);
+
+            }
+
+            else 
+            {
+                MessageBox.Show("Odaberite vrstu projekcije!");
+            } 
+        }
+        /// <summary>
+        /// Uklanja vrste porjekcija za određeni film
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void lblUkloni_Click(object sender, EventArgs e)
+        {
+            if (lbOdabrane.SelectedItem != null)
+            {
+                lbVrsteProjekcija.Items.Add(lbOdabrane.SelectedItem);
+                lbOdabrane.Items.Remove(lbOdabrane.SelectedItem);
+
+            }
+
+            else
+            {
+                MessageBox.Show("Odaberite vrstu projekcije!");
+            } 
+        }
+
+        private void btnFilmoviDodajSpremi_Click(object sender, EventArgs e)
+        {
+            
+            
+            try
+            {
+                novaProjekcija.BrojDvorane = listaDvorana[cbBrojDvorana.SelectedIndex].BrojDvorane;
+                novaProjekcija.IdFilma = listaFilmova[cbNazivFilma.SelectedIndex].IdFilma;
+                novaProjekcija.VrijemeTrajanja = int.Parse(txtProjekcijeDodajTrajanje.Text.ToString());
+                novaProjekcija.Cijena = float.Parse(txtProjekcijeDodajCijena.Text.ToString());
+                novaProjekcija.Datum = DateTime.Parse(dtDatum.Text.ToString());
+                novaProjekcija.BrojMjesta = listaDvorana[cbBrojDvorana.SelectedIndex].BrojSjedala;
+
+                if (listaOdabraneVrste != null)
+                {
+                    VrstaProjekcije pomocnaVrsta = new VrstaProjekcije();
+                    for (int i = 0; i < lbOdabrane.Items.Count; i++)
+                    {
+                        //pomocnaVrsta = lbOdabrane.Items.ToString();
+                        // MessageBox.Show(lbOdabrane.Items[i].IdVrste.ToString());
+                        //listaOdabraneVrste.Add ();
+
+                    }
+                }
+                else 
+                {
+                    MessageBox.Show("Odaberite vrstu projekcije!");
+                }
+            }
+
+            catch 
+            {
+                MessageBox.Show("Pogrešno uneseni podaci!");
+            }
         }
     }
 }

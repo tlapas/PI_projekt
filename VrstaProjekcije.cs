@@ -106,7 +106,23 @@ namespace PI_projekt
             dr.Close();     //Zatvaranje DataReader objekta.
             return lista;
         }
-
+        /// <summary>
+        /// Dohvaća listu svih projekcija
+        /// </summary>
+        /// <returns></returns>
+        public static List<VrstaProjekcije> DohvatiSveVrste()
+        {
+            List<VrstaProjekcije> lista = new List<VrstaProjekcije>();
+            string sqlUpit = "SELECT * FROM Vrsta_projekcije";
+            DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
+            while (dr.Read())
+            {
+                VrstaProjekcije vrstaProjekcije = new VrstaProjekcije(dr);
+                lista.Add(vrstaProjekcije);
+            }
+            dr.Close();     //Zatvaranje DataReader objekta.
+            return lista;
+        }
 
         
         #endregion

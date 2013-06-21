@@ -69,7 +69,7 @@ namespace PI_projekt
             {
                 return id_projekcije;
             }
-            private set
+            set
             {
                 if (id_projekcije != value)
                 {
@@ -87,7 +87,7 @@ namespace PI_projekt
             {
                 return id_filma;
             }
-            private set
+            set
             {
                 if (id_filma != value)
                 {
@@ -105,7 +105,7 @@ namespace PI_projekt
             {
                 return vrijeme_trajanja;
             }
-            private set
+            set
             {
                 if (vrijeme_trajanja != value)
                 {
@@ -120,7 +120,7 @@ namespace PI_projekt
             {
                 return broj_dvorane;
             }
-            private set
+             set
             {
                 if (broj_dvorane != value)
                 {
@@ -134,7 +134,7 @@ namespace PI_projekt
             {
                 return broj_mjesta;
             }
-            private set
+            set
             {
                 if (broj_mjesta != value)
                 {
@@ -148,7 +148,7 @@ namespace PI_projekt
             {
                 return prodano_ulaznica;
             }
-            private set
+             set
             {
                 if (prodano_ulaznica != value)
                 {
@@ -162,7 +162,7 @@ namespace PI_projekt
             {
                 return cijena;
             }
-            private set
+            set
             {
                 if (cijena != value)
                 {
@@ -176,7 +176,7 @@ namespace PI_projekt
             {
                 return datum;
             }
-            private set
+             set
             {
                 if (datum != value)
                 {
@@ -247,6 +247,26 @@ namespace PI_projekt
             }
             dr.Close();     //Zatvaranje DataReader objekta.
             return lista;
+        }
+
+        /// <summary>
+        /// Dohvaća jednu projekciju
+        /// </summary>
+        /// <param name="idFilma">Id Projekcije</param>
+        /// <returns>Dohvati jednu projekciju</returns>
+        public static Projekcija DohvatiProjekciju(int idProjekcije)
+        {
+            Projekcija projekcija= new Projekcija();
+
+            string sqlUpit = "SELECT * FROM Projekcija WHERE id_projekcije=" + idProjekcije + ";";
+            DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
+            while (dr.Read())
+            {
+                projekcija = new Projekcija(dr);
+                
+            }
+            dr.Close();     //Zatvaranje DataReader objekta.
+            return projekcija;
         }
         /// <summary>
         /// Unesi projekciju u bazu podataka

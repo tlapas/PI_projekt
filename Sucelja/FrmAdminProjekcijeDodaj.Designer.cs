@@ -30,7 +30,6 @@
         {
             this.lblProjekcijeDodajTrajanjeMin = new System.Windows.Forms.Label();
             this.txtProjekcijeDodajTrajanje = new System.Windows.Forms.TextBox();
-            this.txtProjekcijeDodajIdDvorane = new System.Windows.Forms.TextBox();
             this.lblProjekcijeDodajTrajanje = new System.Windows.Forms.Label();
             this.lblProjekcijeDodajIdDvorane = new System.Windows.Forms.Label();
             this.btnFilmoviDodajOdustani = new System.Windows.Forms.Button();
@@ -40,12 +39,19 @@
             this.uloga = new System.Windows.Forms.Label();
             this.userName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtProjekcijeDodajIdFilma = new System.Windows.Forms.TextBox();
-            this.lblProjekcijeDodajIdFilma = new System.Windows.Forms.Label();
+            this.lblNazivFilma = new System.Windows.Forms.Label();
             this.txtProjekcijeDodajCijena = new System.Windows.Forms.TextBox();
             this.lblProjekcijeDodajCijena = new System.Windows.Forms.Label();
-            this.txtProjekcijeDodajDatum = new System.Windows.Forms.TextBox();
             this.lblProjekcijeDodajDatum = new System.Windows.Forms.Label();
+            this.cbBrojDvorana = new System.Windows.Forms.ComboBox();
+            this.cbNazivFilma = new System.Windows.Forms.ComboBox();
+            this.lbVrsteProjekcija = new System.Windows.Forms.ListBox();
+            this.lbOdabrane = new System.Windows.Forms.ListBox();
+            this.lblDodaj = new System.Windows.Forms.Button();
+            this.lblUkloni = new System.Windows.Forms.Button();
+            this.lblVrsteProjekcija = new System.Windows.Forms.Label();
+            this.lblOdabrane = new System.Windows.Forms.Label();
+            this.dtDatum = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lblProjekcijeDodajTrajanjeMin
@@ -63,13 +69,6 @@
             this.txtProjekcijeDodajTrajanje.Name = "txtProjekcijeDodajTrajanje";
             this.txtProjekcijeDodajTrajanje.Size = new System.Drawing.Size(100, 20);
             this.txtProjekcijeDodajTrajanje.TabIndex = 46;
-            // 
-            // txtProjekcijeDodajIdDvorane
-            // 
-            this.txtProjekcijeDodajIdDvorane.Location = new System.Drawing.Point(92, 66);
-            this.txtProjekcijeDodajIdDvorane.Name = "txtProjekcijeDodajIdDvorane";
-            this.txtProjekcijeDodajIdDvorane.Size = new System.Drawing.Size(100, 20);
-            this.txtProjekcijeDodajIdDvorane.TabIndex = 45;
             // 
             // lblProjekcijeDodajTrajanje
             // 
@@ -107,6 +106,7 @@
             this.btnFilmoviDodajSpremi.TabIndex = 41;
             this.btnFilmoviDodajSpremi.Text = "Spremi";
             this.btnFilmoviDodajSpremi.UseVisualStyleBackColor = true;
+            this.btnFilmoviDodajSpremi.Click += new System.EventHandler(this.btnFilmoviDodajSpremi_Click);
             // 
             // Odjava
             // 
@@ -170,21 +170,14 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "Prijavljeni ste kao:";
             // 
-            // txtProjekcijeDodajIdFilma
+            // lblNazivFilma
             // 
-            this.txtProjekcijeDodajIdFilma.Location = new System.Drawing.Point(92, 92);
-            this.txtProjekcijeDodajIdFilma.Name = "txtProjekcijeDodajIdFilma";
-            this.txtProjekcijeDodajIdFilma.Size = new System.Drawing.Size(100, 20);
-            this.txtProjekcijeDodajIdFilma.TabIndex = 49;
-            // 
-            // lblProjekcijeDodajIdFilma
-            // 
-            this.lblProjekcijeDodajIdFilma.AutoSize = true;
-            this.lblProjekcijeDodajIdFilma.Location = new System.Drawing.Point(8, 95);
-            this.lblProjekcijeDodajIdFilma.Name = "lblProjekcijeDodajIdFilma";
-            this.lblProjekcijeDodajIdFilma.Size = new System.Drawing.Size(46, 13);
-            this.lblProjekcijeDodajIdFilma.TabIndex = 48;
-            this.lblProjekcijeDodajIdFilma.Text = "Id Filma:";
+            this.lblNazivFilma.AutoSize = true;
+            this.lblNazivFilma.Location = new System.Drawing.Point(8, 95);
+            this.lblNazivFilma.Name = "lblNazivFilma";
+            this.lblNazivFilma.Size = new System.Drawing.Size(61, 13);
+            this.lblNazivFilma.TabIndex = 48;
+            this.lblNazivFilma.Text = "Naziv filma:";
             // 
             // txtProjekcijeDodajCijena
             // 
@@ -202,13 +195,6 @@
             this.lblProjekcijeDodajCijena.TabIndex = 50;
             this.lblProjekcijeDodajCijena.Text = "Cijena ulaznice:";
             // 
-            // txtProjekcijeDodajDatum
-            // 
-            this.txtProjekcijeDodajDatum.Location = new System.Drawing.Point(92, 172);
-            this.txtProjekcijeDodajDatum.Name = "txtProjekcijeDodajDatum";
-            this.txtProjekcijeDodajDatum.Size = new System.Drawing.Size(100, 20);
-            this.txtProjekcijeDodajDatum.TabIndex = 53;
-            // 
             // lblProjekcijeDodajDatum
             // 
             this.lblProjekcijeDodajDatum.AutoSize = true;
@@ -218,20 +204,110 @@
             this.lblProjekcijeDodajDatum.TabIndex = 52;
             this.lblProjekcijeDodajDatum.Text = "Datum:";
             // 
+            // cbBrojDvorana
+            // 
+            this.cbBrojDvorana.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBrojDvorana.FormattingEnabled = true;
+            this.cbBrojDvorana.Location = new System.Drawing.Point(101, 69);
+            this.cbBrojDvorana.Name = "cbBrojDvorana";
+            this.cbBrojDvorana.Size = new System.Drawing.Size(121, 21);
+            this.cbBrojDvorana.TabIndex = 54;
+            // 
+            // cbNazivFilma
+            // 
+            this.cbNazivFilma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNazivFilma.FormattingEnabled = true;
+            this.cbNazivFilma.Location = new System.Drawing.Point(101, 95);
+            this.cbNazivFilma.Name = "cbNazivFilma";
+            this.cbNazivFilma.Size = new System.Drawing.Size(121, 21);
+            this.cbNazivFilma.TabIndex = 55;
+            // 
+            // lbVrsteProjekcija
+            // 
+            this.lbVrsteProjekcija.DisplayMember = "Naziv";
+            this.lbVrsteProjekcija.FormattingEnabled = true;
+            this.lbVrsteProjekcija.Location = new System.Drawing.Point(318, 69);
+            this.lbVrsteProjekcija.Name = "lbVrsteProjekcija";
+            this.lbVrsteProjekcija.Size = new System.Drawing.Size(172, 95);
+            this.lbVrsteProjekcija.TabIndex = 56;
+            // 
+            // lbOdabrane
+            // 
+            this.lbOdabrane.DisplayMember = "Naziv";
+            this.lbOdabrane.FormattingEnabled = true;
+            this.lbOdabrane.Location = new System.Drawing.Point(607, 71);
+            this.lbOdabrane.Name = "lbOdabrane";
+            this.lbOdabrane.Size = new System.Drawing.Size(158, 95);
+            this.lbOdabrane.TabIndex = 57;
+            // 
+            // lblDodaj
+            // 
+            this.lblDodaj.Location = new System.Drawing.Point(509, 69);
+            this.lblDodaj.Name = "lblDodaj";
+            this.lblDodaj.Size = new System.Drawing.Size(75, 37);
+            this.lblDodaj.TabIndex = 58;
+            this.lblDodaj.Text = "Dodaj";
+            this.lblDodaj.UseVisualStyleBackColor = true;
+            this.lblDodaj.Click += new System.EventHandler(this.lblDodaj_Click);
+            // 
+            // lblUkloni
+            // 
+            this.lblUkloni.Location = new System.Drawing.Point(509, 123);
+            this.lblUkloni.Name = "lblUkloni";
+            this.lblUkloni.Size = new System.Drawing.Size(75, 39);
+            this.lblUkloni.TabIndex = 59;
+            this.lblUkloni.Text = "Ukloni";
+            this.lblUkloni.UseVisualStyleBackColor = true;
+            this.lblUkloni.Click += new System.EventHandler(this.lblUkloni_Click);
+            // 
+            // lblVrsteProjekcija
+            // 
+            this.lblVrsteProjekcija.AutoSize = true;
+            this.lblVrsteProjekcija.Location = new System.Drawing.Point(331, 34);
+            this.lblVrsteProjekcija.Name = "lblVrsteProjekcija";
+            this.lblVrsteProjekcija.Size = new System.Drawing.Size(79, 13);
+            this.lblVrsteProjekcija.TabIndex = 61;
+            this.lblVrsteProjekcija.Text = "Vrste projekcija";
+            // 
+            // lblOdabrane
+            // 
+            this.lblOdabrane.AutoSize = true;
+            this.lblOdabrane.Location = new System.Drawing.Point(639, 34);
+            this.lblOdabrane.Name = "lblOdabrane";
+            this.lblOdabrane.Size = new System.Drawing.Size(54, 13);
+            this.lblOdabrane.TabIndex = 62;
+            this.lblOdabrane.Text = "Odabrane";
+            // 
+            // dtDatum
+            // 
+            this.dtDatum.CustomFormat = "dd.MM.yyyy HH:mm:ss";
+            this.dtDatum.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDatum.Location = new System.Drawing.Point(92, 167);
+            this.dtDatum.Name = "dtDatum";
+            this.dtDatum.ShowUpDown = true;
+            this.dtDatum.Size = new System.Drawing.Size(200, 20);
+            this.dtDatum.TabIndex = 63;
+            // 
             // FrmAdminProjekcijeDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(287, 249);
-            this.Controls.Add(this.txtProjekcijeDodajDatum);
+            this.ClientSize = new System.Drawing.Size(787, 367);
+            this.Controls.Add(this.dtDatum);
+            this.Controls.Add(this.lblOdabrane);
+            this.Controls.Add(this.lblVrsteProjekcija);
+            this.Controls.Add(this.lblUkloni);
+            this.Controls.Add(this.lblDodaj);
+            this.Controls.Add(this.lbOdabrane);
+            this.Controls.Add(this.lbVrsteProjekcija);
+            this.Controls.Add(this.cbNazivFilma);
+            this.Controls.Add(this.cbBrojDvorana);
             this.Controls.Add(this.lblProjekcijeDodajDatum);
             this.Controls.Add(this.txtProjekcijeDodajCijena);
             this.Controls.Add(this.lblProjekcijeDodajCijena);
-            this.Controls.Add(this.txtProjekcijeDodajIdFilma);
-            this.Controls.Add(this.lblProjekcijeDodajIdFilma);
+            this.Controls.Add(this.lblNazivFilma);
             this.Controls.Add(this.lblProjekcijeDodajTrajanjeMin);
             this.Controls.Add(this.txtProjekcijeDodajTrajanje);
-            this.Controls.Add(this.txtProjekcijeDodajIdDvorane);
             this.Controls.Add(this.lblProjekcijeDodajTrajanje);
             this.Controls.Add(this.lblProjekcijeDodajIdDvorane);
             this.Controls.Add(this.btnFilmoviDodajOdustani);
@@ -244,6 +320,7 @@
             this.Name = "FrmAdminProjekcijeDodaj";
             this.Text = "Admin Dodaj Projekciju";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAdminProjekcijeDodaj_FormClosed);
+            this.Load += new System.EventHandler(this.FrmAdminProjekcijeDodaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,7 +330,6 @@
 
         private System.Windows.Forms.Label lblProjekcijeDodajTrajanjeMin;
         private System.Windows.Forms.TextBox txtProjekcijeDodajTrajanje;
-        private System.Windows.Forms.TextBox txtProjekcijeDodajIdDvorane;
         private System.Windows.Forms.Label lblProjekcijeDodajTrajanje;
         private System.Windows.Forms.Label lblProjekcijeDodajIdDvorane;
         private System.Windows.Forms.Button btnFilmoviDodajOdustani;
@@ -263,11 +339,18 @@
         private System.Windows.Forms.Label uloga;
         private System.Windows.Forms.Label userName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtProjekcijeDodajIdFilma;
-        private System.Windows.Forms.Label lblProjekcijeDodajIdFilma;
+        private System.Windows.Forms.Label lblNazivFilma;
         private System.Windows.Forms.TextBox txtProjekcijeDodajCijena;
         private System.Windows.Forms.Label lblProjekcijeDodajCijena;
-        private System.Windows.Forms.TextBox txtProjekcijeDodajDatum;
         private System.Windows.Forms.Label lblProjekcijeDodajDatum;
+        private System.Windows.Forms.ComboBox cbBrojDvorana;
+        private System.Windows.Forms.ComboBox cbNazivFilma;
+        private System.Windows.Forms.ListBox lbVrsteProjekcija;
+        private System.Windows.Forms.ListBox lbOdabrane;
+        private System.Windows.Forms.Button lblDodaj;
+        private System.Windows.Forms.Button lblUkloni;
+        private System.Windows.Forms.Label lblVrsteProjekcija;
+        private System.Windows.Forms.Label lblOdabrane;
+        private System.Windows.Forms.DateTimePicker dtDatum;
     }
 }

@@ -12,7 +12,18 @@ namespace PI_projekt.Sucelja
 {
     public partial class FrmAdminProjekcije : Form
     {
+        /// <summary>
+        /// Prikazuje sve projekcije u dgvProjeckije
+        /// </summary>
+        private void OsvjeziProjeckije()
+        {
+            List<Projekcija> listaProjekcija = Projekcija.DohvatiProjekcije();
+            dgvSveProjekcije.DataSource = listaProjekcija;
+        }
+
+
         public FrmAdminProjekcije()
+
         {
             InitializeComponent();
             userName.Text = FrmPocetna.SpremnikPodataka.Zaposlenik;
@@ -77,6 +88,16 @@ namespace PI_projekt.Sucelja
                 admin.Show();
             }
 
+        }
+
+        private void btnProjekcijeOsvjezi_Click(object sender, EventArgs e)
+        {
+            OsvjeziProjeckije();
+        }
+
+        private void FrmAdminProjekcije_Load(object sender, EventArgs e)
+        {
+            OsvjeziProjeckije();
         }
     }
 }
