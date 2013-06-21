@@ -21,11 +21,13 @@ namespace PI_projekt.Sucelja
 
        private void Prijava_Click(object sender, EventArgs e)
         {
+            bool kor_ime = false;
             List<Zaposlenici> listaKorisnika = Zaposlenici.DohvatiZaposlenike();
             for (int i = 0; i < 4; i++)
             {
                 if (KorIme.Text == listaKorisnika[i].KorIme)
                 {
+                    kor_ime = true;
                     SpremnikPodataka.Zaposlenik = KorIme.Text;
                     if (Pass.Text == listaKorisnika[i].Lozinka)
                     {
@@ -44,9 +46,43 @@ namespace PI_projekt.Sucelja
                             this.Hide();
                         }
                     }
+                    else
+                    {
+                        string message_2 = "Unijeli ste neispravnu lozinku.";
+                        string caption_2 = "Greška!";
+                        DialogResult result_2;
+
+                        // Displays the MessageBox.
+                        result_2 = MessageBox.Show(this, message_2, caption_2);
+                    }
                 }
             }
+            if (!kor_ime)
+            {
+                string message_1 = "Unijeli ste nepostojeće korisničko ime.";
+                string caption_1 = "Greška!";
+                DialogResult result_1;
+
+                // Displays the MessageBox.
+                result_1 = MessageBox.Show(this, message_1, caption_1);
+            }
         }
+
+       private void KorIme_KeyDown(object sender, KeyEventArgs e)
+       {
+           if (e.KeyCode == Keys.Enter)
+           {
+               Prijava_Click(sender, e);
+           }
+       }
+
+       private void Pass_KeyDown(object sender, KeyEventArgs e)
+       {
+           if (e.KeyCode == Keys.Enter)
+           {
+               Prijava_Click(sender, e);
+           }
+       }
 
         public static class SpremnikPodataka
         {
@@ -94,6 +130,6 @@ namespace PI_projekt.Sucelja
             if (!pomOdjava) {
                 Application.Exit();
             }
-        }        
+        }
     }
 }
