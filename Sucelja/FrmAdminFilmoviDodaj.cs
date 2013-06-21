@@ -15,8 +15,13 @@ namespace PI_projekt.Sucelja
         private bool pomOdjava = false;
         private Film filmAzuriraj = null;
 
-
-
+        /// <summary>
+        /// Lista koja prikazuje moguće žanrove i lista koja pokazuje koji su od ponuđenih
+        /// žanrova odabrani
+        /// </summary>
+        List<Zanrovi> listaZanrova = new List<Zanrovi>();
+        List<int> listaOdabranih = new List<int>();
+        
         /// <summary>
         /// Konstruktor koji se poziva u slučaju dodavanja novog filma
         /// </summary>
@@ -47,8 +52,17 @@ namespace PI_projekt.Sucelja
         /// <param name="e"></param>
         private void FrmAdminFilmDodaj_Load(object sender, EventArgs e)
         {
+            listaZanrova = Zanrovi.DohvatiZanrove();
+            
+            foreach (Zanrovi zanr in listaZanrova)
+            {
+                lbFilmoviDodajZanrovi.Items.Add(zanr);
+            }
+
+            if(filmAzuriraj != null) {
             txtDodajFilmNaziv.Text = filmAzuriraj.Naziv.ToString();
             txtFilmoviDodajTrajanje.Text = filmAzuriraj.VrijemeTrajanja.ToString();
+            }
         }
 
         /// <summary>
@@ -86,6 +100,41 @@ namespace PI_projekt.Sucelja
         }
 
         /// <summary>
+        /// Dodaje žanr za film koji se unosi
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnFilmoviDodajDodajLb_Click(object sender, EventArgs e)
+        {
+            if (lbFilmoviDodajZanrovi.SelectedItem != null)
+            {
+                lbFilmoviDodajZanroviOdabrani.Items.Add(lbFilmoviDodajZanrovi.SelectedItem);
+                lbFilmoviDodajZanrovi.Items.Remove(lbFilmoviDodajZanrovi.SelectedItem);
+            }
+            else
+            {
+                MessageBox.Show("Odaberite Žanr!");
+            }
+        }
+        /// <summary>
+        /// Uklanja žanr za film koji se unosi
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnFilmoviDodajOdustaniLb_Click(object sender, EventArgs e)
+        {
+            if (lbFilmoviDodajZanroviOdabrani != null)
+            {
+                lbFilmoviDodajZanrovi.Items.Add(lbFilmoviDodajZanroviOdabrani.SelectedItem);
+                lbFilmoviDodajZanroviOdabrani.Items.Remove(lbFilmoviDodajZanroviOdabrani.SelectedItem);
+            }
+            else
+            {
+                MessageBox.Show("Odaberite Žanr!");
+            }
+        } 
+
+        /// <summary>
         /// Odustajanje od dodavanja novog artikla prilikom klika na tipku odustani
         /// </summary>
         /// <param name="sender"></param>
@@ -109,7 +158,18 @@ namespace PI_projekt.Sucelja
             Film noviFilm = new Film();
             try
             {
-                noviFilm.Naziv = txtDodajFilmNaziv.Text.ToString();
+                //Prolazimo kroz svaku odabranu vrstu projekcije iz lbOdabrane i 
+                //spremamo u pomoćnu listu listaOdabraneVrste listu ID-a svih odabranih vrsta projekcija 
+                foreach (Zanrovi zanr in lbFilmoviDodajZanroviOdabrani.Items)
+                {
+                    listaOdabranih.Add(zanr.IdZanra);
+                }
+        
+
+                //ako je korisnik odabrao vrste projekcije nastavljamo sa unosom projekcije u bazu podataka
+                if (listaOdabranih != null)                   
+                {
+                     noviFilm.Naziv = txtDodajFilmNaziv.Text.ToString();
                 noviFilm.VrijemeTrajanja = int.Parse(txtFilmoviDodajTrajanje.Text.ToString());
                 if (filmAzuriraj != null)
                 {
@@ -123,6 +183,12 @@ namespace PI_projekt.Sucelja
                 FrmAdminFilmovi adminFilmovi = new FrmAdminFilmovi();
                 adminFilmovi.Show();
                 this.Close();
+
+                } 
+                else //ako korisnik nije unio vrste projekcije ispisuje se poruka o pogrešci
+                {
+                    MessageBox.Show("Odaberite žanr!");
+                }
             }
             catch {
                 MessageBox.Show("Pogrešan unos podataka!");
@@ -174,6 +240,6 @@ namespace PI_projekt.Sucelja
                 FrmAdminFilmovi adminFilmovi = new FrmAdminFilmovi();
                 adminFilmovi.Show();
             }
-        }            
+        }    
     }
 }

@@ -40,6 +40,12 @@
             this.txtDodajFilmNaziv = new System.Windows.Forms.TextBox();
             this.txtFilmoviDodajTrajanje = new System.Windows.Forms.TextBox();
             this.lblFilmoviDodajTrajanjeMin = new System.Windows.Forms.Label();
+            this.lblDilmoviDodajZanrovi = new System.Windows.Forms.Label();
+            this.lblFilmoviDodajZanroviOdabrani = new System.Windows.Forms.Label();
+            this.lbFilmoviDodajZanrovi = new System.Windows.Forms.ListBox();
+            this.lbFilmoviDodajZanroviOdabrani = new System.Windows.Forms.ListBox();
+            this.btnFilmoviDodajDodajLb = new System.Windows.Forms.Button();
+            this.btnFilmoviDodajOdustaniLb = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Odjava
@@ -49,7 +55,7 @@
             this.Odjava.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Odjava.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Odjava.LinkColor = System.Drawing.Color.Yellow;
-            this.Odjava.Location = new System.Drawing.Point(293, 9);
+            this.Odjava.Location = new System.Drawing.Point(374, 9);
             this.Odjava.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Odjava.Name = "Odjava";
             this.Odjava.Size = new System.Drawing.Size(39, 13);
@@ -106,7 +112,7 @@
             // 
             // btnFilmoviDodajSpremi
             // 
-            this.btnFilmoviDodajSpremi.Location = new System.Drawing.Point(154, 155);
+            this.btnFilmoviDodajSpremi.Location = new System.Drawing.Point(15, 284);
             this.btnFilmoviDodajSpremi.Name = "btnFilmoviDodajSpremi";
             this.btnFilmoviDodajSpremi.Size = new System.Drawing.Size(75, 23);
             this.btnFilmoviDodajSpremi.TabIndex = 29;
@@ -116,7 +122,7 @@
             // 
             // btnFilmoviDodajOdustani
             // 
-            this.btnFilmoviDodajOdustani.Location = new System.Drawing.Point(254, 155);
+            this.btnFilmoviDodajOdustani.Location = new System.Drawing.Point(115, 284);
             this.btnFilmoviDodajOdustani.Name = "btnFilmoviDodajOdustani";
             this.btnFilmoviDodajOdustani.Size = new System.Drawing.Size(75, 23);
             this.btnFilmoviDodajOdustani.TabIndex = 30;
@@ -165,11 +171,74 @@
             this.lblFilmoviDodajTrajanjeMin.TabIndex = 35;
             this.lblFilmoviDodajTrajanjeMin.Text = "minuta";
             // 
+            // lblDilmoviDodajZanrovi
+            // 
+            this.lblDilmoviDodajZanrovi.AutoSize = true;
+            this.lblDilmoviDodajZanrovi.Location = new System.Drawing.Point(13, 145);
+            this.lblDilmoviDodajZanrovi.Name = "lblDilmoviDodajZanrovi";
+            this.lblDilmoviDodajZanrovi.Size = new System.Drawing.Size(73, 13);
+            this.lblDilmoviDodajZanrovi.TabIndex = 36;
+            this.lblDilmoviDodajZanrovi.Text = "Lista žanrova:";
+            // 
+            // lblFilmoviDodajZanroviOdabrani
+            // 
+            this.lblFilmoviDodajZanroviOdabrani.AutoSize = true;
+            this.lblFilmoviDodajZanroviOdabrani.Location = new System.Drawing.Point(290, 145);
+            this.lblFilmoviDodajZanroviOdabrani.Name = "lblFilmoviDodajZanroviOdabrani";
+            this.lblFilmoviDodajZanroviOdabrani.Size = new System.Drawing.Size(90, 13);
+            this.lblFilmoviDodajZanroviOdabrani.TabIndex = 37;
+            this.lblFilmoviDodajZanroviOdabrani.Text = "Odabrani žanrovi:";
+            // 
+            // lbFilmoviDodajZanrovi
+            // 
+            this.lbFilmoviDodajZanrovi.DisplayMember = "Naziv";
+            this.lbFilmoviDodajZanrovi.FormattingEnabled = true;
+            this.lbFilmoviDodajZanrovi.Location = new System.Drawing.Point(12, 170);
+            this.lbFilmoviDodajZanrovi.Name = "lbFilmoviDodajZanrovi";
+            this.lbFilmoviDodajZanrovi.Size = new System.Drawing.Size(120, 95);
+            this.lbFilmoviDodajZanrovi.TabIndex = 38;
+            this.lbFilmoviDodajZanrovi.ValueMember = "idZanra";
+            // 
+            // lbFilmoviDodajZanroviOdabrani
+            // 
+            this.lbFilmoviDodajZanroviOdabrani.DisplayMember = "Naziv";
+            this.lbFilmoviDodajZanroviOdabrani.FormattingEnabled = true;
+            this.lbFilmoviDodajZanroviOdabrani.Location = new System.Drawing.Point(293, 170);
+            this.lbFilmoviDodajZanroviOdabrani.Name = "lbFilmoviDodajZanroviOdabrani";
+            this.lbFilmoviDodajZanroviOdabrani.Size = new System.Drawing.Size(120, 95);
+            this.lbFilmoviDodajZanroviOdabrani.TabIndex = 39;
+            // 
+            // btnFilmoviDodajDodajLb
+            // 
+            this.btnFilmoviDodajDodajLb.Location = new System.Drawing.Point(177, 186);
+            this.btnFilmoviDodajDodajLb.Name = "btnFilmoviDodajDodajLb";
+            this.btnFilmoviDodajDodajLb.Size = new System.Drawing.Size(75, 23);
+            this.btnFilmoviDodajDodajLb.TabIndex = 40;
+            this.btnFilmoviDodajDodajLb.Text = "Dodaj";
+            this.btnFilmoviDodajDodajLb.UseVisualStyleBackColor = true;
+            this.btnFilmoviDodajDodajLb.Click += new System.EventHandler(this.btnFilmoviDodajDodajLb_Click);
+            // 
+            // btnFilmoviDodajOdustaniLb
+            // 
+            this.btnFilmoviDodajOdustaniLb.Location = new System.Drawing.Point(177, 227);
+            this.btnFilmoviDodajOdustaniLb.Name = "btnFilmoviDodajOdustaniLb";
+            this.btnFilmoviDodajOdustaniLb.Size = new System.Drawing.Size(75, 23);
+            this.btnFilmoviDodajOdustaniLb.TabIndex = 41;
+            this.btnFilmoviDodajOdustaniLb.Text = "Odustani";
+            this.btnFilmoviDodajOdustaniLb.UseVisualStyleBackColor = true;
+            this.btnFilmoviDodajOdustaniLb.Click += new System.EventHandler(this.btnFilmoviDodajOdustaniLb_Click);
+            // 
             // FrmAdminFilmoviDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 191);
+            this.ClientSize = new System.Drawing.Size(424, 312);
+            this.Controls.Add(this.btnFilmoviDodajOdustaniLb);
+            this.Controls.Add(this.btnFilmoviDodajDodajLb);
+            this.Controls.Add(this.lbFilmoviDodajZanroviOdabrani);
+            this.Controls.Add(this.lbFilmoviDodajZanrovi);
+            this.Controls.Add(this.lblFilmoviDodajZanroviOdabrani);
+            this.Controls.Add(this.lblDilmoviDodajZanrovi);
             this.Controls.Add(this.lblFilmoviDodajTrajanjeMin);
             this.Controls.Add(this.txtFilmoviDodajTrajanje);
             this.Controls.Add(this.txtDodajFilmNaziv);
@@ -186,6 +255,7 @@
             this.Name = "FrmAdminFilmoviDodaj";
             this.Text = "Admin Dodaj Film";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAdminFilmoviDodaj_FormClosed);
+            this.Load += new System.EventHandler(this.FrmAdminFilmDodaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +275,11 @@
         private System.Windows.Forms.TextBox txtDodajFilmNaziv;
         private System.Windows.Forms.TextBox txtFilmoviDodajTrajanje;
         private System.Windows.Forms.Label lblFilmoviDodajTrajanjeMin;
+        private System.Windows.Forms.Label lblDilmoviDodajZanrovi;
+        private System.Windows.Forms.Label lblFilmoviDodajZanroviOdabrani;
+        private System.Windows.Forms.ListBox lbFilmoviDodajZanrovi;
+        private System.Windows.Forms.ListBox lbFilmoviDodajZanroviOdabrani;
+        private System.Windows.Forms.Button btnFilmoviDodajDodajLb;
+        private System.Windows.Forms.Button btnFilmoviDodajOdustaniLb;
     }
 }
