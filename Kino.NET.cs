@@ -44,10 +44,13 @@ namespace PI_projekt
         public static void KreirajRacun(long OIB, int idNacinaPlacanja, List<Artikl> listaArtikala, List<int> listaKolicina, List<int> listaIdUlaznica, Popust popust)
         {
             int IdRacun = Racun.UnesiRacun(OIB, idNacinaPlacanja);
-            int brojElemenata = listaArtikala.Count;
-            for (int i = 0; i < brojElemenata; i++)
+            if (listaArtikala != null)
             {
-                RacunArtikl.UnesiRacunArtikl(IdRacun, listaArtikala[i].IdArtikla, listaKolicina[i]);
+                int brojElemenata = listaArtikala.Count;
+                for (int i = 0; i < brojElemenata; i++)
+                {
+                    RacunArtikl.UnesiRacunArtikl(IdRacun, listaArtikala[i].IdArtikla, listaKolicina[i]);
+                }
             }
             if (listaIdUlaznica != null)
             {
