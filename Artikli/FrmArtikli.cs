@@ -62,20 +62,8 @@ namespace PI_projekt.Artikli
         private void Dalje_Click(object sender, EventArgs e)
         {
             Zaposlenici zaposlenik = Zaposlenici.DohvatiZaposlenika(userName.Text);
-            if (listaIdUlaznica == null && listaOdabranihArtikala.Count == 0)
-            {
-                string message = "Unijeli ste račun bez stavki.";
-                string caption = "Greška!";
-                DialogResult result;
-
-                // Displays the MessageBox.
-                result = MessageBox.Show(this, message, caption);
-            }
-            else
-            {
-                Kino.KreirajRacun(zaposlenik.OIB, IdNacinaPlacanja, listaOdabranihArtikala, listaKolicina, listaIdUlaznica, odabraniPopust);
-                MessageBox.Show("OIB zaposlenika: " + zaposlenik.OIB.ToString());
-            }
+            Kino.KreirajRacun(zaposlenik.OIB, IdNacinaPlacanja, listaOdabranihArtikala, listaKolicina, listaIdUlaznica, odabraniPopust);
+            MessageBox.Show("OIB zaposlenika: " + zaposlenik.OIB.ToString());
         }
 
         private void OsvjeziArtikle()

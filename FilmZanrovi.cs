@@ -112,12 +112,12 @@ namespace PI_projekt
         /// <param name="idFilma">Id filma za kojeg se uose žanrovi</param>
         /// <param name="listaZanrova">Lista objekata Zanrovi koja sadrži sve žanrove za film</param>
         /// <returns>Broj zahvaćenih redova</returns>
-        public static int UnesiZanrove(int idFilma, List<Zanrovi> listaZanrova)
+        public static int UnesiZanrove(int idFilma, List<int> listaZanrova)
         {
             int brojUmetanja=0;
-            foreach (Zanrovi zanr in listaZanrova)
+            foreach (int zanr in listaZanrova)
             {
-                string sqlUpit = "INSERT INTO film_zanr ('id_zanra','id_filma') VALUES ('" + zanr.IdZanra + "','" + idFilma + "');";
+                string sqlUpit = "INSERT INTO film_zanr ('id_zanra','id_filma') VALUES ('" + zanr.ToString() + "','" + idFilma + "');";
                 brojUmetanja += DB.Instance.IzvrsiUpit(sqlUpit);
             }
             

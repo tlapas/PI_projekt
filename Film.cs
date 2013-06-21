@@ -161,14 +161,14 @@ namespace PI_projekt
         /// Dodaje novi film u bazu
         /// </summary>
         /// <param name="noviFilm">Objekt klase film</param>
-        /// <returns>Vraća int, broj zahvaćenih redova upitom</returns>
+        /// <returns>Vraća id dodanog filma</returns>
         public static int DodajFilm(Film noviFilm)
         {
 
             string sqlUpit = "INSERT INTO Film ('naziv','vrijeme_trajanja') VALUES ('"
                             + noviFilm.Naziv + "','" + noviFilm.VrijemeTrajanja + "');";
-            int izvrsenUpit = DB.Instance.IzvrsiUpit(sqlUpit);
-            return izvrsenUpit;
+            int IdFilma = DB.Instance.IzvrsiUpitID(sqlUpit);
+            return IdFilma;
         }
 
         /// <summary>

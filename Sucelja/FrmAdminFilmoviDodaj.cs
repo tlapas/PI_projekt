@@ -40,28 +40,50 @@ namespace PI_projekt.Sucelja
         {
             InitializeComponent();
             filmAzuriraj = Film.DohvatiFilm(odabraniFilm);
+            listaZanrova2 = Zanrovi.DohvatiZanrove(odabraniFilm);
             txtDodajFilmNaziv.Text = filmAzuriraj.Naziv.ToString();
-            txtFilmoviDodajTrajanje.Text = filmAzuriraj.VrijemeTrajanja.ToString();
-
+            txtFilmoviDodajTrajanje.Text = filmAzuriraj.VrijemeTrajanja.ToString();     
         }
 
         /// <summary>
-        /// Rukuje događajem pokretanja forme, ukoliko se radi o ažuriranju tima tada formulu popunjava sa postojećim podacima
+        /// Rukuje događajem pokretanja forme, ukoliko se radi o ažuriranju filma tada formu popunjava sa postojećim podacima
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void FrmAdminFilmDodaj_Load(object sender, EventArgs e)
         {
             listaZanrova = Zanrovi.DohvatiZanrove();
-            
+
             foreach (Zanrovi zanr in listaZanrova)
             {
                 lbFilmoviDodajZanrovi.Items.Add(zanr);
             }
 
-            if(filmAzuriraj != null) {
-            txtDodajFilmNaziv.Text = filmAzuriraj.Naziv.ToString();
-            txtFilmoviDodajTrajanje.Text = filmAzuriraj.VrijemeTrajanja.ToString();
+            //ukoliko se radi o ažuriranju
+            if (filmAzuriraj != null)
+            {
+                txtDodajFilmNaziv.Text = filmAzuriraj.Naziv.ToString();
+                txtFilmoviDodajTrajanje.Text = filmAzuriraj.VrijemeTrajanja.ToString();
+
+                //foreach (Zanrovi zanr in listaZanrova2)
+                //{
+                //    if (!listaZanrova2.Contains(zanr))//ako film nema taj žanr, onda ga sprema  u lbFilmDodajZanrovi
+                //    {
+                //        lbFilmoviDodajZanrovi.Items.Add(zanr);
+                //    }
+                //}
+                //foreach (Zanrovi zanr in listaZanrova2) {
+                //    if (listaZanrova.Contains(zanr)) {
+                //        lbFilmoviDodajZanroviOdabrani.Items.Add(zanr);
+                //    }
+                //}
+            }
+            else //ako je otvoren obrazac za dodavanje
+            {
+                foreach (Zanrovi zanr in listaZanrova)
+                {
+                    lbFilmoviDodajZanrovi.Items.Add(zanr);
+                }
             }
         }
 
@@ -159,7 +181,7 @@ namespace PI_projekt.Sucelja
             try
             {
                 //Prolazimo kroz svaku odabranu vrstu projekcije iz lbOdabrane i 
-                //spremamo u pomoćnu listu listaOdabraneVrste listu ID-a svih odabranih vrsta projekcija 
+                //spremamo u pomoćnu listu lbFilmoviDodajZanroviOdabrani listu ID-a svih odabranih žanrova projekcija 
                 foreach (Zanrovi zanr in lbFilmoviDodajZanroviOdabrani.Items)
                 {
                     listaOdabranih.Add(zanr.IdZanra);
@@ -169,23 +191,24 @@ namespace PI_projekt.Sucelja
                 //ako je korisnik odabrao vrste projekcije nastavljamo sa unosom projekcije u bazu podataka
                 if (listaOdabranih != null)                   
                 {
-                     noviFilm.Naziv = txtDodajFilmNaziv.Text.ToString();
-                noviFilm.VrijemeTrajanja = int.Parse(txtFilmoviDodajTrajanje.Text.ToString());
-                if (filmAzuriraj != null)
-                {
-                    noviFilm.IdFilma = filmAzuriraj.IdFilma;
-                    Film.AzurirajFilm(noviFilm);
-                }
-                else
-                {
-                    Film.DodajFilm(noviFilm);
-                }
-                FrmAdminFilmovi adminFilmovi = new FrmAdminFilmovi();
-                adminFilmovi.Show();
-                this.Close();
+                    noviFilm.Naziv = txtDodajFilmNaziv.Text.ToString();
+                    noviFilm.VrijemeTrajanja = int.Parse(txtFilmoviDodajTrajanje.Text.ToString());
+                    if (filmAzuriraj != null)
+                    {
+                        noviFilm.IdFilma = filmAzuriraj.IdFilma;
+                        Film.AzurirajFilm(noviFilm);
+                    }
+                    else
+                    {
+                        int IdDodanogFilma = Film.DodajFilm(noviFilm);
+                        FilmZanrovi.UnesiZanrove(IdDodanogFilma, listaOdabranih);
+                    }
+                    FrmAdminFilmovi adminFilmovi = new FrmAdminFilmovi();
+                    adminFilmovi.Show();
+                    this.Close();
 
                 } 
-                else //ako korisnik nije unio vrste projekcije ispisuje se poruka o pogrešci
+                else //ako korisnik nije unio žanrove ispisuje se poruka o pogrešci
                 {
                     MessageBox.Show("Odaberite žanr!");
                 }
