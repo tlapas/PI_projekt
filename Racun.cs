@@ -130,10 +130,9 @@ namespace PI_projekt
         /// </summary>
         /// <param name="idRacuna">Id računa</param>
         /// <returns>int vraća ID računa</returns>
-        public static int UnesiRacun(int OIB, int IDNacinaPlacanja)
+        public static int UnesiRacun(long OIB, int IDNacinaPlacanja)
         {
-
-            string sqlUpit = "INSERT INTO Racun ('OIB','id_nacina_placanja') VALUES ('" + OIB + "','" + IDNacinaPlacanja + "');";
+            string sqlUpit = "INSERT INTO Racun (OIB, id_nacina_placanja) VALUES (" + OIB + ", " + IDNacinaPlacanja + ");";
             int idRacuna = DB.Instance.IzvrsiUpitID(sqlUpit);
 
             return idRacuna;

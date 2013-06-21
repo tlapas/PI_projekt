@@ -17,8 +17,6 @@ namespace PI_projekt.Artikli
         private List<int> listaIdUlaznica = null;
         private Popust  odabraniPopust = null;
 
-
-
         /// <summary>
         /// Konstruktor za FrmArtikli ukoliko se pristupa direktno iz izbornika prodavača
         /// </summary>
@@ -36,24 +34,24 @@ namespace PI_projekt.Artikli
             userName.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik;
             userRole.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Uloga;
             listaIdUlaznica = listaIdUlaznicaArg;
-            odabraniPopust =Popust.DohvatiPopust(idPopustArg);
+            odabraniPopust = Popust.DohvatiPopust(idPopustArg);
         }
 
-
-
-
-
         private float CijenaUkupno = 0;
+        private int IdNacinaPlacanja = 1;
         List<Artikl> listaArtikala = Artikl.DohvatiArtikle();
+        List<Artikl> listaOdabranihArtikala = new List<Artikl>();
+        public List<int> listaKolicina = new List<int>();
+        List<NaciniPlacanja> listaNacinaPlacanja = NaciniPlacanja.DohvatiNacinePlacanja();
 
         private void FrmArtikli_Load(object sender, EventArgs e)
         {
             OsvjeziArtikle();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            foreach (NaciniPlacanja NacinPlacanja in listaNacinaPlacanja)
+            {
+                nacinPlacanja.Items.Add(NacinPlacanja.Naziv);
+            }
+            nacinPlacanja.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -63,28 +61,23 @@ namespace PI_projekt.Artikli
 
         private void Dalje_Click(object sender, EventArgs e)
         {
-            //Ako se na račun unose i ulaznice
-            if (listaIdUlaznica != null && odabraniPopust != null)
-            {
-                MessageBox.Show("Lista ulaznica id i id popusta"+listaIdUlaznica[0].ToString()+", "+odabraniPopust.Naziv.ToString());
-            }
-            else
-            {
-                MessageBox.Show("Samo artikli bez karte!");
-            }
+            Zaposlenici zaposlenik = Zaposlenici.DohvatiZaposlenika(userName.Text);
+            Kino.KreirajRacun(zaposlenik.OIB, IdNacinaPlacanja, listaOdabranihArtikala, listaKolicina);
+            MessageBox.Show("OIB zaposlenika: " + zaposlenik.OIB.ToString());
         }
 
         private void OsvjeziArtikle()
         {
             foreach (Artikl artikl in listaArtikala)
             {
-                Naziv.Items.Add(artikl.Naziv);
+                naziv.Items.Add(artikl.Naziv);
             }
         }
 
         private void Naziv_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Cijena_box.Text = listaArtikala[Naziv.SelectedIndex].Cijena.ToString() + " kn";
+            jedinicnaCijena.Text = listaArtikala[naziv.SelectedIndex].Cijena.ToString() + " kn";
+            kolicinaNum.Value = 1;
         }
 
         private int redak = 0;
@@ -94,41 +87,40 @@ namespace PI_projekt.Artikli
             {
                 int stupac = 0;
                 this.Stavke.Rows.Add();
-                this.Stavke.Rows[redak].Cells[stupac++].Value = listaArtikala[Naziv.SelectedIndex].Naziv;
-                this.Stavke.Rows[redak].Cells[stupac++].Value = listaArtikala[Naziv.SelectedIndex].Cijena;
-                this.Stavke.Rows[redak++].Cells[stupac++].Value = KolicinaBox.Text;
-                //Stavke.Text += listaArtikala[Naziv.SelectedIndex].Naziv + "\t Cijena: " + listaArtikala[Naziv.SelectedIndex].Cijena + "\t Količina:" + KolicinaBox.Text + "\r\n";
-                CijenaUkupno += listaArtikala[Naziv.SelectedIndex].Cijena * Convert.ToInt32(KolicinaBox.Text);
-                Ukupno.Text = CijenaUkupno.ToString() + " kn";
+                listaOdabranihArtikala.Add(listaArtikala[naziv.SelectedIndex]);
+                this.Stavke.Rows[redak].Cells[stupac++].Value = listaArtikala[naziv.SelectedIndex].Naziv;
+                this.Stavke.Rows[redak].Cells[stupac++].Value = listaArtikala[naziv.SelectedIndex].Cijena;
+                listaKolicina.Add((int)kolicinaNum.Value);
+                this.Stavke.Rows[redak++].Cells[stupac++].Value = kolicinaNum.Value;
+                CijenaUkupno += listaArtikala[naziv.SelectedIndex].Cijena * Convert.ToInt32(kolicinaNum.Value);
+                ukupanIznos.Text = CijenaUkupno.ToString() + " kn";
             }
             catch (Exception)
             {
                 MessageBox.Show("Greška! Niste odabrali artikl.");
             }
         }
-        
-        private void KolicinaBox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (KolicinaBox.Text != "")
-                {
-                    int temp = Convert.ToInt32(KolicinaBox.Text);
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Greška! Količina ne smije biti slovo ili znak. Unesite broj.");
-            }
-        }
 
         private void Ponisti_Click(object sender, EventArgs e)
         {
             Stavke.Rows.Clear();
+            listaOdabranihArtikala.Clear();
+            listaKolicina.Clear();
             redak = 0;
-            Ukupno.Text = "0,00 kn";
+            ukupanIznos.Text = "0,00 kn";
+            kolicinaNum.Value = 1;
         }
 
+        private void nacinPlacanja_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (NaciniPlacanja nacin in listaNacinaPlacanja)
+            {
+                if (nacin.Naziv == nacinPlacanja.Text)
+                {
+                    IdNacinaPlacanja = nacin.IdNacinaPlacanja;
+                }
+            }
+        }
 
         //funkcija za odjavu iz sustava, klikom na odjava se postavlja parametar na 1
         // i prosljeđuje funkciji koja će ispisati poruku i pitati želi li se korisnik odjaviti

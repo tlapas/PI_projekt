@@ -27,7 +27,7 @@ namespace PI_projekt
         {
             if (dr != null)
             {
-                OIB = float.Parse(dr["OIB"].ToString());
+                OIB = long.Parse(dr["OIB"].ToString());
                 Ime = dr["ime"].ToString();
                 Prezime = dr["prezime"].ToString();
                 Adresa = dr["adresa"].ToString();
@@ -44,7 +44,7 @@ namespace PI_projekt
 
         #region Private Fields
 
-        private float oib;
+        private long oib;
         private string ime;
         private string prezime;
         private string adresa;
@@ -61,7 +61,7 @@ namespace PI_projekt
         /// <summary>
         /// Jedinstveni identifikator zaposlenika.
         /// </summary>
-        public float OIB
+        public long OIB
         {
             get
             {
@@ -240,6 +240,19 @@ namespace PI_projekt
             }
             dr.Close();     //Zatvaranje DataReader objekta.
             return lista;
+        }
+
+        public static Zaposlenici DohvatiZaposlenika(string korIme)
+        {
+            Zaposlenici zaposlenik = new Zaposlenici();
+            string sqlUpit = "SELECT * FROM Zaposlenik WHERE kor_ime='" + korIme + "';";
+            DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
+            while (dr.Read())
+            {
+                zaposlenik = new Zaposlenici(dr);
+            }
+            dr.Close();     //Zatvaranje DataReader objekta.
+            return zaposlenik;
         }
 
         #endregion

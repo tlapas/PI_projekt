@@ -41,6 +41,9 @@ namespace PI_projekt
             return listaIdUlaznica;
         }
 
-
+        public static void KreirajRacun(long OIB, int idNacinaPlacanja, List<Artikl> listaArtikala, List<int> listaKolicina)
+        {
+            Racun.UnesiRacun(OIB, idNacinaPlacanja);
+        }
     }
 }

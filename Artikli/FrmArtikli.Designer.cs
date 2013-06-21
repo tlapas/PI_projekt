@@ -30,19 +30,19 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmArtikli));
             this.Naziv_artikla = new System.Windows.Forms.Label();
             this.Cijena = new System.Windows.Forms.Label();
-            this.Naziv = new System.Windows.Forms.ComboBox();
+            this.naziv = new System.Windows.Forms.ComboBox();
             this.Kolicina = new System.Windows.Forms.Label();
             this.Dodaj = new System.Windows.Forms.Button();
             this.Ponisti = new System.Windows.Forms.Button();
-            this.Cijena_box = new System.Windows.Forms.TextBox();
-            this.KolicinaBox = new System.Windows.Forms.TextBox();
+            this.jedinicnaCijena = new System.Windows.Forms.TextBox();
             this.Stavke_racun = new System.Windows.Forms.GroupBox();
             this.Stavke = new System.Windows.Forms.DataGridView();
-            this.Iznos_racun = new System.Windows.Forms.Label();
-            this.Ukupno = new System.Windows.Forms.TextBox();
+            this.Iznos_racuna = new System.Windows.Forms.Label();
+            this.ukupanIznos = new System.Windows.Forms.TextBox();
             this.Dalje = new System.Windows.Forms.Button();
             this.Odjava = new System.Windows.Forms.LinkLabel();
             this.Opcije = new System.Windows.Forms.GroupBox();
@@ -51,12 +51,16 @@
             this.uloga = new System.Windows.Forms.Label();
             this.userName = new System.Windows.Forms.Label();
             this.korisnik = new System.Windows.Forms.Label();
+            this.kolicinaNum = new System.Windows.Forms.NumericUpDown();
             this.NazivCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CijenaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KolicinaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nacin_placanja = new System.Windows.Forms.Label();
+            this.nacinPlacanja = new System.Windows.Forms.ComboBox();
             this.Stavke_racun.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Stavke)).BeginInit();
             this.Opcije.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kolicinaNum)).BeginInit();
             this.SuspendLayout();
             // 
             // Naziv_artikla
@@ -87,20 +91,20 @@
             this.Cijena.TabIndex = 2;
             this.Cijena.Text = "Jedinična cijena:";
             // 
-            // Naziv
+            // naziv
             // 
-            this.Naziv.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Naziv.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Naziv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Naziv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Naziv.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Naziv.FormattingEnabled = true;
-            this.Naziv.Location = new System.Drawing.Point(154, 23);
-            this.Naziv.Margin = new System.Windows.Forms.Padding(4);
-            this.Naziv.Name = "Naziv";
-            this.Naziv.Size = new System.Drawing.Size(254, 24);
-            this.Naziv.TabIndex = 3;
-            this.Naziv.SelectedIndexChanged += new System.EventHandler(this.Naziv_SelectedIndexChanged);
+            this.naziv.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.naziv.Cursor = System.Windows.Forms.Cursors.Default;
+            this.naziv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.naziv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.naziv.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.naziv.FormattingEnabled = true;
+            this.naziv.Location = new System.Drawing.Point(154, 23);
+            this.naziv.Margin = new System.Windows.Forms.Padding(4);
+            this.naziv.Name = "naziv";
+            this.naziv.Size = new System.Drawing.Size(254, 24);
+            this.naziv.TabIndex = 3;
+            this.naziv.SelectedIndexChanged += new System.EventHandler(this.Naziv_SelectedIndexChanged);
             // 
             // Kolicina
             // 
@@ -147,33 +151,19 @@
             this.Ponisti.UseVisualStyleBackColor = false;
             this.Ponisti.Click += new System.EventHandler(this.Ponisti_Click);
             // 
-            // Cijena_box
+            // jedinicnaCijena
             // 
-            this.Cijena_box.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Cijena_box.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Cijena_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Cijena_box.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Cijena_box.Location = new System.Drawing.Point(154, 63);
-            this.Cijena_box.Margin = new System.Windows.Forms.Padding(4);
-            this.Cijena_box.Name = "Cijena_box";
-            this.Cijena_box.ReadOnly = true;
-            this.Cijena_box.Size = new System.Drawing.Size(139, 22);
-            this.Cijena_box.TabIndex = 7;
-            this.Cijena_box.Text = " kn";
-            // 
-            // KolicinaBox
-            // 
-            this.KolicinaBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.KolicinaBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.KolicinaBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.KolicinaBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.KolicinaBox.Location = new System.Drawing.Point(154, 101);
-            this.KolicinaBox.Margin = new System.Windows.Forms.Padding(4);
-            this.KolicinaBox.Name = "KolicinaBox";
-            this.KolicinaBox.Size = new System.Drawing.Size(139, 22);
-            this.KolicinaBox.TabIndex = 8;
-            this.KolicinaBox.Text = "1";
-            this.KolicinaBox.TextChanged += new System.EventHandler(this.KolicinaBox_TextChanged);
+            this.jedinicnaCijena.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.jedinicnaCijena.Cursor = System.Windows.Forms.Cursors.Default;
+            this.jedinicnaCijena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.jedinicnaCijena.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.jedinicnaCijena.Location = new System.Drawing.Point(154, 63);
+            this.jedinicnaCijena.Margin = new System.Windows.Forms.Padding(4);
+            this.jedinicnaCijena.Name = "jedinicnaCijena";
+            this.jedinicnaCijena.ReadOnly = true;
+            this.jedinicnaCijena.Size = new System.Drawing.Size(139, 22);
+            this.jedinicnaCijena.TabIndex = 7;
+            this.jedinicnaCijena.Text = " kn";
             // 
             // Stavke_racun
             // 
@@ -196,52 +186,60 @@
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.Stavke.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Stavke.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Stavke.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Stavke.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NazivCol,
             this.CijenaCol,
             this.KolicinaCol});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Stavke.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Stavke.DefaultCellStyle = dataGridViewCellStyle3;
             this.Stavke.Location = new System.Drawing.Point(5, 17);
             this.Stavke.Name = "Stavke";
             this.Stavke.ReadOnly = true;
             this.Stavke.Size = new System.Drawing.Size(436, 133);
             this.Stavke.TabIndex = 21;
             // 
-            // Iznos_racun
+            // Iznos_racuna
             // 
-            this.Iznos_racun.AutoSize = true;
-            this.Iznos_racun.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Iznos_racun.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Iznos_racun.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Iznos_racun.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Iznos_racun.Location = new System.Drawing.Point(252, 412);
-            this.Iznos_racun.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Iznos_racun.Name = "Iznos_racun";
-            this.Iznos_racun.Size = new System.Drawing.Size(48, 16);
-            this.Iznos_racun.TabIndex = 10;
-            this.Iznos_racun.Text = "Iznos:";
+            this.Iznos_racuna.AutoSize = true;
+            this.Iznos_racuna.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Iznos_racuna.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Iznos_racuna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Iznos_racuna.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Iznos_racuna.Location = new System.Drawing.Point(252, 412);
+            this.Iznos_racuna.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Iznos_racuna.Name = "Iznos_racuna";
+            this.Iznos_racuna.Size = new System.Drawing.Size(48, 16);
+            this.Iznos_racuna.TabIndex = 10;
+            this.Iznos_racuna.Text = "Iznos:";
             // 
-            // Ukupno
+            // ukupanIznos
             // 
-            this.Ukupno.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Ukupno.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Ukupno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Ukupno.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Ukupno.Location = new System.Drawing.Point(308, 409);
-            this.Ukupno.Margin = new System.Windows.Forms.Padding(4);
-            this.Ukupno.Name = "Ukupno";
-            this.Ukupno.ReadOnly = true;
-            this.Ukupno.Size = new System.Drawing.Size(148, 22);
-            this.Ukupno.TabIndex = 11;
-            this.Ukupno.Text = "0,00 kn";
+            this.ukupanIznos.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ukupanIznos.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ukupanIznos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ukupanIznos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ukupanIznos.Location = new System.Drawing.Point(308, 409);
+            this.ukupanIznos.Margin = new System.Windows.Forms.Padding(4);
+            this.ukupanIznos.Name = "ukupanIznos";
+            this.ukupanIznos.ReadOnly = true;
+            this.ukupanIznos.Size = new System.Drawing.Size(148, 22);
+            this.ukupanIznos.TabIndex = 11;
+            this.ukupanIznos.Text = "0,00 kn";
             // 
             // Dalje
             // 
@@ -249,7 +247,7 @@
             this.Dalje.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Dalje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Dalje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Dalje.Location = new System.Drawing.Point(344, 440);
+            this.Dalje.Location = new System.Drawing.Point(344, 476);
             this.Dalje.Margin = new System.Windows.Forms.Padding(4);
             this.Dalje.Name = "Dalje";
             this.Dalje.Size = new System.Drawing.Size(112, 35);
@@ -277,12 +275,12 @@
             // Opcije
             // 
             this.Opcije.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Opcije.Controls.Add(this.Naziv);
+            this.Opcije.Controls.Add(this.kolicinaNum);
+            this.Opcije.Controls.Add(this.naziv);
             this.Opcije.Controls.Add(this.Naziv_artikla);
             this.Opcije.Controls.Add(this.Cijena);
             this.Opcije.Controls.Add(this.Kolicina);
-            this.Opcije.Controls.Add(this.Cijena_box);
-            this.Opcije.Controls.Add(this.KolicinaBox);
+            this.Opcije.Controls.Add(this.jedinicnaCijena);
             this.Opcije.Cursor = System.Windows.Forms.Cursors.Default;
             this.Opcije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Opcije.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -301,7 +299,7 @@
             this.Nazad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Nazad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Nazad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Nazad.Location = new System.Drawing.Point(7, 440);
+            this.Nazad.Location = new System.Drawing.Point(7, 476);
             this.Nazad.Margin = new System.Windows.Forms.Padding(4);
             this.Nazad.Name = "Nazad";
             this.Nazad.Size = new System.Drawing.Size(112, 35);
@@ -356,6 +354,25 @@
             this.korisnik.TabIndex = 17;
             this.korisnik.Text = "Prijavljeni ste kao:";
             // 
+            // kolicinaNum
+            // 
+            this.kolicinaNum.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.kolicinaNum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.kolicinaNum.Location = new System.Drawing.Point(154, 101);
+            this.kolicinaNum.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.kolicinaNum.Name = "kolicinaNum";
+            this.kolicinaNum.Size = new System.Drawing.Size(120, 22);
+            this.kolicinaNum.TabIndex = 21;
+            this.kolicinaNum.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // NazivCol
             // 
             this.NazivCol.HeaderText = "Naziv";
@@ -372,10 +389,39 @@
             // 
             // KolicinaCol
             // 
-            this.KolicinaCol.HeaderText = "Kolicina";
+            this.KolicinaCol.HeaderText = "Količina";
             this.KolicinaCol.Name = "KolicinaCol";
             this.KolicinaCol.ReadOnly = true;
             this.KolicinaCol.Width = 70;
+            // 
+            // Nacin_placanja
+            // 
+            this.Nacin_placanja.AutoSize = true;
+            this.Nacin_placanja.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Nacin_placanja.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Nacin_placanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Nacin_placanja.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Nacin_placanja.Location = new System.Drawing.Point(184, 446);
+            this.Nacin_placanja.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Nacin_placanja.Name = "Nacin_placanja";
+            this.Nacin_placanja.Size = new System.Drawing.Size(116, 16);
+            this.Nacin_placanja.TabIndex = 21;
+            this.Nacin_placanja.Text = "Način plačanja:";
+            // 
+            // nacinPlacanja
+            // 
+            this.nacinPlacanja.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.nacinPlacanja.Cursor = System.Windows.Forms.Cursors.Default;
+            this.nacinPlacanja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.nacinPlacanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nacinPlacanja.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.nacinPlacanja.FormattingEnabled = true;
+            this.nacinPlacanja.Location = new System.Drawing.Point(308, 442);
+            this.nacinPlacanja.Margin = new System.Windows.Forms.Padding(4);
+            this.nacinPlacanja.Name = "nacinPlacanja";
+            this.nacinPlacanja.Size = new System.Drawing.Size(148, 24);
+            this.nacinPlacanja.TabIndex = 22;
+            this.nacinPlacanja.SelectedIndexChanged += new System.EventHandler(this.nacinPlacanja_SelectedIndexChanged);
             // 
             // FrmArtikli
             // 
@@ -383,7 +429,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PI_projekt.Properties.Resources.BCKground_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(463, 482);
+            this.ClientSize = new System.Drawing.Size(463, 522);
+            this.Controls.Add(this.nacinPlacanja);
+            this.Controls.Add(this.Nacin_placanja);
             this.Controls.Add(this.userRole);
             this.Controls.Add(this.uloga);
             this.Controls.Add(this.userName);
@@ -392,16 +440,16 @@
             this.Controls.Add(this.Opcije);
             this.Controls.Add(this.Odjava);
             this.Controls.Add(this.Dalje);
-            this.Controls.Add(this.Ukupno);
+            this.Controls.Add(this.ukupanIznos);
             this.Controls.Add(this.Ponisti);
             this.Controls.Add(this.Dodaj);
-            this.Controls.Add(this.Iznos_racun);
+            this.Controls.Add(this.Iznos_racuna);
             this.Controls.Add(this.Stavke_racun);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(479, 520);
+            this.MaximumSize = new System.Drawing.Size(479, 560);
             this.MinimumSize = new System.Drawing.Size(479, 520);
             this.Name = "FrmArtikli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -412,6 +460,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Stavke)).EndInit();
             this.Opcije.ResumeLayout(false);
             this.Opcije.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kolicinaNum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,15 +470,14 @@
 
         private System.Windows.Forms.Label Naziv_artikla;
         private System.Windows.Forms.Label Cijena;
-        private System.Windows.Forms.ComboBox Naziv;
+        private System.Windows.Forms.ComboBox naziv;
         private System.Windows.Forms.Label Kolicina;
         private System.Windows.Forms.Button Dodaj;
         private System.Windows.Forms.Button Ponisti;
-        private System.Windows.Forms.TextBox Cijena_box;
-        private System.Windows.Forms.TextBox KolicinaBox;
+        private System.Windows.Forms.TextBox jedinicnaCijena;
         private System.Windows.Forms.GroupBox Stavke_racun;
-        private System.Windows.Forms.Label Iznos_racun;
-        private System.Windows.Forms.TextBox Ukupno;
+        private System.Windows.Forms.Label Iznos_racuna;
+        private System.Windows.Forms.TextBox ukupanIznos;
         private System.Windows.Forms.Button Dalje;
         private System.Windows.Forms.LinkLabel Odjava;
         private System.Windows.Forms.GroupBox Opcije;
@@ -439,9 +487,12 @@
         private System.Windows.Forms.Label userName;
         private System.Windows.Forms.Label korisnik;
         private System.Windows.Forms.DataGridView Stavke;
+        private System.Windows.Forms.NumericUpDown kolicinaNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn NazivCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn CijenaCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn KolicinaCol;
+        private System.Windows.Forms.Label Nacin_placanja;
+        private System.Windows.Forms.ComboBox nacinPlacanja;
 
     }
 }
