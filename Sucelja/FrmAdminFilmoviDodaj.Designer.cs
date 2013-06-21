@@ -112,6 +112,7 @@
             this.btnFilmoviDodajSpremi.TabIndex = 29;
             this.btnFilmoviDodajSpremi.Text = "Spremi";
             this.btnFilmoviDodajSpremi.UseVisualStyleBackColor = true;
+            this.btnFilmoviDodajSpremi.Click += new System.EventHandler(this.btnFilmoviDodajSpremi_Click);
             // 
             // btnFilmoviDodajOdustani
             // 

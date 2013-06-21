@@ -55,7 +55,7 @@ namespace PI_projekt
             {
                 return id_filma;
             }
-            private set
+            set
             {
                 if (id_filma != value)
                 {
@@ -73,7 +73,7 @@ namespace PI_projekt
             {
                 return vrijeme_trajanja;
             }
-            private set
+            set
             {
                 if (vrijeme_trajanja != value)
                 {
@@ -87,7 +87,7 @@ namespace PI_projekt
             {
                 return naziv;
             }
-            private set
+            set
             {
                 if (naziv != value)
                 {
@@ -101,7 +101,7 @@ namespace PI_projekt
         #region Methods
 
         /// <summary>
-        /// Dohvaća sve filmove
+        /// Dohvaća sve filmove iz baze i vrća ih u obliku generičke liste.
         /// </summary>
         /// <returns>Lista filmova</returns>
         public static List<Film> DohvatiFilmove()
@@ -140,6 +140,49 @@ namespace PI_projekt
             return lista;
         
         }
+
+        /// <summary>
+        /// Dohvaćanje filma prema određenom ID-u
+        /// </summary>
+        /// <param name="IdFilma"></param>
+        /// <returns>Vraća objekt određen ID-om iz baze, ukoliko postoji, a ukoliko ne postoji, vraća null</returns>
+        public static Film DohvatiFilm(int IdFilma) {
+            Film film = new Film();
+            string sqlUpit = "SELECT * FROM Film WHERE id_filma = "+IdFilma+";";
+            DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
+            while (dr.Read()) {
+                film = new Film(dr);
+            }
+            dr.Close();
+            return film;
+        }
+
+        /// <summary>
+        /// Dodaje novi film u bazu
+        /// </summary>
+        /// <param name="noviFilm">Objekt klase film</param>
+        /// <returns>Vraća int, broj zahvaćenih redova upitom</returns>
+        public static int DodajFilm(Film noviFilm)
+        {
+
+            string sqlUpit = "INSERT INTO Film ('naziv','vrijeme_trajanja') VALUES ('"
+                            + noviFilm.Naziv + "','" + noviFilm.VrijemeTrajanja + "');";
+            int izvrsenUpit = DB.Instance.IzvrsiUpit(sqlUpit);
+            return izvrsenUpit;
+        }
+
+        /// <summary>
+        /// Ažurira film u bazi podakaka
+        /// </summary>
+        /// <param name="odabraniFilm">Objekt klase Film</param>
+        /// <returns>Broj zahvaćenih redova</returns>
+        public static int AzurirajFilm(Film odabraniFilm) {
+            string sqlUpit = "UPDATE Film SET naziv = '" + odabraniFilm.Naziv + "', vrijeme_trajanja = '" + odabraniFilm.VrijemeTrajanja + "' WHERE id_filma = '"+ odabraniFilm.IdFilma +"';";
+            int izvrsenUpit = DB.Instance.IzvrsiUpit(sqlUpit);
+            return izvrsenUpit;
+        }
+
+
 
         
         #endregion

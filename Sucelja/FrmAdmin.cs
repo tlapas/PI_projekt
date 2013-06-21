@@ -19,16 +19,27 @@ namespace PI_projekt.Sucelja
             userRole.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Uloga;
         }
 
+        //varijabla koja provjerava da li se radi o odjavi ili o zatvaranju forme na x
         private bool pomOdjava = false;
 
-        private void Dvorane_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Klik na gumb otvara formu za rad sa podacima o zaposlenicima
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Zaposlenici_Click(object sender, EventArgs e)
         {
             pomOdjava = true;
-            FrmAdminDvorane adminDvorane = new FrmAdminDvorane();
-            adminDvorane.Show();
+            FrmAdminZaposlenici adminZaposlenici = new FrmAdminZaposlenici();
+            adminZaposlenici.Show();
             this.Close();
-        }
+        } 
 
+        /// <summary>
+        /// Klik na gumb otvara formu za rad sa podacima o artiklima
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Artikli_Click(object sender, EventArgs e)
         {
             pomOdjava = true;
@@ -36,15 +47,12 @@ namespace PI_projekt.Sucelja
             adminArtikli.Show();
             this.Close();
         }
-
-        private void Zaposlenici_Click(object sender, EventArgs e)
-        {
-            pomOdjava = true;
-            FrmAdminZaposlenici adminZaposlenici = new FrmAdminZaposlenici();
-            adminZaposlenici.Show();
-            this.Close();
-        }        
-
+               
+        /// <summary>
+        /// Klik na gumb otvara formu za rad sa podacima o filmovima
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Filmovi_Click(object sender, EventArgs e)
         {
             pomOdjava = true;
@@ -53,6 +61,11 @@ namespace PI_projekt.Sucelja
             this.Close();
         }
 
+        /// <summary>
+        /// Klik na gumb otvara formu za rad sa podacima o projekcijama
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Projekcije_Click(object sender, EventArgs e)
         {
             pomOdjava = true;
@@ -61,6 +74,18 @@ namespace PI_projekt.Sucelja
             this.Close();
         }
 
+        /// <summary>
+        /// Klik na gumb otvara formu za rad sa podacima o dvoranama
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Dvorane_Click(object sender, EventArgs e)
+        {
+            pomOdjava = true;
+            FrmAdminDvorane adminDvorane = new FrmAdminDvorane();
+            adminDvorane.Show();
+            this.Close();
+        }
 
         /// <summary>
         /// funkcija za odjavu iz sustava, klikom na odjava se postavlja parametar na 1
@@ -94,7 +119,11 @@ namespace PI_projekt.Sucelja
                 }
             }
         }
-
+        /// <summary>
+        /// Metoda koja se poziva kada se forma zatvara na x (varijabla pomOdjava je ostala na false)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmAdmin_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (!pomOdjava) {

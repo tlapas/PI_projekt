@@ -34,7 +34,7 @@ namespace PI_projekt.Sucelja
 
         }
         /// <summary>
-        /// Konstruktor koji se poziva prilikom ažuriranja postojeeg artikla
+        /// Konstruktor koji se poziva prilikom ažuriranja postojćeg artikla
         /// </summary>
         /// <param name="odabraniArtikl"></param>
         public FrmAdminArtikliDodaj(Artikl odabraniArtikl)
@@ -73,6 +73,11 @@ namespace PI_projekt.Sucelja
 
         }
 
+        /// <summary>
+        /// Odustajanje od dodavanja novog artikla prilikom klika na tipku odustani
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOdustani_Click(object sender, EventArgs e)
         {
             pomOdjava = true;
@@ -119,8 +124,7 @@ namespace PI_projekt.Sucelja
                 
                 MessageBox.Show("Pogrešan unos podataka!");
             }
-
-
+            
         }
         /// <summary>
         /// funkcija za odjavu iz sustava, klikom na odjava se postavlja parametar na 1
@@ -154,6 +158,11 @@ namespace PI_projekt.Sucelja
                 }
             }
         }
+        /// <summary>
+        /// Metoda koja se poziva kada se forma zatvara na x (varijabla pomOdjava je ostala na false)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmAdminArtikliDodaj_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (!pomOdjava)

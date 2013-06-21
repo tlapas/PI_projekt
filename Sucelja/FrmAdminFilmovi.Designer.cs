@@ -117,6 +117,7 @@
             this.dgvSviFilmovi.Name = "dgvSviFilmovi";
             this.dgvSviFilmovi.Size = new System.Drawing.Size(637, 263);
             this.dgvSviFilmovi.TabIndex = 29;
+            this.dgvSviFilmovi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSviFilmovi_CellClick);
             // 
             // btnFilmoviPovratak
             // 
@@ -155,6 +156,7 @@
             this.btnFilmoviAzuriraj.TabIndex = 33;
             this.btnFilmoviAzuriraj.Text = "Ažuriraj";
             this.btnFilmoviAzuriraj.UseVisualStyleBackColor = true;
+            this.btnFilmoviAzuriraj.Click += new System.EventHandler(this.btnFilmoviAzuriraj_Click);
             // 
             // FrmAdminFilmovi
             // 
@@ -175,6 +177,7 @@
             this.Name = "FrmAdminFilmovi";
             this.Text = "FrmAdminFilmovi";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAdminFilmovi_FormClosed);
+            this.Load += new System.EventHandler(this.FrmAdminFilmovi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSviFilmovi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -12,42 +12,18 @@ namespace PI_projekt.Sucelja
 {
     public partial class FrmAdminArtikli : Form
     {
-        //objekt klase artikl u kojeg se sprema artikl za uređivanje
-        Artikl detaljiArtikl = null;
-        int IdArtikla = -1;
-
-        /// <summary>
-        /// Metoda koja osvježava popis artikala u dgvSviArtikli objektu
-        /// </summary>
-        private void OsvjeziArtikle()
-        {
-            List<Artikl> listaArtikala = Artikl.DohvatiArtikle();
-            dgvSviArtikli.DataSource = listaArtikala;
-        }
-
-
         public FrmAdminArtikli()
         {
             InitializeComponent();
             userName.Text = FrmPocetna.SpremnikPodataka.Zaposlenik;
             userRole.Text = FrmPocetna.SpremnikPodataka.Uloga;
         }
-
+        //varijabla koja provjerava da li se radi o odjavi ili o zatvaranju forme na x
         private bool pomOdjava = false;
-
-        private void FrmAdminArtikli_Load(object sender, EventArgs e)
-        {
-            OsvjeziArtikle();
-        }
-
-
-        private void btnOsvjeziArtikle_Click(object sender, EventArgs e)
-        {
-            pomOdjava = true;
-            OsvjeziArtikle();
-        }
-
-       
+        
+        //objekt klase artikl u kojeg se sprema artikl za uređivanje
+        Artikl detaljiArtikl = null;
+        int IdArtikla = -1;
         /// <summary>
         /// Prilikom klika na određenu ćeliju dohvaća se id pojedinog artikla
         /// </summary>
@@ -61,8 +37,38 @@ namespace PI_projekt.Sucelja
                 DataGridViewRow red = this.dgvSviArtikli.Rows[e.RowIndex];
                 //postavljamo id artikla u varijablu IdArtikl
                 IdArtikla = int.Parse(red.Cells["IdArtikla"].Value.ToString());
-            
+
             }
+        }
+
+        /// <summary>
+        /// Metoda koja osvježava popis artikala u dgvSviArtikli objektu
+        /// </summary>
+        private void OsvjeziArtikle()
+        {
+            List<Artikl> listaArtikala = Artikl.DohvatiArtikle();
+            dgvSviArtikli.DataSource = listaArtikala;
+        }
+           
+        /// <summary>
+        /// Učitavanjem forme osvježava se spisak artikala koji se nalaze u dgvSviArtikli
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param        
+        private void FrmAdminArtikli_Load(object sender, EventArgs e)
+        {
+            OsvjeziArtikle();
+        }
+
+        /// <summary>
+        /// Gumb osvježava spisak artikala koji se nalaze u dgvSviArtikli
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param 
+        private void btnOsvjeziArtikle_Click(object sender, EventArgs e)
+        {
+            pomOdjava = true;
+            OsvjeziArtikle();
         }
 
         /// <summary>
@@ -79,7 +85,7 @@ namespace PI_projekt.Sucelja
         }
 
         /// <summary>
-        /// Na klik ažuriraj provjerava je li odabran artikl u cbSviArtikli i ako je odabran poziva formu za dodavanje/ažuriranje artikla
+        /// Na klik ažuriraj provjerava je li odabran artikl u dgvSviArtikli i ako je odabran poziva formu za dodavanje/ažuriranje artikla
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -99,7 +105,12 @@ namespace PI_projekt.Sucelja
                 MessageBox.Show("Molimo vas odaberite artikl!");
             }
         }
-        
+
+        /// <summary>
+        /// Gumb povratak vraća na prethodnu stranicu (glavna Admin)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnArtikliPovratak_Click(object sender, EventArgs e)
         {
             pomOdjava = true;
@@ -140,7 +151,11 @@ namespace PI_projekt.Sucelja
                 }
             }
         }
-
+        /// <summary>
+        /// Metoda koja se poziva kada se forma zatvara na x (varijabla pomOdjava je ostala na false)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmAdmin_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (!pomOdjava)
