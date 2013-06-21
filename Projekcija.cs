@@ -217,7 +217,7 @@ namespace PI_projekt
             DateTime sada = DateTime.Now;
             sada.AddMinutes(15);
 
-            string sqlUpit = "SELECT * FROM Projekcija WHERE datum=>" + sada.ToString() + ";";
+            string sqlUpit = "SELECT * FROM Projekcija WHERE datum=>" + sada.ToString("yyyy-MM-dd HH:mm:ss") + ";";
             DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
             while (dr.Read())
             {
@@ -275,9 +275,9 @@ namespace PI_projekt
        /// <returns>Broj zahvaćenih redova</returns>
         public static int UnesiProjekciju(Projekcija novaProjekcija)
         {
-            string sqlUpit = "INSERT INTO Projekcija ('broj_dvorane','id_filma','vrijeme_trajanja','broj_mjesta','prodano_ulaznica','cijena','datum',) VALUES ('"
-                + novaProjekcija.BrojDvorane + "','" + novaProjekcija.IdFilma + "','" + novaProjekcija.VrijemeTrajanja + "','" + novaProjekcija.BrojMjesta 
-                + "','" + novaProjekcija.ProdanoUlaznica + "','" + Kino.PretvoriCijenu(novaProjekcija.Cijena) + "','" + novaProjekcija.Datum + "');";
+            string sqlUpit = "INSERT INTO Projekcija ('broj_dvorane','id_filma','vrijeme_trajanja','broj_mjesta','prodano_ulaznica','cijena','datum') VALUES ('"
+                + novaProjekcija.BrojDvorane + "','" + novaProjekcija.IdFilma + "','" + novaProjekcija.VrijemeTrajanja + "','" + novaProjekcija.BrojMjesta
+                + "','" + novaProjekcija.ProdanoUlaznica + "','" + Kino.PretvoriCijenu(novaProjekcija.Cijena) + "','" + novaProjekcija.Datum.ToString("yyyy-MM-dd HH:mm:ss") + "');";
               int  zahvaceno = DB.Instance.IzvrsiUpit(sqlUpit);
 
             return zahvaceno;
@@ -294,7 +294,7 @@ namespace PI_projekt
             string sqlUpit = "UPDATE  Projekcija SET broj_dvorane='"+novaProjekcija.BrojDvorane+"',id_filma='"+novaProjekcija.IdFilma
                 +"',vrijeme_trajanja='"+ novaProjekcija.VrijemeTrajanja+"','broj_mjesta='"+novaProjekcija.BrojMjesta
                 + "','prodano_ulaznica='" + novaProjekcija.ProdanoUlaznica + "',cijena='" + Kino.PretvoriCijenu(novaProjekcija.Cijena)
-                + "',datum='" + novaProjekcija.Datum + "' WHERE id_projekcije=" + novaProjekcija .IdProjekcije+ ";";
+                + "',datum='" + novaProjekcija.Datum.ToString("yyyy-MM-dd HH:mm:ss") + "' WHERE id_projekcije=" + novaProjekcija.IdProjekcije + ";";
           
             int zahvaceno = DB.Instance.IzvrsiUpit(sqlUpit);
 
