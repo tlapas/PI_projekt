@@ -46,22 +46,12 @@ namespace PI_projekt.Artikli
 
         private void FrmArtikli_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'kinoDBDataSet.Zaposlenik' table. You can move, or remove it, as needed.
-            this.zaposlenikTableAdapter.Fill(this.kinoDBDataSet.Zaposlenik);
-            // TODO: This line of code loads data into the 'kinoDBDataSet.Racun' table. You can move, or remove it, as needed.
-            this.racunTableAdapter.Fill(this.kinoDBDataSet.Racun);
-            // TODO: This line of code loads data into the 'kinoDBDataSet.Racun' table. You can move, or remove it, as needed.
-            this.racunTableAdapter.Fill(this.kinoDBDataSet.Racun);
-            // TODO: This line of code loads data into the 'kinoDBDataSet.Artikl' table. You can move, or remove it, as needed.
-            this.artiklTableAdapter.Fill(this.kinoDBDataSet.Artikl);
             OsvjeziArtikle();
             foreach (NaciniPlacanja NacinPlacanja in listaNacinaPlacanja)
             {
                 nacinPlacanja.Items.Add(NacinPlacanja.Naziv);
             }
             nacinPlacanja.SelectedIndex = 0;
-            this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,20 +62,8 @@ namespace PI_projekt.Artikli
         private void Dalje_Click(object sender, EventArgs e)
         {
             Zaposlenici zaposlenik = Zaposlenici.DohvatiZaposlenika(userName.Text);
-            if (listaIdUlaznica == null && listaOdabranihArtikala.Count == 0)
-            {
-                string message = "Unijeli ste račun bez stavki.";
-                string caption = "Greška!";
-                DialogResult result;
-
-                // Displays the MessageBox.
-                result = MessageBox.Show(this, message, caption);
-            }
-            else
-            {
-                Kino.KreirajRacun(zaposlenik.OIB, IdNacinaPlacanja, listaOdabranihArtikala, listaKolicina, listaIdUlaznica, odabraniPopust);
-                MessageBox.Show("OIB zaposlenika: " + zaposlenik.OIB.ToString());
-            }
+            Kino.KreirajRacun(zaposlenik.OIB, IdNacinaPlacanja, listaOdabranihArtikala, listaKolicina, listaIdUlaznica, odabraniPopust);
+            MessageBox.Show("OIB zaposlenika: " + zaposlenik.OIB.ToString());
         }
 
         private void OsvjeziArtikle()

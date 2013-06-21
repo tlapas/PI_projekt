@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmArtikli));
             this.Naziv_artikla = new System.Windows.Forms.Label();
             this.Cijena = new System.Windows.Forms.Label();
@@ -42,29 +41,26 @@
             this.jedinicnaCijena = new System.Windows.Forms.TextBox();
             this.Stavke_racun = new System.Windows.Forms.GroupBox();
             this.Stavke = new System.Windows.Forms.DataGridView();
-            this.NazivCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CijenaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KolicinaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Iznos_racuna = new System.Windows.Forms.Label();
             this.ukupanIznos = new System.Windows.Forms.TextBox();
             this.Dalje = new System.Windows.Forms.Button();
             this.Odjava = new System.Windows.Forms.LinkLabel();
             this.Opcije = new System.Windows.Forms.GroupBox();
-            this.kolicinaNum = new System.Windows.Forms.NumericUpDown();
             this.Nazad = new System.Windows.Forms.Button();
             this.userRole = new System.Windows.Forms.Label();
             this.uloga = new System.Windows.Forms.Label();
             this.userName = new System.Windows.Forms.Label();
             this.korisnik = new System.Windows.Forms.Label();
+            this.kolicinaNum = new System.Windows.Forms.NumericUpDown();
+            this.NazivCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CijenaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KolicinaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nacin_placanja = new System.Windows.Forms.Label();
             this.nacinPlacanja = new System.Windows.Forms.ComboBox();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.kinoDBDataSet = new PI_projekt.KinoDBDataSet();
             this.Stavke_racun.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Stavke)).BeginInit();
             this.Opcije.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kolicinaNum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kinoDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // Naziv_artikla
@@ -77,7 +73,7 @@
             this.Naziv_artikla.Location = new System.Drawing.Point(13, 26);
             this.Naziv_artikla.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Naziv_artikla.Name = "Naziv_artikla";
-            this.Naziv_artikla.Size = new System.Drawing.Size(101, 16);
+            this.Naziv_artikla.Size = new System.Drawing.Size(98, 16);
             this.Naziv_artikla.TabIndex = 0;
             this.Naziv_artikla.Text = "Naziv artikla:";
             // 
@@ -91,7 +87,7 @@
             this.Cijena.Location = new System.Drawing.Point(13, 66);
             this.Cijena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Cijena.Name = "Cijena";
-            this.Cijena.Size = new System.Drawing.Size(127, 16);
+            this.Cijena.Size = new System.Drawing.Size(125, 16);
             this.Cijena.TabIndex = 2;
             this.Cijena.Text = "Jedinična cijena:";
             // 
@@ -120,7 +116,7 @@
             this.Kolicina.Location = new System.Drawing.Point(13, 104);
             this.Kolicina.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Kolicina.Name = "Kolicina";
-            this.Kolicina.Size = new System.Drawing.Size(70, 16);
+            this.Kolicina.Size = new System.Drawing.Size(67, 16);
             this.Kolicina.TabIndex = 4;
             this.Kolicina.Text = "Količina:";
             // 
@@ -203,32 +199,19 @@
             this.NazivCol,
             this.CijenaCol,
             this.KolicinaCol});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Stavke.DefaultCellStyle = dataGridViewCellStyle3;
             this.Stavke.Location = new System.Drawing.Point(5, 17);
             this.Stavke.Name = "Stavke";
             this.Stavke.ReadOnly = true;
             this.Stavke.Size = new System.Drawing.Size(436, 133);
             this.Stavke.TabIndex = 21;
-            // 
-            // NazivCol
-            // 
-            this.NazivCol.HeaderText = "Naziv";
-            this.NazivCol.Name = "NazivCol";
-            this.NazivCol.ReadOnly = true;
-            this.NazivCol.Width = 240;
-            // 
-            // CijenaCol
-            // 
-            this.CijenaCol.HeaderText = "Cijena";
-            this.CijenaCol.Name = "CijenaCol";
-            this.CijenaCol.ReadOnly = true;
-            this.CijenaCol.Width = 70;
-            // 
-            // KolicinaCol
-            // 
-            this.KolicinaCol.HeaderText = "Količina";
-            this.KolicinaCol.Name = "KolicinaCol";
-            this.KolicinaCol.ReadOnly = true;
-            this.KolicinaCol.Width = 70;
             // 
             // Iznos_racuna
             // 
@@ -240,7 +223,7 @@
             this.Iznos_racuna.Location = new System.Drawing.Point(252, 412);
             this.Iznos_racuna.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Iznos_racuna.Name = "Iznos_racuna";
-            this.Iznos_racuna.Size = new System.Drawing.Size(50, 16);
+            this.Iznos_racuna.Size = new System.Drawing.Size(48, 16);
             this.Iznos_racuna.TabIndex = 10;
             this.Iznos_racuna.Text = "Iznos:";
             // 
@@ -310,25 +293,6 @@
             this.Opcije.TabStop = false;
             this.Opcije.Text = "Opcije";
             // 
-            // kolicinaNum
-            // 
-            this.kolicinaNum.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.kolicinaNum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.kolicinaNum.Location = new System.Drawing.Point(154, 101);
-            this.kolicinaNum.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.kolicinaNum.Name = "kolicinaNum";
-            this.kolicinaNum.Size = new System.Drawing.Size(120, 22);
-            this.kolicinaNum.TabIndex = 21;
-            this.kolicinaNum.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // Nazad
             // 
             this.Nazad.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -363,7 +327,7 @@
             this.uloga.Location = new System.Drawing.Point(10, 35);
             this.uloga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uloga.Name = "uloga";
-            this.uloga.Size = new System.Drawing.Size(56, 16);
+            this.uloga.Size = new System.Drawing.Size(54, 16);
             this.uloga.TabIndex = 19;
             this.uloga.Text = "Uloga:";
             // 
@@ -374,7 +338,7 @@
             this.userName.ForeColor = System.Drawing.Color.Red;
             this.userName.Location = new System.Drawing.Point(153, 9);
             this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(109, 16);
+            this.userName.Size = new System.Drawing.Size(108, 16);
             this.userName.TabIndex = 18;
             this.userName.Text = "korisničko ime";
             // 
@@ -386,9 +350,49 @@
             this.korisnik.Location = new System.Drawing.Point(10, 9);
             this.korisnik.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.korisnik.Name = "korisnik";
-            this.korisnik.Size = new System.Drawing.Size(140, 16);
+            this.korisnik.Size = new System.Drawing.Size(136, 16);
             this.korisnik.TabIndex = 17;
             this.korisnik.Text = "Prijavljeni ste kao:";
+            // 
+            // kolicinaNum
+            // 
+            this.kolicinaNum.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.kolicinaNum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.kolicinaNum.Location = new System.Drawing.Point(154, 101);
+            this.kolicinaNum.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.kolicinaNum.Name = "kolicinaNum";
+            this.kolicinaNum.Size = new System.Drawing.Size(120, 22);
+            this.kolicinaNum.TabIndex = 21;
+            this.kolicinaNum.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // NazivCol
+            // 
+            this.NazivCol.HeaderText = "Naziv";
+            this.NazivCol.Name = "NazivCol";
+            this.NazivCol.ReadOnly = true;
+            this.NazivCol.Width = 240;
+            // 
+            // CijenaCol
+            // 
+            this.CijenaCol.HeaderText = "Cijena";
+            this.CijenaCol.Name = "CijenaCol";
+            this.CijenaCol.ReadOnly = true;
+            this.CijenaCol.Width = 70;
+            // 
+            // KolicinaCol
+            // 
+            this.KolicinaCol.HeaderText = "Količina";
+            this.KolicinaCol.Name = "KolicinaCol";
+            this.KolicinaCol.ReadOnly = true;
+            this.KolicinaCol.Width = 70;
             // 
             // Nacin_placanja
             // 
@@ -400,7 +404,7 @@
             this.Nacin_placanja.Location = new System.Drawing.Point(184, 446);
             this.Nacin_placanja.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Nacin_placanja.Name = "Nacin_placanja";
-            this.Nacin_placanja.Size = new System.Drawing.Size(119, 16);
+            this.Nacin_placanja.Size = new System.Drawing.Size(116, 16);
             this.Nacin_placanja.TabIndex = 21;
             this.Nacin_placanja.Text = "Način plačanja:";
             // 
@@ -419,29 +423,13 @@
             this.nacinPlacanja.TabIndex = 22;
             this.nacinPlacanja.SelectedIndexChanged += new System.EventHandler(this.nacinPlacanja_SelectedIndexChanged);
             // 
-            // reportViewer1
-            // 
-            reportDataSource1.Name = "DataSet1";
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PI_projekt.Artikli.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(617, 130);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
-            this.reportViewer1.TabIndex = 23;
-            // 
-            // kinoDBDataSet
-            // 
-            this.kinoDBDataSet.DataSetName = "KinoDBDataSet";
-            this.kinoDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // FrmArtikli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PI_projekt.Properties.Resources.BCKground_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1463, 522);
-            this.Controls.Add(this.reportViewer1);
+            this.ClientSize = new System.Drawing.Size(463, 522);
             this.Controls.Add(this.nacinPlacanja);
             this.Controls.Add(this.Nacin_placanja);
             this.Controls.Add(this.userRole);
@@ -461,8 +449,8 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(1479, 560);
-            this.MinimumSize = new System.Drawing.Size(1479, 520);
+            this.MaximumSize = new System.Drawing.Size(479, 560);
+            this.MinimumSize = new System.Drawing.Size(479, 520);
             this.Name = "FrmArtikli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Artikli";
@@ -473,7 +461,6 @@
             this.Opcije.ResumeLayout(false);
             this.Opcije.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kolicinaNum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kinoDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,8 +493,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn KolicinaCol;
         private System.Windows.Forms.Label Nacin_placanja;
         private System.Windows.Forms.ComboBox nacinPlacanja;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private KinoDBDataSet kinoDBDataSet;
 
     }
 }
