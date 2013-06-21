@@ -108,6 +108,7 @@
             this.dgvSveProjekcije.Name = "dgvSveProjekcije";
             this.dgvSveProjekcije.Size = new System.Drawing.Size(693, 226);
             this.dgvSveProjekcije.TabIndex = 23;
+            this.dgvSveProjekcije.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSveProjekcije_CellClick);
             // 
             // btnProjekcijePovratak
             // 
@@ -147,6 +148,7 @@
             this.btnProjekcijeAžuriraj.TabIndex = 27;
             this.btnProjekcijeAžuriraj.Text = "Ažuriraj";
             this.btnProjekcijeAžuriraj.UseVisualStyleBackColor = true;
+            this.btnProjekcijeAžuriraj.Click += new System.EventHandler(this.btnProjekcijeAžuriraj_Click);
             // 
             // lblSveProjekcije
             // 

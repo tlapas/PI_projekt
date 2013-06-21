@@ -12,6 +12,7 @@ namespace PI_projekt.Sucelja
 {
     public partial class FrmAdminProjekcije : Form
     {
+        private int IdProjekcije = -1;
         /// <summary>
         /// Prikazuje sve projekcije u dgvProjeckije
         /// </summary>
@@ -98,6 +99,35 @@ namespace PI_projekt.Sucelja
         private void FrmAdminProjekcije_Load(object sender, EventArgs e)
         {
             OsvjeziProjeckije();
+        }
+
+        private void btnProjekcijeAžuriraj_Click(object sender, EventArgs e)
+        {
+            if (IdProjekcije != -1)
+            {
+                FrmAdminProjekcijeDodaj formaAzuriraj = new FrmAdminProjekcijeDodaj(IdProjekcije);
+                formaAzuriraj.Show();
+            }
+            else 
+            {
+                MessageBox.Show("Odaberite projekciju za ažuriranje!");
+            }
+
+        }
+
+        /// <summary>
+        /// Prilikom na određenu ćeliju dohvaća se id pojedine projekcije
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dgvSveProjekcije_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow red = this.dgvSveProjekcije.Rows[e.RowIndex];
+                //postavljamo id projekcije u arijablu IdProjeckije
+                IdProjekcije = int.Parse(red.Cells["IdProjekcije"].Value.ToString());
+            }
         }
     }
 }

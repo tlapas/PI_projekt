@@ -230,6 +230,7 @@
             this.lbVrsteProjekcija.Name = "lbVrsteProjekcija";
             this.lbVrsteProjekcija.Size = new System.Drawing.Size(172, 95);
             this.lbVrsteProjekcija.TabIndex = 56;
+            this.lbVrsteProjekcija.ValueMember = "IdVrste";
             // 
             // lbOdabrane
             // 
@@ -239,6 +240,7 @@
             this.lbOdabrane.Name = "lbOdabrane";
             this.lbOdabrane.Size = new System.Drawing.Size(158, 95);
             this.lbOdabrane.TabIndex = 57;
+            this.lbOdabrane.ValueMember = "IdVrste";
             // 
             // lblDodaj
             // 
