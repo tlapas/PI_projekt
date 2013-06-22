@@ -116,7 +116,7 @@
             this.btnProjekcijePovratak.Name = "btnProjekcijePovratak";
             this.btnProjekcijePovratak.Size = new System.Drawing.Size(75, 23);
             this.btnProjekcijePovratak.TabIndex = 24;
-            this.btnProjekcijePovratak.Text = "Povrtak";
+            this.btnProjekcijePovratak.Text = "Povratak";
             this.btnProjekcijePovratak.UseVisualStyleBackColor = true;
             this.btnProjekcijePovratak.Click += new System.EventHandler(this.btnProjekcijePovratak_Click);
             // 

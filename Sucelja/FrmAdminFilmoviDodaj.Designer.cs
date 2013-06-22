@@ -45,7 +45,7 @@
             this.lbFilmoviDodajZanrovi = new System.Windows.Forms.ListBox();
             this.lbFilmoviDodajZanroviOdabrani = new System.Windows.Forms.ListBox();
             this.btnFilmoviDodajDodajLb = new System.Windows.Forms.Button();
-            this.btnFilmoviDodajOdustaniLb = new System.Windows.Forms.Button();
+            this.btnFilmoviDodajUkloniLb = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Odjava
@@ -218,22 +218,22 @@
             this.btnFilmoviDodajDodajLb.UseVisualStyleBackColor = true;
             this.btnFilmoviDodajDodajLb.Click += new System.EventHandler(this.btnFilmoviDodajDodajLb_Click);
             // 
-            // btnFilmoviDodajOdustaniLb
+            // btnFilmoviDodajUkloniLb
             // 
-            this.btnFilmoviDodajOdustaniLb.Location = new System.Drawing.Point(177, 227);
-            this.btnFilmoviDodajOdustaniLb.Name = "btnFilmoviDodajOdustaniLb";
-            this.btnFilmoviDodajOdustaniLb.Size = new System.Drawing.Size(75, 23);
-            this.btnFilmoviDodajOdustaniLb.TabIndex = 41;
-            this.btnFilmoviDodajOdustaniLb.Text = "Odustani";
-            this.btnFilmoviDodajOdustaniLb.UseVisualStyleBackColor = true;
-            this.btnFilmoviDodajOdustaniLb.Click += new System.EventHandler(this.btnFilmoviDodajOdustaniLb_Click);
+            this.btnFilmoviDodajUkloniLb.Location = new System.Drawing.Point(177, 227);
+            this.btnFilmoviDodajUkloniLb.Name = "btnFilmoviDodajUkloniLb";
+            this.btnFilmoviDodajUkloniLb.Size = new System.Drawing.Size(75, 23);
+            this.btnFilmoviDodajUkloniLb.TabIndex = 41;
+            this.btnFilmoviDodajUkloniLb.Text = "Ukloni";
+            this.btnFilmoviDodajUkloniLb.UseVisualStyleBackColor = true;
+            this.btnFilmoviDodajUkloniLb.Click += new System.EventHandler(this.btnFilmoviDodajOdustaniLb_Click);
             // 
             // FrmAdminFilmoviDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 312);
-            this.Controls.Add(this.btnFilmoviDodajOdustaniLb);
+            this.Controls.Add(this.btnFilmoviDodajUkloniLb);
             this.Controls.Add(this.btnFilmoviDodajDodajLb);
             this.Controls.Add(this.lbFilmoviDodajZanroviOdabrani);
             this.Controls.Add(this.lbFilmoviDodajZanrovi);
@@ -280,6 +280,6 @@
         private System.Windows.Forms.ListBox lbFilmoviDodajZanrovi;
         private System.Windows.Forms.ListBox lbFilmoviDodajZanroviOdabrani;
         private System.Windows.Forms.Button btnFilmoviDodajDodajLb;
-        private System.Windows.Forms.Button btnFilmoviDodajOdustaniLb;
+        private System.Windows.Forms.Button btnFilmoviDodajUkloniLb;
     }
 }
