@@ -34,8 +34,6 @@ namespace PI_projekt {
         
         private Mjerna_jedinicaDataTable tableMjerna_jedinica;
         
-        private RacunDataTable tableRacun;
-        
         private racun_kartaDataTable tableracun_karta;
         
         private ZaposlenikDataTable tableZaposlenik;
@@ -46,25 +44,27 @@ namespace PI_projekt {
         
         private KartaDataTable tableKarta;
         
+        private RacunDataTable tableRacun;
+        
         private global::System.Data.DataRelation relationFK_Artikl_0_0;
         
         private global::System.Data.DataRelation relationFK_stavka_racuna_0_0;
-        
-        private global::System.Data.DataRelation relationFK_stavka_racuna_1_0;
-        
-        private global::System.Data.DataRelation relationFK_Racun_0_0;
-        
-        private global::System.Data.DataRelation relationFK_Racun_1_0;
         
         private global::System.Data.DataRelation relationFK_racun_karta_0_0;
         
         private global::System.Data.DataRelation relationFK_racun_karta_1_0;
         
-        private global::System.Data.DataRelation relationFK_racun_karta_2_0;
-        
         private global::System.Data.DataRelation relationFK_Projekcija_0_0;
         
         private global::System.Data.DataRelation relationFK_Karta_0_0;
+        
+        private global::System.Data.DataRelation relationFK_stavka_racuna_1_0;
+        
+        private global::System.Data.DataRelation relationFK_racun_karta_2_0;
+        
+        private global::System.Data.DataRelation relationFK_Racun_0_0;
+        
+        private global::System.Data.DataRelation relationFK_Racun_1_0;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -109,9 +109,6 @@ namespace PI_projekt {
                 if ((ds.Tables["Mjerna_jedinica"] != null)) {
                     base.Tables.Add(new Mjerna_jedinicaDataTable(ds.Tables["Mjerna_jedinica"]));
                 }
-                if ((ds.Tables["Racun"] != null)) {
-                    base.Tables.Add(new RacunDataTable(ds.Tables["Racun"]));
-                }
                 if ((ds.Tables["racun_karta"] != null)) {
                     base.Tables.Add(new racun_kartaDataTable(ds.Tables["racun_karta"]));
                 }
@@ -126,6 +123,9 @@ namespace PI_projekt {
                 }
                 if ((ds.Tables["Karta"] != null)) {
                     base.Tables.Add(new KartaDataTable(ds.Tables["Karta"]));
+                }
+                if ((ds.Tables["Racun"] != null)) {
+                    base.Tables.Add(new RacunDataTable(ds.Tables["Racun"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -199,16 +199,6 @@ namespace PI_projekt {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public RacunDataTable Racun {
-            get {
-                return this.tableRacun;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public racun_kartaDataTable racun_karta {
             get {
                 return this.tableracun_karta;
@@ -252,6 +242,16 @@ namespace PI_projekt {
         public KartaDataTable Karta {
             get {
                 return this.tableKarta;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public RacunDataTable Racun {
+            get {
+                return this.tableRacun;
             }
         }
         
@@ -337,9 +337,6 @@ namespace PI_projekt {
                 if ((ds.Tables["Mjerna_jedinica"] != null)) {
                     base.Tables.Add(new Mjerna_jedinicaDataTable(ds.Tables["Mjerna_jedinica"]));
                 }
-                if ((ds.Tables["Racun"] != null)) {
-                    base.Tables.Add(new RacunDataTable(ds.Tables["Racun"]));
-                }
                 if ((ds.Tables["racun_karta"] != null)) {
                     base.Tables.Add(new racun_kartaDataTable(ds.Tables["racun_karta"]));
                 }
@@ -354,6 +351,9 @@ namespace PI_projekt {
                 }
                 if ((ds.Tables["Karta"] != null)) {
                     base.Tables.Add(new KartaDataTable(ds.Tables["Karta"]));
+                }
+                if ((ds.Tables["Racun"] != null)) {
+                    base.Tables.Add(new RacunDataTable(ds.Tables["Racun"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -418,12 +418,6 @@ namespace PI_projekt {
                     this.tableMjerna_jedinica.InitVars();
                 }
             }
-            this.tableRacun = ((RacunDataTable)(base.Tables["Racun"]));
-            if ((initTable == true)) {
-                if ((this.tableRacun != null)) {
-                    this.tableRacun.InitVars();
-                }
-            }
             this.tableracun_karta = ((racun_kartaDataTable)(base.Tables["racun_karta"]));
             if ((initTable == true)) {
                 if ((this.tableracun_karta != null)) {
@@ -454,16 +448,22 @@ namespace PI_projekt {
                     this.tableKarta.InitVars();
                 }
             }
+            this.tableRacun = ((RacunDataTable)(base.Tables["Racun"]));
+            if ((initTable == true)) {
+                if ((this.tableRacun != null)) {
+                    this.tableRacun.InitVars();
+                }
+            }
             this.relationFK_Artikl_0_0 = this.Relations["FK_Artikl_0_0"];
             this.relationFK_stavka_racuna_0_0 = this.Relations["FK_stavka_racuna_0_0"];
-            this.relationFK_stavka_racuna_1_0 = this.Relations["FK_stavka_racuna_1_0"];
-            this.relationFK_Racun_0_0 = this.Relations["FK_Racun_0_0"];
-            this.relationFK_Racun_1_0 = this.Relations["FK_Racun_1_0"];
             this.relationFK_racun_karta_0_0 = this.Relations["FK_racun_karta_0_0"];
             this.relationFK_racun_karta_1_0 = this.Relations["FK_racun_karta_1_0"];
-            this.relationFK_racun_karta_2_0 = this.Relations["FK_racun_karta_2_0"];
             this.relationFK_Projekcija_0_0 = this.Relations["FK_Projekcija_0_0"];
             this.relationFK_Karta_0_0 = this.Relations["FK_Karta_0_0"];
+            this.relationFK_stavka_racuna_1_0 = this.Relations["FK_stavka_racuna_1_0"];
+            this.relationFK_racun_karta_2_0 = this.Relations["FK_racun_karta_2_0"];
+            this.relationFK_Racun_0_0 = this.Relations["FK_Racun_0_0"];
+            this.relationFK_Racun_1_0 = this.Relations["FK_Racun_1_0"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -484,8 +484,6 @@ namespace PI_projekt {
             base.Tables.Add(this.tablestavka_racuna);
             this.tableMjerna_jedinica = new Mjerna_jedinicaDataTable();
             base.Tables.Add(this.tableMjerna_jedinica);
-            this.tableRacun = new RacunDataTable();
-            base.Tables.Add(this.tableRacun);
             this.tableracun_karta = new racun_kartaDataTable();
             base.Tables.Add(this.tableracun_karta);
             this.tableZaposlenik = new ZaposlenikDataTable();
@@ -496,6 +494,8 @@ namespace PI_projekt {
             base.Tables.Add(this.tableProjekcija);
             this.tableKarta = new KartaDataTable();
             base.Tables.Add(this.tableKarta);
+            this.tableRacun = new RacunDataTable();
+            base.Tables.Add(this.tableRacun);
             this.relationFK_Artikl_0_0 = new global::System.Data.DataRelation("FK_Artikl_0_0", new global::System.Data.DataColumn[] {
                         this.tableMjerna_jedinica.id_mjerne_jediniceColumn}, new global::System.Data.DataColumn[] {
                         this.tableArtikl.id_mjerne_jediniceColumn}, false);
@@ -504,18 +504,6 @@ namespace PI_projekt {
                         this.tableArtikl.id_artiklaColumn}, new global::System.Data.DataColumn[] {
                         this.tablestavka_racuna.id_artiklaColumn}, false);
             this.Relations.Add(this.relationFK_stavka_racuna_0_0);
-            this.relationFK_stavka_racuna_1_0 = new global::System.Data.DataRelation("FK_stavka_racuna_1_0", new global::System.Data.DataColumn[] {
-                        this.tableRacun.id_racunaColumn}, new global::System.Data.DataColumn[] {
-                        this.tablestavka_racuna.id_racunaColumn}, false);
-            this.Relations.Add(this.relationFK_stavka_racuna_1_0);
-            this.relationFK_Racun_0_0 = new global::System.Data.DataRelation("FK_Racun_0_0", new global::System.Data.DataColumn[] {
-                        this.tableNacin_placanja.id_nacina_placanjaColumn}, new global::System.Data.DataColumn[] {
-                        this.tableRacun.id_nacina_placanjaColumn}, false);
-            this.Relations.Add(this.relationFK_Racun_0_0);
-            this.relationFK_Racun_1_0 = new global::System.Data.DataRelation("FK_Racun_1_0", new global::System.Data.DataColumn[] {
-                        this.tableZaposlenik.OIBColumn}, new global::System.Data.DataColumn[] {
-                        this.tableRacun.OIBColumn}, false);
-            this.Relations.Add(this.relationFK_Racun_1_0);
             this.relationFK_racun_karta_0_0 = new global::System.Data.DataRelation("FK_racun_karta_0_0", new global::System.Data.DataColumn[] {
                         this.tablePopust.id_popustaColumn}, new global::System.Data.DataColumn[] {
                         this.tableracun_karta.id_popustaColumn}, false);
@@ -524,10 +512,6 @@ namespace PI_projekt {
                         this.tableKarta.id_karteColumn}, new global::System.Data.DataColumn[] {
                         this.tableracun_karta.id_karteColumn}, false);
             this.Relations.Add(this.relationFK_racun_karta_1_0);
-            this.relationFK_racun_karta_2_0 = new global::System.Data.DataRelation("FK_racun_karta_2_0", new global::System.Data.DataColumn[] {
-                        this.tableRacun.id_racunaColumn}, new global::System.Data.DataColumn[] {
-                        this.tableracun_karta.id_racunaColumn}, false);
-            this.Relations.Add(this.relationFK_racun_karta_2_0);
             this.relationFK_Projekcija_0_0 = new global::System.Data.DataRelation("FK_Projekcija_0_0", new global::System.Data.DataColumn[] {
                         this.tableFilm.id_filmaColumn}, new global::System.Data.DataColumn[] {
                         this.tableProjekcija.id_filmaColumn}, false);
@@ -536,6 +520,22 @@ namespace PI_projekt {
                         this.tableProjekcija.id_projekcijeColumn}, new global::System.Data.DataColumn[] {
                         this.tableKarta.id_projekcijeColumn}, false);
             this.Relations.Add(this.relationFK_Karta_0_0);
+            this.relationFK_stavka_racuna_1_0 = new global::System.Data.DataRelation("FK_stavka_racuna_1_0", new global::System.Data.DataColumn[] {
+                        this.tableRacun.id_racunaColumn}, new global::System.Data.DataColumn[] {
+                        this.tablestavka_racuna.id_racunaColumn}, false);
+            this.Relations.Add(this.relationFK_stavka_racuna_1_0);
+            this.relationFK_racun_karta_2_0 = new global::System.Data.DataRelation("FK_racun_karta_2_0", new global::System.Data.DataColumn[] {
+                        this.tableRacun.id_racunaColumn}, new global::System.Data.DataColumn[] {
+                        this.tableracun_karta.id_racunaColumn}, false);
+            this.Relations.Add(this.relationFK_racun_karta_2_0);
+            this.relationFK_Racun_0_0 = new global::System.Data.DataRelation("FK_Racun_0_0", new global::System.Data.DataColumn[] {
+                        this.tableNacin_placanja.id_nacina_placanjaColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRacun.id_nacina_placanjaColumn}, false);
+            this.Relations.Add(this.relationFK_Racun_0_0);
+            this.relationFK_Racun_1_0 = new global::System.Data.DataRelation("FK_Racun_1_0", new global::System.Data.DataColumn[] {
+                        this.tableZaposlenik.OIBColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRacun.OIBColumn}, false);
+            this.Relations.Add(this.relationFK_Racun_1_0);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -570,12 +570,6 @@ namespace PI_projekt {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeRacun() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeracun_karta() {
             return false;
         }
@@ -601,6 +595,12 @@ namespace PI_projekt {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeKarta() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeRacun() {
             return false;
         }
         
@@ -675,9 +675,6 @@ namespace PI_projekt {
         public delegate void Mjerna_jedinicaRowChangeEventHandler(object sender, Mjerna_jedinicaRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void RacunRowChangeEventHandler(object sender, RacunRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void racun_kartaRowChangeEventHandler(object sender, racun_kartaRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -691,6 +688,9 @@ namespace PI_projekt {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void KartaRowChangeEventHandler(object sender, KartaRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void RacunRowChangeEventHandler(object sender, RacunRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2100,303 +2100,6 @@ namespace PI_projekt {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "Mjerna_jedinicaDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class RacunDataTable : global::System.Data.TypedTableBase<RacunRow> {
-            
-            private global::System.Data.DataColumn columnid_racuna;
-            
-            private global::System.Data.DataColumn columnOIB;
-            
-            private global::System.Data.DataColumn columnid_nacina_placanja;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RacunDataTable() {
-                this.TableName = "Racun";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal RacunDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected RacunDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn id_racunaColumn {
-                get {
-                    return this.columnid_racuna;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn OIBColumn {
-                get {
-                    return this.columnOIB;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn id_nacina_placanjaColumn {
-                get {
-                    return this.columnid_nacina_placanja;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RacunRow this[int index] {
-                get {
-                    return ((RacunRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event RacunRowChangeEventHandler RacunRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event RacunRowChangeEventHandler RacunRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event RacunRowChangeEventHandler RacunRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event RacunRowChangeEventHandler RacunRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddRacunRow(RacunRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RacunRow AddRacunRow(ZaposlenikRow parentZaposlenikRowByFK_Racun_1_0, Nacin_placanjaRow parentNacin_placanjaRowByFK_Racun_0_0) {
-                RacunRow rowRacunRow = ((RacunRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        null,
-                        null};
-                if ((parentZaposlenikRowByFK_Racun_1_0 != null)) {
-                    columnValuesArray[1] = parentZaposlenikRowByFK_Racun_1_0[0];
-                }
-                if ((parentNacin_placanjaRowByFK_Racun_0_0 != null)) {
-                    columnValuesArray[2] = parentNacin_placanjaRowByFK_Racun_0_0[0];
-                }
-                rowRacunRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowRacunRow);
-                return rowRacunRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RacunRow FindByid_racuna(long id_racuna) {
-                return ((RacunRow)(this.Rows.Find(new object[] {
-                            id_racuna})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                RacunDataTable cln = ((RacunDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new RacunDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnid_racuna = base.Columns["id_racuna"];
-                this.columnOIB = base.Columns["OIB"];
-                this.columnid_nacina_placanja = base.Columns["id_nacina_placanja"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnid_racuna = new global::System.Data.DataColumn("id_racuna", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_racuna);
-                this.columnOIB = new global::System.Data.DataColumn("OIB", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOIB);
-                this.columnid_nacina_placanja = new global::System.Data.DataColumn("id_nacina_placanja", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_nacina_placanja);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_racuna}, true));
-                this.columnid_racuna.AutoIncrement = true;
-                this.columnid_racuna.AutoIncrementSeed = -1;
-                this.columnid_racuna.AutoIncrementStep = -1;
-                this.columnid_racuna.AllowDBNull = false;
-                this.columnid_racuna.Unique = true;
-                this.columnOIB.AllowDBNull = false;
-                this.columnid_nacina_placanja.AllowDBNull = false;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RacunRow NewRacunRow() {
-                return ((RacunRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new RacunRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(RacunRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.RacunRowChanged != null)) {
-                    this.RacunRowChanged(this, new RacunRowChangeEvent(((RacunRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.RacunRowChanging != null)) {
-                    this.RacunRowChanging(this, new RacunRowChangeEvent(((RacunRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.RacunRowDeleted != null)) {
-                    this.RacunRowDeleted(this, new RacunRowChangeEvent(((RacunRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.RacunRowDeleting != null)) {
-                    this.RacunRowDeleting(this, new RacunRowChangeEvent(((RacunRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveRacunRow(RacunRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                KinoDBDataSet ds = new KinoDBDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "RacunDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4070,6 +3773,317 @@ namespace PI_projekt {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class RacunDataTable : global::System.Data.TypedTableBase<RacunRow> {
+            
+            private global::System.Data.DataColumn columnid_racuna;
+            
+            private global::System.Data.DataColumn columnOIB;
+            
+            private global::System.Data.DataColumn columnid_nacina_placanja;
+            
+            private global::System.Data.DataColumn columndatum;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RacunDataTable() {
+                this.TableName = "Racun";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal RacunDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected RacunDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn id_racunaColumn {
+                get {
+                    return this.columnid_racuna;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn OIBColumn {
+                get {
+                    return this.columnOIB;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn id_nacina_placanjaColumn {
+                get {
+                    return this.columnid_nacina_placanja;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn datumColumn {
+                get {
+                    return this.columndatum;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RacunRow this[int index] {
+                get {
+                    return ((RacunRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event RacunRowChangeEventHandler RacunRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event RacunRowChangeEventHandler RacunRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event RacunRowChangeEventHandler RacunRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event RacunRowChangeEventHandler RacunRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddRacunRow(RacunRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RacunRow AddRacunRow(ZaposlenikRow parentZaposlenikRowByFK_Racun_1_0, Nacin_placanjaRow parentNacin_placanjaRowByFK_Racun_0_0, System.DateTime datum) {
+                RacunRow rowRacunRow = ((RacunRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        null,
+                        datum};
+                if ((parentZaposlenikRowByFK_Racun_1_0 != null)) {
+                    columnValuesArray[1] = parentZaposlenikRowByFK_Racun_1_0[0];
+                }
+                if ((parentNacin_placanjaRowByFK_Racun_0_0 != null)) {
+                    columnValuesArray[2] = parentNacin_placanjaRowByFK_Racun_0_0[0];
+                }
+                rowRacunRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowRacunRow);
+                return rowRacunRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RacunRow FindByid_racuna(long id_racuna) {
+                return ((RacunRow)(this.Rows.Find(new object[] {
+                            id_racuna})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                RacunDataTable cln = ((RacunDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new RacunDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnid_racuna = base.Columns["id_racuna"];
+                this.columnOIB = base.Columns["OIB"];
+                this.columnid_nacina_placanja = base.Columns["id_nacina_placanja"];
+                this.columndatum = base.Columns["datum"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnid_racuna = new global::System.Data.DataColumn("id_racuna", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_racuna);
+                this.columnOIB = new global::System.Data.DataColumn("OIB", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOIB);
+                this.columnid_nacina_placanja = new global::System.Data.DataColumn("id_nacina_placanja", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_nacina_placanja);
+                this.columndatum = new global::System.Data.DataColumn("datum", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndatum);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid_racuna}, true));
+                this.columnid_racuna.AutoIncrement = true;
+                this.columnid_racuna.AutoIncrementSeed = -1;
+                this.columnid_racuna.AutoIncrementStep = -1;
+                this.columnid_racuna.AllowDBNull = false;
+                this.columnid_racuna.Unique = true;
+                this.columnOIB.AllowDBNull = false;
+                this.columnid_nacina_placanja.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RacunRow NewRacunRow() {
+                return ((RacunRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new RacunRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(RacunRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.RacunRowChanged != null)) {
+                    this.RacunRowChanged(this, new RacunRowChangeEvent(((RacunRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.RacunRowChanging != null)) {
+                    this.RacunRowChanging(this, new RacunRowChangeEvent(((RacunRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.RacunRowDeleted != null)) {
+                    this.RacunRowDeleted(this, new RacunRowChangeEvent(((RacunRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.RacunRowDeleting != null)) {
+                    this.RacunRowDeleting(this, new RacunRowChangeEvent(((RacunRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveRacunRow(RacunRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                KinoDBDataSet ds = new KinoDBDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "RacunDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class ArtiklRow : global::System.Data.DataRow {
@@ -4371,98 +4385,6 @@ namespace PI_projekt {
                 }
                 else {
                     return ((ArtiklRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Artikl_0_0"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class RacunRow : global::System.Data.DataRow {
-            
-            private RacunDataTable tableRacun;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal RacunRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableRacun = ((RacunDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public long id_racuna {
-                get {
-                    return ((long)(this[this.tableRacun.id_racunaColumn]));
-                }
-                set {
-                    this[this.tableRacun.id_racunaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal OIB {
-                get {
-                    return ((decimal)(this[this.tableRacun.OIBColumn]));
-                }
-                set {
-                    this[this.tableRacun.OIBColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public long id_nacina_placanja {
-                get {
-                    return ((long)(this[this.tableRacun.id_nacina_placanjaColumn]));
-                }
-                set {
-                    this[this.tableRacun.id_nacina_placanjaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Nacin_placanjaRow Nacin_placanjaRow {
-                get {
-                    return ((Nacin_placanjaRow)(this.GetParentRow(this.Table.ParentRelations["FK_Racun_0_0"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Racun_0_0"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ZaposlenikRow ZaposlenikRow {
-                get {
-                    return ((ZaposlenikRow)(this.GetParentRow(this.Table.ParentRelations["FK_Racun_1_0"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Racun_1_0"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public stavka_racunaRow[] Getstavka_racunaRows() {
-                if ((this.Table.ChildRelations["FK_stavka_racuna_1_0"] == null)) {
-                    return new stavka_racunaRow[0];
-                }
-                else {
-                    return ((stavka_racunaRow[])(base.GetChildRows(this.Table.ChildRelations["FK_stavka_racuna_1_0"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public racun_kartaRow[] Getracun_kartaRows() {
-                if ((this.Table.ChildRelations["FK_racun_karta_2_0"] == null)) {
-                    return new racun_kartaRow[0];
-                }
-                else {
-                    return ((racun_kartaRow[])(base.GetChildRows(this.Table.ChildRelations["FK_racun_karta_2_0"])));
                 }
             }
         }
@@ -4979,6 +4901,126 @@ namespace PI_projekt {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class RacunRow : global::System.Data.DataRow {
+            
+            private RacunDataTable tableRacun;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal RacunRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableRacun = ((RacunDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public long id_racuna {
+                get {
+                    return ((long)(this[this.tableRacun.id_racunaColumn]));
+                }
+                set {
+                    this[this.tableRacun.id_racunaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal OIB {
+                get {
+                    return ((decimal)(this[this.tableRacun.OIBColumn]));
+                }
+                set {
+                    this[this.tableRacun.OIBColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public long id_nacina_placanja {
+                get {
+                    return ((long)(this[this.tableRacun.id_nacina_placanjaColumn]));
+                }
+                set {
+                    this[this.tableRacun.id_nacina_placanjaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime datum {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableRacun.datumColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'datum\' in table \'Racun\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRacun.datumColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Nacin_placanjaRow Nacin_placanjaRow {
+                get {
+                    return ((Nacin_placanjaRow)(this.GetParentRow(this.Table.ParentRelations["FK_Racun_0_0"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Racun_0_0"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ZaposlenikRow ZaposlenikRow {
+                get {
+                    return ((ZaposlenikRow)(this.GetParentRow(this.Table.ParentRelations["FK_Racun_1_0"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Racun_1_0"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdatumNull() {
+                return this.IsNull(this.tableRacun.datumColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdatumNull() {
+                this[this.tableRacun.datumColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public stavka_racunaRow[] Getstavka_racunaRows() {
+                if ((this.Table.ChildRelations["FK_stavka_racuna_1_0"] == null)) {
+                    return new stavka_racunaRow[0];
+                }
+                else {
+                    return ((stavka_racunaRow[])(base.GetChildRows(this.Table.ChildRelations["FK_stavka_racuna_1_0"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public racun_kartaRow[] Getracun_kartaRows() {
+                if ((this.Table.ChildRelations["FK_racun_karta_2_0"] == null)) {
+                    return new racun_kartaRow[0];
+                }
+                else {
+                    return ((racun_kartaRow[])(base.GetChildRows(this.Table.ChildRelations["FK_racun_karta_2_0"])));
+                }
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -5152,40 +5194,6 @@ namespace PI_projekt {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class RacunRowChangeEvent : global::System.EventArgs {
-            
-            private RacunRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RacunRowChangeEvent(RacunRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RacunRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public class racun_kartaRowChangeEvent : global::System.EventArgs {
             
             private racun_kartaRow eventRow;
@@ -5338,6 +5346,40 @@ namespace PI_projekt {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public KartaRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class RacunRowChangeEvent : global::System.EventArgs {
+            
+            private RacunRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RacunRowChangeEvent(RacunRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RacunRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7244,370 +7286,6 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_naziv));
             }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class RacunTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SQLite.SQLiteDataAdapter _adapter;
-        
-        private global::System.Data.SQLite.SQLiteConnection _connection;
-        
-        private global::System.Data.SQLite.SQLiteTransaction _transaction;
-        
-        private global::System.Data.SQLite.SQLiteCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public RacunTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SQLite.SQLiteDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SQLite.SQLiteConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SQLite.SQLiteCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SQLite.SQLiteTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SQLite.SQLiteCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SQLite.SQLiteDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Racun";
-            tableMapping.ColumnMappings.Add("id_racuna", "id_racuna");
-            tableMapping.ColumnMappings.Add("OIB", "OIB");
-            tableMapping.ColumnMappings.Add("id_nacina_placanja", "id_nacina_placanja");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SQLite.SQLiteCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [main].[sqlite_default_schema].[Racun] WHERE (([id_racuna] = @Origina" +
-                "l_id_racuna) AND ([OIB] = @Original_OIB) AND ([id_nacina_placanja] = @Original_i" +
-                "d_nacina_placanja))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            global::System.Data.SQLite.SQLiteParameter param = new global::System.Data.SQLite.SQLiteParameter();
-            param.ParameterName = "@Original_id_racuna";
-            param.DbType = global::System.Data.DbType.Int64;
-            param.DbType = global::System.Data.DbType.Int64;
-            param.SourceColumn = "id_racuna";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::System.Data.SQLite.SQLiteParameter();
-            param.ParameterName = "@Original_OIB";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.SourceColumn = "OIB";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::System.Data.SQLite.SQLiteParameter();
-            param.ParameterName = "@Original_id_nacina_placanja";
-            param.DbType = global::System.Data.DbType.Int64;
-            param.DbType = global::System.Data.DbType.Int64;
-            param.SourceColumn = "id_nacina_placanja";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            this._adapter.InsertCommand = new global::System.Data.SQLite.SQLiteCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [main].[sqlite_default_schema].[Racun] ([OIB], [id_nacina_placanja]) " +
-                "VALUES (@OIB, @id_nacina_placanja)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            param = new global::System.Data.SQLite.SQLiteParameter();
-            param.ParameterName = "@OIB";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.SourceColumn = "OIB";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::System.Data.SQLite.SQLiteParameter();
-            param.ParameterName = "@id_nacina_placanja";
-            param.DbType = global::System.Data.DbType.Int64;
-            param.DbType = global::System.Data.DbType.Int64;
-            param.SourceColumn = "id_nacina_placanja";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            this._adapter.UpdateCommand = new global::System.Data.SQLite.SQLiteCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [main].[sqlite_default_schema].[Racun] SET [OIB] = @OIB, [id_nacina_placan" +
-                "ja] = @id_nacina_placanja WHERE (([id_racuna] = @Original_id_racuna) AND ([OIB] " +
-                "= @Original_OIB) AND ([id_nacina_placanja] = @Original_id_nacina_placanja))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            param = new global::System.Data.SQLite.SQLiteParameter();
-            param.ParameterName = "@OIB";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.SourceColumn = "OIB";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::System.Data.SQLite.SQLiteParameter();
-            param.ParameterName = "@id_nacina_placanja";
-            param.DbType = global::System.Data.DbType.Int64;
-            param.DbType = global::System.Data.DbType.Int64;
-            param.SourceColumn = "id_nacina_placanja";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::System.Data.SQLite.SQLiteParameter();
-            param.ParameterName = "@Original_id_racuna";
-            param.DbType = global::System.Data.DbType.Int64;
-            param.DbType = global::System.Data.DbType.Int64;
-            param.SourceColumn = "id_racuna";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::System.Data.SQLite.SQLiteParameter();
-            param.ParameterName = "@Original_OIB";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.SourceColumn = "OIB";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::System.Data.SQLite.SQLiteParameter();
-            param.ParameterName = "@Original_id_nacina_placanja";
-            param.DbType = global::System.Data.DbType.Int64;
-            param.DbType = global::System.Data.DbType.Int64;
-            param.SourceColumn = "id_nacina_placanja";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SQLite.SQLiteConnection();
-            this._connection.ConnectionString = global::PI_projekt.Properties.Settings.Default.KinoDBConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SQLite.SQLiteCommand[1];
-            this._commandCollection[0] = new global::System.Data.SQLite.SQLiteCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [id_racuna], [OIB], [id_nacina_placanja] FROM [Racun] WHERE id_racuna = @i" +
-                "d_racuna";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            global::System.Data.SQLite.SQLiteParameter param = new global::System.Data.SQLite.SQLiteParameter();
-            param.ParameterName = "@id_racuna";
-            param.DbType = global::System.Data.DbType.Int64;
-            param.DbType = global::System.Data.DbType.Int64;
-            param.Size = 8;
-            param.SourceColumn = "id_racuna";
-            this._commandCollection[0].Parameters.Add(param);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillByIdRacuna(KinoDBDataSet.RacunDataTable dataTable, long id_racuna) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(id_racuna));
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual KinoDBDataSet.RacunDataTable GetDataByIdRacuna(long id_racuna) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(id_racuna));
-            KinoDBDataSet.RacunDataTable dataTable = new KinoDBDataSet.RacunDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(KinoDBDataSet.RacunDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(KinoDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Racun");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(long Original_id_racuna, decimal Original_OIB, long Original_id_nacina_placanja) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_id_racuna));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((decimal)(Original_OIB));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((long)(Original_id_nacina_placanja));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(decimal OIB, long id_nacina_placanja) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(OIB));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((long)(id_nacina_placanja));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(decimal OIB, long id_nacina_placanja, long Original_id_racuna, decimal Original_OIB, long Original_id_nacina_placanja) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(OIB));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((long)(id_nacina_placanja));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((long)(Original_id_racuna));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(Original_OIB));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((long)(Original_id_nacina_placanja));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10173,6 +9851,437 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class RacunTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SQLite.SQLiteDataAdapter _adapter;
+        
+        private global::System.Data.SQLite.SQLiteConnection _connection;
+        
+        private global::System.Data.SQLite.SQLiteTransaction _transaction;
+        
+        private global::System.Data.SQLite.SQLiteCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public RacunTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SQLite.SQLiteDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SQLite.SQLiteConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SQLite.SQLiteCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SQLite.SQLiteTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SQLite.SQLiteCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SQLite.SQLiteDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Racun";
+            tableMapping.ColumnMappings.Add("id_racuna", "id_racuna");
+            tableMapping.ColumnMappings.Add("OIB", "OIB");
+            tableMapping.ColumnMappings.Add("id_nacina_placanja", "id_nacina_placanja");
+            tableMapping.ColumnMappings.Add("datum", "datum");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SQLite.SQLiteCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [main].[sqlite_default_schema].[Racun] WHERE (([id_racuna] = @Original_id_racuna) AND ([OIB] = @Original_OIB) AND ([id_nacina_placanja] = @Original_id_nacina_placanja) AND ((@IsNull_datum = 1 AND [datum] IS NULL) OR ([datum] = @Original_datum)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            global::System.Data.SQLite.SQLiteParameter param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@Original_id_racuna";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.DbType = global::System.Data.DbType.Int64;
+            param.SourceColumn = "id_racuna";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@Original_OIB";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.SourceColumn = "OIB";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@Original_id_nacina_placanja";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.DbType = global::System.Data.DbType.Int64;
+            param.SourceColumn = "id_nacina_placanja";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@IsNull_datum";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.SourceColumn = "datum";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@Original_datum";
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.SourceColumn = "datum";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            this._adapter.InsertCommand = new global::System.Data.SQLite.SQLiteCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [main].[sqlite_default_schema].[Racun] ([OIB], [id_nacina_placanja], " +
+                "[datum]) VALUES (@OIB, @id_nacina_placanja, @datum)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@OIB";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.SourceColumn = "OIB";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@id_nacina_placanja";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.DbType = global::System.Data.DbType.Int64;
+            param.SourceColumn = "id_nacina_placanja";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@datum";
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.SourceColumn = "datum";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            this._adapter.UpdateCommand = new global::System.Data.SQLite.SQLiteCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [main].[sqlite_default_schema].[Racun] SET [OIB] = @OIB, [id_nacina_placanja] = @id_nacina_placanja, [datum] = @datum WHERE (([id_racuna] = @Original_id_racuna) AND ([OIB] = @Original_OIB) AND ([id_nacina_placanja] = @Original_id_nacina_placanja) AND ((@IsNull_datum = 1 AND [datum] IS NULL) OR ([datum] = @Original_datum)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@OIB";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.SourceColumn = "OIB";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@id_nacina_placanja";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.DbType = global::System.Data.DbType.Int64;
+            param.SourceColumn = "id_nacina_placanja";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@datum";
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.SourceColumn = "datum";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@Original_id_racuna";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.DbType = global::System.Data.DbType.Int64;
+            param.SourceColumn = "id_racuna";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@Original_OIB";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.SourceColumn = "OIB";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@Original_id_nacina_placanja";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.DbType = global::System.Data.DbType.Int64;
+            param.SourceColumn = "id_nacina_placanja";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@IsNull_datum";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.SourceColumn = "datum";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@Original_datum";
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.SourceColumn = "datum";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SQLite.SQLiteConnection();
+            this._connection.ConnectionString = global::PI_projekt.Properties.Settings.Default.KinoDBConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SQLite.SQLiteCommand[1];
+            this._commandCollection[0] = new global::System.Data.SQLite.SQLiteCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT [id_racuna], [OIB], [id_nacina_placanja], [datum] FROM [Racun] WHERE id_ra" +
+                "cuna = @id_racuna";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            global::System.Data.SQLite.SQLiteParameter param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@id_racuna";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.DbType = global::System.Data.DbType.Int64;
+            param.Size = 8;
+            param.SourceColumn = "id_racuna";
+            this._commandCollection[0].Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int FillByIdRacuna(KinoDBDataSet.RacunDataTable dataTable, long id_racuna) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(id_racuna));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual KinoDBDataSet.RacunDataTable GetDataByIdRacuna(long id_racuna) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(id_racuna));
+            KinoDBDataSet.RacunDataTable dataTable = new KinoDBDataSet.RacunDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(KinoDBDataSet.RacunDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(KinoDBDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Racun");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(long Original_id_racuna, decimal Original_OIB, long Original_id_nacina_placanja, global::System.Nullable<global::System.DateTime> Original_datum) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_id_racuna));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((decimal)(Original_OIB));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((long)(Original_id_nacina_placanja));
+            if ((Original_datum.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_datum.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(decimal OIB, long id_nacina_placanja, global::System.Nullable<global::System.DateTime> datum) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(OIB));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((long)(id_nacina_placanja));
+            if ((datum.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(datum.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(decimal OIB, long id_nacina_placanja, global::System.Nullable<global::System.DateTime> datum, long Original_id_racuna, decimal Original_OIB, long Original_id_nacina_placanja, global::System.Nullable<global::System.DateTime> Original_datum) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(OIB));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((long)(id_nacina_placanja));
+            if ((datum.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(datum.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((long)(Original_id_racuna));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(Original_OIB));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((long)(Original_id_nacina_placanja));
+            if ((Original_datum.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_datum.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10194,8 +10303,6 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
         
         private Mjerna_jedinicaTableAdapter _mjerna_jedinicaTableAdapter;
         
-        private RacunTableAdapter _racunTableAdapter;
-        
         private racun_kartaTableAdapter _racun_kartaTableAdapter;
         
         private ZaposlenikTableAdapter _zaposlenikTableAdapter;
@@ -10205,6 +10312,8 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
         private ProjekcijaTableAdapter _projekcijaTableAdapter;
         
         private KartaTableAdapter _kartaTableAdapter;
+        
+        private RacunTableAdapter _racunTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -10296,20 +10405,6 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public RacunTableAdapter RacunTableAdapter {
-            get {
-                return this._racunTableAdapter;
-            }
-            set {
-                this._racunTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
         public racun_kartaTableAdapter racun_kartaTableAdapter {
             get {
                 return this._racun_kartaTableAdapter;
@@ -10377,6 +10472,20 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public RacunTableAdapter RacunTableAdapter {
+            get {
+                return this._racunTableAdapter;
+            }
+            set {
+                this._racunTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -10414,10 +10523,6 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
                             && (this._mjerna_jedinicaTableAdapter.Connection != null))) {
                     return this._mjerna_jedinicaTableAdapter.Connection;
                 }
-                if (((this._racunTableAdapter != null) 
-                            && (this._racunTableAdapter.Connection != null))) {
-                    return this._racunTableAdapter.Connection;
-                }
                 if (((this._racun_kartaTableAdapter != null) 
                             && (this._racun_kartaTableAdapter.Connection != null))) {
                     return this._racun_kartaTableAdapter.Connection;
@@ -10437,6 +10542,10 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
                 if (((this._kartaTableAdapter != null) 
                             && (this._kartaTableAdapter.Connection != null))) {
                     return this._kartaTableAdapter.Connection;
+                }
+                if (((this._racunTableAdapter != null) 
+                            && (this._racunTableAdapter.Connection != null))) {
+                    return this._racunTableAdapter.Connection;
                 }
                 return null;
             }
@@ -10466,9 +10575,6 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
                 if ((this._mjerna_jedinicaTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._racunTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._racun_kartaTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -10482,6 +10588,9 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
                     count = (count + 1);
                 }
                 if ((this._kartaTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._racunTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -10549,15 +10658,6 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._racunTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Racun.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._racunTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._popustTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Popust.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -10573,6 +10673,15 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._kartaTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._racunTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Racun.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._racunTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -10652,14 +10761,6 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._racunTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Racun.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._racunTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._popustTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Popust.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -10673,6 +10774,14 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._kartaTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._racunTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Racun.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._racunTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -10718,6 +10827,14 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._racunTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Racun.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._racunTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._kartaTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Karta.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -10731,14 +10848,6 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._popustTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._racunTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Racun.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._racunTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -10854,11 +10963,6 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._racunTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._racunTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             if (((this._racun_kartaTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._racun_kartaTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
@@ -10881,6 +10985,11 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
             }
             if (((this._kartaTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._kartaTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._racunTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._racunTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -10961,15 +11070,6 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
                         adaptersWithAcceptChangesDuringUpdate.Add(this._mjerna_jedinicaTableAdapter.Adapter);
                     }
                 }
-                if ((this._racunTableAdapter != null)) {
-                    revertConnections.Add(this._racunTableAdapter, this._racunTableAdapter.Connection);
-                    this._racunTableAdapter.Connection = ((global::System.Data.SQLite.SQLiteConnection)(workConnection));
-                    this._racunTableAdapter.Transaction = ((global::System.Data.SQLite.SQLiteTransaction)(workTransaction));
-                    if (this._racunTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._racunTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._racunTableAdapter.Adapter);
-                    }
-                }
                 if ((this._racun_kartaTableAdapter != null)) {
                     revertConnections.Add(this._racun_kartaTableAdapter, this._racun_kartaTableAdapter.Connection);
                     this._racun_kartaTableAdapter.Connection = ((global::System.Data.SQLite.SQLiteConnection)(workConnection));
@@ -11013,6 +11113,15 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
                     if (this._kartaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._kartaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._kartaTableAdapter.Adapter);
+                    }
+                }
+                if ((this._racunTableAdapter != null)) {
+                    revertConnections.Add(this._racunTableAdapter, this._racunTableAdapter.Connection);
+                    this._racunTableAdapter.Connection = ((global::System.Data.SQLite.SQLiteConnection)(workConnection));
+                    this._racunTableAdapter.Transaction = ((global::System.Data.SQLite.SQLiteTransaction)(workTransaction));
+                    if (this._racunTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._racunTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._racunTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -11093,10 +11202,6 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
                     this._mjerna_jedinicaTableAdapter.Connection = ((global::System.Data.SQLite.SQLiteConnection)(revertConnections[this._mjerna_jedinicaTableAdapter]));
                     this._mjerna_jedinicaTableAdapter.Transaction = null;
                 }
-                if ((this._racunTableAdapter != null)) {
-                    this._racunTableAdapter.Connection = ((global::System.Data.SQLite.SQLiteConnection)(revertConnections[this._racunTableAdapter]));
-                    this._racunTableAdapter.Transaction = null;
-                }
                 if ((this._racun_kartaTableAdapter != null)) {
                     this._racun_kartaTableAdapter.Connection = ((global::System.Data.SQLite.SQLiteConnection)(revertConnections[this._racun_kartaTableAdapter]));
                     this._racun_kartaTableAdapter.Transaction = null;
@@ -11116,6 +11221,10 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
                 if ((this._kartaTableAdapter != null)) {
                     this._kartaTableAdapter.Connection = ((global::System.Data.SQLite.SQLiteConnection)(revertConnections[this._kartaTableAdapter]));
                     this._kartaTableAdapter.Transaction = null;
+                }
+                if ((this._racunTableAdapter != null)) {
+                    this._racunTableAdapter.Connection = ((global::System.Data.SQLite.SQLiteConnection)(revertConnections[this._racunTableAdapter]));
+                    this._racunTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
