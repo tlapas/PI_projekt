@@ -61,7 +61,7 @@ namespace PI_projekt.Artikli
 
         private void Dalje_Click(object sender, EventArgs e)
         {
-            Zaposlenici zaposlenik = Zaposlenici.DohvatiZaposlenika(userName.Text);
+            Zaposlenici zaposlenik = Zaposlenici.DohvatiZaposlenika2(userName.Text);
             if (listaIdUlaznica == null && listaOdabranihArtikala.Count == 0)
             {
                 string message = "Unijeli ste račun bez stavki.";

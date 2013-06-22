@@ -118,8 +118,8 @@ namespace PI_projekt
             DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
             while (dr.Read())
             {
-                 uloga = new Uloga(dr);
-                
+                uloga = new Uloga(dr);
+
             }
             dr.Close();     //Zatvaranje DataReader objekta.
             return uloga;
@@ -134,9 +134,9 @@ namespace PI_projekt
         public static int UnesiUlogu(int idZaposlenika, int idUloge)
         {
             int zahvaceno = 0;
-            string sqlUpit = "INSERT INTO Zaposlenik(id_uloge) VALUES ('"+idUloge+"')WHERE id_zaposlenika=" + idZaposlenika + ";";
+            string sqlUpit = "INSERT INTO Zaposlenik(id_uloge) VALUES ('" + idUloge + "')WHERE id_zaposlenika=" + idZaposlenika + ";";
             zahvaceno = DB.Instance.IzvrsiUpit(sqlUpit);
-           
+
             return zahvaceno;
         }
 

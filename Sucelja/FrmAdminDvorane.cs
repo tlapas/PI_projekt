@@ -79,7 +79,7 @@ namespace PI_projekt.Sucelja
             pomOdjava = true;
             FrmAdminDvoraneDodaj formaDodaj = new FrmAdminDvoraneDodaj();
             formaDodaj.Show();
-            this.Close(); ;
+            this.Close(); 
         }
 
         /// <summary>

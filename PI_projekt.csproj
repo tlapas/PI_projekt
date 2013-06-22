@@ -157,6 +157,7 @@
       <DependentUpon>FrmUlaznica.cs</DependentUpon>
     </Compile>
     <Compile Include="ProjekcijaVrstaProjekcije.cs" />
+    <Compile Include="Uloga.cs" />
     <Compile Include="VrstaProjekcije.cs" />
     <Compile Include="Zanrovi.cs" />
     <Compile Include="Zaposlenici.cs" />
