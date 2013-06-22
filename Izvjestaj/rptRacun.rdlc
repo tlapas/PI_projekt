@@ -160,7 +160,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>KinoDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Rider\Desktop\PI_radna\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Rider\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Racun</rd:TableName>
         <rd:TableAdapterFillMethod>FillByIdRacuna</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataByIdRacuna</rd:TableAdapterGetDataMethod>
