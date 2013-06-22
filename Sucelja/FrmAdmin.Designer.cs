@@ -40,7 +40,11 @@
             this.miSifarniciProjekcije = new System.Windows.Forms.ToolStripMenuItem();
             this.miSifarniciDvorane = new System.Windows.Forms.ToolStripMenuItem();
             this.statistikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusnaTraka = new System.Windows.Forms.StatusStrip();
+            this.sstext = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ssUsername = new System.Windows.Forms.ToolStripStatusLabel();
             this.msIzbornik.SuspendLayout();
+            this.statusnaTraka.SuspendLayout();
             this.SuspendLayout();
             // 
             // msIzbornik
@@ -67,14 +71,14 @@
             // miOpcijeOdjava
             // 
             this.miOpcijeOdjava.Name = "miOpcijeOdjava";
-            this.miOpcijeOdjava.Size = new System.Drawing.Size(152, 22);
+            this.miOpcijeOdjava.Size = new System.Drawing.Size(111, 22);
             this.miOpcijeOdjava.Text = "Odjava";
             this.miOpcijeOdjava.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miOpcijeOdjava_MouseUp);
             // 
             // miOpcijeIzlaz
             // 
             this.miOpcijeIzlaz.Name = "miOpcijeIzlaz";
-            this.miOpcijeIzlaz.Size = new System.Drawing.Size(152, 22);
+            this.miOpcijeIzlaz.Size = new System.Drawing.Size(111, 22);
             this.miOpcijeIzlaz.Text = "Izlaz";
             this.miOpcijeIzlaz.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miOpcijeIzlaz_MouseUp);
             // 
@@ -93,35 +97,35 @@
             // miSifarniciZaposlenici
             // 
             this.miSifarniciZaposlenici.Name = "miSifarniciZaposlenici";
-            this.miSifarniciZaposlenici.Size = new System.Drawing.Size(152, 22);
+            this.miSifarniciZaposlenici.Size = new System.Drawing.Size(134, 22);
             this.miSifarniciZaposlenici.Text = "Zaposlenici";
             this.miSifarniciZaposlenici.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miSifarniciZaposlenici_MouseUp);
             // 
             // miSifarniciArtikli
             // 
             this.miSifarniciArtikli.Name = "miSifarniciArtikli";
-            this.miSifarniciArtikli.Size = new System.Drawing.Size(152, 22);
+            this.miSifarniciArtikli.Size = new System.Drawing.Size(134, 22);
             this.miSifarniciArtikli.Text = "Artikli";
             this.miSifarniciArtikli.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miSifarniciArtikli_MouseUp);
             // 
             // miSifarniciFilmovi
             // 
             this.miSifarniciFilmovi.Name = "miSifarniciFilmovi";
-            this.miSifarniciFilmovi.Size = new System.Drawing.Size(152, 22);
+            this.miSifarniciFilmovi.Size = new System.Drawing.Size(134, 22);
             this.miSifarniciFilmovi.Text = "Filmovi";
             this.miSifarniciFilmovi.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miSifarniciFilmovi_MouseUp);
             // 
             // miSifarniciProjekcije
             // 
             this.miSifarniciProjekcije.Name = "miSifarniciProjekcije";
-            this.miSifarniciProjekcije.Size = new System.Drawing.Size(152, 22);
+            this.miSifarniciProjekcije.Size = new System.Drawing.Size(134, 22);
             this.miSifarniciProjekcije.Text = "Projekcije";
             this.miSifarniciProjekcije.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miSifarniciProjekcije_MouseUp);
             // 
             // miSifarniciDvorane
             // 
             this.miSifarniciDvorane.Name = "miSifarniciDvorane";
-            this.miSifarniciDvorane.Size = new System.Drawing.Size(152, 22);
+            this.miSifarniciDvorane.Size = new System.Drawing.Size(134, 22);
             this.miSifarniciDvorane.Text = "Dvorane";
             this.miSifarniciDvorane.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miSifarniciDvorane_MouseUp);
             // 
@@ -131,6 +135,33 @@
             this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.statistikaToolStripMenuItem.Text = "Statistika";
             // 
+            // statusnaTraka
+            // 
+            this.statusnaTraka.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sstext,
+            this.ssUsername});
+            this.statusnaTraka.Location = new System.Drawing.Point(0, 363);
+            this.statusnaTraka.Name = "statusnaTraka";
+            this.statusnaTraka.Size = new System.Drawing.Size(560, 22);
+            this.statusnaTraka.TabIndex = 17;
+            this.statusnaTraka.Text = "status";
+            // 
+            // sstext
+            // 
+            this.sstext.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.sstext.ForeColor = System.Drawing.Color.White;
+            this.sstext.Name = "sstext";
+            this.sstext.Size = new System.Drawing.Size(101, 17);
+            this.sstext.Text = "Prijavljeni ste kao:";
+            // 
+            // ssUsername
+            // 
+            this.ssUsername.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ssUsername.ForeColor = System.Drawing.Color.Red;
+            this.ssUsername.Name = "ssUsername";
+            this.ssUsername.Size = new System.Drawing.Size(59, 17);
+            this.ssUsername.Text = "username";
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -138,6 +169,7 @@
             this.BackgroundImage = global::PI_projekt.Properties.Resources.BCKground_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(560, 385);
+            this.Controls.Add(this.statusnaTraka);
             this.Controls.Add(this.msIzbornik);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -150,6 +182,8 @@
             this.Text = "Administrator";
             this.msIzbornik.ResumeLayout(false);
             this.msIzbornik.PerformLayout();
+            this.statusnaTraka.ResumeLayout(false);
+            this.statusnaTraka.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,6 +202,9 @@
         private System.Windows.Forms.ToolStripMenuItem miSifarniciProjekcije;
         private System.Windows.Forms.ToolStripMenuItem miSifarniciDvorane;
         private System.Windows.Forms.ToolStripMenuItem statistikaToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip statusnaTraka;
+        private System.Windows.Forms.ToolStripStatusLabel sstext;
+        private System.Windows.Forms.ToolStripStatusLabel ssUsername;
 
     }
 }

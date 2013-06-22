@@ -15,11 +15,9 @@ namespace PI_projekt.Sucelja
         public FrmAdmin()
         {
             InitializeComponent();
-            
+            ssUsername.Text = Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik;
         }
-
-       
-        
+            
         private void miSifarniciZaposlenici_MouseUp(object sender, MouseEventArgs e)
         {
             Sucelja.FrmAdminZaposlenici Odabir = new Sucelja.FrmAdminZaposlenici();
