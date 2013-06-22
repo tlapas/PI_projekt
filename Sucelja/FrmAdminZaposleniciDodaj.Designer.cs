@@ -51,6 +51,8 @@
             this.lblZaposleniciDodajLozinka = new System.Windows.Forms.Label();
             this.txtZaposleniciDodajKorime = new System.Windows.Forms.TextBox();
             this.lblZaposleniciDodajKorime = new System.Windows.Forms.Label();
+            this.lblUloga = new System.Windows.Forms.Label();
+            this.cbUloga = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtZaposleniciDodajIme
@@ -87,7 +89,7 @@
             // 
             // btnFilmoviDodajOdustani
             // 
-            this.btnFilmoviDodajOdustani.Location = new System.Drawing.Point(201, 305);
+            this.btnFilmoviDodajOdustani.Location = new System.Drawing.Point(201, 330);
             this.btnFilmoviDodajOdustani.Name = "btnFilmoviDodajOdustani";
             this.btnFilmoviDodajOdustani.Size = new System.Drawing.Size(75, 23);
             this.btnFilmoviDodajOdustani.TabIndex = 60;
@@ -97,12 +99,13 @@
             // 
             // btnFilmoviDodajSpremi
             // 
-            this.btnFilmoviDodajSpremi.Location = new System.Drawing.Point(101, 305);
+            this.btnFilmoviDodajSpremi.Location = new System.Drawing.Point(107, 330);
             this.btnFilmoviDodajSpremi.Name = "btnFilmoviDodajSpremi";
             this.btnFilmoviDodajSpremi.Size = new System.Drawing.Size(75, 23);
             this.btnFilmoviDodajSpremi.TabIndex = 59;
             this.btnFilmoviDodajSpremi.Text = "Spremi";
             this.btnFilmoviDodajSpremi.UseVisualStyleBackColor = true;
+            this.btnFilmoviDodajSpremi.Click += new System.EventHandler(this.btnZaposleniciDodaj_Click);
             // 
             // Odjava
             // 
@@ -262,11 +265,31 @@
             this.lblZaposleniciDodajKorime.TabIndex = 76;
             this.lblZaposleniciDodajKorime.Text = "Korisničko ime:";
             // 
+            // lblUloga
+            // 
+            this.lblUloga.AutoSize = true;
+            this.lblUloga.Location = new System.Drawing.Point(11, 291);
+            this.lblUloga.Name = "lblUloga";
+            this.lblUloga.Size = new System.Drawing.Size(35, 13);
+            this.lblUloga.TabIndex = 80;
+            this.lblUloga.Text = "Uloga";
+            // 
+            // cbUloga
+            // 
+            this.cbUloga.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUloga.FormattingEnabled = true;
+            this.cbUloga.Location = new System.Drawing.Point(92, 283);
+            this.cbUloga.Name = "cbUloga";
+            this.cbUloga.Size = new System.Drawing.Size(121, 21);
+            this.cbUloga.TabIndex = 81;
+            // 
             // FrmAdminZaposleniciDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(285, 337);
+            this.ClientSize = new System.Drawing.Size(359, 365);
+            this.Controls.Add(this.cbUloga);
+            this.Controls.Add(this.lblUloga);
             this.Controls.Add(this.txtZaposleniciDodajLozinka);
             this.Controls.Add(this.lblZaposleniciDodajLozinka);
             this.Controls.Add(this.txtZaposleniciDodajKorime);
@@ -293,6 +316,7 @@
             this.Name = "FrmAdminZaposleniciDodaj";
             this.Text = "FrmAdminZaposleniciDodaj";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAdminZaposleniciDodaj_FormClosed);
+            this.Load += new System.EventHandler(this.FrmAdminZaposleniciDodaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +347,7 @@
         private System.Windows.Forms.Label lblZaposleniciDodajLozinka;
         private System.Windows.Forms.TextBox txtZaposleniciDodajKorime;
         private System.Windows.Forms.Label lblZaposleniciDodajKorime;
+        private System.Windows.Forms.Label lblUloga;
+        private System.Windows.Forms.ComboBox cbUloga;
     }
 }

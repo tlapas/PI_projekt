@@ -108,6 +108,8 @@
             this.dgvSviZaposlenici.Name = "dgvSviZaposlenici";
             this.dgvSviZaposlenici.Size = new System.Drawing.Size(754, 203);
             this.dgvSviZaposlenici.TabIndex = 24;
+            this.dgvSviZaposlenici.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSviZaposlenici_CellClick);
+            this.dgvSviZaposlenici.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSviZaposlenici_CellClick);
             // 
             // btnZaposleniciPovratak
             // 
@@ -127,6 +129,7 @@
             this.btnZaposleniciOsvjezi.TabIndex = 27;
             this.btnZaposleniciOsvjezi.Text = "Osvježi";
             this.btnZaposleniciOsvjezi.UseVisualStyleBackColor = true;
+            this.btnZaposleniciOsvjezi.Click += new System.EventHandler(this.btnZaposleniciOsvjezi_Click);
             // 
             // btnZaposleniciDodaj
             // 
@@ -146,6 +149,7 @@
             this.btnZaposleniciAzuriraj.TabIndex = 29;
             this.btnZaposleniciAzuriraj.Text = "Ažuriraj";
             this.btnZaposleniciAzuriraj.UseVisualStyleBackColor = true;
+            this.btnZaposleniciAzuriraj.Click += new System.EventHandler(this.btnZaposleniciAzuriraj_Click);
             // 
             // lblSviZaposlenici
             // 
@@ -175,6 +179,7 @@
             this.Name = "FrmAdminZaposlenici";
             this.Text = "FrmAdminZaposlenici";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAdminZaposlenici_FormClosed);
+            this.Load += new System.EventHandler(this.FrmAdminZaposlenici_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSviZaposlenici)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
