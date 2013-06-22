@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUlaznica));
-            this.Odjava = new System.Windows.Forms.LinkLabel();
             this.Prijava = new System.Windows.Forms.Label();
             this.lblDatumProjekcije = new System.Windows.Forms.Label();
             this.lblNazivProjekcije = new System.Windows.Forms.Label();
             this.cbNazivProjekcije = new System.Windows.Forms.ComboBox();
-            this.Nazad = new System.Windows.Forms.Button();
             this.Dalje = new System.Windows.Forms.Button();
             this.Opcije = new System.Windows.Forms.GroupBox();
             this.cbPopust = new System.Windows.Forms.ComboBox();
@@ -80,21 +78,6 @@
             this.gbDetalji.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Odjava
-            // 
-            this.Odjava.AutoSize = true;
-            this.Odjava.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Odjava.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Odjava.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Odjava.LinkColor = System.Drawing.Color.Yellow;
-            this.Odjava.Location = new System.Drawing.Point(1074, 9);
-            this.Odjava.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Odjava.Name = "Odjava";
-            this.Odjava.Size = new System.Drawing.Size(63, 20);
-            this.Odjava.TabIndex = 18;
-            this.Odjava.TabStop = true;
-            this.Odjava.Text = "odjava";
-            // 
             // Prijava
             // 
             this.Prijava.AutoSize = true;
@@ -103,7 +86,7 @@
             this.Prijava.Location = new System.Drawing.Point(9, 9);
             this.Prijava.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Prijava.Name = "Prijava";
-            this.Prijava.Size = new System.Drawing.Size(165, 20);
+            this.Prijava.Size = new System.Drawing.Size(136, 16);
             this.Prijava.TabIndex = 17;
             this.Prijava.Text = "Prijavljeni ste kao:";
             // 
@@ -114,7 +97,7 @@
             this.lblDatumProjekcije.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblDatumProjekcije.Location = new System.Drawing.Point(7, 64);
             this.lblDatumProjekcije.Name = "lblDatumProjekcije";
-            this.lblDatumProjekcije.Size = new System.Drawing.Size(157, 20);
+            this.lblDatumProjekcije.Size = new System.Drawing.Size(129, 16);
             this.lblDatumProjekcije.TabIndex = 19;
             this.lblDatumProjekcije.Text = "Datum projekcije:";
             // 
@@ -125,7 +108,7 @@
             this.lblNazivProjekcije.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblNazivProjekcije.Location = new System.Drawing.Point(7, 33);
             this.lblNazivProjekcije.Name = "lblNazivProjekcije";
-            this.lblNazivProjekcije.Size = new System.Drawing.Size(151, 20);
+            this.lblNazivProjekcije.Size = new System.Drawing.Size(125, 16);
             this.lblNazivProjekcije.TabIndex = 20;
             this.lblNazivProjekcije.Text = "Naziv Projekcije:";
             // 
@@ -137,24 +120,9 @@
             this.cbNazivProjekcije.FormattingEnabled = true;
             this.cbNazivProjekcije.Location = new System.Drawing.Point(165, 30);
             this.cbNazivProjekcije.Name = "cbNazivProjekcije";
-            this.cbNazivProjekcije.Size = new System.Drawing.Size(333, 28);
+            this.cbNazivProjekcije.Size = new System.Drawing.Size(333, 24);
             this.cbNazivProjekcije.TabIndex = 21;
             this.cbNazivProjekcije.SelectedIndexChanged += new System.EventHandler(this.cbNazivProjekcije_SelectedIndexChanged);
-            // 
-            // Nazad
-            // 
-            this.Nazad.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Nazad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Nazad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Nazad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Nazad.Location = new System.Drawing.Point(34, 547);
-            this.Nazad.Margin = new System.Windows.Forms.Padding(4);
-            this.Nazad.Name = "Nazad";
-            this.Nazad.Size = new System.Drawing.Size(112, 35);
-            this.Nazad.TabIndex = 26;
-            this.Nazad.Text = "Nazad";
-            this.Nazad.UseVisualStyleBackColor = false;
-            this.Nazad.Click += new System.EventHandler(this.Nazad_Click);
             // 
             // Dalje
             // 
@@ -205,7 +173,7 @@
             this.cbPopust.FormattingEnabled = true;
             this.cbPopust.Location = new System.Drawing.Point(165, 128);
             this.cbPopust.Name = "cbPopust";
-            this.cbPopust.Size = new System.Drawing.Size(332, 28);
+            this.cbPopust.Size = new System.Drawing.Size(332, 24);
             this.cbPopust.TabIndex = 40;
             this.cbPopust.SelectedIndexChanged += new System.EventHandler(this.cbPopust_SelectedIndexChanged);
             // 
@@ -214,7 +182,7 @@
             this.lblPopust.AutoSize = true;
             this.lblPopust.Location = new System.Drawing.Point(7, 136);
             this.lblPopust.Name = "lblPopust";
-            this.lblPopust.Size = new System.Drawing.Size(73, 20);
+            this.lblPopust.Size = new System.Drawing.Size(60, 16);
             this.lblPopust.TabIndex = 39;
             this.lblPopust.Text = "Popust:";
             // 
@@ -223,7 +191,7 @@
             this.txtDvorana.Location = new System.Drawing.Point(165, 96);
             this.txtDvorana.Name = "txtDvorana";
             this.txtDvorana.ReadOnly = true;
-            this.txtDvorana.Size = new System.Drawing.Size(333, 26);
+            this.txtDvorana.Size = new System.Drawing.Size(333, 22);
             this.txtDvorana.TabIndex = 38;
             // 
             // label1
@@ -231,7 +199,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(161, 186);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 20);
+            this.label1.Size = new System.Drawing.Size(81, 16);
             this.label1.TabIndex = 37;
             this.label1.Text = "Odabrano:";
             // 
@@ -258,7 +226,7 @@
             // lbSlobodna
             // 
             this.lbSlobodna.FormattingEnabled = true;
-            this.lbSlobodna.ItemHeight = 20;
+            this.lbSlobodna.ItemHeight = 16;
             this.lbSlobodna.Location = new System.Drawing.Point(24, 215);
             this.lbSlobodna.Name = "lbSlobodna";
             this.lbSlobodna.Size = new System.Drawing.Size(88, 244);
@@ -268,7 +236,7 @@
             // 
             this.lbOdabrana.AccessibleRole = System.Windows.Forms.AccessibleRole.DropList;
             this.lbOdabrana.FormattingEnabled = true;
-            this.lbOdabrana.ItemHeight = 20;
+            this.lbOdabrana.ItemHeight = 16;
             this.lbOdabrana.Location = new System.Drawing.Point(165, 215);
             this.lbOdabrana.Name = "lbOdabrana";
             this.lbOdabrana.Size = new System.Drawing.Size(81, 244);
@@ -282,7 +250,7 @@
             this.cbDatum.FormattingEnabled = true;
             this.cbDatum.Location = new System.Drawing.Point(165, 64);
             this.cbDatum.Name = "cbDatum";
-            this.cbDatum.Size = new System.Drawing.Size(333, 28);
+            this.cbDatum.Size = new System.Drawing.Size(333, 24);
             this.cbDatum.TabIndex = 32;
             this.cbDatum.SelectedIndexChanged += new System.EventHandler(this.cbDatum_SelectedIndexChanged);
             // 
@@ -293,7 +261,7 @@
             this.lblSjedalo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblSjedalo.Location = new System.Drawing.Point(20, 186);
             this.lblSjedalo.Name = "lblSjedalo";
-            this.lblSjedalo.Size = new System.Drawing.Size(92, 20);
+            this.lblSjedalo.Size = new System.Drawing.Size(79, 16);
             this.lblSjedalo.TabIndex = 31;
             this.lblSjedalo.Text = "Slobodno:";
             // 
@@ -304,7 +272,7 @@
             this.lblDvorana.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblDvorana.Location = new System.Drawing.Point(7, 99);
             this.lblDvorana.Name = "lblDvorana";
-            this.lblDvorana.Size = new System.Drawing.Size(85, 20);
+            this.lblDvorana.Size = new System.Drawing.Size(71, 16);
             this.lblDvorana.TabIndex = 29;
             this.lblDvorana.Text = "Dvorana:";
             // 
@@ -339,7 +307,7 @@
             this.lblKn.AutoSize = true;
             this.lblKn.Location = new System.Drawing.Point(304, 106);
             this.lblKn.Name = "lblKn";
-            this.lblKn.Size = new System.Drawing.Size(31, 20);
+            this.lblKn.Size = new System.Drawing.Size(25, 16);
             this.lblKn.TabIndex = 16;
             this.lblKn.Text = "Kn";
             // 
@@ -348,7 +316,7 @@
             this.lblMinuta.AutoSize = true;
             this.lblMinuta.Location = new System.Drawing.Point(304, 70);
             this.lblMinuta.Name = "lblMinuta";
-            this.lblMinuta.Size = new System.Drawing.Size(65, 20);
+            this.lblMinuta.Size = new System.Drawing.Size(53, 16);
             this.lblMinuta.TabIndex = 15;
             this.lblMinuta.Text = "Minuta";
             // 
@@ -358,7 +326,7 @@
             this.txtProdanoUlaznica.Margin = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.txtProdanoUlaznica.Name = "txtProdanoUlaznica";
             this.txtProdanoUlaznica.ReadOnly = true;
-            this.txtProdanoUlaznica.Size = new System.Drawing.Size(114, 26);
+            this.txtProdanoUlaznica.Size = new System.Drawing.Size(114, 22);
             this.txtProdanoUlaznica.TabIndex = 14;
             this.txtProdanoUlaznica.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -368,7 +336,7 @@
             this.txtBrojMjesta.Margin = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.txtBrojMjesta.Name = "txtBrojMjesta";
             this.txtBrojMjesta.ReadOnly = true;
-            this.txtBrojMjesta.Size = new System.Drawing.Size(114, 26);
+            this.txtBrojMjesta.Size = new System.Drawing.Size(114, 22);
             this.txtBrojMjesta.TabIndex = 13;
             this.txtBrojMjesta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -378,7 +346,7 @@
             this.txtCijena.Margin = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.txtCijena.Name = "txtCijena";
             this.txtCijena.ReadOnly = true;
-            this.txtCijena.Size = new System.Drawing.Size(114, 26);
+            this.txtCijena.Size = new System.Drawing.Size(114, 22);
             this.txtCijena.TabIndex = 12;
             this.txtCijena.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -388,7 +356,7 @@
             this.txtVrijemeTrajanja.Margin = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.txtVrijemeTrajanja.Name = "txtVrijemeTrajanja";
             this.txtVrijemeTrajanja.ReadOnly = true;
-            this.txtVrijemeTrajanja.Size = new System.Drawing.Size(114, 26);
+            this.txtVrijemeTrajanja.Size = new System.Drawing.Size(114, 22);
             this.txtVrijemeTrajanja.TabIndex = 11;
             this.txtVrijemeTrajanja.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -397,13 +365,13 @@
             this.txtFilm.Location = new System.Drawing.Point(184, 30);
             this.txtFilm.Name = "txtFilm";
             this.txtFilm.ReadOnly = true;
-            this.txtFilm.Size = new System.Drawing.Size(273, 26);
+            this.txtFilm.Size = new System.Drawing.Size(273, 22);
             this.txtFilm.TabIndex = 10;
             // 
             // lbZanr
             // 
             this.lbZanr.FormattingEnabled = true;
-            this.lbZanr.ItemHeight = 20;
+            this.lbZanr.ItemHeight = 16;
             this.lbZanr.Location = new System.Drawing.Point(268, 238);
             this.lbZanr.Name = "lbZanr";
             this.lbZanr.SelectionMode = System.Windows.Forms.SelectionMode.None;
@@ -413,7 +381,7 @@
             // lbVrstaProjekcije
             // 
             this.lbVrstaProjekcije.FormattingEnabled = true;
-            this.lbVrstaProjekcije.ItemHeight = 20;
+            this.lbVrstaProjekcije.ItemHeight = 16;
             this.lbVrstaProjekcije.Location = new System.Drawing.Point(39, 238);
             this.lbVrstaProjekcije.Name = "lbVrstaProjekcije";
             this.lbVrstaProjekcije.SelectionMode = System.Windows.Forms.SelectionMode.None;
@@ -425,7 +393,7 @@
             this.lblZanr.AutoSize = true;
             this.lblZanr.Location = new System.Drawing.Point(264, 215);
             this.lblZanr.Name = "lblZanr";
-            this.lblZanr.Size = new System.Drawing.Size(52, 20);
+            this.lblZanr.Size = new System.Drawing.Size(43, 16);
             this.lblZanr.TabIndex = 7;
             this.lblZanr.Text = "Žanr:";
             // 
@@ -434,7 +402,7 @@
             this.lblVrstaProjekcije.AutoSize = true;
             this.lblVrstaProjekcije.Location = new System.Drawing.Point(36, 215);
             this.lblVrstaProjekcije.Name = "lblVrstaProjekcije";
-            this.lblVrstaProjekcije.Size = new System.Drawing.Size(147, 20);
+            this.lblVrstaProjekcije.Size = new System.Drawing.Size(121, 16);
             this.lblVrstaProjekcije.TabIndex = 6;
             this.lblVrstaProjekcije.Text = "Vrsta projekcije:";
             // 
@@ -443,7 +411,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(24, 198);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 20);
+            this.label7.Size = new System.Drawing.Size(0, 16);
             this.label7.TabIndex = 5;
             // 
             // lblCijena
@@ -451,7 +419,7 @@
             this.lblCijena.AutoSize = true;
             this.lblCijena.Location = new System.Drawing.Point(30, 102);
             this.lblCijena.Name = "lblCijena";
-            this.lblCijena.Size = new System.Drawing.Size(68, 20);
+            this.lblCijena.Size = new System.Drawing.Size(56, 16);
             this.lblCijena.TabIndex = 4;
             this.lblCijena.Text = "Cijena:";
             // 
@@ -460,7 +428,7 @@
             this.lblProdanoUlaznica.AutoSize = true;
             this.lblProdanoUlaznica.Location = new System.Drawing.Point(29, 164);
             this.lblProdanoUlaznica.Name = "lblProdanoUlaznica";
-            this.lblProdanoUlaznica.Size = new System.Drawing.Size(154, 20);
+            this.lblProdanoUlaznica.Size = new System.Drawing.Size(128, 16);
             this.lblProdanoUlaznica.TabIndex = 3;
             this.lblProdanoUlaznica.Text = "Prodano ulaznica";
             // 
@@ -469,7 +437,7 @@
             this.lblBrojMjesta.AutoSize = true;
             this.lblBrojMjesta.Location = new System.Drawing.Point(30, 133);
             this.lblBrojMjesta.Name = "lblBrojMjesta";
-            this.lblBrojMjesta.Size = new System.Drawing.Size(118, 20);
+            this.lblBrojMjesta.Size = new System.Drawing.Size(94, 16);
             this.lblBrojMjesta.TabIndex = 2;
             this.lblBrojMjesta.Text = "Broj mjesta: ";
             // 
@@ -478,7 +446,7 @@
             this.lblVrijemeTrajanja.AutoSize = true;
             this.lblVrijemeTrajanja.Location = new System.Drawing.Point(30, 70);
             this.lblVrijemeTrajanja.Name = "lblVrijemeTrajanja";
-            this.lblVrijemeTrajanja.Size = new System.Drawing.Size(148, 20);
+            this.lblVrijemeTrajanja.Size = new System.Drawing.Size(121, 16);
             this.lblVrijemeTrajanja.TabIndex = 1;
             this.lblVrijemeTrajanja.Text = "Vrijeme trajanja:";
             // 
@@ -487,7 +455,7 @@
             this.lblFilm.AutoSize = true;
             this.lblFilm.Location = new System.Drawing.Point(30, 33);
             this.lblFilm.Name = "lblFilm";
-            this.lblFilm.Size = new System.Drawing.Size(51, 20);
+            this.lblFilm.Size = new System.Drawing.Size(41, 16);
             this.lblFilm.TabIndex = 0;
             this.lblFilm.Text = "Film:";
             // 
@@ -496,7 +464,7 @@
             this.lblUkupno.AutoSize = true;
             this.lblUkupno.Location = new System.Drawing.Point(561, 525);
             this.lblUkupno.Name = "lblUkupno";
-            this.lblUkupno.Size = new System.Drawing.Size(120, 20);
+            this.lblUkupno.Size = new System.Drawing.Size(98, 16);
             this.lblUkupno.TabIndex = 39;
             this.lblUkupno.Text = "Bez popusta:";
             // 
@@ -505,7 +473,7 @@
             this.txtSuma.Location = new System.Drawing.Point(687, 521);
             this.txtSuma.Margin = new System.Windows.Forms.Padding(0, 0, 7, 0);
             this.txtSuma.Name = "txtSuma";
-            this.txtSuma.Size = new System.Drawing.Size(88, 26);
+            this.txtSuma.Size = new System.Drawing.Size(88, 22);
             this.txtSuma.TabIndex = 40;
             this.txtSuma.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -514,7 +482,7 @@
             this.lblKn2.AutoSize = true;
             this.lblKn2.Location = new System.Drawing.Point(780, 525);
             this.lblKn2.Name = "lblKn2";
-            this.lblKn2.Size = new System.Drawing.Size(31, 20);
+            this.lblKn2.Size = new System.Drawing.Size(25, 16);
             this.lblKn2.TabIndex = 41;
             this.lblKn2.Text = "Kn";
             // 
@@ -523,7 +491,7 @@
             this.lblPopust2.AutoSize = true;
             this.lblPopust2.Location = new System.Drawing.Point(606, 561);
             this.lblPopust2.Name = "lblPopust2";
-            this.lblPopust2.Size = new System.Drawing.Size(73, 20);
+            this.lblPopust2.Size = new System.Drawing.Size(60, 16);
             this.lblPopust2.TabIndex = 42;
             this.lblPopust2.Text = "Popust:";
             // 
@@ -532,7 +500,7 @@
             this.lblUkupno2.AutoSize = true;
             this.lblUkupno2.Location = new System.Drawing.Point(606, 595);
             this.lblUkupno2.Name = "lblUkupno2";
-            this.lblUkupno2.Size = new System.Drawing.Size(77, 20);
+            this.lblUkupno2.Size = new System.Drawing.Size(65, 16);
             this.lblUkupno2.TabIndex = 43;
             this.lblUkupno2.Text = "Ukupno:";
             // 
@@ -541,7 +509,7 @@
             this.lblKn3.AutoSize = true;
             this.lblKn3.Location = new System.Drawing.Point(780, 595);
             this.lblKn3.Name = "lblKn3";
-            this.lblKn3.Size = new System.Drawing.Size(31, 20);
+            this.lblKn3.Size = new System.Drawing.Size(25, 16);
             this.lblKn3.TabIndex = 44;
             this.lblKn3.Text = "Kn";
             // 
@@ -550,7 +518,7 @@
             this.txtPopust.Location = new System.Drawing.Point(687, 558);
             this.txtPopust.Margin = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.txtPopust.Name = "txtPopust";
-            this.txtPopust.Size = new System.Drawing.Size(88, 26);
+            this.txtPopust.Size = new System.Drawing.Size(88, 22);
             this.txtPopust.TabIndex = 45;
             this.txtPopust.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -559,7 +527,7 @@
             this.txtUkupno.Location = new System.Drawing.Point(685, 592);
             this.txtUkupno.Margin = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.txtUkupno.Name = "txtUkupno";
-            this.txtUkupno.Size = new System.Drawing.Size(90, 26);
+            this.txtUkupno.Size = new System.Drawing.Size(90, 22);
             this.txtUkupno.TabIndex = 46;
             this.txtUkupno.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -584,7 +552,7 @@
             // 
             // FrmUlaznica
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -599,9 +567,7 @@
             this.Controls.Add(this.txtSuma);
             this.Controls.Add(this.gbDetalji);
             this.Controls.Add(this.Opcije);
-            this.Controls.Add(this.Nazad);
             this.Controls.Add(this.Dalje);
-            this.Controls.Add(this.Odjava);
             this.Controls.Add(this.Prijava);
             this.Controls.Add(this.shapeContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -611,7 +577,6 @@
             this.Name = "FrmUlaznica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ulaznica";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmUlaznica_FormClosed);
             this.Load += new System.EventHandler(this.FrmUlaznica_Load);
             this.Opcije.ResumeLayout(false);
             this.Opcije.PerformLayout();
@@ -624,12 +589,10 @@
 
         #endregion
 
-        private System.Windows.Forms.LinkLabel Odjava;
         private System.Windows.Forms.Label Prijava;
         private System.Windows.Forms.Label lblDatumProjekcije;
         private System.Windows.Forms.Label lblNazivProjekcije;
         private System.Windows.Forms.ComboBox cbNazivProjekcije;
-        private System.Windows.Forms.Button Nazad;
         private System.Windows.Forms.Button Dalje;
         private System.Windows.Forms.GroupBox Opcije;
         private System.Windows.Forms.Label lblDvorana;

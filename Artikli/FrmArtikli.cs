@@ -23,17 +23,12 @@ namespace PI_projekt.Artikli
         public FrmArtikli()
         {
             InitializeComponent();
-            userName.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik;
-            userRole.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Uloga;
         }
 
 
         public FrmArtikli(List<int> listaIdUlaznicaArg, int idPopustArg)
         {
             InitializeComponent();
-            userName.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik;
-            userRole.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Uloga;
-            listaIdUlaznica = listaIdUlaznicaArg;
             odabraniPopust = Popust.DohvatiPopust(idPopustArg);
         }
 
@@ -61,7 +56,7 @@ namespace PI_projekt.Artikli
 
         private void Dalje_Click(object sender, EventArgs e)
         {
-            Zaposlenici zaposlenik = Zaposlenici.DohvatiZaposlenika2(userName.Text);
+            Zaposlenici zaposlenik = Zaposlenici.DohvatiZaposlenika2(Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik);
             if (listaIdUlaznica == null && listaOdabranihArtikala.Count == 0)
             {
                 string message = "Unijeli ste račun bez stavki.";
@@ -132,47 +127,6 @@ namespace PI_projekt.Artikli
                     IdNacinaPlacanja = nacin.IdNacinaPlacanja;
                 }
             }
-        }
-
-        //funkcija za odjavu iz sustava, klikom na odjava se postavlja parametar na 1
-        // i prosljeđuje funkciji koja će ispisati poruku i pitati želi li se korisnik odjaviti
-        // u slučaju klika na yes, korisnik se odjavljuje i vraća na početnu stranicu (login)
-        int odjavljivanje = 0;
-        private void Odjava_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            odjavljivanje = 1;
-            odjava();
-        }
-        private void odjava()
-        {
-            if (odjavljivanje == 1)
-            {
-                string message = "Želite li se odjaviti iz sustava?";
-                string caption = "Odjava iz sustava";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result;
-
-                // Displays the MessageBox.
-                result = MessageBox.Show(this, message, caption, buttons);
-
-                if (result == DialogResult.Yes)
-                {
-                    PI_projekt.Sucelja.FrmPocetna pocetna = new PI_projekt.Sucelja.FrmPocetna();
-                    pocetna.Show();
-                    this.Close();
-                }
-            }
-        }
-
-        private void Nazad_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void FrmArtikli_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            FrmProdavac prodavac = new FrmProdavac();
-            prodavac.Show();
-        }
+        }             
     }
 }
