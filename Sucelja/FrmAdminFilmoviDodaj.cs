@@ -12,9 +12,9 @@ namespace PI_projekt.Sucelja
 {
     public partial class FrmAdminFilmoviDodaj : Form
     {
-        private bool pomOdjava = false;
         private Film filmAzuriraj = null;
         private int idFilma = -1;
+
         /// <summary>
         /// Lista koja prikazuje moguće žanrove i lista koja pokazuje koji su od ponuđenih
         /// žanrova odabrani
@@ -25,11 +25,10 @@ namespace PI_projekt.Sucelja
         /// <summary>
         /// Konstruktor koji se poziva u slučaju dodavanja novog filma
         /// </summary>
+        /// 
         public FrmAdminFilmoviDodaj()
         {
             InitializeComponent();
-            userName.Text = FrmPocetna.SpremnikPodataka.Zaposlenik;
-            userRole.Text = FrmPocetna.SpremnikPodataka.Uloga;
         }
         
         /// <summary>
@@ -93,40 +92,6 @@ namespace PI_projekt.Sucelja
         }
 
         /// <summary>
-        /// Dodavanje novog filma prilikom klika na tipku dodaj!
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        //private void btnDodaj_Click(object sender, EventArgs e)
-        //{
-        //    pomOdjava = true;
-        //    Film noviFilm = new Film();
-        //    noviFilm.Naziv = txtDodajFilmNaziv.Text.ToString();
-        //    try
-        //    {
-        //        if (filmAzuriraj != null)
-        //        {
-        //            noviFilm.IdFilma = filmAzuriraj.IdFilma;
-        //            Film.AzurirajFilm(noviFilm);
-
-        //        }
-        //        else
-        //        {
-        //            Film.DodajFilm(noviFilm);
-
-        //        }
-        //        FrmAdminFilmovi adminFilmovi = new FrmAdminFilmovi();
-        //        adminFilmovi.Show();
-        //        this.Close();
-        //    }
-        //    catch
-        //    {
-
-        //        MessageBox.Show("Pogrešan unos podataka!");
-        //    }
-        //}
-
-        /// <summary>
         /// Dodaje žanr za film koji se unosi
         /// </summary>
         /// <param name="sender"></param>
@@ -162,26 +127,22 @@ namespace PI_projekt.Sucelja
         } 
 
         /// <summary>
-        /// Odustajanje od dodavanja novog artikla prilikom klika na tipku odustani
+        /// Odustajanje od dodavanja novog filma prilikom klika na tipku odustani
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnFilmoviDodajOdustani_Click(object sender, EventArgs e)
         {
-            pomOdjava = true;
-            FrmAdminFilmovi adminFilmovi = new FrmAdminFilmovi();
-            adminFilmovi.Show();
             this.Close();
         }
 
         /// <summary>
-        /// Dodavanje novog artikla prilikom klika na tipku spremi
+        /// Dodavanje novog filma prilikom klika na tipku spremi
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnFilmoviDodajSpremi_Click(object sender, EventArgs e)
         {
-            pomOdjava = true;
             Film noviFilm = new Film();
             try
             {
@@ -202,15 +163,13 @@ namespace PI_projekt.Sucelja
                     {
                         noviFilm.IdFilma = filmAzuriraj.IdFilma;
                         Film.AzurirajFilm(noviFilm);
-                     FilmZanrovi.AzurirajZanrove(noviFilm.IdFilma, listaOdabranih);  
+                        FilmZanrovi.AzurirajZanrove(noviFilm.IdFilma, listaOdabranih);
                     }
                     else
                     {
                         int IdDodanogFilma = Film.DodajFilm(noviFilm);
                         FilmZanrovi.UnesiZanrove(IdDodanogFilma, listaOdabranih);
                     }
-                    FrmAdminFilmovi adminFilmovi = new FrmAdminFilmovi();
-                    adminFilmovi.Show();
                     this.Close();
 
                 } 
@@ -222,54 +181,6 @@ namespace PI_projekt.Sucelja
             catch {
                 MessageBox.Show("Pogrešan unos podataka!");
             }
-        } 
-
-       
-        /// <summary>
-        /// funkcija za odjavu iz sustava, klikom na odjava se postavlja parametar na 1
-        /// i prosljeđuje funkciji koja će ispisati poruku i pitati želi li se korisnik odjaviti
-        /// u slučaju klika na yes, korisnik se odjavljuje i vraća na početnu stranicu (login)
-        /// </summary>
-        int odjavljivanje = 0;
-        private void Odjava_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            odjavljivanje = 1;
-            odjava();
-        }
-        private void odjava()
-        {
-            if (odjavljivanje == 1)
-            {
-                string message = "Želite li se odjaviti iz sustava?";
-                string caption = "Odjava iz sustava";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result;
-
-                // Displays the MessageBox.
-                result = MessageBox.Show(this, message, caption, buttons);
-
-                if (result == DialogResult.Yes)
-                {
-                    pomOdjava = true;
-                    PI_projekt.Sucelja.FrmPocetna pocetna = new PI_projekt.Sucelja.FrmPocetna();
-                    pocetna.Show();
-                    this.Close();
-                }
-            }
-        }
-
-        /// <summary>
-        /// Metoda koja se poziva kada se forma zatvara na x (varijabla pomOdjava je ostala na false)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FrmAdminFilmoviDodaj_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (!pomOdjava)
-            {
-                FrmAdminFilmovi adminFilmovi = new FrmAdminFilmovi();
-                adminFilmovi.Show();
-            }
-        }    
+        }   
     }
 }

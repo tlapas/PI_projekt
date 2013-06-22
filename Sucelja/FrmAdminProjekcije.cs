@@ -16,7 +16,7 @@ namespace PI_projekt.Sucelja
         /// <summary>
         /// Prikazuje sve projekcije u dgvProjeckije
         /// </summary>
-        private void OsvjeziProjeckije()
+        private void OsvjeziProjekcije()
         {
             List<Projekcija> listaProjekcija = Projekcija.DohvatiProjekcije();
             dgvSveProjekcije.DataSource = listaProjekcija;
@@ -27,92 +27,16 @@ namespace PI_projekt.Sucelja
 
         {
             InitializeComponent();
-            userName.Text = FrmPocetna.SpremnikPodataka.Zaposlenik;
-            userRole.Text = FrmPocetna.SpremnikPodataka.Uloga;
-        }
-
-        private bool pomOdjava = false;
-
-        private void btnProjekcijePovratak_Click(object sender, EventArgs e)
-        {
-            pomOdjava = true;
-            FrmAdmin admin = new FrmAdmin();
-            admin.Show();
-            this.Close();
-        }
-
-        private void btnProjekcijeDodaj_Click(object sender, EventArgs e)
-        {
-            pomOdjava = true;
-            FrmAdminProjekcijeDodaj formaDodaj = new FrmAdminProjekcijeDodaj();
-            formaDodaj.Show();
-            this.Close(); ;
-        }
-
-        /// <summary>
-        /// funkcija za odjavu iz sustava, klikom na odjava se postavlja parametar na 1
-        /// i prosljeđuje funkciji koja će ispisati poruku i pitati želi li se korisnik odjaviti
-        /// u slučaju klika na yes, korisnik se odjavljuje i vraća na početnu stranicu (login)
-        /// </summary>
-        int odjavljivanje = 0;
-        private void Odjava_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            odjavljivanje = 1;
-            odjava();
-        }
-        private void odjava()
-        {
-            if (odjavljivanje == 1)
-            {
-                string message = "Želite li se odjaviti iz sustava?";
-                string caption = "Odjava iz sustava";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result;
-
-                // Displays the MessageBox.
-                result = MessageBox.Show(this, message, caption, buttons);
-
-                if (result == DialogResult.Yes)
-                {
-                    pomOdjava = true;
-                    PI_projekt.Sucelja.FrmPocetna pocetna = new PI_projekt.Sucelja.FrmPocetna();
-                    pocetna.Show();
-                    this.Close();
-                }
-            }
-        }
-        private void FrmAdminProjekcije_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (!pomOdjava)
-            {
-                FrmAdmin admin = new FrmAdmin();
-                admin.Show();
-            }
-
         }
 
         private void btnProjekcijeOsvjezi_Click(object sender, EventArgs e)
         {
-            OsvjeziProjeckije();
+            OsvjeziProjekcije();
         }
 
         private void FrmAdminProjekcije_Load(object sender, EventArgs e)
         {
-            OsvjeziProjeckije();
-        }
-
-        private void btnProjekcijeAžuriraj_Click(object sender, EventArgs e)
-        {
-            if (IdProjekcije != -1)
-            {
-                FrmAdminProjekcijeDodaj formaAzuriraj = new FrmAdminProjekcijeDodaj(IdProjekcije);
-                formaAzuriraj.Show();
-            }
-            else 
-            {
-                MessageBox.Show("Odaberite projekciju za ažuriranje!");
-            }
-
+            OsvjeziProjekcije();
         }
 
         /// <summary>
@@ -125,9 +49,30 @@ namespace PI_projekt.Sucelja
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow red = this.dgvSveProjekcije.Rows[e.RowIndex];
-                //postavljamo id projekcije u arijablu IdProjeckije
+                //postavljamo id projekcije u varijablu IdProjeckije
                 IdProjekcije = int.Parse(red.Cells["IdProjekcije"].Value.ToString());
             }
         }
+
+        private void btnProjekcijeDodaj_Click(object sender, EventArgs e)
+        {
+            FrmAdminProjekcijeDodaj formaDodaj = new FrmAdminProjekcijeDodaj();
+            formaDodaj.Show();
+        }
+
+        private void btnProjekcijeAžuriraj_Click(object sender, EventArgs e)
+        {
+            if (IdProjekcije != -1)
+            {
+                FrmAdminProjekcijeDodaj formaAzuriraj = new FrmAdminProjekcijeDodaj(IdProjekcije);
+                formaAzuriraj.Show();
+            }
+            else
+            {
+                MessageBox.Show("Odaberite projekciju za ažuriranje!");
+            }
+
+        }
+
     }
 }

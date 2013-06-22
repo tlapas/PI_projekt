@@ -34,11 +34,6 @@
             this.lblZaposleniciDodajOIB = new System.Windows.Forms.Label();
             this.btnFilmoviDodajOdustani = new System.Windows.Forms.Button();
             this.btnFilmoviDodajSpremi = new System.Windows.Forms.Button();
-            this.Odjava = new System.Windows.Forms.LinkLabel();
-            this.userRole = new System.Windows.Forms.Label();
-            this.uloga = new System.Windows.Forms.Label();
-            this.userName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtZaposleniciDodajPrezime = new System.Windows.Forms.TextBox();
             this.lblZaposleniciDodajPrezime = new System.Windows.Forms.Label();
             this.txtZaposleniciDodajEmail = new System.Windows.Forms.TextBox();
@@ -106,68 +101,6 @@
             this.btnFilmoviDodajSpremi.Text = "Spremi";
             this.btnFilmoviDodajSpremi.UseVisualStyleBackColor = true;
             this.btnFilmoviDodajSpremi.Click += new System.EventHandler(this.btnZaposleniciDodaj_Click);
-            // 
-            // Odjava
-            // 
-            this.Odjava.AutoSize = true;
-            this.Odjava.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Odjava.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Odjava.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Odjava.LinkColor = System.Drawing.Color.Yellow;
-            this.Odjava.Location = new System.Drawing.Point(237, 16);
-            this.Odjava.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Odjava.Name = "Odjava";
-            this.Odjava.Size = new System.Drawing.Size(39, 13);
-            this.Odjava.TabIndex = 58;
-            this.Odjava.TabStop = true;
-            this.Odjava.Text = "odjava";
-            this.Odjava.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Odjava_LinkClicked);
-            // 
-            // userRole
-            // 
-            this.userRole.AutoSize = true;
-            this.userRole.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.userRole.ForeColor = System.Drawing.Color.Red;
-            this.userRole.Location = new System.Drawing.Point(54, 41);
-            this.userRole.Name = "userRole";
-            this.userRole.Size = new System.Drawing.Size(33, 13);
-            this.userRole.TabIndex = 57;
-            this.userRole.Text = "uloga";
-            // 
-            // uloga
-            // 
-            this.uloga.AutoSize = true;
-            this.uloga.BackColor = System.Drawing.Color.Black;
-            this.uloga.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.uloga.Location = new System.Drawing.Point(9, 41);
-            this.uloga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.uloga.Name = "uloga";
-            this.uloga.Size = new System.Drawing.Size(38, 13);
-            this.uloga.TabIndex = 56;
-            this.uloga.Text = "Uloga:";
-            // 
-            // userName
-            // 
-            this.userName.AutoSize = true;
-            this.userName.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.userName.ForeColor = System.Drawing.Color.Red;
-            this.userName.Location = new System.Drawing.Point(108, 17);
-            this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(74, 13);
-            this.userName.TabIndex = 55;
-            this.userName.Text = "korisničko ime";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(9, 17);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 13);
-            this.label1.TabIndex = 54;
-            this.label1.Text = "Prijavljeni ste kao:";
             // 
             // txtZaposleniciDodajPrezime
             // 
@@ -308,14 +241,8 @@
             this.Controls.Add(this.lblZaposleniciDodajOIB);
             this.Controls.Add(this.btnFilmoviDodajOdustani);
             this.Controls.Add(this.btnFilmoviDodajSpremi);
-            this.Controls.Add(this.Odjava);
-            this.Controls.Add(this.userRole);
-            this.Controls.Add(this.uloga);
-            this.Controls.Add(this.userName);
-            this.Controls.Add(this.label1);
             this.Name = "FrmAdminZaposleniciDodaj";
             this.Text = "FrmAdminZaposleniciDodaj";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAdminZaposleniciDodaj_FormClosed);
             this.Load += new System.EventHandler(this.FrmAdminZaposleniciDodaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -330,11 +257,6 @@
         private System.Windows.Forms.Label lblZaposleniciDodajOIB;
         private System.Windows.Forms.Button btnFilmoviDodajOdustani;
         private System.Windows.Forms.Button btnFilmoviDodajSpremi;
-        private System.Windows.Forms.LinkLabel Odjava;
-        private System.Windows.Forms.Label userRole;
-        private System.Windows.Forms.Label uloga;
-        private System.Windows.Forms.Label userName;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtZaposleniciDodajPrezime;
         private System.Windows.Forms.Label lblZaposleniciDodajPrezime;
         private System.Windows.Forms.TextBox txtZaposleniciDodajEmail;

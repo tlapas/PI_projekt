@@ -15,122 +15,71 @@ namespace PI_projekt.Sucelja
         public FrmAdmin()
         {
             InitializeComponent();
-            userName.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik;
-            userRole.Text = PI_projekt.Sucelja.FrmPocetna.SpremnikPodataka.Uloga;
+            
         }
 
-        //varijabla koja provjerava da li se radi o odjavi ili o zatvaranju forme na x
-        private bool pomOdjava = false;
-
-        /// <summary>
-        /// Klik na gumb otvara formu za rad sa podacima o zaposlenicima
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Zaposlenici_Click(object sender, EventArgs e)
+       
+        
+        private void miSifarniciZaposlenici_MouseUp(object sender, MouseEventArgs e)
         {
-            pomOdjava = true;
-            FrmAdminZaposlenici adminZaposlenici = new FrmAdminZaposlenici();
-            adminZaposlenici.Show();
+            Sucelja.FrmAdminZaposlenici Odabir = new Sucelja.FrmAdminZaposlenici();
+            Odabir.MdiParent = this;
+            Odabir.WindowState = FormWindowState.Maximized;
+            Odabir.Show();
+            
+        }
+
+        private void miSifarniciArtikli_MouseUp(object sender, MouseEventArgs e)
+        {
+            Sucelja.FrmAdminArtikli Odabir = new Sucelja.FrmAdminArtikli();
+            Odabir.MdiParent = this;
+            Odabir.WindowState = FormWindowState.Maximized;
+            Odabir.Show();
+
+        }
+
+        private void miSifarniciFilmovi_MouseUp(object sender, MouseEventArgs e)
+        {
+            Sucelja.FrmAdminFilmovi Odabir = new Sucelja.FrmAdminFilmovi();
+            Odabir.MdiParent = this;
+            Odabir.WindowState = FormWindowState.Maximized;
+            Odabir.Show();
+
+        }
+
+        private void miSifarniciProjekcije_MouseUp(object sender, MouseEventArgs e)
+        {
+            Sucelja.FrmAdminProjekcije Odabir = new Sucelja.FrmAdminProjekcije();
+            Odabir.MdiParent = this;
+            Odabir.WindowState = FormWindowState.Maximized;
+            Odabir.Show();
+
+        }
+
+        private void miSifarniciDvorane_MouseUp(object sender, MouseEventArgs e)
+        {
+            Sucelja.FrmAdminDvorane Odabir = new Sucelja.FrmAdminDvorane();
+            Odabir.MdiParent = this;
+            Odabir.WindowState = FormWindowState.Maximized;
+            Odabir.Show();
+
+        }
+
+        private void miOpcijeOdjava_MouseUp(object sender, MouseEventArgs e)
+        {
+            FrmPocetna pocetna = new FrmPocetna();
             this.Close();
-        } 
-
-        /// <summary>
-        /// Klik na gumb otvara formu za rad sa podacima o artiklima
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Artikli_Click(object sender, EventArgs e)
-        {
-            pomOdjava = true;
-            FrmAdminArtikli adminArtikli = new FrmAdminArtikli();
-            adminArtikli.Show();
-            this.Close();
-        }
-               
-        /// <summary>
-        /// Klik na gumb otvara formu za rad sa podacima o filmovima
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Filmovi_Click(object sender, EventArgs e)
-        {
-            pomOdjava = true;
-            FrmAdminFilmovi adminFilmovi = new FrmAdminFilmovi();
-            adminFilmovi.Show();
-            this.Close();
+            pocetna.Show();
         }
 
-        /// <summary>
-        /// Klik na gumb otvara formu za rad sa podacima o projekcijama
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Projekcije_Click(object sender, EventArgs e)
+        private void miOpcijeIzlaz_MouseUp(object sender, MouseEventArgs e)
         {
-            pomOdjava = true;
-            FrmAdminProjekcije adminProjekcije = new FrmAdminProjekcije();
-            adminProjekcije.Show();
-            this.Close();
-        }
+            Application.Exit();
 
-        /// <summary>
-        /// Klik na gumb otvara formu za rad sa podacima o dvoranama
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Dvorane_Click(object sender, EventArgs e)
-        {
-            pomOdjava = true;
-            FrmAdminDvorane adminDvorane = new FrmAdminDvorane();
-            adminDvorane.Show();
-            this.Close();
         }
-
-        /// <summary>
-        /// funkcija za odjavu iz sustava, klikom na odjava se postavlja parametar na 1
-        /// i prosljeđuje funkciji koja će ispisati poruku i pitati želi li se korisnik odjaviti
-        /// u slučaju klika na yes, korisnik se odjavljuje i vraća na početnu stranicu (login)
-        /// </summary>
-        int odjavljivanje = 0;
-        private void Odjava_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            odjavljivanje = 1;
-            odjava();
-        }
-        private void odjava()
-        {
-            if (odjavljivanje == 1)
-            {
-                string message = "Želite li se odjaviti iz sustava?";
-                string caption = "Odjava iz sustava";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result;
-
-                // Displays the MessageBox.
-                result = MessageBox.Show(this, message, caption, buttons);
-
-                if (result == DialogResult.Yes)
-                {
-                    pomOdjava = true;
-                    PI_projekt.Sucelja.FrmPocetna pocetna = new PI_projekt.Sucelja.FrmPocetna();
-                    pocetna.Show();
-                    this.Close();
-                }
-            }
-        }
-        /// <summary>
-        /// Metoda koja se poziva kada se forma zatvara na x (varijabla pomOdjava je ostala na false)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FrmAdmin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (!pomOdjava) {
-                FrmPocetna pocetna = new FrmPocetna();
-                pocetna.Show();
-            }
-        }       
+        
+    
+            
     }
 }
     
