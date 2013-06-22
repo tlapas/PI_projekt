@@ -32,6 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -40,6 +42,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files (x86)\System.Data.SQLite\2012\bin\System.Data.SQLite.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,7 +64,22 @@
     <Compile Include="Dvorane.cs" />
     <Compile Include="Film.cs" />
     <Compile Include="FilmZanrovi.cs" />
+    <Compile Include="Izvjestaj\RacunIzvjestaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izvjestaj\RacunIzvjestaj.Designer.cs">
+      <DependentUpon>RacunIzvjestaj.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kino.NET.cs" />
+    <Compile Include="KinoDBDataSet.cs">
+      <DependentUpon>KinoDBDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KinoDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KinoDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MjerneJedinice.cs" />
     <Compile Include="NaciniPlacanja.cs" />
     <Compile Include="Popust.cs" />
@@ -164,6 +182,10 @@
     <EmbeddedResource Include="Artikli\FrmArtikli.resx">
       <DependentUpon>FrmArtikli.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Izvjestaj\RacunIzvjestaj.resx">
+      <DependentUpon>RacunIzvjestaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izvjestaj\rptRacun.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -216,6 +238,17 @@
     <EmbeddedResource Include="Ulaznica\FrmUlaznica.resx">
       <DependentUpon>FrmUlaznica.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="KinoDBDataSet.xsc">
+      <DependentUpon>KinoDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KinoDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KinoDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KinoDBDataSet.xss">
+      <DependentUpon>KinoDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

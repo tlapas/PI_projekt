@@ -59,6 +59,8 @@ namespace PI_projekt
                     RacunUlaznica.UnesiRacunUlaznica(IdRacun, ID, popust.IdPopusta);
                 }
             }
+            Izvjestaj.RacunIzvjestaj racun = new Izvjestaj.RacunIzvjestaj(IdRacun);
+            racun.Show();
         }
     }
 }
