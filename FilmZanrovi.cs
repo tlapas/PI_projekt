@@ -125,6 +125,23 @@ namespace PI_projekt
         
         }
 
+        public static int AzurirajZanrove(int idFilma, List<int> idZanrova)
+        {
+            int zahvaceno = 0;
+            //obrišemo sve vrsteProjekcije za određenu projekciju
+            string sqlUpit1 = "DELETE FROM film_zanr WHERE id_filma=" + idFilma + ";";
+            DB.Instance.IzvrsiUpit(sqlUpit1);
+
+            //dodajemo Ažuriranje vrste projekcija za projekciju
+            foreach (int idZanra in idZanrova)
+            {
+                string sqlUpit = "INSERT INTO film_zanr ('id_filma','id_zanra') VALUES ('"
+                + idFilma + "','" + idZanra + "');";
+                zahvaceno += DB.Instance.IzvrsiUpit(sqlUpit);
+            }
+            return zahvaceno;
+        }
+
         
         #endregion
     }
