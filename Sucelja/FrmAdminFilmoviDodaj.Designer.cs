@@ -50,12 +50,14 @@
             this.lblFilmoviDodajGlumci = new System.Windows.Forms.Label();
             this.txtFilmoviDodajGodina = new System.Windows.Forms.TextBox();
             this.lblFilmoviDodajGodina = new System.Windows.Forms.Label();
+            this.panFilm = new System.Windows.Forms.Panel();
+            this.panFilm.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnFilmoviDodajSpremi
             // 
             this.btnFilmoviDodajSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnFilmoviDodajSpremi.Location = new System.Drawing.Point(174, 488);
+            this.btnFilmoviDodajSpremi.Location = new System.Drawing.Point(182, 499);
             this.btnFilmoviDodajSpremi.Name = "btnFilmoviDodajSpremi";
             this.btnFilmoviDodajSpremi.Size = new System.Drawing.Size(80, 35);
             this.btnFilmoviDodajSpremi.TabIndex = 29;
@@ -66,7 +68,7 @@
             // btnFilmoviDodajOdustani
             // 
             this.btnFilmoviDodajOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnFilmoviDodajOdustani.Location = new System.Drawing.Point(260, 488);
+            this.btnFilmoviDodajOdustani.Location = new System.Drawing.Point(268, 499);
             this.btnFilmoviDodajOdustani.Name = "btnFilmoviDodajOdustani";
             this.btnFilmoviDodajOdustani.Size = new System.Drawing.Size(80, 35);
             this.btnFilmoviDodajOdustani.TabIndex = 30;
@@ -78,7 +80,7 @@
             // 
             this.lblFilmoviDodajNaziv.AutoSize = true;
             this.lblFilmoviDodajNaziv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblFilmoviDodajNaziv.Location = new System.Drawing.Point(10, 40);
+            this.lblFilmoviDodajNaziv.Location = new System.Drawing.Point(15, 43);
             this.lblFilmoviDodajNaziv.Name = "lblFilmoviDodajNaziv";
             this.lblFilmoviDodajNaziv.Size = new System.Drawing.Size(88, 16);
             this.lblFilmoviDodajNaziv.TabIndex = 31;
@@ -88,7 +90,7 @@
             // 
             this.lblFilmoviDodajTrajanje.AutoSize = true;
             this.lblFilmoviDodajTrajanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblFilmoviDodajTrajanje.Location = new System.Drawing.Point(10, 70);
+            this.lblFilmoviDodajTrajanje.Location = new System.Drawing.Point(4, 53);
             this.lblFilmoviDodajTrajanje.Name = "lblFilmoviDodajTrajanje";
             this.lblFilmoviDodajTrajanje.Size = new System.Drawing.Size(70, 16);
             this.lblFilmoviDodajTrajanje.TabIndex = 32;
@@ -96,14 +98,14 @@
             // 
             // txtDodajFilmNaziv
             // 
-            this.txtDodajFilmNaziv.Location = new System.Drawing.Point(110, 40);
+            this.txtDodajFilmNaziv.Location = new System.Drawing.Point(100, 23);
             this.txtDodajFilmNaziv.Name = "txtDodajFilmNaziv";
             this.txtDodajFilmNaziv.Size = new System.Drawing.Size(230, 20);
             this.txtDodajFilmNaziv.TabIndex = 33;
             // 
             // txtFilmoviDodajTrajanje
             // 
-            this.txtFilmoviDodajTrajanje.Location = new System.Drawing.Point(110, 70);
+            this.txtFilmoviDodajTrajanje.Location = new System.Drawing.Point(100, 52);
             this.txtFilmoviDodajTrajanje.Name = "txtFilmoviDodajTrajanje";
             this.txtFilmoviDodajTrajanje.Size = new System.Drawing.Size(100, 20);
             this.txtFilmoviDodajTrajanje.TabIndex = 34;
@@ -112,7 +114,7 @@
             // 
             this.lblFilmoviDodajTrajanjeMin.AutoSize = true;
             this.lblFilmoviDodajTrajanjeMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblFilmoviDodajTrajanjeMin.Location = new System.Drawing.Point(215, 70);
+            this.lblFilmoviDodajTrajanjeMin.Location = new System.Drawing.Point(216, 53);
             this.lblFilmoviDodajTrajanjeMin.Name = "lblFilmoviDodajTrajanjeMin";
             this.lblFilmoviDodajTrajanjeMin.Size = new System.Drawing.Size(53, 16);
             this.lblFilmoviDodajTrajanjeMin.TabIndex = 35;
@@ -122,7 +124,7 @@
             // 
             this.lblDilmoviDodajZanrovi.AutoSize = true;
             this.lblDilmoviDodajZanrovi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblDilmoviDodajZanrovi.Location = new System.Drawing.Point(13, 338);
+            this.lblDilmoviDodajZanrovi.Location = new System.Drawing.Point(4, 320);
             this.lblDilmoviDodajZanrovi.Name = "lblDilmoviDodajZanrovi";
             this.lblDilmoviDodajZanrovi.Size = new System.Drawing.Size(64, 16);
             this.lblDilmoviDodajZanrovi.TabIndex = 36;
@@ -132,7 +134,7 @@
             // 
             this.lblFilmoviDodajZanroviOdabrani.AutoSize = true;
             this.lblFilmoviDodajZanroviOdabrani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblFilmoviDodajZanroviOdabrani.Location = new System.Drawing.Point(217, 338);
+            this.lblFilmoviDodajZanroviOdabrani.Location = new System.Drawing.Point(200, 320);
             this.lblFilmoviDodajZanroviOdabrani.Name = "lblFilmoviDodajZanroviOdabrani";
             this.lblFilmoviDodajZanroviOdabrani.Size = new System.Drawing.Size(130, 16);
             this.lblFilmoviDodajZanroviOdabrani.TabIndex = 37;
@@ -142,7 +144,7 @@
             // 
             this.lbFilmoviDodajZanrovi.DisplayMember = "Naziv";
             this.lbFilmoviDodajZanrovi.FormattingEnabled = true;
-            this.lbFilmoviDodajZanrovi.Location = new System.Drawing.Point(16, 368);
+            this.lbFilmoviDodajZanrovi.Location = new System.Drawing.Point(7, 350);
             this.lbFilmoviDodajZanrovi.Name = "lbFilmoviDodajZanrovi";
             this.lbFilmoviDodajZanrovi.Size = new System.Drawing.Size(120, 95);
             this.lbFilmoviDodajZanrovi.TabIndex = 38;
@@ -152,7 +154,7 @@
             // 
             this.lbFilmoviDodajZanroviOdabrani.DisplayMember = "Naziv";
             this.lbFilmoviDodajZanroviOdabrani.FormattingEnabled = true;
-            this.lbFilmoviDodajZanroviOdabrani.Location = new System.Drawing.Point(220, 368);
+            this.lbFilmoviDodajZanroviOdabrani.Location = new System.Drawing.Point(210, 350);
             this.lbFilmoviDodajZanroviOdabrani.Name = "lbFilmoviDodajZanroviOdabrani";
             this.lbFilmoviDodajZanroviOdabrani.Size = new System.Drawing.Size(120, 95);
             this.lbFilmoviDodajZanroviOdabrani.TabIndex = 39;
@@ -160,7 +162,7 @@
             // btnFilmoviDodajDodajLb
             // 
             this.btnFilmoviDodajDodajLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnFilmoviDodajDodajLb.Location = new System.Drawing.Point(143, 378);
+            this.btnFilmoviDodajDodajLb.Location = new System.Drawing.Point(134, 364);
             this.btnFilmoviDodajDodajLb.Name = "btnFilmoviDodajDodajLb";
             this.btnFilmoviDodajDodajLb.Size = new System.Drawing.Size(70, 30);
             this.btnFilmoviDodajDodajLb.TabIndex = 40;
@@ -171,7 +173,7 @@
             // btnFilmoviDodajUkloniLb
             // 
             this.btnFilmoviDodajUkloniLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnFilmoviDodajUkloniLb.Location = new System.Drawing.Point(143, 423);
+            this.btnFilmoviDodajUkloniLb.Location = new System.Drawing.Point(134, 400);
             this.btnFilmoviDodajUkloniLb.Name = "btnFilmoviDodajUkloniLb";
             this.btnFilmoviDodajUkloniLb.Size = new System.Drawing.Size(70, 30);
             this.btnFilmoviDodajUkloniLb.TabIndex = 41;
@@ -182,24 +184,24 @@
             // lblNaslovAdminFilmoviDodaj
             // 
             this.lblNaslovAdminFilmoviDodaj.AutoSize = true;
-            this.lblNaslovAdminFilmoviDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblNaslovAdminFilmoviDodaj.Location = new System.Drawing.Point(10, 10);
+            this.lblNaslovAdminFilmoviDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblNaslovAdminFilmoviDodaj.Location = new System.Drawing.Point(15, 9);
             this.lblNaslovAdminFilmoviDodaj.Name = "lblNaslovAdminFilmoviDodaj";
-            this.lblNaslovAdminFilmoviDodaj.Size = new System.Drawing.Size(45, 18);
+            this.lblNaslovAdminFilmoviDodaj.Size = new System.Drawing.Size(40, 18);
             this.lblNaslovAdminFilmoviDodaj.TabIndex = 42;
-            this.lblNaslovAdminFilmoviDodaj.Text = "Film:";
+            this.lblNaslovAdminFilmoviDodaj.Text = "Film";
             // 
             // txtFilmoviDodajSinopsis
             // 
-            this.txtFilmoviDodajSinopsis.Location = new System.Drawing.Point(110, 251);
+            this.txtFilmoviDodajSinopsis.Location = new System.Drawing.Point(98, 228);
             this.txtFilmoviDodajSinopsis.Multiline = true;
             this.txtFilmoviDodajSinopsis.Name = "txtFilmoviDodajSinopsis";
-            this.txtFilmoviDodajSinopsis.Size = new System.Drawing.Size(228, 84);
+            this.txtFilmoviDodajSinopsis.Size = new System.Drawing.Size(232, 84);
             this.txtFilmoviDodajSinopsis.TabIndex = 46;
             // 
             // txtFilmoviDodajRedatelj
             // 
-            this.txtFilmoviDodajRedatelj.Location = new System.Drawing.Point(110, 100);
+            this.txtFilmoviDodajRedatelj.Location = new System.Drawing.Point(98, 80);
             this.txtFilmoviDodajRedatelj.Name = "txtFilmoviDodajRedatelj";
             this.txtFilmoviDodajRedatelj.Size = new System.Drawing.Size(230, 20);
             this.txtFilmoviDodajRedatelj.TabIndex = 45;
@@ -208,7 +210,7 @@
             // 
             this.lblFilmoviDodajSinopsis.AutoSize = true;
             this.lblFilmoviDodajSinopsis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblFilmoviDodajSinopsis.Location = new System.Drawing.Point(10, 251);
+            this.lblFilmoviDodajSinopsis.Location = new System.Drawing.Point(4, 229);
             this.lblFilmoviDodajSinopsis.Name = "lblFilmoviDodajSinopsis";
             this.lblFilmoviDodajSinopsis.Size = new System.Drawing.Size(72, 16);
             this.lblFilmoviDodajSinopsis.TabIndex = 44;
@@ -218,7 +220,7 @@
             // 
             this.lblFilmoviDodajRedatelj.AutoSize = true;
             this.lblFilmoviDodajRedatelj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblFilmoviDodajRedatelj.Location = new System.Drawing.Point(10, 100);
+            this.lblFilmoviDodajRedatelj.Location = new System.Drawing.Point(4, 81);
             this.lblFilmoviDodajRedatelj.Name = "lblFilmoviDodajRedatelj";
             this.lblFilmoviDodajRedatelj.Size = new System.Drawing.Size(71, 16);
             this.lblFilmoviDodajRedatelj.TabIndex = 43;
@@ -226,7 +228,7 @@
             // 
             // txtFilmoviDodajGlumci
             // 
-            this.txtFilmoviDodajGlumci.Location = new System.Drawing.Point(110, 160);
+            this.txtFilmoviDodajGlumci.Location = new System.Drawing.Point(98, 137);
             this.txtFilmoviDodajGlumci.Multiline = true;
             this.txtFilmoviDodajGlumci.Name = "txtFilmoviDodajGlumci";
             this.txtFilmoviDodajGlumci.Size = new System.Drawing.Size(230, 85);
@@ -236,7 +238,7 @@
             // 
             this.lblFilmoviDodajGlumci.AutoSize = true;
             this.lblFilmoviDodajGlumci.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblFilmoviDodajGlumci.Location = new System.Drawing.Point(10, 160);
+            this.lblFilmoviDodajGlumci.Location = new System.Drawing.Point(4, 137);
             this.lblFilmoviDodajGlumci.Name = "lblFilmoviDodajGlumci";
             this.lblFilmoviDodajGlumci.Size = new System.Drawing.Size(59, 16);
             this.lblFilmoviDodajGlumci.TabIndex = 47;
@@ -244,7 +246,7 @@
             // 
             // txtFilmoviDodajGodina
             // 
-            this.txtFilmoviDodajGodina.Location = new System.Drawing.Point(110, 130);
+            this.txtFilmoviDodajGodina.Location = new System.Drawing.Point(98, 109);
             this.txtFilmoviDodajGodina.Name = "txtFilmoviDodajGodina";
             this.txtFilmoviDodajGodina.Size = new System.Drawing.Size(230, 20);
             this.txtFilmoviDodajGodina.TabIndex = 50;
@@ -253,39 +255,48 @@
             // 
             this.lblFilmoviDodajGodina.AutoSize = true;
             this.lblFilmoviDodajGodina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblFilmoviDodajGodina.Location = new System.Drawing.Point(10, 130);
+            this.lblFilmoviDodajGodina.Location = new System.Drawing.Point(4, 110);
             this.lblFilmoviDodajGodina.Name = "lblFilmoviDodajGodina";
             this.lblFilmoviDodajGodina.Size = new System.Drawing.Size(62, 16);
             this.lblFilmoviDodajGodina.TabIndex = 49;
             this.lblFilmoviDodajGodina.Text = "Godina:";
             // 
+            // panFilm
+            // 
+            this.panFilm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panFilm.Controls.Add(this.txtFilmoviDodajSinopsis);
+            this.panFilm.Controls.Add(this.btnFilmoviDodajUkloniLb);
+            this.panFilm.Controls.Add(this.txtFilmoviDodajGlumci);
+            this.panFilm.Controls.Add(this.btnFilmoviDodajDodajLb);
+            this.panFilm.Controls.Add(this.lblFilmoviDodajSinopsis);
+            this.panFilm.Controls.Add(this.lbFilmoviDodajZanroviOdabrani);
+            this.panFilm.Controls.Add(this.txtFilmoviDodajGodina);
+            this.panFilm.Controls.Add(this.lblFilmoviDodajZanroviOdabrani);
+            this.panFilm.Controls.Add(this.lbFilmoviDodajZanrovi);
+            this.panFilm.Controls.Add(this.lblFilmoviDodajGlumci);
+            this.panFilm.Controls.Add(this.txtDodajFilmNaziv);
+            this.panFilm.Controls.Add(this.lblDilmoviDodajZanrovi);
+            this.panFilm.Controls.Add(this.lblFilmoviDodajGodina);
+            this.panFilm.Controls.Add(this.lblFilmoviDodajTrajanje);
+            this.panFilm.Controls.Add(this.txtFilmoviDodajTrajanje);
+            this.panFilm.Controls.Add(this.lblFilmoviDodajTrajanjeMin);
+            this.panFilm.Controls.Add(this.lblFilmoviDodajRedatelj);
+            this.panFilm.Controls.Add(this.txtFilmoviDodajRedatelj);
+            this.panFilm.Location = new System.Drawing.Point(10, 19);
+            this.panFilm.Name = "panFilm";
+            this.panFilm.Size = new System.Drawing.Size(338, 456);
+            this.panFilm.TabIndex = 51;
+            // 
             // FrmAdminFilmoviDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 535);
-            this.Controls.Add(this.txtFilmoviDodajGodina);
-            this.Controls.Add(this.lblFilmoviDodajGodina);
-            this.Controls.Add(this.txtFilmoviDodajGlumci);
-            this.Controls.Add(this.lblFilmoviDodajGlumci);
-            this.Controls.Add(this.txtFilmoviDodajSinopsis);
-            this.Controls.Add(this.txtFilmoviDodajRedatelj);
-            this.Controls.Add(this.lblFilmoviDodajSinopsis);
-            this.Controls.Add(this.lblFilmoviDodajRedatelj);
+            this.ClientSize = new System.Drawing.Size(358, 550);
             this.Controls.Add(this.lblNaslovAdminFilmoviDodaj);
-            this.Controls.Add(this.btnFilmoviDodajUkloniLb);
-            this.Controls.Add(this.btnFilmoviDodajDodajLb);
-            this.Controls.Add(this.lbFilmoviDodajZanroviOdabrani);
-            this.Controls.Add(this.lbFilmoviDodajZanrovi);
-            this.Controls.Add(this.lblFilmoviDodajZanroviOdabrani);
-            this.Controls.Add(this.lblDilmoviDodajZanrovi);
-            this.Controls.Add(this.lblFilmoviDodajTrajanjeMin);
-            this.Controls.Add(this.txtFilmoviDodajTrajanje);
-            this.Controls.Add(this.txtDodajFilmNaziv);
-            this.Controls.Add(this.lblFilmoviDodajTrajanje);
             this.Controls.Add(this.lblFilmoviDodajNaziv);
             this.Controls.Add(this.btnFilmoviDodajOdustani);
             this.Controls.Add(this.btnFilmoviDodajSpremi);
+            this.Controls.Add(this.panFilm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -294,6 +305,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Filmovi - dodaj/ažuriraj";
             this.Load += new System.EventHandler(this.FrmAdminFilmDodaj_Load);
+            this.panFilm.ResumeLayout(false);
+            this.panFilm.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +336,6 @@
         private System.Windows.Forms.Label lblFilmoviDodajGlumci;
         private System.Windows.Forms.TextBox txtFilmoviDodajGodina;
         private System.Windows.Forms.Label lblFilmoviDodajGodina;
+        private System.Windows.Forms.Panel panFilm;
     }
 }

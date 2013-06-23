@@ -18,10 +18,6 @@ namespace PI_projekt.Sucelja
             InitializeComponent();
             ssUsername.Text = Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik;
         }
-
-        //varijabla koja provjerava da li se radi o odjavi
-        private bool pomOdjava = false;
-            
         private void miSifarniciZaposlenici_MouseUp(object sender, MouseEventArgs e)
         {
             Sucelja.FrmAdminZaposlenici Odabir = new Sucelja.FrmAdminZaposlenici();
@@ -94,7 +90,6 @@ namespace PI_projekt.Sucelja
 
                 if (result == DialogResult.Yes)
                 {
-                    pomOdjava = true;
                     FrmPocetna pocetna = new FrmPocetna();
                     this.Close();
                     pocetna.Show();
@@ -103,11 +98,35 @@ namespace PI_projekt.Sucelja
             }
         }
 
+        /// <summary>
+        ///funkcija za izlaz iz aplikacije 
+        /// </summary>
+        int izlaz = 0;
         private void miOpcijeIzlaz_MouseUp(object sender, MouseEventArgs e)
         {
-            Application.Exit();
-
+            izlaz = 1;
+            izlazak(); 
         }
+
+        private void izlazak()
+        {
+            if (izlaz == 1)
+            {
+                string message = "Želite li ugasiti aplikaciju?";
+                string caption = "Gašenje aplikacije";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                // Displays the MessageBox.
+                result = MessageBox.Show(this, message, caption, buttons);
+
+                if (result == DialogResult.Yes)
+                {
+                  Application.Exit();
+                }
+            }
+        }  
+      
             
     }
 }
