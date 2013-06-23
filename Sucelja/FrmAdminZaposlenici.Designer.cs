@@ -38,19 +38,30 @@
             // 
             // dgvSviZaposlenici
             // 
+            this.dgvSviZaposlenici.AllowUserToAddRows = false;
+            this.dgvSviZaposlenici.AllowUserToDeleteRows = false;
+            this.dgvSviZaposlenici.AllowUserToResizeColumns = false;
+            this.dgvSviZaposlenici.AllowUserToResizeRows = false;
+            this.dgvSviZaposlenici.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSviZaposlenici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSviZaposlenici.Location = new System.Drawing.Point(14, 95);
+            this.dgvSviZaposlenici.Location = new System.Drawing.Point(10, 40);
+            this.dgvSviZaposlenici.MultiSelect = false;
             this.dgvSviZaposlenici.Name = "dgvSviZaposlenici";
-            this.dgvSviZaposlenici.Size = new System.Drawing.Size(754, 203);
+            this.dgvSviZaposlenici.ReadOnly = true;
+            this.dgvSviZaposlenici.RowHeadersVisible = false;
+            this.dgvSviZaposlenici.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvSviZaposlenici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSviZaposlenici.Size = new System.Drawing.Size(850, 235);
             this.dgvSviZaposlenici.TabIndex = 24;
             this.dgvSviZaposlenici.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSviZaposlenici_CellClick);
             this.dgvSviZaposlenici.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSviZaposlenici_CellClick);
             // 
             // btnZaposleniciOsvjezi
             // 
-            this.btnZaposleniciOsvjezi.Location = new System.Drawing.Point(531, 320);
+            this.btnZaposleniciOsvjezi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnZaposleniciOsvjezi.Location = new System.Drawing.Point(608, 290);
             this.btnZaposleniciOsvjezi.Name = "btnZaposleniciOsvjezi";
-            this.btnZaposleniciOsvjezi.Size = new System.Drawing.Size(75, 23);
+            this.btnZaposleniciOsvjezi.Size = new System.Drawing.Size(80, 35);
             this.btnZaposleniciOsvjezi.TabIndex = 27;
             this.btnZaposleniciOsvjezi.Text = "Osvježi";
             this.btnZaposleniciOsvjezi.UseVisualStyleBackColor = true;
@@ -58,9 +69,10 @@
             // 
             // btnZaposleniciDodaj
             // 
-            this.btnZaposleniciDodaj.Location = new System.Drawing.Point(612, 320);
+            this.btnZaposleniciDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnZaposleniciDodaj.Location = new System.Drawing.Point(694, 290);
             this.btnZaposleniciDodaj.Name = "btnZaposleniciDodaj";
-            this.btnZaposleniciDodaj.Size = new System.Drawing.Size(75, 23);
+            this.btnZaposleniciDodaj.Size = new System.Drawing.Size(80, 35);
             this.btnZaposleniciDodaj.TabIndex = 28;
             this.btnZaposleniciDodaj.Text = "Dodaj";
             this.btnZaposleniciDodaj.UseVisualStyleBackColor = true;
@@ -68,9 +80,10 @@
             // 
             // btnZaposleniciAzuriraj
             // 
-            this.btnZaposleniciAzuriraj.Location = new System.Drawing.Point(693, 320);
+            this.btnZaposleniciAzuriraj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnZaposleniciAzuriraj.Location = new System.Drawing.Point(780, 290);
             this.btnZaposleniciAzuriraj.Name = "btnZaposleniciAzuriraj";
-            this.btnZaposleniciAzuriraj.Size = new System.Drawing.Size(75, 23);
+            this.btnZaposleniciAzuriraj.Size = new System.Drawing.Size(80, 35);
             this.btnZaposleniciAzuriraj.TabIndex = 29;
             this.btnZaposleniciAzuriraj.Text = "Ažuriraj";
             this.btnZaposleniciAzuriraj.UseVisualStyleBackColor = true;
@@ -79,24 +92,27 @@
             // lblSviZaposlenici
             // 
             this.lblSviZaposlenici.AutoSize = true;
-            this.lblSviZaposlenici.Location = new System.Drawing.Point(12, 66);
+            this.lblSviZaposlenici.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblSviZaposlenici.Location = new System.Drawing.Point(10, 10);
             this.lblSviZaposlenici.Name = "lblSviZaposlenici";
-            this.lblSviZaposlenici.Size = new System.Drawing.Size(80, 13);
+            this.lblSviZaposlenici.Size = new System.Drawing.Size(200, 18);
             this.lblSviZaposlenici.TabIndex = 30;
-            this.lblSviZaposlenici.Text = "Svi zaposlenici:";
+            this.lblSviZaposlenici.Text = "Pregled svih zaposlenika:";
             // 
             // FrmAdminZaposlenici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 355);
+            this.ClientSize = new System.Drawing.Size(873, 337);
             this.Controls.Add(this.lblSviZaposlenici);
             this.Controls.Add(this.btnZaposleniciAzuriraj);
             this.Controls.Add(this.btnZaposleniciDodaj);
             this.Controls.Add(this.btnZaposleniciOsvjezi);
             this.Controls.Add(this.dgvSviZaposlenici);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmAdminZaposlenici";
-            this.Text = "FrmAdminZaposlenici";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Zaposlenici";
             this.Load += new System.EventHandler(this.FrmAdminZaposlenici_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSviZaposlenici)).EndInit();
             this.ResumeLayout(false);

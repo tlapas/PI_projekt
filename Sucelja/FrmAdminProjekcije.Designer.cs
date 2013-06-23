@@ -94,9 +94,9 @@
             this.lblSveProjekcije.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblSveProjekcije.Location = new System.Drawing.Point(10, 10);
             this.lblSveProjekcije.Name = "lblSveProjekcije";
-            this.lblSveProjekcije.Size = new System.Drawing.Size(174, 18);
+            this.lblSveProjekcije.Size = new System.Drawing.Size(183, 18);
             this.lblSveProjekcije.TabIndex = 28;
-            this.lblSveProjekcije.Text = "Pregled svi projekcija:";
+            this.lblSveProjekcije.Text = "Pregled svih projekcija:";
             // 
             // FrmAdminProjekcije
             // 
@@ -111,7 +111,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmAdminProjekcije";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAdminProjekcije";
+            this.Text = "Zaposlenici";
             this.Load += new System.EventHandler(this.FrmAdminProjekcije_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSveProjekcije)).EndInit();
             this.ResumeLayout(false);

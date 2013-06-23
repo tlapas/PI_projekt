@@ -44,21 +44,21 @@
             this.dgvSviArtikli.AllowUserToResizeRows = false;
             this.dgvSviArtikli.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvSviArtikli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSviArtikli.Location = new System.Drawing.Point(10, 40);
+            this.dgvSviArtikli.Location = new System.Drawing.Point(14, 40);
             this.dgvSviArtikli.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSviArtikli.MultiSelect = false;
             this.dgvSviArtikli.Name = "dgvSviArtikli";
+            this.dgvSviArtikli.ReadOnly = true;
             this.dgvSviArtikli.RowTemplate.Height = 24;
             this.dgvSviArtikli.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvSviArtikli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSviArtikli.Size = new System.Drawing.Size(312, 235);
+            this.dgvSviArtikli.Size = new System.Drawing.Size(315, 235);
             this.dgvSviArtikli.TabIndex = 0;
             this.dgvSviArtikli.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSviArtikli_CellClick);
             // 
             // btnDodajArtikl
             // 
             this.btnDodajArtikl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDodajArtikl.Location = new System.Drawing.Point(158, 290);
+            this.btnDodajArtikl.Location = new System.Drawing.Point(165, 290);
             this.btnDodajArtikl.Margin = new System.Windows.Forms.Padding(2);
             this.btnDodajArtikl.Name = "btnDodajArtikl";
             this.btnDodajArtikl.Size = new System.Drawing.Size(80, 35);
@@ -70,7 +70,7 @@
             // btnOsvjeziArtikle
             // 
             this.btnOsvjeziArtikle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOsvjeziArtikle.Location = new System.Drawing.Point(74, 290);
+            this.btnOsvjeziArtikle.Location = new System.Drawing.Point(81, 290);
             this.btnOsvjeziArtikle.Margin = new System.Windows.Forms.Padding(2);
             this.btnOsvjeziArtikle.Name = "btnOsvjeziArtikle";
             this.btnOsvjeziArtikle.Size = new System.Drawing.Size(80, 35);
@@ -82,7 +82,7 @@
             // btnAzurirajArtikl
             // 
             this.btnAzurirajArtikl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnAzurirajArtikl.Location = new System.Drawing.Point(242, 290);
+            this.btnAzurirajArtikl.Location = new System.Drawing.Point(249, 290);
             this.btnAzurirajArtikl.Margin = new System.Windows.Forms.Padding(2);
             this.btnAzurirajArtikl.Name = "btnAzurirajArtikl";
             this.btnAzurirajArtikl.Size = new System.Drawing.Size(80, 35);
@@ -94,29 +94,29 @@
             // lblSviArtikli
             // 
             this.lblSviArtikli.AutoSize = true;
-            this.lblSviArtikli.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblSviArtikli.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblSviArtikli.Location = new System.Drawing.Point(10, 10);
             this.lblSviArtikli.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSviArtikli.Name = "lblSviArtikli";
-            this.lblSviArtikli.Size = new System.Drawing.Size(165, 18);
+            this.lblSviArtikli.Size = new System.Drawing.Size(163, 20);
             this.lblSviArtikli.TabIndex = 5;
-            this.lblSviArtikli.Text = "Pregled svih artikala:";
+            this.lblSviArtikli.Text = "Prikaz svih artikala:";
             // 
             // FrmAdminArtikli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 336);
+            this.ClientSize = new System.Drawing.Size(344, 337);
             this.Controls.Add(this.lblSviArtikli);
             this.Controls.Add(this.btnAzurirajArtikl);
             this.Controls.Add(this.btnOsvjeziArtikle);
             this.Controls.Add(this.btnDodajArtikl);
             this.Controls.Add(this.dgvSviArtikli);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmAdminArtikli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Administrator Artikli";
+            this.Text = "Artikli";
             this.Load += new System.EventHandler(this.FrmAdminArtikli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSviArtikli)).EndInit();
             this.ResumeLayout(false);

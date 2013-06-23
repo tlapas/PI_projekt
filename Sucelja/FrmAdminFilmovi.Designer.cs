@@ -111,7 +111,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmAdminFilmovi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAdminFilmovi";
+            this.Text = "Filmovi";
             this.Load += new System.EventHandler(this.FrmAdminFilmovi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSviFilmovi)).EndInit();
             this.ResumeLayout(false);

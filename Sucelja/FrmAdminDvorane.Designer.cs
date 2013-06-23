@@ -120,7 +120,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmAdminDvorane";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Administrator Dvorane";
+            this.Text = "Dvorane";
             this.Load += new System.EventHandler(this.FrmAdminDvorane_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSveDvorane)).EndInit();
             this.ResumeLayout(false);

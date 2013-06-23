@@ -119,7 +119,7 @@
             this.Dodaj.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Dodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Dodaj.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Dodaj.Location = new System.Drawing.Point(123, 160);
+            this.Dodaj.Location = new System.Drawing.Point(232, 160);
             this.Dodaj.Margin = new System.Windows.Forms.Padding(4);
             this.Dodaj.Name = "Dodaj";
             this.Dodaj.Size = new System.Drawing.Size(112, 28);
@@ -135,7 +135,7 @@
             this.Ponisti.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Ponisti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Ponisti.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Ponisti.Location = new System.Drawing.Point(243, 160);
+            this.Ponisti.Location = new System.Drawing.Point(352, 160);
             this.Ponisti.Margin = new System.Windows.Forms.Padding(4);
             this.Ponisti.Name = "Ponisti";
             this.Ponisti.Size = new System.Drawing.Size(112, 28);
@@ -165,7 +165,7 @@
             this.Stavke_racun.Cursor = System.Windows.Forms.Cursors.Default;
             this.Stavke_racun.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Stavke_racun.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Stavke_racun.Location = new System.Drawing.Point(13, 196);
+            this.Stavke_racun.Location = new System.Drawing.Point(122, 196);
             this.Stavke_racun.Margin = new System.Windows.Forms.Padding(4);
             this.Stavke_racun.Name = "Stavke_racun";
             this.Stavke_racun.Padding = new System.Windows.Forms.Padding(4);
@@ -226,7 +226,7 @@
             this.Iznos_racuna.Cursor = System.Windows.Forms.Cursors.Default;
             this.Iznos_racuna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Iznos_racuna.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Iznos_racuna.Location = new System.Drawing.Point(257, 361);
+            this.Iznos_racuna.Location = new System.Drawing.Point(366, 361);
             this.Iznos_racuna.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Iznos_racuna.Name = "Iznos_racuna";
             this.Iznos_racuna.Size = new System.Drawing.Size(48, 16);
@@ -239,7 +239,7 @@
             this.ukupanIznos.Cursor = System.Windows.Forms.Cursors.Default;
             this.ukupanIznos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ukupanIznos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ukupanIznos.Location = new System.Drawing.Point(313, 358);
+            this.ukupanIznos.Location = new System.Drawing.Point(422, 358);
             this.ukupanIznos.Margin = new System.Windows.Forms.Padding(4);
             this.ukupanIznos.Name = "ukupanIznos";
             this.ukupanIznos.ReadOnly = true;
@@ -253,7 +253,7 @@
             this.Dalje.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Dalje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Dalje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Dalje.Location = new System.Drawing.Point(349, 425);
+            this.Dalje.Location = new System.Drawing.Point(458, 425);
             this.Dalje.Margin = new System.Windows.Forms.Padding(4);
             this.Dalje.Name = "Dalje";
             this.Dalje.Size = new System.Drawing.Size(112, 35);
@@ -274,7 +274,7 @@
             this.Opcije.Cursor = System.Windows.Forms.Cursors.Default;
             this.Opcije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Opcije.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Opcije.Location = new System.Drawing.Point(13, 13);
+            this.Opcije.Location = new System.Drawing.Point(122, 13);
             this.Opcije.Margin = new System.Windows.Forms.Padding(4);
             this.Opcije.Name = "Opcije";
             this.Opcije.Padding = new System.Windows.Forms.Padding(4);
@@ -309,7 +309,7 @@
             this.Nacin_placanja.Cursor = System.Windows.Forms.Cursors.Default;
             this.Nacin_placanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Nacin_placanja.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Nacin_placanja.Location = new System.Drawing.Point(189, 395);
+            this.Nacin_placanja.Location = new System.Drawing.Point(298, 395);
             this.Nacin_placanja.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Nacin_placanja.Name = "Nacin_placanja";
             this.Nacin_placanja.Size = new System.Drawing.Size(116, 16);
@@ -324,7 +324,7 @@
             this.nacinPlacanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.nacinPlacanja.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.nacinPlacanja.FormattingEnabled = true;
-            this.nacinPlacanja.Location = new System.Drawing.Point(313, 391);
+            this.nacinPlacanja.Location = new System.Drawing.Point(422, 391);
             this.nacinPlacanja.Margin = new System.Windows.Forms.Padding(4);
             this.nacinPlacanja.Name = "nacinPlacanja";
             this.nacinPlacanja.Size = new System.Drawing.Size(148, 24);
@@ -337,7 +337,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PI_projekt.Properties.Resources.BCKground_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(479, 476);
+            this.ClientSize = new System.Drawing.Size(699, 486);
             this.Controls.Add(this.nacinPlacanja);
             this.Controls.Add(this.Nacin_placanja);
             this.Controls.Add(this.Opcije);

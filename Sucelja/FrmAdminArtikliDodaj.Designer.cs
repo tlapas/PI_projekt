@@ -42,50 +42,46 @@
             // lblNaslovDodajArtikl
             // 
             this.lblNaslovDodajArtikl.AutoSize = true;
-            this.lblNaslovDodajArtikl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblNaslovDodajArtikl.Location = new System.Drawing.Point(10, 10);
+            this.lblNaslovDodajArtikl.Location = new System.Drawing.Point(6, 57);
             this.lblNaslovDodajArtikl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNaslovDodajArtikl.Name = "lblNaslovDodajArtikl";
-            this.lblNaslovDodajArtikl.Size = new System.Drawing.Size(55, 20);
+            this.lblNaslovDodajArtikl.Size = new System.Drawing.Size(61, 13);
             this.lblNaslovDodajArtikl.TabIndex = 0;
-            this.lblNaslovDodajArtikl.Text = "Artikl:";
+            this.lblNaslovDodajArtikl.Text = "Dodaj Artikl";
             // 
             // lblNazivArtikla
             // 
             this.lblNazivArtikla.AutoSize = true;
-            this.lblNazivArtikla.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblNazivArtikla.Location = new System.Drawing.Point(10, 45);
+            this.lblNazivArtikla.Location = new System.Drawing.Point(9, 84);
             this.lblNazivArtikla.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNazivArtikla.Name = "lblNazivArtikla";
-            this.lblNazivArtikla.Size = new System.Drawing.Size(51, 16);
+            this.lblNazivArtikla.Size = new System.Drawing.Size(37, 13);
             this.lblNazivArtikla.TabIndex = 1;
             this.lblNazivArtikla.Text = "Naziv:";
             // 
             // lblCijenaArtikla
             // 
             this.lblCijenaArtikla.AutoSize = true;
-            this.lblCijenaArtikla.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblCijenaArtikla.Location = new System.Drawing.Point(10, 75);
+            this.lblCijenaArtikla.Location = new System.Drawing.Point(9, 121);
             this.lblCijenaArtikla.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCijenaArtikla.Name = "lblCijenaArtikla";
-            this.lblCijenaArtikla.Size = new System.Drawing.Size(56, 16);
+            this.lblCijenaArtikla.Size = new System.Drawing.Size(39, 13);
             this.lblCijenaArtikla.TabIndex = 2;
             this.lblCijenaArtikla.Text = "Cijena:";
             // 
             // lblMjernaJedinica
             // 
             this.lblMjernaJedinica.AutoSize = true;
-            this.lblMjernaJedinica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblMjernaJedinica.Location = new System.Drawing.Point(10, 105);
+            this.lblMjernaJedinica.Location = new System.Drawing.Point(11, 156);
             this.lblMjernaJedinica.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMjernaJedinica.Name = "lblMjernaJedinica";
-            this.lblMjernaJedinica.Size = new System.Drawing.Size(118, 16);
+            this.lblMjernaJedinica.Size = new System.Drawing.Size(81, 13);
             this.lblMjernaJedinica.TabIndex = 3;
             this.lblMjernaJedinica.Text = "Mjerna jedinica:";
             // 
             // txtNazivDodajArtikl
             // 
-            this.txtNazivDodajArtikl.Location = new System.Drawing.Point(140, 45);
+            this.txtNazivDodajArtikl.Location = new System.Drawing.Point(97, 83);
             this.txtNazivDodajArtikl.Margin = new System.Windows.Forms.Padding(2);
             this.txtNazivDodajArtikl.Name = "txtNazivDodajArtikl";
             this.txtNazivDodajArtikl.Size = new System.Drawing.Size(225, 20);
@@ -93,7 +89,7 @@
             // 
             // txtCijenaDodajArtikl
             // 
-            this.txtCijenaDodajArtikl.Location = new System.Drawing.Point(140, 75);
+            this.txtCijenaDodajArtikl.Location = new System.Drawing.Point(97, 121);
             this.txtCijenaDodajArtikl.Margin = new System.Windows.Forms.Padding(2);
             this.txtCijenaDodajArtikl.Name = "txtCijenaDodajArtikl";
             this.txtCijenaDodajArtikl.Size = new System.Drawing.Size(84, 20);
@@ -102,7 +98,7 @@
             // cbMjerneJedinice
             // 
             this.cbMjerneJedinice.FormattingEnabled = true;
-            this.cbMjerneJedinice.Location = new System.Drawing.Point(140, 105);
+            this.cbMjerneJedinice.Location = new System.Drawing.Point(97, 161);
             this.cbMjerneJedinice.Margin = new System.Windows.Forms.Padding(2);
             this.cbMjerneJedinice.Name = "cbMjerneJedinice";
             this.cbMjerneJedinice.Size = new System.Drawing.Size(84, 21);
@@ -111,11 +107,10 @@
             // 
             // btnDodaj
             // 
-            this.btnDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDodaj.Location = new System.Drawing.Point(201, 145);
+            this.btnDodaj.Location = new System.Drawing.Point(170, 219);
             this.btnDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(80, 35);
+            this.btnDodaj.Size = new System.Drawing.Size(64, 20);
             this.btnDodaj.TabIndex = 8;
             this.btnDodaj.Text = "Spremi";
             this.btnDodaj.UseVisualStyleBackColor = true;
@@ -123,11 +118,10 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOdustani.Location = new System.Drawing.Point(285, 145);
+            this.btnOdustani.Location = new System.Drawing.Point(259, 219);
             this.btnOdustani.Margin = new System.Windows.Forms.Padding(2);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(80, 35);
+            this.btnOdustani.Size = new System.Drawing.Size(60, 20);
             this.btnOdustani.TabIndex = 9;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
@@ -137,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 189);
+            this.ClientSize = new System.Drawing.Size(336, 261);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.cbMjerneJedinice);
@@ -149,9 +143,7 @@
             this.Controls.Add(this.lblNaslovDodajArtikl);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmAdminArtikliDodaj";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Artikli - dodaj/ažuriraj";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Text = "Administrator Dodaj Artikl";
             this.Load += new System.EventHandler(this.FrmAdminArtikliDodaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
