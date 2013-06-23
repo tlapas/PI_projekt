@@ -78,7 +78,7 @@ namespace PI_projekt.Sucelja
         private void btnFilmoviDodaj_Click(object sender, EventArgs e)
         {
             FrmAdminFilmoviDodaj formaDodaj = new FrmAdminFilmoviDodaj();
-            formaDodaj.Show();
+            formaDodaj.ShowDialog(this);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace PI_projekt.Sucelja
             if (IdFilma > -1)
             {
                 FrmAdminFilmoviDodaj formaAzuriraj = new FrmAdminFilmoviDodaj(IdFilma);
-                formaAzuriraj.Show();
+                formaAzuriraj.ShowDialog(this);
             }
         }
                        

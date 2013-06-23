@@ -142,10 +142,10 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.msIzbornik;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(459, 244);
             this.Name = "FrmProdavac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prodavač";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.msIzbornik.ResumeLayout(false);
             this.msIzbornik.PerformLayout();
             this.statusnaTraka.ResumeLayout(false);

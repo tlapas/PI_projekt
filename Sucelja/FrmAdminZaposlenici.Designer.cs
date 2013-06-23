@@ -49,7 +49,6 @@
             this.dgvSviZaposlenici.Name = "dgvSviZaposlenici";
             this.dgvSviZaposlenici.ReadOnly = true;
             this.dgvSviZaposlenici.RowHeadersVisible = false;
-            this.dgvSviZaposlenici.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvSviZaposlenici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSviZaposlenici.Size = new System.Drawing.Size(692, 235);
             this.dgvSviZaposlenici.TabIndex = 24;

@@ -67,7 +67,7 @@
             this.btnDvoraneOsvjezi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnDvoraneOsvjezi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnDvoraneOsvjezi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDvoraneOsvjezi.Location = new System.Drawing.Point(26, 289);
+            this.btnDvoraneOsvjezi.Location = new System.Drawing.Point(26, 290);
             this.btnDvoraneOsvjezi.Name = "btnDvoraneOsvjezi";
             this.btnDvoraneOsvjezi.Size = new System.Drawing.Size(80, 35);
             this.btnDvoraneOsvjezi.TabIndex = 3;

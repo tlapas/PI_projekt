@@ -40,7 +40,7 @@
             // btnSpremi
             // 
             this.btnSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnSpremi.Location = new System.Drawing.Point(112, 110);
+            this.btnSpremi.Location = new System.Drawing.Point(122, 110);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(80, 35);
             this.btnSpremi.TabIndex = 0;
@@ -117,6 +117,8 @@
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmAdminDvoraneDodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dvorana - dodaj/ažuriraj";

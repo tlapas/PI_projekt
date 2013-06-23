@@ -65,7 +65,7 @@ namespace PI_projekt.Sucelja
         private void btnDvoraneDodaj_Click(object sender, EventArgs e)
         {
             FrmAdminDvoraneDodaj formaDodaj = new FrmAdminDvoraneDodaj();
-            formaDodaj.Show();
+            formaDodaj.ShowDialog(this);
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace PI_projekt.Sucelja
             {
                 detaljiDvorana = Dvorana.DohvatiDvoranu(BrojDvorane);
                 FrmAdminDvoraneDodaj formaAzuriraj = new FrmAdminDvoraneDodaj(detaljiDvorana);
-                formaAzuriraj.Show();
+                formaAzuriraj.ShowDialog(this);
             }
             else
             {

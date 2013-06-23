@@ -288,6 +288,8 @@
             this.Controls.Add(this.btnFilmoviDodajSpremi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmAdminFilmoviDodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Filmovi - dodaj/ažuriraj";

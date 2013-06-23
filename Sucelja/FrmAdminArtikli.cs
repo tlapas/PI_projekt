@@ -76,7 +76,7 @@ namespace PI_projekt.Sucelja
         private void btnDodajArtikl_Click(object sender, EventArgs e)
         {
             FrmAdminArtikliDodaj formaDodaj = new FrmAdminArtikliDodaj();
-            formaDodaj.Show();
+            formaDodaj.ShowDialog(this);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace PI_projekt.Sucelja
             {
                 detaljiArtikl = Artikl.DohvatiArtikl(IdArtikla);
                 FrmAdminArtikliDodaj formaAzuriraj = new FrmAdminArtikliDodaj(detaljiArtikl);
-                formaAzuriraj.Show();
+                formaAzuriraj.ShowDialog(this);
             }
 
             else

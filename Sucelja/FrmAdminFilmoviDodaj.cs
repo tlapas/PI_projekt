@@ -32,7 +32,7 @@ namespace PI_projekt.Sucelja
         }
         
         /// <summary>
-        /// Konstruktor koji se poziva prilikom ažuriranja postojćeg filma
+        /// Konstruktor koji se poziva prilikom ažuriranja postojećeg filma
         /// </summary>
         /// <param name="odabraniFilm"></param>
         public FrmAdminFilmoviDodaj(int odabraniFilm)
@@ -167,6 +167,10 @@ namespace PI_projekt.Sucelja
                 {
                     noviFilm.Naziv = txtDodajFilmNaziv.Text.ToString();
                     noviFilm.VrijemeTrajanja = int.Parse(txtFilmoviDodajTrajanje.Text.ToString());
+                    noviFilm.Redatelj = txtFilmoviDodajTrajanje.Text.ToString();
+                    noviFilm.Godina = int.Parse(txtFilmoviDodajGodina.Text.ToString());
+                    noviFilm.Glumci = txtFilmoviDodajGlumci.Text.ToString();
+                    noviFilm.Sinopsis = txtFilmoviDodajSinopsis.Text.ToString();
                     if (filmAzuriraj != null)
                     {
                         noviFilm.IdFilma = filmAzuriraj.IdFilma;

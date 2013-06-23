@@ -59,16 +59,15 @@
             this.dgvSviFilmovi.Name = "dgvSviFilmovi";
             this.dgvSviFilmovi.ReadOnly = true;
             this.dgvSviFilmovi.RowHeadersVisible = false;
-            this.dgvSviFilmovi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvSviFilmovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSviFilmovi.Size = new System.Drawing.Size(318, 235);
+            this.dgvSviFilmovi.Size = new System.Drawing.Size(642, 235);
             this.dgvSviFilmovi.TabIndex = 29;
             this.dgvSviFilmovi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSviFilmovi_CellClick);
             // 
             // btnFilmoviOsvjezi
             // 
             this.btnFilmoviOsvjezi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnFilmoviOsvjezi.Location = new System.Drawing.Point(72, 290);
+            this.btnFilmoviOsvjezi.Location = new System.Drawing.Point(400, 290);
             this.btnFilmoviOsvjezi.Name = "btnFilmoviOsvjezi";
             this.btnFilmoviOsvjezi.Size = new System.Drawing.Size(80, 35);
             this.btnFilmoviOsvjezi.TabIndex = 31;
@@ -79,7 +78,7 @@
             // btnFilmoviDodaj
             // 
             this.btnFilmoviDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnFilmoviDodaj.Location = new System.Drawing.Point(158, 290);
+            this.btnFilmoviDodaj.Location = new System.Drawing.Point(486, 290);
             this.btnFilmoviDodaj.Name = "btnFilmoviDodaj";
             this.btnFilmoviDodaj.Size = new System.Drawing.Size(80, 35);
             this.btnFilmoviDodaj.TabIndex = 32;
@@ -90,7 +89,7 @@
             // btnFilmoviAzuriraj
             // 
             this.btnFilmoviAzuriraj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnFilmoviAzuriraj.Location = new System.Drawing.Point(244, 290);
+            this.btnFilmoviAzuriraj.Location = new System.Drawing.Point(572, 290);
             this.btnFilmoviAzuriraj.Name = "btnFilmoviAzuriraj";
             this.btnFilmoviAzuriraj.Size = new System.Drawing.Size(80, 35);
             this.btnFilmoviAzuriraj.TabIndex = 33;
@@ -102,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 337);
+            this.ClientSize = new System.Drawing.Size(664, 337);
             this.Controls.Add(this.btnFilmoviAzuriraj);
             this.Controls.Add(this.btnFilmoviDodaj);
             this.Controls.Add(this.btnFilmoviOsvjezi);

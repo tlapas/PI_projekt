@@ -78,7 +78,7 @@ namespace PI_projekt.Sucelja
         private void btnZaposleniciDodaj_Click(object sender, EventArgs e)
         {
             FrmAdminZaposleniciDodaj formaDodaj = new FrmAdminZaposleniciDodaj();
-            formaDodaj.Show();
+            formaDodaj.ShowDialog(this);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace PI_projekt.Sucelja
             if (oib > -1)
             {
                 FrmAdminZaposleniciDodaj formaAzuriraj = new FrmAdminZaposleniciDodaj(oib);
-                formaAzuriraj.Show();
+                formaAzuriraj.ShowDialog(this);
             }
             else
             {

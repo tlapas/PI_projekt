@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUlaznica));
-            this.Prijava = new System.Windows.Forms.Label();
             this.lblDatumProjekcije = new System.Windows.Forms.Label();
             this.lblNazivProjekcije = new System.Windows.Forms.Label();
             this.cbNazivProjekcije = new System.Windows.Forms.ComboBox();
@@ -78,22 +77,9 @@
             this.gbDetalji.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Prijava
-            // 
-            this.Prijava.AutoSize = true;
-            this.Prijava.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Prijava.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Prijava.Location = new System.Drawing.Point(9, 9);
-            this.Prijava.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Prijava.Name = "Prijava";
-            this.Prijava.Size = new System.Drawing.Size(136, 16);
-            this.Prijava.TabIndex = 17;
-            this.Prijava.Text = "Prijavljeni ste kao:";
-            // 
             // lblDatumProjekcije
             // 
             this.lblDatumProjekcije.AutoSize = true;
-            this.lblDatumProjekcije.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblDatumProjekcije.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblDatumProjekcije.Location = new System.Drawing.Point(7, 64);
             this.lblDatumProjekcije.Name = "lblDatumProjekcije";
@@ -104,7 +90,6 @@
             // lblNazivProjekcije
             // 
             this.lblNazivProjekcije.AutoSize = true;
-            this.lblNazivProjekcije.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblNazivProjekcije.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblNazivProjekcije.Location = new System.Drawing.Point(7, 33);
             this.lblNazivProjekcije.Name = "lblNazivProjekcije";
@@ -114,7 +99,6 @@
             // 
             // cbNazivProjekcije
             // 
-            this.cbNazivProjekcije.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.cbNazivProjekcije.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNazivProjekcije.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cbNazivProjekcije.FormattingEnabled = true;
@@ -126,11 +110,10 @@
             // 
             // Dalje
             // 
-            this.Dalje.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Dalje.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Dalje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Dalje.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Dalje.Location = new System.Drawing.Point(966, 547);
+            this.Dalje.Location = new System.Drawing.Point(925, 510);
             this.Dalje.Margin = new System.Windows.Forms.Padding(4);
             this.Dalje.Name = "Dalje";
             this.Dalje.Size = new System.Drawing.Size(112, 35);
@@ -141,7 +124,6 @@
             // 
             // Opcije
             // 
-            this.Opcije.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Opcije.Controls.Add(this.cbPopust);
             this.Opcije.Controls.Add(this.lblPopust);
             this.Opcije.Controls.Add(this.txtDvorana);
@@ -158,7 +140,7 @@
             this.Opcije.Controls.Add(this.cbNazivProjekcije);
             this.Opcije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Opcije.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Opcije.Location = new System.Drawing.Point(34, 46);
+            this.Opcije.Location = new System.Drawing.Point(13, 13);
             this.Opcije.Margin = new System.Windows.Forms.Padding(4);
             this.Opcije.Name = "Opcije";
             this.Opcije.Padding = new System.Windows.Forms.Padding(4);
@@ -170,6 +152,7 @@
             // cbPopust
             // 
             this.cbPopust.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPopust.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cbPopust.FormattingEnabled = true;
             this.cbPopust.Location = new System.Drawing.Point(165, 128);
             this.cbPopust.Name = "cbPopust";
@@ -180,6 +163,7 @@
             // lblPopust
             // 
             this.lblPopust.AutoSize = true;
+            this.lblPopust.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblPopust.Location = new System.Drawing.Point(7, 136);
             this.lblPopust.Name = "lblPopust";
             this.lblPopust.Size = new System.Drawing.Size(60, 16);
@@ -188,6 +172,7 @@
             // 
             // txtDvorana
             // 
+            this.txtDvorana.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtDvorana.Location = new System.Drawing.Point(165, 96);
             this.txtDvorana.Name = "txtDvorana";
             this.txtDvorana.ReadOnly = true;
@@ -197,7 +182,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(161, 186);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(147, 170);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 16);
             this.label1.TabIndex = 37;
@@ -205,29 +191,32 @@
             // 
             // btnUkloni
             // 
-            this.btnUkloni.Location = new System.Drawing.Point(116, 304);
+            this.btnUkloni.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnUkloni.Location = new System.Drawing.Point(102, 288);
             this.btnUkloni.Name = "btnUkloni";
             this.btnUkloni.Size = new System.Drawing.Size(43, 30);
             this.btnUkloni.TabIndex = 36;
             this.btnUkloni.Text = "<--";
-            this.btnUkloni.UseVisualStyleBackColor = true;
+            this.btnUkloni.UseVisualStyleBackColor = false;
             this.btnUkloni.Click += new System.EventHandler(this.btnUkloni_Click);
             // 
             // btnDodaj
             // 
-            this.btnDodaj.Location = new System.Drawing.Point(116, 258);
+            this.btnDodaj.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDodaj.Location = new System.Drawing.Point(102, 242);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(43, 28);
             this.btnDodaj.TabIndex = 35;
             this.btnDodaj.Text = "-->";
-            this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.UseVisualStyleBackColor = false;
             this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // lbSlobodna
             // 
+            this.lbSlobodna.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbSlobodna.FormattingEnabled = true;
             this.lbSlobodna.ItemHeight = 16;
-            this.lbSlobodna.Location = new System.Drawing.Point(24, 215);
+            this.lbSlobodna.Location = new System.Drawing.Point(10, 199);
             this.lbSlobodna.Name = "lbSlobodna";
             this.lbSlobodna.Size = new System.Drawing.Size(88, 244);
             this.lbSlobodna.TabIndex = 34;
@@ -235,16 +224,16 @@
             // lbOdabrana
             // 
             this.lbOdabrana.AccessibleRole = System.Windows.Forms.AccessibleRole.DropList;
+            this.lbOdabrana.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbOdabrana.FormattingEnabled = true;
             this.lbOdabrana.ItemHeight = 16;
-            this.lbOdabrana.Location = new System.Drawing.Point(165, 215);
+            this.lbOdabrana.Location = new System.Drawing.Point(151, 199);
             this.lbOdabrana.Name = "lbOdabrana";
             this.lbOdabrana.Size = new System.Drawing.Size(81, 244);
             this.lbOdabrana.TabIndex = 33;
             // 
             // cbDatum
             // 
-            this.cbDatum.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.cbDatum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDatum.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cbDatum.FormattingEnabled = true;
@@ -257,9 +246,8 @@
             // lblSjedalo
             // 
             this.lblSjedalo.AutoSize = true;
-            this.lblSjedalo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblSjedalo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSjedalo.Location = new System.Drawing.Point(20, 186);
+            this.lblSjedalo.Location = new System.Drawing.Point(6, 170);
             this.lblSjedalo.Name = "lblSjedalo";
             this.lblSjedalo.Size = new System.Drawing.Size(79, 16);
             this.lblSjedalo.TabIndex = 31;
@@ -268,7 +256,6 @@
             // lblDvorana
             // 
             this.lblDvorana.AutoSize = true;
-            this.lblDvorana.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblDvorana.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblDvorana.Location = new System.Drawing.Point(7, 99);
             this.lblDvorana.Name = "lblDvorana";
@@ -295,7 +282,8 @@
             this.gbDetalji.Controls.Add(this.lblBrojMjesta);
             this.gbDetalji.Controls.Add(this.lblVrijemeTrajanja);
             this.gbDetalji.Controls.Add(this.lblFilm);
-            this.gbDetalji.Location = new System.Drawing.Point(605, 46);
+            this.gbDetalji.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gbDetalji.Location = new System.Drawing.Point(564, 14);
             this.gbDetalji.Name = "gbDetalji";
             this.gbDetalji.Size = new System.Drawing.Size(473, 471);
             this.gbDetalji.TabIndex = 28;
@@ -305,7 +293,8 @@
             // lblKn
             // 
             this.lblKn.AutoSize = true;
-            this.lblKn.Location = new System.Drawing.Point(304, 106);
+            this.lblKn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblKn.Location = new System.Drawing.Point(304, 102);
             this.lblKn.Name = "lblKn";
             this.lblKn.Size = new System.Drawing.Size(25, 16);
             this.lblKn.TabIndex = 16;
@@ -314,6 +303,7 @@
             // lblMinuta
             // 
             this.lblMinuta.AutoSize = true;
+            this.lblMinuta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblMinuta.Location = new System.Drawing.Point(304, 70);
             this.lblMinuta.Name = "lblMinuta";
             this.lblMinuta.Size = new System.Drawing.Size(53, 16);
@@ -322,6 +312,7 @@
             // 
             // txtProdanoUlaznica
             // 
+            this.txtProdanoUlaznica.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtProdanoUlaznica.Location = new System.Drawing.Point(184, 161);
             this.txtProdanoUlaznica.Margin = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.txtProdanoUlaznica.Name = "txtProdanoUlaznica";
@@ -332,6 +323,7 @@
             // 
             // txtBrojMjesta
             // 
+            this.txtBrojMjesta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtBrojMjesta.Location = new System.Drawing.Point(184, 130);
             this.txtBrojMjesta.Margin = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.txtBrojMjesta.Name = "txtBrojMjesta";
@@ -342,6 +334,7 @@
             // 
             // txtCijena
             // 
+            this.txtCijena.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtCijena.Location = new System.Drawing.Point(184, 99);
             this.txtCijena.Margin = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.txtCijena.Name = "txtCijena";
@@ -352,6 +345,7 @@
             // 
             // txtVrijemeTrajanja
             // 
+            this.txtVrijemeTrajanja.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtVrijemeTrajanja.Location = new System.Drawing.Point(184, 67);
             this.txtVrijemeTrajanja.Margin = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.txtVrijemeTrajanja.Name = "txtVrijemeTrajanja";
@@ -362,6 +356,7 @@
             // 
             // txtFilm
             // 
+            this.txtFilm.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtFilm.Location = new System.Drawing.Point(184, 30);
             this.txtFilm.Name = "txtFilm";
             this.txtFilm.ReadOnly = true;
@@ -370,27 +365,30 @@
             // 
             // lbZanr
             // 
+            this.lbZanr.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbZanr.FormattingEnabled = true;
             this.lbZanr.ItemHeight = 16;
             this.lbZanr.Location = new System.Drawing.Point(268, 238);
             this.lbZanr.Name = "lbZanr";
             this.lbZanr.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lbZanr.Size = new System.Drawing.Size(189, 164);
+            this.lbZanr.Size = new System.Drawing.Size(190, 148);
             this.lbZanr.TabIndex = 9;
             // 
             // lbVrstaProjekcije
             // 
+            this.lbVrstaProjekcije.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbVrstaProjekcije.FormattingEnabled = true;
             this.lbVrstaProjekcije.ItemHeight = 16;
-            this.lbVrstaProjekcije.Location = new System.Drawing.Point(39, 238);
+            this.lbVrstaProjekcije.Location = new System.Drawing.Point(33, 238);
             this.lbVrstaProjekcije.Name = "lbVrstaProjekcije";
             this.lbVrstaProjekcije.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lbVrstaProjekcije.Size = new System.Drawing.Size(195, 164);
+            this.lbVrstaProjekcije.Size = new System.Drawing.Size(190, 148);
             this.lbVrstaProjekcije.TabIndex = 8;
             // 
             // lblZanr
             // 
             this.lblZanr.AutoSize = true;
+            this.lblZanr.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblZanr.Location = new System.Drawing.Point(264, 215);
             this.lblZanr.Name = "lblZanr";
             this.lblZanr.Size = new System.Drawing.Size(43, 16);
@@ -400,7 +398,8 @@
             // lblVrstaProjekcije
             // 
             this.lblVrstaProjekcije.AutoSize = true;
-            this.lblVrstaProjekcije.Location = new System.Drawing.Point(36, 215);
+            this.lblVrstaProjekcije.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblVrstaProjekcije.Location = new System.Drawing.Point(30, 215);
             this.lblVrstaProjekcije.Name = "lblVrstaProjekcije";
             this.lblVrstaProjekcije.Size = new System.Drawing.Size(121, 16);
             this.lblVrstaProjekcije.TabIndex = 6;
@@ -409,6 +408,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(24, 198);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 16);
@@ -417,6 +417,7 @@
             // lblCijena
             // 
             this.lblCijena.AutoSize = true;
+            this.lblCijena.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblCijena.Location = new System.Drawing.Point(30, 102);
             this.lblCijena.Name = "lblCijena";
             this.lblCijena.Size = new System.Drawing.Size(56, 16);
@@ -426,6 +427,7 @@
             // lblProdanoUlaznica
             // 
             this.lblProdanoUlaznica.AutoSize = true;
+            this.lblProdanoUlaznica.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblProdanoUlaznica.Location = new System.Drawing.Point(29, 164);
             this.lblProdanoUlaznica.Name = "lblProdanoUlaznica";
             this.lblProdanoUlaznica.Size = new System.Drawing.Size(128, 16);
@@ -435,6 +437,7 @@
             // lblBrojMjesta
             // 
             this.lblBrojMjesta.AutoSize = true;
+            this.lblBrojMjesta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblBrojMjesta.Location = new System.Drawing.Point(30, 133);
             this.lblBrojMjesta.Name = "lblBrojMjesta";
             this.lblBrojMjesta.Size = new System.Drawing.Size(94, 16);
@@ -444,6 +447,7 @@
             // lblVrijemeTrajanja
             // 
             this.lblVrijemeTrajanja.AutoSize = true;
+            this.lblVrijemeTrajanja.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblVrijemeTrajanja.Location = new System.Drawing.Point(30, 70);
             this.lblVrijemeTrajanja.Name = "lblVrijemeTrajanja";
             this.lblVrijemeTrajanja.Size = new System.Drawing.Size(121, 16);
@@ -453,6 +457,7 @@
             // lblFilm
             // 
             this.lblFilm.AutoSize = true;
+            this.lblFilm.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblFilm.Location = new System.Drawing.Point(30, 33);
             this.lblFilm.Name = "lblFilm";
             this.lblFilm.Size = new System.Drawing.Size(41, 16);
@@ -462,7 +467,8 @@
             // lblUkupno
             // 
             this.lblUkupno.AutoSize = true;
-            this.lblUkupno.Location = new System.Drawing.Point(561, 525);
+            this.lblUkupno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblUkupno.Location = new System.Drawing.Point(561, 488);
             this.lblUkupno.Name = "lblUkupno";
             this.lblUkupno.Size = new System.Drawing.Size(98, 16);
             this.lblUkupno.TabIndex = 39;
@@ -470,17 +476,19 @@
             // 
             // txtSuma
             // 
-            this.txtSuma.Location = new System.Drawing.Point(687, 521);
+            this.txtSuma.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtSuma.Location = new System.Drawing.Point(662, 488);
             this.txtSuma.Margin = new System.Windows.Forms.Padding(0, 0, 7, 0);
             this.txtSuma.Name = "txtSuma";
-            this.txtSuma.Size = new System.Drawing.Size(88, 22);
+            this.txtSuma.Size = new System.Drawing.Size(90, 22);
             this.txtSuma.TabIndex = 40;
             this.txtSuma.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblKn2
             // 
             this.lblKn2.AutoSize = true;
-            this.lblKn2.Location = new System.Drawing.Point(780, 525);
+            this.lblKn2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblKn2.Location = new System.Drawing.Point(760, 519);
             this.lblKn2.Name = "lblKn2";
             this.lblKn2.Size = new System.Drawing.Size(25, 16);
             this.lblKn2.TabIndex = 41;
@@ -489,7 +497,8 @@
             // lblPopust2
             // 
             this.lblPopust2.AutoSize = true;
-            this.lblPopust2.Location = new System.Drawing.Point(606, 561);
+            this.lblPopust2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPopust2.Location = new System.Drawing.Point(561, 519);
             this.lblPopust2.Name = "lblPopust2";
             this.lblPopust2.Size = new System.Drawing.Size(60, 16);
             this.lblPopust2.TabIndex = 42;
@@ -498,7 +507,8 @@
             // lblUkupno2
             // 
             this.lblUkupno2.AutoSize = true;
-            this.lblUkupno2.Location = new System.Drawing.Point(606, 595);
+            this.lblUkupno2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblUkupno2.Location = new System.Drawing.Point(561, 550);
             this.lblUkupno2.Name = "lblUkupno2";
             this.lblUkupno2.Size = new System.Drawing.Size(65, 16);
             this.lblUkupno2.TabIndex = 43;
@@ -507,7 +517,8 @@
             // lblKn3
             // 
             this.lblKn3.AutoSize = true;
-            this.lblKn3.Location = new System.Drawing.Point(780, 595);
+            this.lblKn3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblKn3.Location = new System.Drawing.Point(760, 550);
             this.lblKn3.Name = "lblKn3";
             this.lblKn3.Size = new System.Drawing.Size(25, 16);
             this.lblKn3.TabIndex = 44;
@@ -515,16 +526,18 @@
             // 
             // txtPopust
             // 
-            this.txtPopust.Location = new System.Drawing.Point(687, 558);
+            this.txtPopust.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtPopust.Location = new System.Drawing.Point(662, 516);
             this.txtPopust.Margin = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.txtPopust.Name = "txtPopust";
-            this.txtPopust.Size = new System.Drawing.Size(88, 22);
+            this.txtPopust.Size = new System.Drawing.Size(90, 22);
             this.txtPopust.TabIndex = 45;
             this.txtPopust.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtUkupno
             // 
-            this.txtUkupno.Location = new System.Drawing.Point(685, 592);
+            this.txtUkupno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtUkupno.Location = new System.Drawing.Point(662, 547);
             this.txtUkupno.Margin = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.txtUkupno.Name = "txtUkupno";
             this.txtUkupno.Size = new System.Drawing.Size(90, 22);
@@ -538,25 +551,25 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(1160, 671);
+            this.shapeContainer1.Size = new System.Drawing.Size(1054, 584);
             this.shapeContainer1.TabIndex = 47;
             this.shapeContainer1.TabStop = false;
             // 
             // lineShape1
             // 
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 575;
-            this.lineShape1.X2 = 855;
-            this.lineShape1.Y1 = 589;
-            this.lineShape1.Y2 = 589;
+            this.lineShape1.X1 = 562;
+            this.lineShape1.X2 = 842;
+            this.lineShape1.Y1 = 542;
+            this.lineShape1.Y2 = 542;
             // 
             // FrmUlaznica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1160, 671);
+            this.ClientSize = new System.Drawing.Size(1054, 584);
             this.Controls.Add(this.txtUkupno);
             this.Controls.Add(this.txtPopust);
             this.Controls.Add(this.lblKn3);
@@ -568,7 +581,6 @@
             this.Controls.Add(this.gbDetalji);
             this.Controls.Add(this.Opcije);
             this.Controls.Add(this.Dalje);
-            this.Controls.Add(this.Prijava);
             this.Controls.Add(this.shapeContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -577,6 +589,7 @@
             this.Name = "FrmUlaznica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ulaznica";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmUlaznica_Load);
             this.Opcije.ResumeLayout(false);
             this.Opcije.PerformLayout();
@@ -589,7 +602,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Prijava;
         private System.Windows.Forms.Label lblDatumProjekcije;
         private System.Windows.Forms.Label lblNazivProjekcije;
         private System.Windows.Forms.ComboBox cbNazivProjekcije;

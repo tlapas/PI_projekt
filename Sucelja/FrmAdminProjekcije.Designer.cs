@@ -49,7 +49,6 @@
             this.dgvSveProjekcije.Name = "dgvSveProjekcije";
             this.dgvSveProjekcije.ReadOnly = true;
             this.dgvSveProjekcije.RowHeadersVisible = false;
-            this.dgvSveProjekcije.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvSveProjekcije.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSveProjekcije.Size = new System.Drawing.Size(612, 235);
             this.dgvSveProjekcije.TabIndex = 23;

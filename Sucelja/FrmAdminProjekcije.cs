@@ -57,7 +57,7 @@ namespace PI_projekt.Sucelja
         private void btnProjekcijeDodaj_Click(object sender, EventArgs e)
         {
             FrmAdminProjekcijeDodaj formaDodaj = new FrmAdminProjekcijeDodaj();
-            formaDodaj.Show();
+            formaDodaj.ShowDialog(this);
         }
 
         private void btnProjekcijeAžuriraj_Click(object sender, EventArgs e)
@@ -65,7 +65,7 @@ namespace PI_projekt.Sucelja
             if (IdProjekcije != -1)
             {
                 FrmAdminProjekcijeDodaj formaAzuriraj = new FrmAdminProjekcijeDodaj(IdProjekcije);
-                formaAzuriraj.Show();
+                formaAzuriraj.ShowDialog(this);
             }
             else
             {
