@@ -180,6 +180,7 @@
             this.Name = "FrmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrator";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.msIzbornik.ResumeLayout(false);
             this.msIzbornik.PerformLayout();
             this.statusnaTraka.ResumeLayout(false);
