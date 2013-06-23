@@ -55,7 +55,7 @@
             // 
             this.txtZaposleniciDodajIme.Location = new System.Drawing.Point(140, 70);
             this.txtZaposleniciDodajIme.Name = "txtZaposleniciDodajIme";
-            this.txtZaposleniciDodajIme.Size = new System.Drawing.Size(121, 20);
+            this.txtZaposleniciDodajIme.Size = new System.Drawing.Size(176, 20);
             this.txtZaposleniciDodajIme.TabIndex = 67;
             // 
             // lblZaposleniciDodajIme
@@ -72,7 +72,7 @@
             // 
             this.txtZaposleniciDodajOIB.Location = new System.Drawing.Point(140, 40);
             this.txtZaposleniciDodajOIB.Name = "txtZaposleniciDodajOIB";
-            this.txtZaposleniciDodajOIB.Size = new System.Drawing.Size(121, 20);
+            this.txtZaposleniciDodajOIB.Size = new System.Drawing.Size(176, 20);
             this.txtZaposleniciDodajOIB.TabIndex = 63;
             // 
             // lblZaposleniciDodajOIB
@@ -88,7 +88,7 @@
             // btnFilmoviDodajOdustani
             // 
             this.btnFilmoviDodajOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnFilmoviDodajOdustani.Location = new System.Drawing.Point(181, 318);
+            this.btnFilmoviDodajOdustani.Location = new System.Drawing.Point(236, 318);
             this.btnFilmoviDodajOdustani.Name = "btnFilmoviDodajOdustani";
             this.btnFilmoviDodajOdustani.Size = new System.Drawing.Size(80, 35);
             this.btnFilmoviDodajOdustani.TabIndex = 60;
@@ -99,7 +99,7 @@
             // btnFilmoviDodajSpremi
             // 
             this.btnFilmoviDodajSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnFilmoviDodajSpremi.Location = new System.Drawing.Point(95, 318);
+            this.btnFilmoviDodajSpremi.Location = new System.Drawing.Point(150, 318);
             this.btnFilmoviDodajSpremi.Name = "btnFilmoviDodajSpremi";
             this.btnFilmoviDodajSpremi.Size = new System.Drawing.Size(80, 35);
             this.btnFilmoviDodajSpremi.TabIndex = 59;
@@ -111,7 +111,7 @@
             // 
             this.txtZaposleniciDodajPrezime.Location = new System.Drawing.Point(140, 100);
             this.txtZaposleniciDodajPrezime.Name = "txtZaposleniciDodajPrezime";
-            this.txtZaposleniciDodajPrezime.Size = new System.Drawing.Size(121, 20);
+            this.txtZaposleniciDodajPrezime.Size = new System.Drawing.Size(176, 20);
             this.txtZaposleniciDodajPrezime.TabIndex = 69;
             // 
             // lblZaposleniciDodajPrezime
@@ -128,7 +128,7 @@
             // 
             this.txtZaposleniciDodajEmail.Location = new System.Drawing.Point(140, 190);
             this.txtZaposleniciDodajEmail.Name = "txtZaposleniciDodajEmail";
-            this.txtZaposleniciDodajEmail.Size = new System.Drawing.Size(121, 20);
+            this.txtZaposleniciDodajEmail.Size = new System.Drawing.Size(176, 20);
             this.txtZaposleniciDodajEmail.TabIndex = 75;
             // 
             // lblZaposleniciDodajEmail
@@ -145,7 +145,7 @@
             // 
             this.txtZaposleniciDodajKontakt.Location = new System.Drawing.Point(140, 160);
             this.txtZaposleniciDodajKontakt.Name = "txtZaposleniciDodajKontakt";
-            this.txtZaposleniciDodajKontakt.Size = new System.Drawing.Size(121, 20);
+            this.txtZaposleniciDodajKontakt.Size = new System.Drawing.Size(176, 20);
             this.txtZaposleniciDodajKontakt.TabIndex = 73;
             // 
             // lblZaposleniciDodajKontakt
@@ -162,7 +162,7 @@
             // 
             this.txtZaposleniciDodajAdresa.Location = new System.Drawing.Point(140, 130);
             this.txtZaposleniciDodajAdresa.Name = "txtZaposleniciDodajAdresa";
-            this.txtZaposleniciDodajAdresa.Size = new System.Drawing.Size(121, 20);
+            this.txtZaposleniciDodajAdresa.Size = new System.Drawing.Size(176, 20);
             this.txtZaposleniciDodajAdresa.TabIndex = 71;
             // 
             // lblZaposleniciDodajAdresa
@@ -179,7 +179,7 @@
             // 
             this.txtZaposleniciDodajLozinka.Location = new System.Drawing.Point(140, 250);
             this.txtZaposleniciDodajLozinka.Name = "txtZaposleniciDodajLozinka";
-            this.txtZaposleniciDodajLozinka.Size = new System.Drawing.Size(121, 20);
+            this.txtZaposleniciDodajLozinka.Size = new System.Drawing.Size(176, 20);
             this.txtZaposleniciDodajLozinka.TabIndex = 79;
             // 
             // lblZaposleniciDodajLozinka
@@ -196,7 +196,7 @@
             // 
             this.txtZaposleniciDodajKorime.Location = new System.Drawing.Point(140, 220);
             this.txtZaposleniciDodajKorime.Name = "txtZaposleniciDodajKorime";
-            this.txtZaposleniciDodajKorime.Size = new System.Drawing.Size(121, 20);
+            this.txtZaposleniciDodajKorime.Size = new System.Drawing.Size(176, 20);
             this.txtZaposleniciDodajKorime.TabIndex = 77;
             // 
             // lblZaposleniciDodajKorime
@@ -242,7 +242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(280, 365);
+            this.ClientSize = new System.Drawing.Size(328, 365);
             this.Controls.Add(this.lblNaslovDodajZaposlenike);
             this.Controls.Add(this.cbUloga);
             this.Controls.Add(this.lblUloga);
