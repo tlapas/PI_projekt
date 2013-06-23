@@ -30,6 +30,7 @@ namespace PI_projekt.Artikli
         {
             InitializeComponent();
             odabraniPopust = Popust.DohvatiPopust(idPopustArg);
+            listaIdUlaznica = listaIdUlaznicaArg;
         }
 
         private float CijenaUkupno = 0;
