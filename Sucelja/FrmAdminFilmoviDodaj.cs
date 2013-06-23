@@ -167,7 +167,7 @@ namespace PI_projekt.Sucelja
                 {
                     noviFilm.Naziv = txtDodajFilmNaziv.Text.ToString();
                     noviFilm.VrijemeTrajanja = int.Parse(txtFilmoviDodajTrajanje.Text.ToString());
-                    noviFilm.Redatelj = txtFilmoviDodajTrajanje.Text.ToString();
+                    noviFilm.Redatelj = txtFilmoviDodajRedatelj.Text.ToString();
                     noviFilm.Godina = int.Parse(txtFilmoviDodajGodina.Text.ToString());
                     noviFilm.Glumci = txtFilmoviDodajGlumci.Text.ToString();
                     noviFilm.Sinopsis = txtFilmoviDodajSinopsis.Text.ToString();
