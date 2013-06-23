@@ -86,8 +86,8 @@ namespace PI_projekt.Ulaznica
         /// <param name="e"></param>
         private void FrmUlaznica_Load(object sender, EventArgs e)
         {
-            // filmovi = Film.DohvatiAktualneFilmove();
-            filmovi = Film.DohvatiFilmove();
+             filmovi = Film.DohvatiAktualneFilmove();
+            //filmovi = Film.DohvatiFilmove();
             foreach (Film film in filmovi)
             {
                 cbNazivProjekcije.Items.Add(film.Naziv);
@@ -131,7 +131,7 @@ namespace PI_projekt.Ulaznica
                     odabranaProjekcija = projekcija2;
                 }
             }
-  //napravi metodu koja ce dohvatit za taj ID dvorane Naziv dvorane umjesto linije ispod!!!
+
                 txtDvorana.Text = odabranaProjekcija.BrojDvorane.ToString();
                 txtFilm.Text = odabraniFilm.Naziv;
                 txtCijena.Text = odabranaProjekcija.Cijena.ToString();
@@ -217,6 +217,7 @@ namespace PI_projekt.Ulaznica
             {
                 List<int> odabranaSjedala = new List<int>();
                 List<int> listaIdUlaznica = new List<int>();
+
                 for (int i = 0; i < lbOdabrana.Items.Count; i++)
                 {
                     
@@ -224,17 +225,8 @@ namespace PI_projekt.Ulaznica
                 }
                 listaIdUlaznica = Kino.IzradiUlaznicu(odabranaSjedala, odabranaProjekcija);
                 Artikli.FrmArtikli formaArtikli = new Artikli.FrmArtikli(listaIdUlaznica, odabraniPopust.IdPopusta, ukupno);
-                formaArtikli.Show();
-                
-                /////
-                //Jako je bitno da se poziva nakon unosa artikala i kreiranja racun_karta stavki ulaznica zbog uračunavanja popusta
-                /////
-                foreach (int idUlaznice in listaIdUlaznica)
-                {
-                   
-                    Izvjestaj.UlaznicaIspis ispisUlaznice = new Izvjestaj.UlaznicaIspis(idUlaznice);
-                    ispisUlaznice.Show();
-                }
+                formaArtikli.Show();     
+             
                 this.Close();
             }
             else

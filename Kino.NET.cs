@@ -43,6 +43,7 @@ namespace PI_projekt
             return listaIdUlaznica;
         }
 
+
         public static void KreirajRacun(long OIB, int idNacinaPlacanja, List<Artikl> listaArtikala, List<int> listaKolicina, List<int> listaIdUlaznica, Popust popust, float ukupnaCijenaUlaznica, float ukupnaCijenaArtikala)
         {
             int IdRacun = Racun.UnesiRacun(OIB, idNacinaPlacanja);
@@ -60,9 +61,21 @@ namespace PI_projekt
                 {
                     RacunUlaznica.UnesiRacunUlaznica(IdRacun, ID, popust.IdPopusta);
                 }
+               
+                //Poziva se report viewer UlaznicaIspis.cs za svaku kupljenu ulaznicu
+                foreach (int idUlaznice in listaIdUlaznica)
+                {
+                    Izvjestaj.UlaznicaIspis ispisUlaznice = new Izvjestaj.UlaznicaIspis(idUlaznice);
+                    ispisUlaznice.Show();
+                }
             }
-            Izvjestaj.RacunIzvjestaj racun = new Izvjestaj.RacunIzvjestaj(IdRacun, ukupnaCijenaUlaznica, ukupnaCijenaArtikala);
-            racun.Show();
+
+///ZA racun potrebno maknuti komentare ispod
+///
+///
+
+            //Izvjestaj.RacunIzvjestaj racun = new Izvjestaj.RacunIzvjestaj(IdRacun, ukupnaCijenaUlaznica, ukupnaCijenaArtikala);
+           // racun.Show();
         }
 
      

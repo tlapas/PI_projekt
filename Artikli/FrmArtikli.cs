@@ -73,6 +73,8 @@ namespace PI_projekt.Artikli
             {
                 Kino.KreirajRacun(zaposlenik.OIB, IdNacinaPlacanja, listaOdabranihArtikala, listaKolicina, listaIdUlaznica, odabraniPopust, ukupnaCijenaUlaznica, CijenaUkupno);
             }
+            this.Close();
+
         }
 
         private void OsvjeziArtikle()

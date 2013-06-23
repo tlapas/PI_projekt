@@ -201,7 +201,7 @@ namespace PI_projekt
             DateTime sada = DateTime.Now;
             sada.AddMinutes(15);
 
-            string sqlUpit = "SELECT DISTINCT Film.* FROM Projekcija LEFT JOIN Film ON Projekcija.id_filma=Film.Id_filma WHERE projekcija.datum=" + sada.ToString() + ";";
+            string sqlUpit = "SELECT DISTINCT Film.* FROM Projekcija LEFT JOIN Film ON Projekcija.id_filma=Film.Id_filma WHERE projekcija.datum >= '" + sada.ToString("yyyy-MM-dd HH:mm:ss") + "';";
             DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
             while (dr.Read())
             {

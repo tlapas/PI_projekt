@@ -33,8 +33,7 @@ namespace PI_projekt.Izvjestaj
             this.DvoranaBindingSource.DataSource = dvorana;
             this.FilmBindingSource.DataSource = film;
             this.PopustBindingSource.DataSource = popust;
-            this.reportViewer1.RefreshReport();
-           
+            this.reportViewer1.RefreshReport();          
           
            
         }

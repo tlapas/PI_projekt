@@ -242,8 +242,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Datum</rd:DefaultName>
-        <Top>5.97578cm</Top>
-        <Left>3.06917cm</Left>
+        <Top>5.96167cm</Top>
+        <Left>3.34434cm</Left>
         <Height>0.6cm</Height>
         <Width>3.91817cm</Width>
         <ZIndex>7</ZIndex>
@@ -337,7 +337,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Cijena.Value, "dsProjekcija")-(First(Fields!Cijena.Value, "dsProjekcija")*100*First(Fields!PopustPostotak.Value, "dsPopust"))</Value>
+                <Value>=First(Fields!Cijena.Value, "dsProjekcija")-(First(Fields!Cijena.Value, "dsProjekcija")*First(Fields!PopustPostotak.Value, "dsPopust"))</Value>
                 <Style>
                   <FontFamily>Courier New</FontFamily>
                   <FontSize>11pt</FontSize>
