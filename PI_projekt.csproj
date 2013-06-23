@@ -70,6 +70,12 @@
     <Compile Include="Izvjestaj\RacunIzvjestaj.Designer.cs">
       <DependentUpon>RacunIzvjestaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="Izvjestaj\UlaznicaIspis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izvjestaj\UlaznicaIspis.Designer.cs">
+      <DependentUpon>UlaznicaIspis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kino.NET.cs" />
     <Compile Include="KinoDBDataSet.cs">
       <DependentUpon>KinoDBDataSet.xsd</DependentUpon>
@@ -185,7 +191,11 @@
     <EmbeddedResource Include="Izvjestaj\RacunIzvjestaj.resx">
       <DependentUpon>RacunIzvjestaj.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Izvjestaj\rptUlaznicaIspis.rdlc" />
     <EmbeddedResource Include="Izvjestaj\rptRacun.rdlc" />
+    <EmbeddedResource Include="Izvjestaj\UlaznicaIspis.resx">
+      <DependentUpon>UlaznicaIspis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -249,6 +259,71 @@
     <None Include="KinoDBDataSet.xss">
       <DependentUpon>KinoDBDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\Artikl.datasource" />
+    <None Include="Properties\DataSources\DB.datasource" />
+    <None Include="Properties\DataSources\Dvorana.datasource" />
+    <None Include="Properties\DataSources\Film.datasource" />
+    <None Include="Properties\DataSources\FilmZanrovi.datasource" />
+    <None Include="Properties\DataSources\Kino.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.ArtiklDataTable.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.ArtiklRow.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.ArtiklRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.ArtiklRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.FilmDataTable.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.FilmRow.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.FilmRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.FilmRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.KartaDataTable.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.KartaRow.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.KartaRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.KartaRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.Mjerna_jedinicaDataTable.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.Mjerna_jedinicaRow.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.Mjerna_jedinicaRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.Mjerna_jedinicaRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.Nacin_placanjaDataTable.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.Nacin_placanjaRow.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.Nacin_placanjaRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.Nacin_placanjaRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.PopustDataTable.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.PopustRow.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.PopustRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.PopustRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.ProjekcijaDataTable.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.ProjekcijaRow.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.ProjekcijaRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.ProjekcijaRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.RacunDataTable.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.RacunRow.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.RacunRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.RacunRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.racun_kartaDataTable.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.racun_kartaRow.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.racun_kartaRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.racun_kartaRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.stavka_racunaDataTable.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.stavka_racunaRow.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.stavka_racunaRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.stavka_racunaRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.ZaposlenikDataTable.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.ZaposlenikRow.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.ZaposlenikRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\KinoDBDataSet.ZaposlenikRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\MjernaJedinica.datasource" />
+    <None Include="Properties\DataSources\NaciniPlacanja.datasource" />
+    <None Include="Properties\DataSources\Popust.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Projekcija.datasource" />
+    <None Include="Properties\DataSources\ProjekcijaVrstaProjekcije.datasource" />
+    <None Include="Properties\DataSources\Racun.datasource" />
+    <None Include="Properties\DataSources\RacunArtikl.datasource" />
+    <None Include="Properties\DataSources\RacunUlaznica.datasource" />
+    <None Include="Properties\DataSources\Ulaznice.datasource" />
+    <None Include="Properties\DataSources\Uloga.datasource" />
+    <None Include="Properties\DataSources\VrstaProjekcije.datasource" />
+    <None Include="Properties\DataSources\Zanrovi.datasource" />
+    <None Include="Properties\DataSources\Zaposlenici.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
