@@ -41,6 +41,10 @@ namespace PI_projekt.Sucelja
             filmAzuriraj = Film.DohvatiFilm(odabraniFilm);
             txtDodajFilmNaziv.Text = filmAzuriraj.Naziv.ToString();
             txtFilmoviDodajTrajanje.Text = filmAzuriraj.VrijemeTrajanja.ToString();
+            txtFilmoviDodajRedatelj.Text = filmAzuriraj.Redatelj.ToString();
+            txtFilmoviDodajGodina.Text = filmAzuriraj.Godina.ToString();
+            txtFilmoviDodajGlumci.Text = filmAzuriraj.Glumci.ToString();
+            txtFilmoviDodajSinopsis.Text = filmAzuriraj.Sinopsis.ToString();
             idFilma = odabraniFilm;
         }
 
@@ -59,6 +63,10 @@ namespace PI_projekt.Sucelja
 
                 txtDodajFilmNaziv.Text = filmAzuriraj.Naziv.ToString();
                 txtFilmoviDodajTrajanje.Text = filmAzuriraj.VrijemeTrajanja.ToString();
+                txtFilmoviDodajRedatelj.Text = filmAzuriraj.Redatelj.ToString();
+                txtFilmoviDodajGodina.Text = filmAzuriraj.Godina.ToString();
+                txtFilmoviDodajGlumci.Text = filmAzuriraj.Glumci.ToString();
+                txtFilmoviDodajSinopsis.Text = filmAzuriraj.Sinopsis.ToString();
 
                 //Ubacujemo u listu sve Id.e prethodno odabranih žanrova
                 List<Zanrovi> azurirajListaZanrova = new List<Zanrovi>(Zanrovi.DohvatiZanrove(idFilma));
@@ -101,7 +109,7 @@ namespace PI_projekt.Sucelja
             if (lbFilmoviDodajZanrovi.SelectedItem != null)
             {
                 lbFilmoviDodajZanroviOdabrani.Items.Add(lbFilmoviDodajZanrovi.SelectedItem);
-                lbFilmoviDodajZanrovi.Items.Remove(lbFilmoviDodajZanrovi.SelectedItem);
+                lbFilmoviDodajZanrovi.Items.Remove(lbFilmoviDodajZanrovi.SelectedItem);                
             }
             else
             {

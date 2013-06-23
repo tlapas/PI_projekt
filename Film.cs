@@ -30,6 +30,10 @@ namespace PI_projekt
                 IdFilma= int.Parse(dr["id_filma"].ToString());
                 Naziv = dr["naziv"].ToString();
                 VrijemeTrajanja = int.Parse(dr["vrijeme_trajanja"].ToString());
+                Redatelj = dr["redatelj"].ToString();
+                Godina = int.Parse(dr["godina"].ToString());
+                Glumci = dr["glumci"].ToString();
+                Sinopsis = dr["sinopsis"].ToString();
             }
 
         }
@@ -41,6 +45,10 @@ namespace PI_projekt
         private int vrijeme_trajanja;
         private int id_filma;
         private string naziv;
+        private string redatelj;
+        private int godina;
+        private string glumci;
+        private string sinopsis;
         
         #endregion
 
@@ -65,7 +73,7 @@ namespace PI_projekt
         }
 
         /// <summary>
-        /// trajanja filma u minutama
+        /// Trajanja filma u minutama
         /// </summary>
         public int VrijemeTrajanja
         {
@@ -81,6 +89,10 @@ namespace PI_projekt
                 }
             }
         }
+
+        /// <summary>
+        /// Naziv filma
+        /// </summary>
         public string Naziv
         {
             get
@@ -92,6 +104,66 @@ namespace PI_projekt
                 if (naziv != value)
                 {
                     naziv = value;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Redatelj filma
+        /// </summary>
+        public string Redatelj {
+            get {
+                return naziv;
+            }
+            set {
+                if (naziv != value) {
+                    naziv = value;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Godina kad je film snimljen
+        /// </summary>
+        public int Godina {
+            get {
+                return godina;
+            }
+            set {
+                if (godina != value) {
+                    godina = value;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Glavni glumci
+        /// </summary>
+        public string Glumci {
+            get {
+                return glumci;
+            }
+            set {
+                if (glumci != value) {
+                    glumci = value;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Sinopsis
+        /// </summary>
+        public string Sinopsis
+        {
+            get
+            {
+                return sinopsis;
+            }
+            set
+            {
+                if (sinopsis != value)
+                {
+                    sinopsis = value;
                 }
             }
         }
@@ -165,8 +237,8 @@ namespace PI_projekt
         public static int DodajFilm(Film noviFilm)
         {
 
-            string sqlUpit = "INSERT INTO Film ('naziv','vrijeme_trajanja') VALUES ('"
-                            + noviFilm.Naziv + "','" + noviFilm.VrijemeTrajanja + "');";
+            string sqlUpit = "INSERT INTO Film ('naziv','vrijeme_trajanja', 'redatelj', 'godina', 'glumci', 'sinopsis') VALUES ('"
+                            + noviFilm.Naziv + "','" + noviFilm.VrijemeTrajanja + "', '" + noviFilm.Redatelj + "', '" + noviFilm.Godina + "', '" + noviFilm.Glumci + "', '" + noviFilm.Sinopsis + "' );";
             int IdFilma = DB.Instance.IzvrsiUpitID(sqlUpit);
             return IdFilma;
         }
@@ -177,7 +249,7 @@ namespace PI_projekt
         /// <param name="odabraniFilm">Objekt klase Film</param>
         /// <returns>Broj zahvaćenih redova</returns>
         public static int AzurirajFilm(Film odabraniFilm) {
-            string sqlUpit = "UPDATE Film SET naziv = '" + odabraniFilm.Naziv + "', vrijeme_trajanja = '" + odabraniFilm.VrijemeTrajanja + "' WHERE id_filma = '"+ odabraniFilm.IdFilma +"';";
+            string sqlUpit = "UPDATE Film SET naziv = '" + odabraniFilm.Naziv + "', vrijeme_trajanja = '" + odabraniFilm.VrijemeTrajanja + "', redatelj = '" + odabraniFilm.Redatelj + "', godina = '" + odabraniFilm.Godina + "', glumci = '" + odabraniFilm.Glumci + "', sinopsis = '" + odabraniFilm.Sinopsis + "' WHERE id_filma = '"+ odabraniFilm.IdFilma +"';";
             int izvrsenUpit = DB.Instance.IzvrsiUpit(sqlUpit);
             return izvrsenUpit;
         }
