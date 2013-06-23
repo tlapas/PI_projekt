@@ -224,7 +224,7 @@ namespace PI_projekt.Ulaznica
                 }
                 listaIdUlaznica = Kino.IzradiUlaznicu(odabranaSjedala, odabranaProjekcija);
                 Artikli.FrmArtikli formaArtikli = new Artikli.FrmArtikli(listaIdUlaznica, odabraniPopust.IdPopusta);
-                //formaArtikli.Show();
+                formaArtikli.Show();
                 
                 /////
                 //Jako je bitno da se poziva nakon unosa artikala i kreiranja racun_karta stavki ulaznica zbog uračunavanja popusta

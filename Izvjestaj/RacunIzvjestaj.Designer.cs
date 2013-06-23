@@ -37,6 +37,9 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource9 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource10 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource11 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.racunBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kinoDBDataSet = new PI_projekt.KinoDBDataSet();
@@ -45,16 +48,22 @@
             this.artiklBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mjernajedinicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stavkaracunaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kartaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.racunkartaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projekcijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.filmBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.racunTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.RacunTableAdapter();
             this.nacin_placanjaTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.Nacin_placanjaTableAdapter();
             this.zaposlenikTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.ZaposlenikTableAdapter();
             this.artiklTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.ArtiklTableAdapter();
             this.mjerna_jedinicaTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.Mjerna_jedinicaTableAdapter();
             this.stavka_racunaTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.stavka_racunaTableAdapter();
-            this.kartaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kartaTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.KartaTableAdapter();
-            this.racunkartaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.racun_kartaTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.racun_kartaTableAdapter();
+            this.projekcijaTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.ProjekcijaTableAdapter();
+            this.filmTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.FilmTableAdapter();
+            this.popustBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.popustTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.PopustTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.racunBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kinoDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nacinplacanjaBindingSource)).BeginInit();
@@ -64,10 +73,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.stavkaracunaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kartaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunkartaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projekcijaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popustBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "Racun";
             reportDataSource1.Value = this.racunBindingSource;
             reportDataSource2.Name = "NacinPlacanja";
@@ -84,6 +97,12 @@
             reportDataSource7.Value = this.kartaBindingSource;
             reportDataSource8.Name = "RacunKarta";
             reportDataSource8.Value = this.racunkartaBindingSource;
+            reportDataSource9.Name = "Projekcija";
+            reportDataSource9.Value = this.projekcijaBindingSource;
+            reportDataSource10.Name = "Film";
+            reportDataSource10.Value = this.filmBindingSource;
+            reportDataSource11.Name = "Popust";
+            reportDataSource11.Value = this.popustBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
@@ -92,10 +111,13 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource7);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource8);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource9);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource10);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource11);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PI_projekt.Izvjestaj.rptRacun.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 34);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(730, 399);
+            this.reportViewer1.Size = new System.Drawing.Size(794, 476);
             this.reportViewer1.TabIndex = 0;
             // 
             // racunBindingSource
@@ -133,6 +155,26 @@
             this.stavkaracunaBindingSource.DataMember = "stavka_racuna";
             this.stavkaracunaBindingSource.DataSource = this.kinoDBDataSet;
             // 
+            // kartaBindingSource
+            // 
+            this.kartaBindingSource.DataMember = "Karta";
+            this.kartaBindingSource.DataSource = this.kinoDBDataSet;
+            // 
+            // racunkartaBindingSource
+            // 
+            this.racunkartaBindingSource.DataMember = "racun_karta";
+            this.racunkartaBindingSource.DataSource = this.kinoDBDataSet;
+            // 
+            // projekcijaBindingSource
+            // 
+            this.projekcijaBindingSource.DataMember = "Projekcija";
+            this.projekcijaBindingSource.DataSource = this.kinoDBDataSet;
+            // 
+            // filmBindingSource
+            // 
+            this.filmBindingSource.DataMember = "Film";
+            this.filmBindingSource.DataSource = this.kinoDBDataSet;
+            // 
             // racunTableAdapter
             // 
             this.racunTableAdapter.ClearBeforeFill = true;
@@ -157,29 +199,36 @@
             // 
             this.stavka_racunaTableAdapter.ClearBeforeFill = true;
             // 
-            // kartaBindingSource
-            // 
-            this.kartaBindingSource.DataMember = "Karta";
-            this.kartaBindingSource.DataSource = this.kinoDBDataSet;
-            // 
             // kartaTableAdapter
             // 
             this.kartaTableAdapter.ClearBeforeFill = true;
-            // 
-            // racunkartaBindingSource
-            // 
-            this.racunkartaBindingSource.DataMember = "racun_karta";
-            this.racunkartaBindingSource.DataSource = this.kinoDBDataSet;
             // 
             // racun_kartaTableAdapter
             // 
             this.racun_kartaTableAdapter.ClearBeforeFill = true;
             // 
+            // projekcijaTableAdapter
+            // 
+            this.projekcijaTableAdapter.ClearBeforeFill = true;
+            // 
+            // filmTableAdapter
+            // 
+            this.filmTableAdapter.ClearBeforeFill = true;
+            // 
+            // popustBindingSource
+            // 
+            this.popustBindingSource.DataMember = "Popust";
+            this.popustBindingSource.DataSource = this.kinoDBDataSet;
+            // 
+            // popustTableAdapter
+            // 
+            this.popustTableAdapter.ClearBeforeFill = true;
+            // 
             // RacunIzvjestaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 445);
+            this.ClientSize = new System.Drawing.Size(794, 476);
             this.Controls.Add(this.reportViewer1);
             this.Name = "RacunIzvjestaj";
             this.Text = "RacunIzvjestaj";
@@ -193,6 +242,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.stavkaracunaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kartaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunkartaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projekcijaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popustBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -217,5 +269,11 @@
         private System.Windows.Forms.BindingSource racunkartaBindingSource;
         private KinoDBDataSetTableAdapters.KartaTableAdapter kartaTableAdapter;
         private KinoDBDataSetTableAdapters.racun_kartaTableAdapter racun_kartaTableAdapter;
+        private System.Windows.Forms.BindingSource projekcijaBindingSource;
+        private System.Windows.Forms.BindingSource filmBindingSource;
+        private KinoDBDataSetTableAdapters.ProjekcijaTableAdapter projekcijaTableAdapter;
+        private KinoDBDataSetTableAdapters.FilmTableAdapter filmTableAdapter;
+        private System.Windows.Forms.BindingSource popustBindingSource;
+        private KinoDBDataSetTableAdapters.PopustTableAdapter popustTableAdapter;
     }
 }

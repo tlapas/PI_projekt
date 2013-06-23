@@ -42,5 +42,15 @@ namespace PI_projekt.Properties {
                 return ((string)(this["KinoDBConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=C:\\Users\\Rider\\Desktop\\PI_radna\\PI_projekt\\Baza\\KinoDB.db3")]
+        public string KinoDBConnectionString2 {
+            get {
+                return ((string)(this["KinoDBConnectionString2"]));
+            }
+        }
     }
 }

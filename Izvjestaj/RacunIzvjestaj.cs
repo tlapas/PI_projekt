@@ -32,6 +32,9 @@ namespace PI_projekt.Izvjestaj
             this.stavka_racunaTableAdapter.Fill(this.kinoDBDataSet.stavka_racuna, IdRacuna);
             this.kartaTableAdapter.Fill(this.kinoDBDataSet.Karta, IdRacuna);
             this.racun_kartaTableAdapter.Fill(this.kinoDBDataSet.racun_karta, IdRacuna);
+            this.projekcijaTableAdapter.Fill(this.kinoDBDataSet.Projekcija, IdRacuna);
+            this.filmTableAdapter.Fill(this.kinoDBDataSet.Film, IdRacuna);
+            this.popustTableAdapter.Fill(this.kinoDBDataSet.Popust, IdRacuna);
             
             this.reportViewer1.RefreshReport();
         }
