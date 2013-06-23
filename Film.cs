@@ -113,11 +113,11 @@ namespace PI_projekt
         /// </summary>
         public string Redatelj {
             get {
-                return naziv;
+                return redatelj;
             }
             set {
-                if (naziv != value) {
-                    naziv = value;
+                if (redatelj != value) {
+                    redatelj = value;
                 }
             }
         }
