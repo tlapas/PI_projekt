@@ -14,9 +14,13 @@ namespace PI_projekt.Sucelja
     {
         public FrmAdmin()
         {
+            
             InitializeComponent();
             ssUsername.Text = Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik;
         }
+
+        //varijabla koja provjerava da li se radi o odjavi
+        private bool pomOdjava = false;
             
         private void miSifarniciZaposlenici_MouseUp(object sender, MouseEventArgs e)
         {
@@ -63,11 +67,40 @@ namespace PI_projekt.Sucelja
 
         }
 
+         /// <summary>
+        /// funkcija za odjavu iz sustava, klikom na odjava se postavlja parametar na 1
+        /// i prosljeđuje funkciji koja će ispisati poruku i pitati želi li se korisnik odjaviti
+        /// u slučaju klika na yes, korisnik se odjavljuje i vraća na početnu stranicu (login)
+        /// </summary>
+        int odjavljivanje = 0;
         private void miOpcijeOdjava_MouseUp(object sender, MouseEventArgs e)
         {
-            FrmPocetna pocetna = new FrmPocetna();
-            this.Close();
-            pocetna.Show();
+         
+            odjavljivanje = 1;
+            odjava();
+        }
+
+        private void odjava()
+        {
+            if (odjavljivanje == 1)
+            {
+                string message = "Želite li se odjaviti iz sustava?";
+                string caption = "Odjava iz sustava";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                // Displays the MessageBox.
+                result = MessageBox.Show(this, message, caption, buttons);
+
+                if (result == DialogResult.Yes)
+                {
+                    pomOdjava = true;
+                    FrmPocetna pocetna = new FrmPocetna();
+                    this.Close();
+                    pocetna.Show();
+                    
+                }
+            }
         }
 
         private void miOpcijeIzlaz_MouseUp(object sender, MouseEventArgs e)
@@ -75,8 +108,6 @@ namespace PI_projekt.Sucelja
             Application.Exit();
 
         }
-        
-    
             
     }
 }
