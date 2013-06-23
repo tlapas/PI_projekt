@@ -118,6 +118,7 @@
             this.Controls.Add(this.btnSpremi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmAdminDvoraneDodaj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dvorana - dodaj/ažuriraj";
             this.Load += new System.EventHandler(this.FrmAdminDvoraneDodaj_Load);
             this.ResumeLayout(false);

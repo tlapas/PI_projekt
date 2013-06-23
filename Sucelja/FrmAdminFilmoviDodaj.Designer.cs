@@ -200,8 +200,10 @@
             this.Controls.Add(this.lblFilmoviDodajNaziv);
             this.Controls.Add(this.btnFilmoviDodajOdustani);
             this.Controls.Add(this.btnFilmoviDodajSpremi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Name = "FrmAdminFilmoviDodaj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Filmovi - dodaj/ažuriraj";
             this.Load += new System.EventHandler(this.FrmAdminFilmDodaj_Load);
             this.ResumeLayout(false);
