@@ -38,21 +38,30 @@
             // 
             // dgvSviArtikli
             // 
+            this.dgvSviArtikli.AllowUserToAddRows = false;
+            this.dgvSviArtikli.AllowUserToDeleteRows = false;
+            this.dgvSviArtikli.AllowUserToResizeColumns = false;
+            this.dgvSviArtikli.AllowUserToResizeRows = false;
+            this.dgvSviArtikli.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvSviArtikli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSviArtikli.Location = new System.Drawing.Point(11, 83);
+            this.dgvSviArtikli.Location = new System.Drawing.Point(10, 40);
             this.dgvSviArtikli.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvSviArtikli.MultiSelect = false;
             this.dgvSviArtikli.Name = "dgvSviArtikli";
             this.dgvSviArtikli.RowTemplate.Height = 24;
-            this.dgvSviArtikli.Size = new System.Drawing.Size(677, 236);
+            this.dgvSviArtikli.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvSviArtikli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSviArtikli.Size = new System.Drawing.Size(312, 235);
             this.dgvSviArtikli.TabIndex = 0;
             this.dgvSviArtikli.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSviArtikli_CellClick);
             // 
             // btnDodajArtikl
             // 
-            this.btnDodajArtikl.Location = new System.Drawing.Point(537, 349);
+            this.btnDodajArtikl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnDodajArtikl.Location = new System.Drawing.Point(158, 290);
             this.btnDodajArtikl.Margin = new System.Windows.Forms.Padding(2);
             this.btnDodajArtikl.Name = "btnDodajArtikl";
-            this.btnDodajArtikl.Size = new System.Drawing.Size(71, 29);
+            this.btnDodajArtikl.Size = new System.Drawing.Size(80, 35);
             this.btnDodajArtikl.TabIndex = 1;
             this.btnDodajArtikl.Text = "Dodaj";
             this.btnDodajArtikl.UseVisualStyleBackColor = true;
@@ -60,10 +69,11 @@
             // 
             // btnOsvjeziArtikle
             // 
-            this.btnOsvjeziArtikle.Location = new System.Drawing.Point(460, 349);
+            this.btnOsvjeziArtikle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnOsvjeziArtikle.Location = new System.Drawing.Point(74, 290);
             this.btnOsvjeziArtikle.Margin = new System.Windows.Forms.Padding(2);
             this.btnOsvjeziArtikle.Name = "btnOsvjeziArtikle";
-            this.btnOsvjeziArtikle.Size = new System.Drawing.Size(73, 29);
+            this.btnOsvjeziArtikle.Size = new System.Drawing.Size(80, 35);
             this.btnOsvjeziArtikle.TabIndex = 2;
             this.btnOsvjeziArtikle.Text = "Osvježi";
             this.btnOsvjeziArtikle.UseVisualStyleBackColor = true;
@@ -71,10 +81,11 @@
             // 
             // btnAzurirajArtikl
             // 
-            this.btnAzurirajArtikl.Location = new System.Drawing.Point(612, 348);
+            this.btnAzurirajArtikl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAzurirajArtikl.Location = new System.Drawing.Point(242, 290);
             this.btnAzurirajArtikl.Margin = new System.Windows.Forms.Padding(2);
             this.btnAzurirajArtikl.Name = "btnAzurirajArtikl";
-            this.btnAzurirajArtikl.Size = new System.Drawing.Size(76, 30);
+            this.btnAzurirajArtikl.Size = new System.Drawing.Size(80, 35);
             this.btnAzurirajArtikl.TabIndex = 3;
             this.btnAzurirajArtikl.Text = "Ažuriraj";
             this.btnAzurirajArtikl.UseVisualStyleBackColor = true;
@@ -83,25 +94,28 @@
             // lblSviArtikli
             // 
             this.lblSviArtikli.AutoSize = true;
-            this.lblSviArtikli.Location = new System.Drawing.Point(13, 59);
+            this.lblSviArtikli.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblSviArtikli.Location = new System.Drawing.Point(10, 10);
             this.lblSviArtikli.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSviArtikli.Name = "lblSviArtikli";
-            this.lblSviArtikli.Size = new System.Drawing.Size(52, 13);
+            this.lblSviArtikli.Size = new System.Drawing.Size(165, 18);
             this.lblSviArtikli.TabIndex = 5;
-            this.lblSviArtikli.Text = "Svi artikli:";
+            this.lblSviArtikli.Text = "Pregled svih artikala:";
             // 
             // FrmAdminArtikli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 421);
+            this.ClientSize = new System.Drawing.Size(332, 336);
             this.Controls.Add(this.lblSviArtikli);
             this.Controls.Add(this.btnAzurirajArtikl);
             this.Controls.Add(this.btnOsvjeziArtikle);
             this.Controls.Add(this.btnDodajArtikl);
             this.Controls.Add(this.dgvSviArtikli);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmAdminArtikli";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrator Artikli";
             this.Load += new System.EventHandler(this.FrmAdminArtikli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSviArtikli)).EndInit();
