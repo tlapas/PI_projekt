@@ -90,7 +90,7 @@
             // 
             this.txtDodajFilmNaziv.Location = new System.Drawing.Point(110, 40);
             this.txtDodajFilmNaziv.Name = "txtDodajFilmNaziv";
-            this.txtDodajFilmNaziv.Size = new System.Drawing.Size(100, 20);
+            this.txtDodajFilmNaziv.Size = new System.Drawing.Size(230, 20);
             this.txtDodajFilmNaziv.TabIndex = 33;
             // 
             // txtFilmoviDodajTrajanje
