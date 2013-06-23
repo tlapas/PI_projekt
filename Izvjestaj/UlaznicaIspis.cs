@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,16 +19,13 @@ namespace PI_projekt.Izvjestaj
         {
             InitializeComponent();
             idUlaznice = ulaznicaId;
-        }
 
-        private void UlaznicaIspis_Load(object sender, EventArgs e)
-        {
 
             Ulaznice ulaznica = Ulaznice.DohvatiUlaznicu(idUlaznice);
             Projekcija projekcija = Projekcija.DohvatiProjekciju(ulaznica.IdProjekcije);
             Dvorana dvorana = Dvorana.DohvatiDvoranu(projekcija.BrojDvorane);
             Film film = Film.DohvatiFilm(projekcija.IdFilma);
-            RacunUlaznica racunUlaznica= RacunUlaznica.DohvatiRacunUlaznica(idUlaznice);
+            RacunUlaznica racunUlaznica = RacunUlaznica.DohvatiRacunUlaznica(idUlaznice);
             Popust popust = Popust.DohvatiPopust(racunUlaznica.IdPopusta);
 
             this.UlazniceBindingSource.DataSource = ulaznica;
@@ -35,9 +33,15 @@ namespace PI_projekt.Izvjestaj
             this.DvoranaBindingSource.DataSource = dvorana;
             this.FilmBindingSource.DataSource = film;
             this.PopustBindingSource.DataSource = popust;
-
-
             this.reportViewer1.RefreshReport();
+           
+          
+           
+        }
+
+        private void UlaznicaIspis_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

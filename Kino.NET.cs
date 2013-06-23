@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,5 +64,7 @@ namespace PI_projekt
             Izvjestaj.RacunIzvjestaj racun = new Izvjestaj.RacunIzvjestaj(IdRacun);
             racun.Show();
         }
+
+     
     }
 }
