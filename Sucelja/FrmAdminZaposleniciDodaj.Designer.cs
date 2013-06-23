@@ -48,45 +48,49 @@
             this.lblZaposleniciDodajKorime = new System.Windows.Forms.Label();
             this.lblUloga = new System.Windows.Forms.Label();
             this.cbUloga = new System.Windows.Forms.ComboBox();
+            this.lblNaslovDodajZaposlenike = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtZaposleniciDodajIme
             // 
-            this.txtZaposleniciDodajIme.Location = new System.Drawing.Point(92, 99);
+            this.txtZaposleniciDodajIme.Location = new System.Drawing.Point(140, 70);
             this.txtZaposleniciDodajIme.Name = "txtZaposleniciDodajIme";
-            this.txtZaposleniciDodajIme.Size = new System.Drawing.Size(100, 20);
+            this.txtZaposleniciDodajIme.Size = new System.Drawing.Size(121, 20);
             this.txtZaposleniciDodajIme.TabIndex = 67;
             // 
             // lblZaposleniciDodajIme
             // 
             this.lblZaposleniciDodajIme.AutoSize = true;
-            this.lblZaposleniciDodajIme.Location = new System.Drawing.Point(8, 102);
+            this.lblZaposleniciDodajIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblZaposleniciDodajIme.Location = new System.Drawing.Point(10, 70);
             this.lblZaposleniciDodajIme.Name = "lblZaposleniciDodajIme";
-            this.lblZaposleniciDodajIme.Size = new System.Drawing.Size(27, 13);
+            this.lblZaposleniciDodajIme.Size = new System.Drawing.Size(37, 16);
             this.lblZaposleniciDodajIme.TabIndex = 66;
             this.lblZaposleniciDodajIme.Text = "Ime:";
             // 
             // txtZaposleniciDodajOIB
             // 
-            this.txtZaposleniciDodajOIB.Location = new System.Drawing.Point(92, 73);
+            this.txtZaposleniciDodajOIB.Location = new System.Drawing.Point(140, 40);
             this.txtZaposleniciDodajOIB.Name = "txtZaposleniciDodajOIB";
-            this.txtZaposleniciDodajOIB.Size = new System.Drawing.Size(100, 20);
+            this.txtZaposleniciDodajOIB.Size = new System.Drawing.Size(121, 20);
             this.txtZaposleniciDodajOIB.TabIndex = 63;
             // 
             // lblZaposleniciDodajOIB
             // 
             this.lblZaposleniciDodajOIB.AutoSize = true;
-            this.lblZaposleniciDodajOIB.Location = new System.Drawing.Point(8, 76);
+            this.lblZaposleniciDodajOIB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblZaposleniciDodajOIB.Location = new System.Drawing.Point(10, 40);
             this.lblZaposleniciDodajOIB.Name = "lblZaposleniciDodajOIB";
-            this.lblZaposleniciDodajOIB.Size = new System.Drawing.Size(28, 13);
+            this.lblZaposleniciDodajOIB.Size = new System.Drawing.Size(37, 16);
             this.lblZaposleniciDodajOIB.TabIndex = 61;
             this.lblZaposleniciDodajOIB.Text = "OIB:";
             // 
             // btnFilmoviDodajOdustani
             // 
-            this.btnFilmoviDodajOdustani.Location = new System.Drawing.Point(201, 330);
+            this.btnFilmoviDodajOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnFilmoviDodajOdustani.Location = new System.Drawing.Point(181, 318);
             this.btnFilmoviDodajOdustani.Name = "btnFilmoviDodajOdustani";
-            this.btnFilmoviDodajOdustani.Size = new System.Drawing.Size(75, 23);
+            this.btnFilmoviDodajOdustani.Size = new System.Drawing.Size(80, 35);
             this.btnFilmoviDodajOdustani.TabIndex = 60;
             this.btnFilmoviDodajOdustani.Text = "Odustani";
             this.btnFilmoviDodajOdustani.UseVisualStyleBackColor = true;
@@ -94,9 +98,10 @@
             // 
             // btnFilmoviDodajSpremi
             // 
-            this.btnFilmoviDodajSpremi.Location = new System.Drawing.Point(107, 330);
+            this.btnFilmoviDodajSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnFilmoviDodajSpremi.Location = new System.Drawing.Point(95, 318);
             this.btnFilmoviDodajSpremi.Name = "btnFilmoviDodajSpremi";
-            this.btnFilmoviDodajSpremi.Size = new System.Drawing.Size(75, 23);
+            this.btnFilmoviDodajSpremi.Size = new System.Drawing.Size(80, 35);
             this.btnFilmoviDodajSpremi.TabIndex = 59;
             this.btnFilmoviDodajSpremi.Text = "Spremi";
             this.btnFilmoviDodajSpremi.UseVisualStyleBackColor = true;
@@ -104,106 +109,113 @@
             // 
             // txtZaposleniciDodajPrezime
             // 
-            this.txtZaposleniciDodajPrezime.Location = new System.Drawing.Point(92, 125);
+            this.txtZaposleniciDodajPrezime.Location = new System.Drawing.Point(140, 100);
             this.txtZaposleniciDodajPrezime.Name = "txtZaposleniciDodajPrezime";
-            this.txtZaposleniciDodajPrezime.Size = new System.Drawing.Size(100, 20);
+            this.txtZaposleniciDodajPrezime.Size = new System.Drawing.Size(121, 20);
             this.txtZaposleniciDodajPrezime.TabIndex = 69;
             // 
             // lblZaposleniciDodajPrezime
             // 
             this.lblZaposleniciDodajPrezime.AutoSize = true;
-            this.lblZaposleniciDodajPrezime.Location = new System.Drawing.Point(8, 128);
+            this.lblZaposleniciDodajPrezime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblZaposleniciDodajPrezime.Location = new System.Drawing.Point(10, 100);
             this.lblZaposleniciDodajPrezime.Name = "lblZaposleniciDodajPrezime";
-            this.lblZaposleniciDodajPrezime.Size = new System.Drawing.Size(47, 13);
+            this.lblZaposleniciDodajPrezime.Size = new System.Drawing.Size(68, 16);
             this.lblZaposleniciDodajPrezime.TabIndex = 68;
             this.lblZaposleniciDodajPrezime.Text = "Prezime:";
             // 
             // txtZaposleniciDodajEmail
             // 
-            this.txtZaposleniciDodajEmail.Location = new System.Drawing.Point(92, 204);
+            this.txtZaposleniciDodajEmail.Location = new System.Drawing.Point(140, 190);
             this.txtZaposleniciDodajEmail.Name = "txtZaposleniciDodajEmail";
-            this.txtZaposleniciDodajEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtZaposleniciDodajEmail.Size = new System.Drawing.Size(121, 20);
             this.txtZaposleniciDodajEmail.TabIndex = 75;
             // 
             // lblZaposleniciDodajEmail
             // 
             this.lblZaposleniciDodajEmail.AutoSize = true;
-            this.lblZaposleniciDodajEmail.Location = new System.Drawing.Point(8, 207);
+            this.lblZaposleniciDodajEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblZaposleniciDodajEmail.Location = new System.Drawing.Point(10, 190);
             this.lblZaposleniciDodajEmail.Name = "lblZaposleniciDodajEmail";
-            this.lblZaposleniciDodajEmail.Size = new System.Drawing.Size(38, 13);
+            this.lblZaposleniciDodajEmail.Size = new System.Drawing.Size(56, 16);
             this.lblZaposleniciDodajEmail.TabIndex = 74;
             this.lblZaposleniciDodajEmail.Text = "E-mail:";
             // 
             // txtZaposleniciDodajKontakt
             // 
-            this.txtZaposleniciDodajKontakt.Location = new System.Drawing.Point(92, 178);
+            this.txtZaposleniciDodajKontakt.Location = new System.Drawing.Point(140, 160);
             this.txtZaposleniciDodajKontakt.Name = "txtZaposleniciDodajKontakt";
-            this.txtZaposleniciDodajKontakt.Size = new System.Drawing.Size(100, 20);
+            this.txtZaposleniciDodajKontakt.Size = new System.Drawing.Size(121, 20);
             this.txtZaposleniciDodajKontakt.TabIndex = 73;
             // 
             // lblZaposleniciDodajKontakt
             // 
             this.lblZaposleniciDodajKontakt.AutoSize = true;
-            this.lblZaposleniciDodajKontakt.Location = new System.Drawing.Point(8, 181);
+            this.lblZaposleniciDodajKontakt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblZaposleniciDodajKontakt.Location = new System.Drawing.Point(10, 160);
             this.lblZaposleniciDodajKontakt.Name = "lblZaposleniciDodajKontakt";
-            this.lblZaposleniciDodajKontakt.Size = new System.Drawing.Size(47, 13);
+            this.lblZaposleniciDodajKontakt.Size = new System.Drawing.Size(63, 16);
             this.lblZaposleniciDodajKontakt.TabIndex = 72;
             this.lblZaposleniciDodajKontakt.Text = "Kontakt:";
             // 
             // txtZaposleniciDodajAdresa
             // 
-            this.txtZaposleniciDodajAdresa.Location = new System.Drawing.Point(92, 152);
+            this.txtZaposleniciDodajAdresa.Location = new System.Drawing.Point(140, 130);
             this.txtZaposleniciDodajAdresa.Name = "txtZaposleniciDodajAdresa";
-            this.txtZaposleniciDodajAdresa.Size = new System.Drawing.Size(100, 20);
+            this.txtZaposleniciDodajAdresa.Size = new System.Drawing.Size(121, 20);
             this.txtZaposleniciDodajAdresa.TabIndex = 71;
             // 
             // lblZaposleniciDodajAdresa
             // 
             this.lblZaposleniciDodajAdresa.AutoSize = true;
-            this.lblZaposleniciDodajAdresa.Location = new System.Drawing.Point(8, 155);
+            this.lblZaposleniciDodajAdresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblZaposleniciDodajAdresa.Location = new System.Drawing.Point(10, 130);
             this.lblZaposleniciDodajAdresa.Name = "lblZaposleniciDodajAdresa";
-            this.lblZaposleniciDodajAdresa.Size = new System.Drawing.Size(43, 13);
+            this.lblZaposleniciDodajAdresa.Size = new System.Drawing.Size(62, 16);
             this.lblZaposleniciDodajAdresa.TabIndex = 70;
             this.lblZaposleniciDodajAdresa.Text = "Adresa:";
             // 
             // txtZaposleniciDodajLozinka
             // 
-            this.txtZaposleniciDodajLozinka.Location = new System.Drawing.Point(92, 256);
+            this.txtZaposleniciDodajLozinka.Location = new System.Drawing.Point(140, 250);
             this.txtZaposleniciDodajLozinka.Name = "txtZaposleniciDodajLozinka";
-            this.txtZaposleniciDodajLozinka.Size = new System.Drawing.Size(100, 20);
+            this.txtZaposleniciDodajLozinka.Size = new System.Drawing.Size(121, 20);
             this.txtZaposleniciDodajLozinka.TabIndex = 79;
             // 
             // lblZaposleniciDodajLozinka
             // 
             this.lblZaposleniciDodajLozinka.AutoSize = true;
-            this.lblZaposleniciDodajLozinka.Location = new System.Drawing.Point(8, 259);
+            this.lblZaposleniciDodajLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblZaposleniciDodajLozinka.Location = new System.Drawing.Point(10, 250);
             this.lblZaposleniciDodajLozinka.Name = "lblZaposleniciDodajLozinka";
-            this.lblZaposleniciDodajLozinka.Size = new System.Drawing.Size(47, 13);
+            this.lblZaposleniciDodajLozinka.Size = new System.Drawing.Size(65, 16);
             this.lblZaposleniciDodajLozinka.TabIndex = 78;
             this.lblZaposleniciDodajLozinka.Text = "Lozinka:";
             // 
             // txtZaposleniciDodajKorime
             // 
-            this.txtZaposleniciDodajKorime.Location = new System.Drawing.Point(92, 230);
+            this.txtZaposleniciDodajKorime.Location = new System.Drawing.Point(140, 220);
             this.txtZaposleniciDodajKorime.Name = "txtZaposleniciDodajKorime";
-            this.txtZaposleniciDodajKorime.Size = new System.Drawing.Size(100, 20);
+            this.txtZaposleniciDodajKorime.Size = new System.Drawing.Size(121, 20);
             this.txtZaposleniciDodajKorime.TabIndex = 77;
             // 
             // lblZaposleniciDodajKorime
             // 
             this.lblZaposleniciDodajKorime.AutoSize = true;
-            this.lblZaposleniciDodajKorime.Location = new System.Drawing.Point(8, 233);
+            this.lblZaposleniciDodajKorime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblZaposleniciDodajKorime.Location = new System.Drawing.Point(10, 220);
             this.lblZaposleniciDodajKorime.Name = "lblZaposleniciDodajKorime";
-            this.lblZaposleniciDodajKorime.Size = new System.Drawing.Size(78, 13);
+            this.lblZaposleniciDodajKorime.Size = new System.Drawing.Size(113, 16);
             this.lblZaposleniciDodajKorime.TabIndex = 76;
             this.lblZaposleniciDodajKorime.Text = "Korisničko ime:";
             // 
             // lblUloga
             // 
             this.lblUloga.AutoSize = true;
-            this.lblUloga.Location = new System.Drawing.Point(11, 291);
+            this.lblUloga.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblUloga.Location = new System.Drawing.Point(10, 280);
             this.lblUloga.Name = "lblUloga";
-            this.lblUloga.Size = new System.Drawing.Size(35, 13);
+            this.lblUloga.Size = new System.Drawing.Size(50, 16);
             this.lblUloga.TabIndex = 80;
             this.lblUloga.Text = "Uloga";
             // 
@@ -211,16 +223,27 @@
             // 
             this.cbUloga.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbUloga.FormattingEnabled = true;
-            this.cbUloga.Location = new System.Drawing.Point(92, 283);
+            this.cbUloga.Location = new System.Drawing.Point(140, 280);
             this.cbUloga.Name = "cbUloga";
             this.cbUloga.Size = new System.Drawing.Size(121, 21);
             this.cbUloga.TabIndex = 81;
+            // 
+            // lblNaslovDodajZaposlenike
+            // 
+            this.lblNaslovDodajZaposlenike.AutoSize = true;
+            this.lblNaslovDodajZaposlenike.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblNaslovDodajZaposlenike.Location = new System.Drawing.Point(10, 10);
+            this.lblNaslovDodajZaposlenike.Name = "lblNaslovDodajZaposlenike";
+            this.lblNaslovDodajZaposlenike.Size = new System.Drawing.Size(101, 20);
+            this.lblNaslovDodajZaposlenike.TabIndex = 82;
+            this.lblNaslovDodajZaposlenike.Text = "Zaposlenik:";
             // 
             // FrmAdminZaposleniciDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 365);
+            this.ClientSize = new System.Drawing.Size(280, 365);
+            this.Controls.Add(this.lblNaslovDodajZaposlenike);
             this.Controls.Add(this.cbUloga);
             this.Controls.Add(this.lblUloga);
             this.Controls.Add(this.txtZaposleniciDodajLozinka);
@@ -241,8 +264,10 @@
             this.Controls.Add(this.lblZaposleniciDodajOIB);
             this.Controls.Add(this.btnFilmoviDodajOdustani);
             this.Controls.Add(this.btnFilmoviDodajSpremi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmAdminZaposleniciDodaj";
-            this.Text = "FrmAdminZaposleniciDodaj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Zaposlenici - Dodaj/ažuriraj";
             this.Load += new System.EventHandler(this.FrmAdminZaposleniciDodaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -271,5 +296,6 @@
         private System.Windows.Forms.Label lblZaposleniciDodajKorime;
         private System.Windows.Forms.Label lblUloga;
         private System.Windows.Forms.ComboBox cbUloga;
+        private System.Windows.Forms.Label lblNaslovDodajZaposlenike;
     }
 }

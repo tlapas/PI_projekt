@@ -42,7 +42,7 @@
             this.dgvSviZaposlenici.AllowUserToDeleteRows = false;
             this.dgvSviZaposlenici.AllowUserToResizeColumns = false;
             this.dgvSviZaposlenici.AllowUserToResizeRows = false;
-            this.dgvSviZaposlenici.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSviZaposlenici.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvSviZaposlenici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSviZaposlenici.Location = new System.Drawing.Point(10, 40);
             this.dgvSviZaposlenici.MultiSelect = false;
@@ -51,7 +51,7 @@
             this.dgvSviZaposlenici.RowHeadersVisible = false;
             this.dgvSviZaposlenici.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvSviZaposlenici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSviZaposlenici.Size = new System.Drawing.Size(850, 235);
+            this.dgvSviZaposlenici.Size = new System.Drawing.Size(692, 235);
             this.dgvSviZaposlenici.TabIndex = 24;
             this.dgvSviZaposlenici.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSviZaposlenici_CellClick);
             this.dgvSviZaposlenici.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSviZaposlenici_CellClick);
@@ -59,7 +59,7 @@
             // btnZaposleniciOsvjezi
             // 
             this.btnZaposleniciOsvjezi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnZaposleniciOsvjezi.Location = new System.Drawing.Point(608, 290);
+            this.btnZaposleniciOsvjezi.Location = new System.Drawing.Point(450, 290);
             this.btnZaposleniciOsvjezi.Name = "btnZaposleniciOsvjezi";
             this.btnZaposleniciOsvjezi.Size = new System.Drawing.Size(80, 35);
             this.btnZaposleniciOsvjezi.TabIndex = 27;
@@ -70,7 +70,7 @@
             // btnZaposleniciDodaj
             // 
             this.btnZaposleniciDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnZaposleniciDodaj.Location = new System.Drawing.Point(694, 290);
+            this.btnZaposleniciDodaj.Location = new System.Drawing.Point(536, 290);
             this.btnZaposleniciDodaj.Name = "btnZaposleniciDodaj";
             this.btnZaposleniciDodaj.Size = new System.Drawing.Size(80, 35);
             this.btnZaposleniciDodaj.TabIndex = 28;
@@ -81,7 +81,7 @@
             // btnZaposleniciAzuriraj
             // 
             this.btnZaposleniciAzuriraj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnZaposleniciAzuriraj.Location = new System.Drawing.Point(780, 290);
+            this.btnZaposleniciAzuriraj.Location = new System.Drawing.Point(622, 290);
             this.btnZaposleniciAzuriraj.Name = "btnZaposleniciAzuriraj";
             this.btnZaposleniciAzuriraj.Size = new System.Drawing.Size(80, 35);
             this.btnZaposleniciAzuriraj.TabIndex = 29;
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 337);
+            this.ClientSize = new System.Drawing.Size(714, 337);
             this.Controls.Add(this.lblSviZaposlenici);
             this.Controls.Add(this.btnZaposleniciAzuriraj);
             this.Controls.Add(this.btnZaposleniciDodaj);

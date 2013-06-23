@@ -40,7 +40,7 @@
             // 
             this.btnDvoraneAzuriraj.FlatAppearance.BorderSize = 2;
             this.btnDvoraneAzuriraj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDvoraneAzuriraj.Location = new System.Drawing.Point(221, 291);
+            this.btnDvoraneAzuriraj.Location = new System.Drawing.Point(195, 290);
             this.btnDvoraneAzuriraj.Name = "btnDvoraneAzuriraj";
             this.btnDvoraneAzuriraj.Size = new System.Drawing.Size(80, 35);
             this.btnDvoraneAzuriraj.TabIndex = 1;
@@ -52,7 +52,7 @@
             // 
             this.btnDvoraneDodaj.FlatAppearance.BorderSize = 2;
             this.btnDvoraneDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDvoraneDodaj.Location = new System.Drawing.Point(135, 290);
+            this.btnDvoraneDodaj.Location = new System.Drawing.Point(109, 290);
             this.btnDvoraneDodaj.Name = "btnDvoraneDodaj";
             this.btnDvoraneDodaj.Size = new System.Drawing.Size(80, 35);
             this.btnDvoraneDodaj.TabIndex = 2;
@@ -67,7 +67,7 @@
             this.btnDvoraneOsvjezi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnDvoraneOsvjezi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnDvoraneOsvjezi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDvoraneOsvjezi.Location = new System.Drawing.Point(49, 290);
+            this.btnDvoraneOsvjezi.Location = new System.Drawing.Point(26, 289);
             this.btnDvoraneOsvjezi.Name = "btnDvoraneOsvjezi";
             this.btnDvoraneOsvjezi.Size = new System.Drawing.Size(80, 35);
             this.btnDvoraneOsvjezi.TabIndex = 3;
@@ -92,7 +92,7 @@
             this.dgvSveDvorane.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvSveDvorane.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvSveDvorane.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSveDvorane.Size = new System.Drawing.Size(290, 235);
+            this.dgvSveDvorane.Size = new System.Drawing.Size(265, 235);
             this.dgvSveDvorane.TabIndex = 0;
             this.dgvSveDvorane.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSveDvorane_CellClick);
             // 
@@ -110,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(313, 337);
+            this.ClientSize = new System.Drawing.Size(284, 337);
             this.Controls.Add(this.lblDvorane);
             this.Controls.Add(this.dgvSveDvorane);
             this.Controls.Add(this.btnDvoraneOsvjezi);
@@ -119,6 +119,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmAdminDvorane";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dvorane";
             this.Load += new System.EventHandler(this.FrmAdminDvorane_Load);
