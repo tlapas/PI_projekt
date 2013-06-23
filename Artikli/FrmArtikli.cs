@@ -16,6 +16,7 @@ namespace PI_projekt.Artikli
         //postavimo na null i -1 i kasnije kod kreiranja računa ukoliko su te vrijednosti i dalje iste tada nema kupljenih ulaznica
         private List<int> listaIdUlaznica = null;
         private Popust  odabraniPopust = null;
+        private float ukupnaCijenaUlaznica = 0;
 
         /// <summary>
         /// Konstruktor za FrmArtikli ukoliko se pristupa direktno iz izbornika prodavača
@@ -26,11 +27,12 @@ namespace PI_projekt.Artikli
         }
 
 
-        public FrmArtikli(List<int> listaIdUlaznicaArg, int idPopustArg)
+        public FrmArtikli(List<int> listaIdUlaznicaArg, int idPopustArg, float ukupno)
         {
             InitializeComponent();
             odabraniPopust = Popust.DohvatiPopust(idPopustArg);
             listaIdUlaznica = listaIdUlaznicaArg;
+            ukupnaCijenaUlaznica = ukupno;
         }
 
         private float CijenaUkupno = 0;
@@ -69,8 +71,7 @@ namespace PI_projekt.Artikli
             }
             else
             {
-                Kino.KreirajRacun(zaposlenik.OIB, IdNacinaPlacanja, listaOdabranihArtikala, listaKolicina, listaIdUlaznica, odabraniPopust);
-                MessageBox.Show("OIB zaposlenika: " + zaposlenik.OIB.ToString());
+                Kino.KreirajRacun(zaposlenik.OIB, IdNacinaPlacanja, listaOdabranihArtikala, listaKolicina, listaIdUlaznica, odabraniPopust, ukupnaCijenaUlaznica, CijenaUkupno);
             }
         }
 

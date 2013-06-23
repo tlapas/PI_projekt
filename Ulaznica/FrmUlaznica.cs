@@ -223,7 +223,7 @@ namespace PI_projekt.Ulaznica
                     odabranaSjedala.Add(int.Parse(lbOdabrana.Items[i].ToString()));
                 }
                 listaIdUlaznica = Kino.IzradiUlaznicu(odabranaSjedala, odabranaProjekcija);
-                Artikli.FrmArtikli formaArtikli = new Artikli.FrmArtikli(listaIdUlaznica, odabraniPopust.IdPopusta);
+                Artikli.FrmArtikli formaArtikli = new Artikli.FrmArtikli(listaIdUlaznica, odabraniPopust.IdPopusta, ukupno);
                 formaArtikli.Show();
                 
                 /////

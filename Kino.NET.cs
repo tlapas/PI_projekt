@@ -43,7 +43,7 @@ namespace PI_projekt
             return listaIdUlaznica;
         }
 
-        public static void KreirajRacun(long OIB, int idNacinaPlacanja, List<Artikl> listaArtikala, List<int> listaKolicina, List<int> listaIdUlaznica, Popust popust)
+        public static void KreirajRacun(long OIB, int idNacinaPlacanja, List<Artikl> listaArtikala, List<int> listaKolicina, List<int> listaIdUlaznica, Popust popust, float ukupnaCijenaUlaznica, float ukupnaCijenaArtikala)
         {
             int IdRacun = Racun.UnesiRacun(OIB, idNacinaPlacanja);
             if (listaArtikala != null)
@@ -61,7 +61,7 @@ namespace PI_projekt
                     RacunUlaznica.UnesiRacunUlaznica(IdRacun, ID, popust.IdPopusta);
                 }
             }
-            Izvjestaj.RacunIzvjestaj racun = new Izvjestaj.RacunIzvjestaj(IdRacun);
+            Izvjestaj.RacunIzvjestaj racun = new Izvjestaj.RacunIzvjestaj(IdRacun, ukupnaCijenaUlaznica, ukupnaCijenaArtikala);
             racun.Show();
         }
 
