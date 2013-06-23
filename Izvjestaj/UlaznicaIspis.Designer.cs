@@ -49,6 +49,7 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "dsDvorana";
             reportDataSource1.Value = this.DvoranaBindingSource;
             reportDataSource2.Name = "dsFilm";
@@ -65,9 +66,9 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PI_projekt.Izvjestaj.rptUlaznicaIspis.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(3, 2);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(737, 450);
+            this.reportViewer1.Size = new System.Drawing.Size(741, 453);
             this.reportViewer1.TabIndex = 0;
             // 
             // DvoranaBindingSource
