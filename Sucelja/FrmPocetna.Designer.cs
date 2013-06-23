@@ -161,9 +161,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PI_projekt.Properties.Resources.BCKground_2;
+            this.BackgroundImage = global::PI_projekt.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(457, 421);
+            this.ClientSize = new System.Drawing.Size(457, 420);
             this.Controls.Add(this.zaglavlje);
             this.Controls.Add(this.podaci);
             this.Controls.Add(this.Ponisti);

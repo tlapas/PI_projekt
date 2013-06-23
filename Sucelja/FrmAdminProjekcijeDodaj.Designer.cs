@@ -47,14 +47,16 @@
             this.lblVrsteProjekcija = new System.Windows.Forms.Label();
             this.lblOdabrane = new System.Windows.Forms.Label();
             this.dtDatum = new System.Windows.Forms.DateTimePicker();
-            this.lblAdminProjekcijaDodajNaslov = new System.Windows.Forms.Label();
+            this.panProjekcija = new System.Windows.Forms.Panel();
+            this.lblNaslov = new System.Windows.Forms.Label();
+            this.panProjekcija.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblProjekcijeDodajTrajanjeMin
             // 
             this.lblProjekcijeDodajTrajanjeMin.AutoSize = true;
             this.lblProjekcijeDodajTrajanjeMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblProjekcijeDodajTrajanjeMin.Location = new System.Drawing.Point(250, 100);
+            this.lblProjekcijeDodajTrajanjeMin.Location = new System.Drawing.Point(248, 91);
             this.lblProjekcijeDodajTrajanjeMin.Name = "lblProjekcijeDodajTrajanjeMin";
             this.lblProjekcijeDodajTrajanjeMin.Size = new System.Drawing.Size(53, 16);
             this.lblProjekcijeDodajTrajanjeMin.TabIndex = 47;
@@ -62,7 +64,7 @@
             // 
             // txtProjekcijeDodajTrajanje
             // 
-            this.txtProjekcijeDodajTrajanje.Location = new System.Drawing.Point(140, 100);
+            this.txtProjekcijeDodajTrajanje.Location = new System.Drawing.Point(138, 91);
             this.txtProjekcijeDodajTrajanje.Name = "txtProjekcijeDodajTrajanje";
             this.txtProjekcijeDodajTrajanje.Size = new System.Drawing.Size(100, 20);
             this.txtProjekcijeDodajTrajanje.TabIndex = 46;
@@ -71,7 +73,7 @@
             // 
             this.lblProjekcijeDodajTrajanje.AutoSize = true;
             this.lblProjekcijeDodajTrajanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblProjekcijeDodajTrajanje.Location = new System.Drawing.Point(10, 100);
+            this.lblProjekcijeDodajTrajanje.Location = new System.Drawing.Point(8, 91);
             this.lblProjekcijeDodajTrajanje.Name = "lblProjekcijeDodajTrajanje";
             this.lblProjekcijeDodajTrajanje.Size = new System.Drawing.Size(70, 16);
             this.lblProjekcijeDodajTrajanje.TabIndex = 44;
@@ -81,7 +83,7 @@
             // 
             this.lblProjekcijeDodajIdDvorane.AutoSize = true;
             this.lblProjekcijeDodajIdDvorane.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblProjekcijeDodajIdDvorane.Location = new System.Drawing.Point(10, 40);
+            this.lblProjekcijeDodajIdDvorane.Location = new System.Drawing.Point(8, 31);
             this.lblProjekcijeDodajIdDvorane.Name = "lblProjekcijeDodajIdDvorane";
             this.lblProjekcijeDodajIdDvorane.Size = new System.Drawing.Size(101, 16);
             this.lblProjekcijeDodajIdDvorane.TabIndex = 43;
@@ -90,7 +92,7 @@
             // btnFilmoviDodajOdustani
             // 
             this.btnFilmoviDodajOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnFilmoviDodajOdustani.Location = new System.Drawing.Point(288, 350);
+            this.btnFilmoviDodajOdustani.Location = new System.Drawing.Point(297, 367);
             this.btnFilmoviDodajOdustani.Name = "btnFilmoviDodajOdustani";
             this.btnFilmoviDodajOdustani.Size = new System.Drawing.Size(80, 35);
             this.btnFilmoviDodajOdustani.TabIndex = 42;
@@ -101,7 +103,7 @@
             // btnFilmoviDodajSpremi
             // 
             this.btnFilmoviDodajSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnFilmoviDodajSpremi.Location = new System.Drawing.Point(201, 350);
+            this.btnFilmoviDodajSpremi.Location = new System.Drawing.Point(210, 367);
             this.btnFilmoviDodajSpremi.Name = "btnFilmoviDodajSpremi";
             this.btnFilmoviDodajSpremi.Size = new System.Drawing.Size(80, 35);
             this.btnFilmoviDodajSpremi.TabIndex = 41;
@@ -113,7 +115,7 @@
             // 
             this.lblNazivFilma.AutoSize = true;
             this.lblNazivFilma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblNazivFilma.Location = new System.Drawing.Point(10, 70);
+            this.lblNazivFilma.Location = new System.Drawing.Point(8, 61);
             this.lblNazivFilma.Name = "lblNazivFilma";
             this.lblNazivFilma.Size = new System.Drawing.Size(88, 16);
             this.lblNazivFilma.TabIndex = 48;
@@ -121,7 +123,7 @@
             // 
             // txtProjekcijeDodajCijena
             // 
-            this.txtProjekcijeDodajCijena.Location = new System.Drawing.Point(140, 130);
+            this.txtProjekcijeDodajCijena.Location = new System.Drawing.Point(138, 121);
             this.txtProjekcijeDodajCijena.Name = "txtProjekcijeDodajCijena";
             this.txtProjekcijeDodajCijena.Size = new System.Drawing.Size(100, 20);
             this.txtProjekcijeDodajCijena.TabIndex = 51;
@@ -130,7 +132,7 @@
             // 
             this.lblProjekcijeDodajCijena.AutoSize = true;
             this.lblProjekcijeDodajCijena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblProjekcijeDodajCijena.Location = new System.Drawing.Point(10, 130);
+            this.lblProjekcijeDodajCijena.Location = new System.Drawing.Point(8, 121);
             this.lblProjekcijeDodajCijena.Name = "lblProjekcijeDodajCijena";
             this.lblProjekcijeDodajCijena.Size = new System.Drawing.Size(117, 16);
             this.lblProjekcijeDodajCijena.TabIndex = 50;
@@ -140,7 +142,7 @@
             // 
             this.lblProjekcijeDodajDatum.AutoSize = true;
             this.lblProjekcijeDodajDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblProjekcijeDodajDatum.Location = new System.Drawing.Point(10, 160);
+            this.lblProjekcijeDodajDatum.Location = new System.Drawing.Point(8, 151);
             this.lblProjekcijeDodajDatum.Name = "lblProjekcijeDodajDatum";
             this.lblProjekcijeDodajDatum.Size = new System.Drawing.Size(56, 16);
             this.lblProjekcijeDodajDatum.TabIndex = 52;
@@ -150,7 +152,7 @@
             // 
             this.cbBrojDvorana.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBrojDvorana.FormattingEnabled = true;
-            this.cbBrojDvorana.Location = new System.Drawing.Point(140, 40);
+            this.cbBrojDvorana.Location = new System.Drawing.Point(138, 31);
             this.cbBrojDvorana.Name = "cbBrojDvorana";
             this.cbBrojDvorana.Size = new System.Drawing.Size(120, 21);
             this.cbBrojDvorana.TabIndex = 54;
@@ -159,7 +161,7 @@
             // 
             this.cbNazivFilma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNazivFilma.FormattingEnabled = true;
-            this.cbNazivFilma.Location = new System.Drawing.Point(140, 70);
+            this.cbNazivFilma.Location = new System.Drawing.Point(138, 61);
             this.cbNazivFilma.Name = "cbNazivFilma";
             this.cbNazivFilma.Size = new System.Drawing.Size(121, 21);
             this.cbNazivFilma.TabIndex = 55;
@@ -168,7 +170,7 @@
             // 
             this.lbVrsteProjekcija.DisplayMember = "Naziv";
             this.lbVrsteProjekcija.FormattingEnabled = true;
-            this.lbVrsteProjekcija.Location = new System.Drawing.Point(13, 230);
+            this.lbVrsteProjekcija.Location = new System.Drawing.Point(11, 221);
             this.lbVrsteProjekcija.Name = "lbVrsteProjekcija";
             this.lbVrsteProjekcija.Size = new System.Drawing.Size(120, 95);
             this.lbVrsteProjekcija.TabIndex = 56;
@@ -178,7 +180,7 @@
             // 
             this.lbOdabrane.DisplayMember = "Naziv";
             this.lbOdabrane.FormattingEnabled = true;
-            this.lbOdabrane.Location = new System.Drawing.Point(217, 230);
+            this.lbOdabrane.Location = new System.Drawing.Point(215, 221);
             this.lbOdabrane.Name = "lbOdabrane";
             this.lbOdabrane.Size = new System.Drawing.Size(120, 95);
             this.lbOdabrane.TabIndex = 57;
@@ -187,7 +189,7 @@
             // lblDodaj
             // 
             this.lblDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblDodaj.Location = new System.Drawing.Point(140, 240);
+            this.lblDodaj.Location = new System.Drawing.Point(138, 231);
             this.lblDodaj.Name = "lblDodaj";
             this.lblDodaj.Size = new System.Drawing.Size(70, 30);
             this.lblDodaj.TabIndex = 58;
@@ -198,7 +200,7 @@
             // lblUkloni
             // 
             this.lblUkloni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblUkloni.Location = new System.Drawing.Point(140, 285);
+            this.lblUkloni.Location = new System.Drawing.Point(138, 276);
             this.lblUkloni.Name = "lblUkloni";
             this.lblUkloni.Size = new System.Drawing.Size(70, 30);
             this.lblUkloni.TabIndex = 59;
@@ -210,7 +212,7 @@
             // 
             this.lblVrsteProjekcija.AutoSize = true;
             this.lblVrsteProjekcija.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblVrsteProjekcija.Location = new System.Drawing.Point(10, 200);
+            this.lblVrsteProjekcija.Location = new System.Drawing.Point(8, 191);
             this.lblVrsteProjekcija.Name = "lblVrsteProjekcija";
             this.lblVrsteProjekcija.Size = new System.Drawing.Size(121, 16);
             this.lblVrsteProjekcija.TabIndex = 61;
@@ -220,7 +222,7 @@
             // 
             this.lblOdabrane.AutoSize = true;
             this.lblOdabrane.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblOdabrane.Location = new System.Drawing.Point(214, 200);
+            this.lblOdabrane.Location = new System.Drawing.Point(212, 191);
             this.lblOdabrane.Name = "lblOdabrane";
             this.lblOdabrane.Size = new System.Drawing.Size(154, 16);
             this.lblOdabrane.TabIndex = 62;
@@ -230,47 +232,56 @@
             // 
             this.dtDatum.CustomFormat = "dd.MM.yyyy HH:mm:ss";
             this.dtDatum.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDatum.Location = new System.Drawing.Point(140, 160);
+            this.dtDatum.Location = new System.Drawing.Point(138, 151);
             this.dtDatum.Name = "dtDatum";
             this.dtDatum.ShowUpDown = true;
             this.dtDatum.Size = new System.Drawing.Size(200, 20);
             this.dtDatum.TabIndex = 63;
             // 
-            // lblAdminProjekcijaDodajNaslov
+            // panProjekcija
             // 
-            this.lblAdminProjekcijaDodajNaslov.AutoSize = true;
-            this.lblAdminProjekcijaDodajNaslov.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblAdminProjekcijaDodajNaslov.Location = new System.Drawing.Point(10, 10);
-            this.lblAdminProjekcijaDodajNaslov.Name = "lblAdminProjekcijaDodajNaslov";
-            this.lblAdminProjekcijaDodajNaslov.Size = new System.Drawing.Size(88, 18);
-            this.lblAdminProjekcijaDodajNaslov.TabIndex = 64;
-            this.lblAdminProjekcijaDodajNaslov.Text = "Projekcija:";
+            this.panProjekcija.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panProjekcija.Controls.Add(this.cbBrojDvorana);
+            this.panProjekcija.Controls.Add(this.dtDatum);
+            this.panProjekcija.Controls.Add(this.lblProjekcijeDodajIdDvorane);
+            this.panProjekcija.Controls.Add(this.lblOdabrane);
+            this.panProjekcija.Controls.Add(this.lblProjekcijeDodajTrajanje);
+            this.panProjekcija.Controls.Add(this.lblVrsteProjekcija);
+            this.panProjekcija.Controls.Add(this.txtProjekcijeDodajTrajanje);
+            this.panProjekcija.Controls.Add(this.lblUkloni);
+            this.panProjekcija.Controls.Add(this.lblProjekcijeDodajTrajanjeMin);
+            this.panProjekcija.Controls.Add(this.lblDodaj);
+            this.panProjekcija.Controls.Add(this.lblNazivFilma);
+            this.panProjekcija.Controls.Add(this.lbOdabrane);
+            this.panProjekcija.Controls.Add(this.lblProjekcijeDodajCijena);
+            this.panProjekcija.Controls.Add(this.lbVrsteProjekcija);
+            this.panProjekcija.Controls.Add(this.txtProjekcijeDodajCijena);
+            this.panProjekcija.Controls.Add(this.cbNazivFilma);
+            this.panProjekcija.Controls.Add(this.lblProjekcijeDodajDatum);
+            this.panProjekcija.Location = new System.Drawing.Point(12, 25);
+            this.panProjekcija.Name = "panProjekcija";
+            this.panProjekcija.Size = new System.Drawing.Size(365, 327);
+            this.panProjekcija.TabIndex = 65;
+            // 
+            // lblNaslov
+            // 
+            this.lblNaslov.AutoSize = true;
+            this.lblNaslov.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblNaslov.Location = new System.Drawing.Point(16, 14);
+            this.lblNaslov.Name = "lblNaslov";
+            this.lblNaslov.Size = new System.Drawing.Size(83, 18);
+            this.lblNaslov.TabIndex = 66;
+            this.lblNaslov.Text = "Projekcija";
             // 
             // FrmAdminProjekcijeDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 398);
-            this.Controls.Add(this.lblAdminProjekcijaDodajNaslov);
-            this.Controls.Add(this.dtDatum);
-            this.Controls.Add(this.lblOdabrane);
-            this.Controls.Add(this.lblVrsteProjekcija);
-            this.Controls.Add(this.lblUkloni);
-            this.Controls.Add(this.lblDodaj);
-            this.Controls.Add(this.lbOdabrane);
-            this.Controls.Add(this.lbVrsteProjekcija);
-            this.Controls.Add(this.cbNazivFilma);
-            this.Controls.Add(this.cbBrojDvorana);
-            this.Controls.Add(this.lblProjekcijeDodajDatum);
-            this.Controls.Add(this.txtProjekcijeDodajCijena);
-            this.Controls.Add(this.lblProjekcijeDodajCijena);
-            this.Controls.Add(this.lblNazivFilma);
-            this.Controls.Add(this.lblProjekcijeDodajTrajanjeMin);
-            this.Controls.Add(this.txtProjekcijeDodajTrajanje);
-            this.Controls.Add(this.lblProjekcijeDodajTrajanje);
-            this.Controls.Add(this.lblProjekcijeDodajIdDvorane);
+            this.ClientSize = new System.Drawing.Size(392, 410);
+            this.Controls.Add(this.lblNaslov);
             this.Controls.Add(this.btnFilmoviDodajOdustani);
             this.Controls.Add(this.btnFilmoviDodajSpremi);
+            this.Controls.Add(this.panProjekcija);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -278,6 +289,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Projekcije - dodaj/ažuriraj";
             this.Load += new System.EventHandler(this.FrmAdminProjekcijeDodaj_Load);
+            this.panProjekcija.ResumeLayout(false);
+            this.panProjekcija.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,6 +317,7 @@
         private System.Windows.Forms.Label lblVrsteProjekcija;
         private System.Windows.Forms.Label lblOdabrane;
         private System.Windows.Forms.DateTimePicker dtDatum;
-        private System.Windows.Forms.Label lblAdminProjekcijaDodajNaslov;
+        private System.Windows.Forms.Panel panProjekcija;
+        private System.Windows.Forms.Label lblNaslov;
     }
 }

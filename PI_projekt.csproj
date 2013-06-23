@@ -374,6 +374,7 @@
     <None Include="Slike\sjedala.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Slike\pozadina.jpg" />
     <Content Include="Slike\ulaznica.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
