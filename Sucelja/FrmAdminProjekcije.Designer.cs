@@ -38,18 +38,29 @@
             // 
             // dgvSveProjekcije
             // 
+            this.dgvSveProjekcije.AllowUserToAddRows = false;
+            this.dgvSveProjekcije.AllowUserToDeleteRows = false;
+            this.dgvSveProjekcije.AllowUserToResizeColumns = false;
+            this.dgvSveProjekcije.AllowUserToResizeRows = false;
+            this.dgvSveProjekcije.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSveProjekcije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSveProjekcije.Location = new System.Drawing.Point(14, 98);
+            this.dgvSveProjekcije.Location = new System.Drawing.Point(10, 40);
+            this.dgvSveProjekcije.MultiSelect = false;
             this.dgvSveProjekcije.Name = "dgvSveProjekcije";
-            this.dgvSveProjekcije.Size = new System.Drawing.Size(758, 226);
+            this.dgvSveProjekcije.ReadOnly = true;
+            this.dgvSveProjekcije.RowHeadersVisible = false;
+            this.dgvSveProjekcije.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvSveProjekcije.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSveProjekcije.Size = new System.Drawing.Size(730, 235);
             this.dgvSveProjekcije.TabIndex = 23;
             this.dgvSveProjekcije.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSveProjekcije_CellClick);
             // 
             // btnProjekcijeOsvjezi
             // 
-            this.btnProjekcijeOsvjezi.Location = new System.Drawing.Point(470, 338);
+            this.btnProjekcijeOsvjezi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnProjekcijeOsvjezi.Location = new System.Drawing.Point(488, 290);
             this.btnProjekcijeOsvjezi.Name = "btnProjekcijeOsvjezi";
-            this.btnProjekcijeOsvjezi.Size = new System.Drawing.Size(75, 23);
+            this.btnProjekcijeOsvjezi.Size = new System.Drawing.Size(80, 35);
             this.btnProjekcijeOsvjezi.TabIndex = 25;
             this.btnProjekcijeOsvjezi.Text = "Osvježi";
             this.btnProjekcijeOsvjezi.UseVisualStyleBackColor = true;
@@ -57,9 +68,10 @@
             // 
             // btnProjekcijeDodaj
             // 
-            this.btnProjekcijeDodaj.Location = new System.Drawing.Point(551, 338);
+            this.btnProjekcijeDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnProjekcijeDodaj.Location = new System.Drawing.Point(574, 290);
             this.btnProjekcijeDodaj.Name = "btnProjekcijeDodaj";
-            this.btnProjekcijeDodaj.Size = new System.Drawing.Size(75, 23);
+            this.btnProjekcijeDodaj.Size = new System.Drawing.Size(80, 35);
             this.btnProjekcijeDodaj.TabIndex = 26;
             this.btnProjekcijeDodaj.Text = "Dodaj";
             this.btnProjekcijeDodaj.UseVisualStyleBackColor = true;
@@ -67,9 +79,10 @@
             // 
             // btnProjekcijeAžuriraj
             // 
-            this.btnProjekcijeAžuriraj.Location = new System.Drawing.Point(632, 338);
+            this.btnProjekcijeAžuriraj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnProjekcijeAžuriraj.Location = new System.Drawing.Point(660, 290);
             this.btnProjekcijeAžuriraj.Name = "btnProjekcijeAžuriraj";
-            this.btnProjekcijeAžuriraj.Size = new System.Drawing.Size(75, 23);
+            this.btnProjekcijeAžuriraj.Size = new System.Drawing.Size(80, 35);
             this.btnProjekcijeAžuriraj.TabIndex = 27;
             this.btnProjekcijeAžuriraj.Text = "Ažuriraj";
             this.btnProjekcijeAžuriraj.UseVisualStyleBackColor = true;
@@ -78,23 +91,26 @@
             // lblSveProjekcije
             // 
             this.lblSveProjekcije.AutoSize = true;
-            this.lblSveProjekcije.Location = new System.Drawing.Point(14, 72);
+            this.lblSveProjekcije.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblSveProjekcije.Location = new System.Drawing.Point(10, 10);
             this.lblSveProjekcije.Name = "lblSveProjekcije";
-            this.lblSveProjekcije.Size = new System.Drawing.Size(77, 13);
+            this.lblSveProjekcije.Size = new System.Drawing.Size(174, 18);
             this.lblSveProjekcije.TabIndex = 28;
-            this.lblSveProjekcije.Text = "Sve projekcije:";
+            this.lblSveProjekcije.Text = "Pregled svi projekcija:";
             // 
             // FrmAdminProjekcije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 373);
+            this.ClientSize = new System.Drawing.Size(755, 337);
             this.Controls.Add(this.lblSveProjekcije);
             this.Controls.Add(this.btnProjekcijeAžuriraj);
             this.Controls.Add(this.btnProjekcijeDodaj);
             this.Controls.Add(this.btnProjekcijeOsvjezi);
             this.Controls.Add(this.dgvSveProjekcije);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmAdminProjekcije";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAdminProjekcije";
             this.Load += new System.EventHandler(this.FrmAdminProjekcije_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSveProjekcije)).EndInit();

@@ -49,6 +49,7 @@
             // 
             // msIzbornik
             // 
+            this.msIzbornik.AllowDrop = true;
             this.msIzbornik.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miOpcije,
             this.miSifarnici,

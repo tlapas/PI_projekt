@@ -39,26 +39,38 @@
             // lblSviFilmovi
             // 
             this.lblSviFilmovi.AutoSize = true;
-            this.lblSviFilmovi.Location = new System.Drawing.Point(12, 60);
+            this.lblSviFilmovi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblSviFilmovi.Location = new System.Drawing.Point(10, 10);
             this.lblSviFilmovi.Name = "lblSviFilmovi";
-            this.lblSviFilmovi.Size = new System.Drawing.Size(57, 13);
+            this.lblSviFilmovi.Size = new System.Drawing.Size(164, 18);
             this.lblSviFilmovi.TabIndex = 28;
-            this.lblSviFilmovi.Text = "Svi filmovi:";
+            this.lblSviFilmovi.Text = "Pregled svih filmova:";
             // 
             // dgvSviFilmovi
             // 
+            this.dgvSviFilmovi.AllowUserToAddRows = false;
+            this.dgvSviFilmovi.AllowUserToDeleteRows = false;
+            this.dgvSviFilmovi.AllowUserToResizeColumns = false;
+            this.dgvSviFilmovi.AllowUserToResizeRows = false;
+            this.dgvSviFilmovi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSviFilmovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSviFilmovi.Location = new System.Drawing.Point(16, 76);
+            this.dgvSviFilmovi.Location = new System.Drawing.Point(10, 40);
+            this.dgvSviFilmovi.MultiSelect = false;
             this.dgvSviFilmovi.Name = "dgvSviFilmovi";
-            this.dgvSviFilmovi.Size = new System.Drawing.Size(637, 263);
+            this.dgvSviFilmovi.ReadOnly = true;
+            this.dgvSviFilmovi.RowHeadersVisible = false;
+            this.dgvSviFilmovi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvSviFilmovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSviFilmovi.Size = new System.Drawing.Size(500, 235);
             this.dgvSviFilmovi.TabIndex = 29;
             this.dgvSviFilmovi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSviFilmovi_CellClick);
             // 
             // btnFilmoviOsvjezi
             // 
-            this.btnFilmoviOsvjezi.Location = new System.Drawing.Point(416, 359);
+            this.btnFilmoviOsvjezi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnFilmoviOsvjezi.Location = new System.Drawing.Point(258, 290);
             this.btnFilmoviOsvjezi.Name = "btnFilmoviOsvjezi";
-            this.btnFilmoviOsvjezi.Size = new System.Drawing.Size(75, 23);
+            this.btnFilmoviOsvjezi.Size = new System.Drawing.Size(80, 35);
             this.btnFilmoviOsvjezi.TabIndex = 31;
             this.btnFilmoviOsvjezi.Text = "Osvježi";
             this.btnFilmoviOsvjezi.UseVisualStyleBackColor = true;
@@ -66,9 +78,10 @@
             // 
             // btnFilmoviDodaj
             // 
-            this.btnFilmoviDodaj.Location = new System.Drawing.Point(497, 359);
+            this.btnFilmoviDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnFilmoviDodaj.Location = new System.Drawing.Point(344, 290);
             this.btnFilmoviDodaj.Name = "btnFilmoviDodaj";
-            this.btnFilmoviDodaj.Size = new System.Drawing.Size(75, 23);
+            this.btnFilmoviDodaj.Size = new System.Drawing.Size(80, 35);
             this.btnFilmoviDodaj.TabIndex = 32;
             this.btnFilmoviDodaj.Text = "Dodaj";
             this.btnFilmoviDodaj.UseVisualStyleBackColor = true;
@@ -76,9 +89,10 @@
             // 
             // btnFilmoviAzuriraj
             // 
-            this.btnFilmoviAzuriraj.Location = new System.Drawing.Point(578, 359);
+            this.btnFilmoviAzuriraj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnFilmoviAzuriraj.Location = new System.Drawing.Point(430, 290);
             this.btnFilmoviAzuriraj.Name = "btnFilmoviAzuriraj";
-            this.btnFilmoviAzuriraj.Size = new System.Drawing.Size(75, 23);
+            this.btnFilmoviAzuriraj.Size = new System.Drawing.Size(80, 35);
             this.btnFilmoviAzuriraj.TabIndex = 33;
             this.btnFilmoviAzuriraj.Text = "Ažuriraj";
             this.btnFilmoviAzuriraj.UseVisualStyleBackColor = true;
@@ -88,13 +102,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 403);
+            this.ClientSize = new System.Drawing.Size(519, 337);
             this.Controls.Add(this.btnFilmoviAzuriraj);
             this.Controls.Add(this.btnFilmoviDodaj);
             this.Controls.Add(this.btnFilmoviOsvjezi);
             this.Controls.Add(this.dgvSviFilmovi);
             this.Controls.Add(this.lblSviFilmovi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmAdminFilmovi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAdminFilmovi";
             this.Load += new System.EventHandler(this.FrmAdminFilmovi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSviFilmovi)).EndInit();
