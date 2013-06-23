@@ -23,22 +23,22 @@ namespace PI_projekt.Sucelja
         {
             bool kor_ime = false;
             List<Zaposlenici> listaKorisnika = Zaposlenici.DohvatiZaposlenike();
-            for (int i = 0; i < 4; i++)
+            foreach (Zaposlenici zaposlenik in listaKorisnika)
             {
-                if (KorIme.Text == listaKorisnika[i].KorIme)
+                if (KorIme.Text == zaposlenik.KorIme)
                 {
                     kor_ime = true;
                     SpremnikPodataka.Zaposlenik = KorIme.Text;
-                    if (Pass.Text == listaKorisnika[i].Lozinka)
+                    if (Pass.Text == zaposlenik.Lozinka)
                     {
-                        if (listaKorisnika[i].Uloga == 2)
+                        if (zaposlenik.Uloga == 2)
                         {
                             SpremnikPodataka.Uloga = "administrator";
                             FrmAdmin admin = new FrmAdmin();
                             admin.Show();
                             this.Hide();
                         }
-                        else if (listaKorisnika[i].Uloga == 1)
+                        else if (zaposlenik.Uloga == 1)
                         {
                             SpremnikPodataka.Uloga = "prodavač";
                             FrmProdavac prodavac = new FrmProdavac();
