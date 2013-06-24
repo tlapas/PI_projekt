@@ -21,45 +21,45 @@ namespace PI_projekt.Sucelja
         private void miSifarniciZaposlenici_MouseUp(object sender, MouseEventArgs e)
         {
             Sucelja.FrmAdminZaposlenici Odabir = new Sucelja.FrmAdminZaposlenici();
-            //Odabir.MdiParent = this;
+            Odabir.MdiParent = this;
             Odabir.WindowState = FormWindowState.Normal;
-            Odabir.ShowDialog(this);
+            Odabir.Show();
             
         }
 
         private void miSifarniciArtikli_MouseUp(object sender, MouseEventArgs e)
         {
             Sucelja.FrmAdminArtikli Odabir = new Sucelja.FrmAdminArtikli();
-            //Odabir.MdiParent = this;
+            Odabir.MdiParent = this;
             Odabir.WindowState = FormWindowState.Normal;
-            Odabir.ShowDialog(this);
+            Odabir.Show();
 
         }
 
         private void miSifarniciFilmovi_MouseUp(object sender, MouseEventArgs e)
         {
             Sucelja.FrmAdminFilmovi Odabir = new Sucelja.FrmAdminFilmovi();
-            //Odabir.MdiParent = this;
+            Odabir.MdiParent = this;
             Odabir.WindowState = FormWindowState.Normal;
-            Odabir.ShowDialog(this);
+            Odabir.Show();
 
         }
 
         private void miSifarniciProjekcije_MouseUp(object sender, MouseEventArgs e)
         {
             Sucelja.FrmAdminProjekcije Odabir = new Sucelja.FrmAdminProjekcije();
-            //Odabir.MdiParent = this;
+            Odabir.MdiParent = this;
             Odabir.WindowState = FormWindowState.Normal;
-            Odabir.ShowDialog(this);
+            Odabir.Show();
 
         }
 
         private void miSifarniciDvorane_MouseUp(object sender, MouseEventArgs e)
         {
             Sucelja.FrmAdminDvorane Odabir = new Sucelja.FrmAdminDvorane();
-            //Odabir.MdiParent = this;
+            Odabir.MdiParent = this;
             Odabir.WindowState = FormWindowState.Normal;
-            Odabir.ShowDialog(this);
+            Odabir.Show();
 
         }
 

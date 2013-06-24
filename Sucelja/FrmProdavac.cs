@@ -37,17 +37,17 @@ namespace PI_projekt.Sucelja
         private void miSifarniciUlaznica_MouseUp(object sender, MouseEventArgs e)
         {
             Ulaznica.FrmUlaznica Odabir = new Ulaznica.FrmUlaznica();
-            //Odabir.MdiParent = this;
+            Odabir.MdiParent = this;
             Odabir.WindowState = FormWindowState.Normal;
-            Odabir.ShowDialog();
+            Odabir.Show();
         }
 
         private void miSifarniciArtikli_MouseUp(object sender, MouseEventArgs e)
         {
             Artikli.FrmArtikli Odabir = new Artikli.FrmArtikli();
-            //Odabir.MdiParent = this;
+            Odabir.MdiParent = this;
             Odabir.WindowState = FormWindowState.Normal;
-            Odabir.ShowDialog();
+            Odabir.Show();
         }
 
         private static volatile bool _shouldStop;
