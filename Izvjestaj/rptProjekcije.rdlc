@@ -99,7 +99,7 @@
         </TablixRowHierarchy>
         <DataSetName>Projekcija</DataSetName>
         <Top>11.47974cm</Top>
-        <Left>4.52438cm</Left>
+        <Left>2.93688cm</Left>
         <Height>1.2cm</Height>
         <Width>2.36771cm</Width>
         <Style>
@@ -547,7 +547,7 @@
               <Width>3.135cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.84396cm</Width>
+              <Width>4.88125cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -623,7 +623,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Slobono mjesta</Value>
+                              <Value>Datum</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -711,21 +711,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox41">
+                    <Textbox Name="datum">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!broj_mjesta.Value, "Projekcija") - Sum(Fields!prodano_ulaznica.Value, "Projekcija")</Value>
+                              <Value>=Fields!datum.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox41</rd:DefaultName>
+                      <rd:DefaultName>datum</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -762,9 +762,9 @@
         </TablixRowHierarchy>
         <DataSetName>Projekcija</DataSetName>
         <Top>11.47974cm</Top>
-        <Left>6.89208cm</Left>
+        <Left>5.30458cm</Left>
         <Height>1.2cm</Height>
-        <Width>8.66417cm</Width>
+        <Width>10.70146cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>

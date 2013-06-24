@@ -62,6 +62,13 @@ namespace PI_projekt.Sucelja
             Odabir.Show();
 
         }
+        private void statistikaProjekcijaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Izvjestaj.StatistikaProjekcije Odabir = new Izvjestaj.StatistikaProjekcije();
+            Odabir.MdiParent = this;
+            Odabir.WindowState = FormWindowState.Normal;
+            Odabir.Show();
+        }  
 
         /// <summary>
         /// funkcija za odjavu iz sustava, klikom na odjava se postavlja parametar na 1
@@ -75,6 +82,14 @@ namespace PI_projekt.Sucelja
             odjavljivanje = 1;
             odjava();
         }
+
+        private void statistikaProjekcijaToolStripMenuItem_MouseUp(object sender, MouseEventArgs e)
+        {
+            Izvjestaj.StatistikaProjekcije Odabir = new Izvjestaj.StatistikaProjekcije();
+            Odabir.MdiParent = this;
+            Odabir.WindowState = FormWindowState.Normal;
+            Odabir.Show();
+        }  
 
         private void odjava()
         {
@@ -126,8 +141,6 @@ namespace PI_projekt.Sucelja
                 }
             }
         }  
-      
-            
     }
 }
     

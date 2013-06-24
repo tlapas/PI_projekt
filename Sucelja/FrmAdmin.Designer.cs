@@ -40,6 +40,7 @@
             this.miSifarniciProjekcije = new System.Windows.Forms.ToolStripMenuItem();
             this.miSifarniciDvorane = new System.Windows.Forms.ToolStripMenuItem();
             this.statistikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statistikaProjekcijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusnaTraka = new System.Windows.Forms.StatusStrip();
             this.sstext = new System.Windows.Forms.ToolStripStatusLabel();
             this.ssUsername = new System.Windows.Forms.ToolStripStatusLabel();
@@ -73,14 +74,14 @@
             // miOpcijeOdjava
             // 
             this.miOpcijeOdjava.Name = "miOpcijeOdjava";
-            this.miOpcijeOdjava.Size = new System.Drawing.Size(152, 26);
+            this.miOpcijeOdjava.Size = new System.Drawing.Size(129, 26);
             this.miOpcijeOdjava.Text = "Odjava";
             this.miOpcijeOdjava.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miOpcijeOdjava_MouseUp);
             // 
             // miOpcijeIzlaz
             // 
             this.miOpcijeIzlaz.Name = "miOpcijeIzlaz";
-            this.miOpcijeIzlaz.Size = new System.Drawing.Size(152, 26);
+            this.miOpcijeIzlaz.Size = new System.Drawing.Size(129, 26);
             this.miOpcijeIzlaz.Text = "Izlaz";
             this.miOpcijeIzlaz.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miOpcijeIzlaz_MouseUp);
             // 
@@ -134,10 +135,19 @@
             // 
             // statistikaToolStripMenuItem
             // 
+            this.statistikaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statistikaProjekcijaToolStripMenuItem});
             this.statistikaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.statistikaToolStripMenuItem.Name = "statistikaToolStripMenuItem";
             this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
             this.statistikaToolStripMenuItem.Text = "Statistika";
+            // 
+            // statistikaProjekcijaToolStripMenuItem
+            // 
+            this.statistikaProjekcijaToolStripMenuItem.Name = "statistikaProjekcijaToolStripMenuItem";
+            this.statistikaProjekcijaToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.statistikaProjekcijaToolStripMenuItem.Text = "Statistika projekcija";
+            this.statistikaProjekcijaToolStripMenuItem.MouseUp += new System.Windows.Forms.MouseEventHandler(this.statistikaProjekcijaToolStripMenuItem_MouseUp);
             // 
             // statusnaTraka
             // 
@@ -210,6 +220,7 @@
         private System.Windows.Forms.StatusStrip statusnaTraka;
         private System.Windows.Forms.ToolStripStatusLabel sstext;
         private System.Windows.Forms.ToolStripStatusLabel ssUsername;
+        private System.Windows.Forms.ToolStripMenuItem statistikaProjekcijaToolStripMenuItem;
 
     }
 }

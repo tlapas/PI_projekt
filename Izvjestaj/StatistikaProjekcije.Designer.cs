@@ -37,6 +37,8 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.projekcijaTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.ProjekcijaTableAdapter();
             this.filmTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.FilmTableAdapter();
+            this.lblOdaberiFilm = new System.Windows.Forms.Label();
+            this.cbFilm = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.projekcijaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kinoDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmBindingSource)).BeginInit();
@@ -59,6 +61,7 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
             reportDataSource1.Name = "Projekcija";
             reportDataSource1.Value = this.projekcijaBindingSource;
             reportDataSource2.Name = "Film";
@@ -66,9 +69,9 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PI_projekt.Izvjestaj.rptProjekcije.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 39);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 33);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(708, 347);
+            this.reportViewer1.Size = new System.Drawing.Size(694, 353);
             this.reportViewer1.TabIndex = 0;
             // 
             // projekcijaTableAdapter
@@ -79,11 +82,31 @@
             // 
             this.filmTableAdapter.ClearBeforeFill = true;
             // 
+            // lblOdaberiFilm
+            // 
+            this.lblOdaberiFilm.AutoSize = true;
+            this.lblOdaberiFilm.Location = new System.Drawing.Point(12, 11);
+            this.lblOdaberiFilm.Name = "lblOdaberiFilm";
+            this.lblOdaberiFilm.Size = new System.Drawing.Size(74, 13);
+            this.lblOdaberiFilm.TabIndex = 1;
+            this.lblOdaberiFilm.Text = "Odaberite film:";
+            // 
+            // cbFilm
+            // 
+            this.cbFilm.FormattingEnabled = true;
+            this.cbFilm.Location = new System.Drawing.Point(92, 6);
+            this.cbFilm.Name = "cbFilm";
+            this.cbFilm.Size = new System.Drawing.Size(198, 21);
+            this.cbFilm.TabIndex = 2;
+            this.cbFilm.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // StatistikaProjekcije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 386);
+            this.ClientSize = new System.Drawing.Size(694, 386);
+            this.Controls.Add(this.cbFilm);
+            this.Controls.Add(this.lblOdaberiFilm);
             this.Controls.Add(this.reportViewer1);
             this.Name = "StatistikaProjekcije";
             this.Text = "StatistikaProjekcije";
@@ -92,6 +115,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kinoDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -103,5 +127,7 @@
         private System.Windows.Forms.BindingSource filmBindingSource;
         private KinoDBDataSetTableAdapters.ProjekcijaTableAdapter projekcijaTableAdapter;
         private KinoDBDataSetTableAdapters.FilmTableAdapter filmTableAdapter;
+        private System.Windows.Forms.Label lblOdaberiFilm;
+        private System.Windows.Forms.ComboBox cbFilm;
     }
 }
