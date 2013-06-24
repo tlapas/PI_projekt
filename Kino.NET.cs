@@ -74,8 +74,8 @@ namespace PI_projekt
 ///
 ///
 
-            //Izvjestaj.RacunIzvjestaj racun = new Izvjestaj.RacunIzvjestaj(IdRacun, ukupnaCijenaUlaznica, ukupnaCijenaArtikala);
-           // racun.Show();
+            Izvjestaj.RacunIzvjestaj racun = new Izvjestaj.RacunIzvjestaj(IdRacun, ukupnaCijenaUlaznica, ukupnaCijenaArtikala);
+            racun.Show();
         }
 
      

@@ -727,7 +727,7 @@
         <DataSetName>Popust</DataSetName>
         <Top>3.113cm</Top>
         <Left>11.54682cm</Left>
-        <Height>0.59999cm</Height>
+        <Height>0.6cm</Height>
         <Width>2.79104cm</Width>
         <ZIndex>10</ZIndex>
         <Visibility>
@@ -809,7 +809,7 @@
         <DataSetName>Popust</DataSetName>
         <Top>3.113cm</Top>
         <Left>14.40841cm</Left>
-        <Height>0.59999cm</Height>
+        <Height>0.6cm</Height>
         <Width>1.43161cm</Width>
         <ZIndex>11</ZIndex>
         <Visibility>
@@ -1526,7 +1526,7 @@
         <Width>3.85569cm</Width>
         <ZIndex>18</ZIndex>
         <Visibility>
-          <Hidden>=Sum(Fields!id_karte.Value, "Karta") = 0</Hidden>
+          <Hidden>=Sum(Fields!id_artikla.Value, "Artikl") = 0</Hidden>
         </Visibility>
         <Style>
           <Border>
@@ -2286,7 +2286,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>77440b79-3ce4-4edd-80a9-e7ae31d9e5e2</rd:DataSourceID>
+      <rd:DataSourceID>e61cf309-3d86-45cf-b15a-575c93228aa4</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -2315,7 +2315,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>KinoDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Rider\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Ursa\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Racun</rd:TableName>
         <rd:TableAdapterFillMethod>FillByIdRacuna</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataByIdRacuna</rd:TableAdapterGetDataMethod>
@@ -2339,7 +2339,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>KinoDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Rider\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Ursa\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Nacin_placanja</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2391,7 +2391,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>KinoDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Rider\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Ursa\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Zaposlenik</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2423,7 +2423,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>KinoDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Rider\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Ursa\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Artikl</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2447,7 +2447,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>KinoDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Rider\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Ursa\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Mjerna_jedinica</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2475,7 +2475,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>KinoDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Rider\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Ursa\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>stavka_racuna</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2503,7 +2503,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>KinoDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Rider\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Ursa\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Karta</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2531,7 +2531,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>KinoDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Rider\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Ursa\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>racun_karta</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2579,7 +2579,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>KinoDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Rider\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Ursa\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Projekcija</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2607,7 +2607,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>KinoDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Rider\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Ursa\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Film</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2627,7 +2627,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>KinoDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Rider\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Ursa\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>CijenaUlaznica</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2655,7 +2655,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>KinoDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Rider\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Ursa\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Popust</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2675,7 +2675,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>KinoDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Rider\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Ursa\Documents\GitHub\PI_projekt\KinoDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>CijenaArtikala</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

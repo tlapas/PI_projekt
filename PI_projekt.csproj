@@ -261,9 +261,9 @@
       <DependentUpon>KinoDBDataSet.xsd</DependentUpon>
     </None>
     <None Include="KinoDBDataSet.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>KinoDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="KinoDBDataSet.xss">
       <DependentUpon>KinoDBDataSet.xsd</DependentUpon>
