@@ -73,7 +73,7 @@
             this.miOpcijeOdjava.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.miOpcijeOdjava.Image = global::PI_projekt.Properties.Resources.imgOdjava;
             this.miOpcijeOdjava.Name = "miOpcijeOdjava";
-            this.miOpcijeOdjava.Size = new System.Drawing.Size(152, 26);
+            this.miOpcijeOdjava.Size = new System.Drawing.Size(130, 26);
             this.miOpcijeOdjava.Text = "Odjava";
             this.miOpcijeOdjava.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miOpcijeOdjava_MouseUp);
             // 
@@ -82,7 +82,7 @@
             this.miOpcijeIzlaz.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.miOpcijeIzlaz.Image = global::PI_projekt.Properties.Resources.imgIzlaz;
             this.miOpcijeIzlaz.Name = "miOpcijeIzlaz";
-            this.miOpcijeIzlaz.Size = new System.Drawing.Size(152, 26);
+            this.miOpcijeIzlaz.Size = new System.Drawing.Size(130, 26);
             this.miOpcijeIzlaz.Text = "Izlaz";
             this.miOpcijeIzlaz.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miOpcijeIzlaz_MouseUp);
             // 
@@ -104,7 +104,7 @@
             this.miSifarniciUlaznica.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.miSifarniciUlaznica.Image = global::PI_projekt.Properties.Resources.imgUlaznice;
             this.miSifarniciUlaznica.Name = "miSifarniciUlaznica";
-            this.miSifarniciUlaznica.Size = new System.Drawing.Size(152, 26);
+            this.miSifarniciUlaznica.Size = new System.Drawing.Size(139, 26);
             this.miSifarniciUlaznica.Text = "Ulaznica";
             this.miSifarniciUlaznica.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miSifarniciUlaznica_MouseUp);
             // 
@@ -113,7 +113,7 @@
             this.miSifarniciArtikli.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.miSifarniciArtikli.Image = global::PI_projekt.Properties.Resources.imgArtikli;
             this.miSifarniciArtikli.Name = "miSifarniciArtikli";
-            this.miSifarniciArtikli.Size = new System.Drawing.Size(152, 26);
+            this.miSifarniciArtikli.Size = new System.Drawing.Size(139, 26);
             this.miSifarniciArtikli.Text = "Artikli";
             this.miSifarniciArtikli.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miSifarniciArtikli_MouseUp);
             // 
@@ -150,7 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImage = global::PI_projekt.Properties.Resources.imgPozadina;
             this.ClientSize = new System.Drawing.Size(699, 427);
             this.Controls.Add(this.statusnaTraka);
             this.Controls.Add(this.msIzbornik);

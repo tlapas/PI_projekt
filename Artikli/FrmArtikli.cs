@@ -47,9 +47,9 @@ namespace PI_projekt.Artikli
             OsvjeziArtikle();
             foreach (NaciniPlacanja NacinPlacanja in listaNacinaPlacanja)
             {
-                nacinPlacanja.Items.Add(NacinPlacanja.Naziv);
+                cbNacinPlacanja.Items.Add(NacinPlacanja.Naziv);
             }
-            nacinPlacanja.SelectedIndex = 0;
+            cbNacinPlacanja.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -74,21 +74,20 @@ namespace PI_projekt.Artikli
                 Kino.KreirajRacun(zaposlenik.OIB, IdNacinaPlacanja, listaOdabranihArtikala, listaKolicina, listaIdUlaznica, odabraniPopust, ukupnaCijenaUlaznica, CijenaUkupno);
             }
             this.Close();
-
         }
 
         private void OsvjeziArtikle()
         {
             foreach (Artikl artikl in listaArtikala)
             {
-                naziv.Items.Add(artikl.Naziv);
+                cbNaziv.Items.Add(artikl.Naziv);
             }
         }
 
         private void Naziv_SelectedIndexChanged(object sender, EventArgs e)
         {
-            jedinicnaCijena.Text = listaArtikala[naziv.SelectedIndex].Cijena.ToString() + " kn";
-            kolicinaNum.Value = 1;
+            txtCijena.Text = listaArtikala[cbNaziv.SelectedIndex].Cijena.ToString() + " kn";
+            numKolicina.Value = 1;
         }
 
         private int redak = 0;
@@ -96,15 +95,33 @@ namespace PI_projekt.Artikli
         {
             try
             {
-                int stupac = 0;
-                this.Stavke.Rows.Add();
-                listaOdabranihArtikala.Add(listaArtikala[naziv.SelectedIndex]);
-                this.Stavke.Rows[redak].Cells[stupac++].Value = listaArtikala[naziv.SelectedIndex].Naziv;
-                this.Stavke.Rows[redak].Cells[stupac++].Value = listaArtikala[naziv.SelectedIndex].Cijena;
-                listaKolicina.Add((int)kolicinaNum.Value);
-                this.Stavke.Rows[redak++].Cells[stupac++].Value = kolicinaNum.Value;
-                CijenaUkupno += listaArtikala[naziv.SelectedIndex].Cijena * Convert.ToInt32(kolicinaNum.Value);
-                ukupanIznos.Text = CijenaUkupno.ToString() + " kn";
+                bool unosArtikla = true;
+                int brojOdabranih = listaOdabranihArtikala.Count();
+                for (int i = 0; i < brojOdabranih; i++)
+                {
+                    if (this.Stavke.Rows[i].Cells[0].Value.ToString() == listaArtikala[cbNaziv.SelectedIndex].Naziv)
+                    {
+                        int Kolicina = int.Parse(this.Stavke.Rows[i].Cells[2].Value.ToString());
+                        Kolicina += (int)numKolicina.Value;
+                        this.Stavke.Rows[i].Cells[2].Value = Kolicina;
+                        CijenaUkupno += listaArtikala[cbNaziv.SelectedIndex].Cijena * Convert.ToInt32(numKolicina.Value);
+                        txtUkupanIznos.Text = CijenaUkupno.ToString() + " kn";
+                        listaKolicina[i] = Kolicina;
+                        unosArtikla = false;
+                    }
+                }
+                if (unosArtikla)
+                {
+                    int stupac = 0;
+                    this.Stavke.Rows.Add();
+                    listaOdabranihArtikala.Add(listaArtikala[cbNaziv.SelectedIndex]);
+                    this.Stavke.Rows[redak].Cells[stupac++].Value = listaArtikala[cbNaziv.SelectedIndex].Naziv;
+                    this.Stavke.Rows[redak].Cells[stupac++].Value = listaArtikala[cbNaziv.SelectedIndex].Cijena;
+                    listaKolicina.Add((int)numKolicina.Value);
+                    this.Stavke.Rows[redak++].Cells[stupac].Value = numKolicina.Value;
+                    CijenaUkupno += listaArtikala[cbNaziv.SelectedIndex].Cijena * Convert.ToInt32(numKolicina.Value);
+                    txtUkupanIznos.Text = CijenaUkupno.ToString() + " kn";
+                }
             }
             catch (Exception)
             {
@@ -118,19 +135,19 @@ namespace PI_projekt.Artikli
             listaOdabranihArtikala.Clear();
             listaKolicina.Clear();
             redak = 0;
-            ukupanIznos.Text = "0,00 kn";
-            kolicinaNum.Value = 1;
+            txtUkupanIznos.Text = "0,00 kn";
+            numKolicina.Value = 1;
         }
 
         private void nacinPlacanja_SelectedIndexChanged(object sender, EventArgs e)
         {
             foreach (NaciniPlacanja nacin in listaNacinaPlacanja)
             {
-                if (nacin.Naziv == nacinPlacanja.Text)
+                if (nacin.Naziv == cbNacinPlacanja.Text)
                 {
                     IdNacinaPlacanja = nacin.IdNacinaPlacanja;
                 }
             }
-        }             
+        }
     }
 }
