@@ -164,7 +164,7 @@
             this.cbNazivFilma.FormattingEnabled = true;
             this.cbNazivFilma.Location = new System.Drawing.Point(138, 61);
             this.cbNazivFilma.Name = "cbNazivFilma";
-            this.cbNazivFilma.Size = new System.Drawing.Size(121, 21);
+            this.cbNazivFilma.Size = new System.Drawing.Size(197, 21);
             this.cbNazivFilma.TabIndex = 55;
             // 
             // lbVrsteProjekcija

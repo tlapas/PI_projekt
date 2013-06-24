@@ -184,10 +184,11 @@
             this.NazivCol,
             this.CijenaCol,
             this.KolicinaCol});
-            this.Stavke.Location = new System.Drawing.Point(5, 17);
+            this.Stavke.Location = new System.Drawing.Point(28, 22);
             this.Stavke.Name = "Stavke";
             this.Stavke.ReadOnly = true;
-            this.Stavke.Size = new System.Drawing.Size(436, 133);
+            this.Stavke.RowHeadersVisible = false;
+            this.Stavke.Size = new System.Drawing.Size(389, 133);
             this.Stavke.TabIndex = 21;
             // 
             // NazivCol
@@ -334,7 +335,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-	    this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmArtikli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

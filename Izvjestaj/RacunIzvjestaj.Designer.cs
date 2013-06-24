@@ -44,18 +44,22 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource13 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.racunBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kinoDBDataSet = new PI_projekt.KinoDBDataSet();
-            this.nacinplacanjaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Nacin_placanjaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.zaposlenikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.artiklBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mjernajedinicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stavkaracunaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Mjerna_jedinicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stavka_racunaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kartaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.racunkartaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.racun_kartaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.projekcijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.filmBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cijenaUlaznicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.popustBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cijenaArtikalaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nacinplacanjaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mjernajedinicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stavkaracunaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.racunkartaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.racunTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.RacunTableAdapter();
             this.nacin_placanjaTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.Nacin_placanjaTableAdapter();
@@ -70,28 +74,24 @@
             this.cijenaUlaznicaTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.CijenaUlaznicaTableAdapter();
             this.popustTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.PopustTableAdapter();
             this.cijenaArtikalaTableAdapter = new PI_projekt.KinoDBDataSetTableAdapters.CijenaArtikalaTableAdapter();
-            this.Nacin_placanjaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Mjerna_jedinicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stavka_racunaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.racun_kartaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.racunBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kinoDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nacinplacanjaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Nacin_placanjaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artiklBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mjernajedinicaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stavkaracunaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mjerna_jedinicaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stavka_racunaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kartaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.racunkartaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.racun_kartaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projekcijaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cijenaUlaznicaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popustBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cijenaArtikalaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Nacin_placanjaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Mjerna_jedinicaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stavka_racunaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.racun_kartaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nacinplacanjaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mjernajedinicaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stavkaracunaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.racunkartaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // racunBindingSource
@@ -104,10 +104,10 @@
             this.kinoDBDataSet.DataSetName = "KinoDBDataSet";
             this.kinoDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // nacinplacanjaBindingSource
+            // Nacin_placanjaBindingSource
             // 
-            this.nacinplacanjaBindingSource.DataMember = "Nacin_placanja";
-            this.nacinplacanjaBindingSource.DataSource = this.kinoDBDataSet;
+            this.Nacin_placanjaBindingSource.DataMember = "Nacin_placanja";
+            this.Nacin_placanjaBindingSource.DataSource = this.kinoDBDataSet;
             // 
             // zaposlenikBindingSource
             // 
@@ -119,25 +119,25 @@
             this.artiklBindingSource.DataMember = "Artikl";
             this.artiklBindingSource.DataSource = this.kinoDBDataSet;
             // 
-            // mjernajedinicaBindingSource
+            // Mjerna_jedinicaBindingSource
             // 
-            this.mjernajedinicaBindingSource.DataMember = "Mjerna_jedinica";
-            this.mjernajedinicaBindingSource.DataSource = this.kinoDBDataSet;
+            this.Mjerna_jedinicaBindingSource.DataMember = "Mjerna_jedinica";
+            this.Mjerna_jedinicaBindingSource.DataSource = this.kinoDBDataSet;
             // 
-            // stavkaracunaBindingSource
+            // stavka_racunaBindingSource
             // 
-            this.stavkaracunaBindingSource.DataMember = "stavka_racuna";
-            this.stavkaracunaBindingSource.DataSource = this.kinoDBDataSet;
+            this.stavka_racunaBindingSource.DataMember = "stavka_racuna";
+            this.stavka_racunaBindingSource.DataSource = this.kinoDBDataSet;
             // 
             // kartaBindingSource
             // 
             this.kartaBindingSource.DataMember = "Karta";
             this.kartaBindingSource.DataSource = this.kinoDBDataSet;
             // 
-            // racunkartaBindingSource
+            // racun_kartaBindingSource
             // 
-            this.racunkartaBindingSource.DataMember = "racun_karta";
-            this.racunkartaBindingSource.DataSource = this.kinoDBDataSet;
+            this.racun_kartaBindingSource.DataMember = "racun_karta";
+            this.racun_kartaBindingSource.DataSource = this.kinoDBDataSet;
             // 
             // projekcijaBindingSource
             // 
@@ -163,6 +163,26 @@
             // 
             this.cijenaArtikalaBindingSource.DataMember = "CijenaArtikala";
             this.cijenaArtikalaBindingSource.DataSource = this.kinoDBDataSet;
+            // 
+            // nacinplacanjaBindingSource
+            // 
+            this.nacinplacanjaBindingSource.DataMember = "Nacin_placanja";
+            this.nacinplacanjaBindingSource.DataSource = this.kinoDBDataSet;
+            // 
+            // mjernajedinicaBindingSource
+            // 
+            this.mjernajedinicaBindingSource.DataMember = "Mjerna_jedinica";
+            this.mjernajedinicaBindingSource.DataSource = this.kinoDBDataSet;
+            // 
+            // stavkaracunaBindingSource
+            // 
+            this.stavkaracunaBindingSource.DataMember = "stavka_racuna";
+            this.stavkaracunaBindingSource.DataSource = this.kinoDBDataSet;
+            // 
+            // racunkartaBindingSource
+            // 
+            this.racunkartaBindingSource.DataMember = "racun_karta";
+            this.racunkartaBindingSource.DataSource = this.kinoDBDataSet;
             // 
             // reportViewer1
             // 
@@ -264,53 +284,35 @@
             // 
             this.cijenaArtikalaTableAdapter.ClearBeforeFill = true;
             // 
-            // Nacin_placanjaBindingSource
-            // 
-            this.Nacin_placanjaBindingSource.DataMember = "Nacin_placanja";
-            this.Nacin_placanjaBindingSource.DataSource = this.kinoDBDataSet;
-            // 
-            // Mjerna_jedinicaBindingSource
-            // 
-            this.Mjerna_jedinicaBindingSource.DataMember = "Mjerna_jedinica";
-            this.Mjerna_jedinicaBindingSource.DataSource = this.kinoDBDataSet;
-            // 
-            // stavka_racunaBindingSource
-            // 
-            this.stavka_racunaBindingSource.DataMember = "stavka_racuna";
-            this.stavka_racunaBindingSource.DataSource = this.kinoDBDataSet;
-            // 
-            // racun_kartaBindingSource
-            // 
-            this.racun_kartaBindingSource.DataMember = "racun_karta";
-            this.racun_kartaBindingSource.DataSource = this.kinoDBDataSet;
-            // 
             // RacunIzvjestaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 476);
             this.Controls.Add(this.reportViewer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RacunIzvjestaj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RacunIzvjestaj";
             this.Load += new System.EventHandler(this.RacunIzvjestaj_Load);
             ((System.ComponentModel.ISupportInitialize)(this.racunBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kinoDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nacinplacanjaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Nacin_placanjaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.artiklBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mjernajedinicaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stavkaracunaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mjerna_jedinicaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stavka_racunaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kartaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.racunkartaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.racun_kartaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projekcijaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cijenaUlaznicaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popustBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cijenaArtikalaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Nacin_placanjaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Mjerna_jedinicaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stavka_racunaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.racun_kartaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nacinplacanjaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mjernajedinicaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stavkaracunaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.racunkartaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

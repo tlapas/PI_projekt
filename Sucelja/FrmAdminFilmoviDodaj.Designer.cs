@@ -197,6 +197,7 @@
             this.txtFilmoviDodajSinopsis.Location = new System.Drawing.Point(98, 228);
             this.txtFilmoviDodajSinopsis.Multiline = true;
             this.txtFilmoviDodajSinopsis.Name = "txtFilmoviDodajSinopsis";
+            this.txtFilmoviDodajSinopsis.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtFilmoviDodajSinopsis.Size = new System.Drawing.Size(232, 84);
             this.txtFilmoviDodajSinopsis.TabIndex = 46;
             // 
