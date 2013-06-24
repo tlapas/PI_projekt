@@ -6756,13 +6756,13 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SQLite.SQLiteCommand[1];
+            this._commandCollection = new global::System.Data.SQLite.SQLiteCommand[2];
             this._commandCollection[0] = new global::System.Data.SQLite.SQLiteCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [id_filma], [naziv], [vrijeme_trajanja] FROM [Film] WHERE id_filma IN (SEL" +
-                "ECT id_filma FROM Projekcija WHERE id_projekcije IN (SELECT id_projekcije FROM K" +
-                "arta WHERE id_karte IN (SELECT id_karte FROM racun_karta WHERE id_racuna = @id_r" +
-                "acuna)))";
+            this._commandCollection[0].CommandText = "SELECT id_filma, naziv, vrijeme_trajanja FROM Film WHERE (id_filma IN (SELECT id_" +
+                "filma FROM Projekcija WHERE (id_projekcije IN (SELECT id_projekcije FROM Karta W" +
+                "HERE (id_karte IN (SELECT id_karte FROM racun_karta WHERE (id_racuna = @id_racun" +
+                "a)))))))";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             global::System.Data.SQLite.SQLiteParameter param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@id_racuna";
@@ -6770,6 +6770,17 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
             param.Size = 8;
             param.SourceColumn = "";
             this._commandCollection[0].Parameters.Add(param);
+            this._commandCollection[1] = new global::System.Data.SQLite.SQLiteCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT id_filma, naziv, vrijeme_trajanja FROM Film WHERE id_filma = @id_filma";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@id_filma";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.DbType = global::System.Data.DbType.Int64;
+            param.Size = 8;
+            param.SourceColumn = "id_filma";
+            this._commandCollection[1].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6793,6 +6804,32 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
         public virtual KinoDBDataSet.FilmDataTable GetData(int id_racuna) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_racuna));
+            KinoDBDataSet.FilmDataTable dataTable = new KinoDBDataSet.FilmDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByIdFilma(KinoDBDataSet.FilmDataTable dataTable, long id_filma) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(id_filma));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual KinoDBDataSet.FilmDataTable GetDataByIdFilma(long id_filma) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(id_filma));
             KinoDBDataSet.FilmDataTable dataTable = new KinoDBDataSet.FilmDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -8793,7 +8830,7 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SQLite.SQLiteCommand[1];
+            this._commandCollection = new global::System.Data.SQLite.SQLiteCommand[2];
             this._commandCollection[0] = new global::System.Data.SQLite.SQLiteCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT [id_projekcije], [broj_dvorane], [id_filma], [vrijeme_trajanja], [broj_mjesta], [prodano_ulaznica], [cijena], [datum] FROM [Projekcija] WHERE id_projekcije IN (SELECT id_projekcije FROM Karta WHERE id_karte IN (SELECT id_karte FROM racun_karta WHERE id_racuna = @id_racuna))";
@@ -8804,6 +8841,19 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
             param.Size = 8;
             param.SourceColumn = "";
             this._commandCollection[0].Parameters.Add(param);
+            this._commandCollection[1] = new global::System.Data.SQLite.SQLiteCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT [id_projekcije], [broj_dvorane], [id_filma], [vrijeme_trajanja], [broj_mje" +
+                "sta], [prodano_ulaznica], [cijena], [datum] FROM [Projekcija] WHERE id_filma = @" +
+                "id_filma";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@id_filma";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.DbType = global::System.Data.DbType.Int64;
+            param.Size = 8;
+            param.SourceColumn = "id_filma";
+            this._commandCollection[1].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8827,6 +8877,32 @@ namespace PI_projekt.KinoDBDataSetTableAdapters {
         public virtual KinoDBDataSet.ProjekcijaDataTable GetData(int id_racuna) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_racuna));
+            KinoDBDataSet.ProjekcijaDataTable dataTable = new KinoDBDataSet.ProjekcijaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByIdProjekcije(KinoDBDataSet.ProjekcijaDataTable dataTable, long id_filma) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(id_filma));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual KinoDBDataSet.ProjekcijaDataTable GetDataByIdProjekcije(long id_filma) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(id_filma));
             KinoDBDataSet.ProjekcijaDataTable dataTable = new KinoDBDataSet.ProjekcijaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
