@@ -63,7 +63,7 @@ namespace PI_projekt.Sucelja
 
         }
 
-         /// <summary>
+        /// <summary>
         /// funkcija za odjavu iz sustava, klikom na odjava se postavlja parametar na 1
         /// i prosljeđuje funkciji koja će ispisati poruku i pitati želi li se korisnik odjaviti
         /// u slučaju klika na yes, korisnik se odjavljuje i vraća na početnu stranicu (login)

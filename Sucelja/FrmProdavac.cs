@@ -20,20 +20,71 @@ namespace PI_projekt.Sucelja
             InitializeComponent();
             ssUsername.Text = Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik;
         }
-        
+
+        /// <summary>
+        /// funkcija za odjavu iz sustava, klikom na odjava se postavlja parametar na 1
+        /// i prosljeđuje funkciji koja će ispisati poruku i pitati želi li se korisnik odjaviti
+        /// u slučaju klika na yes, korisnik se odjavljuje i vraća na početnu stranicu (login)
+        /// </summary>
+        int odjavljivanje = 0;
         private void miOpcijeOdjava_MouseUp(object sender, MouseEventArgs e)
         {
-            FrmPocetna pocetna = new FrmPocetna();
-            _shouldStop = true;  
-            this.Close();
-            pocetna.Show();            
+
+            odjavljivanje = 1;
+            odjava();
         }
 
+        private void odjava()
+        {
+            if (odjavljivanje == 1)
+            {
+                string message = "Želite li se odjaviti iz sustava?";
+                string caption = "Odjava iz sustava";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                // Displays the MessageBox.
+                result = MessageBox.Show(this, message, caption, buttons);
+
+                if (result == DialogResult.Yes)
+                {
+                    FrmPocetna pocetna = new FrmPocetna();
+                    this.Close();
+                    pocetna.Show();
+
+                }
+            }
+        }
+
+        /// <summary>
+        ///funkcija za izlaz iz aplikacije 
+        /// </summary>
+        int izlaz = 0;
         private void miOpcijeIzlaz_MouseUp(object sender, MouseEventArgs e)
         {
-            Application.Exit();
+            izlaz = 1;
+            izlazak();
         }
 
+        private void izlazak()
+        {
+            if (izlaz == 1)
+            {
+                string message = "Želite li ugasiti aplikaciju?";
+                string caption = "Gašenje aplikacije";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                // Displays the MessageBox.
+                result = MessageBox.Show(this, message, caption, buttons);
+
+                if (result == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+            }
+        }  
+            
         private void miSifarniciUlaznica_MouseUp(object sender, MouseEventArgs e)
         {
             Ulaznica.FrmUlaznica Odabir = new Ulaznica.FrmUlaznica();
