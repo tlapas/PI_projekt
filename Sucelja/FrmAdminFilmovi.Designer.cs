@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminFilmovi));
             this.lblSviFilmovi = new System.Windows.Forms.Label();
             this.dgvSviFilmovi = new System.Windows.Forms.DataGridView();
             this.btnFilmoviOsvjezi = new System.Windows.Forms.Button();
@@ -108,6 +109,7 @@
             this.Controls.Add(this.dgvSviFilmovi);
             this.Controls.Add(this.lblSviFilmovi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAdminFilmovi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Filmovi";

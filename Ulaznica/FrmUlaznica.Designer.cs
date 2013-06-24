@@ -93,9 +93,9 @@
             this.lblNazivProjekcije.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblNazivProjekcije.Location = new System.Drawing.Point(7, 33);
             this.lblNazivProjekcije.Name = "lblNazivProjekcije";
-            this.lblNazivProjekcije.Size = new System.Drawing.Size(125, 16);
+            this.lblNazivProjekcije.Size = new System.Drawing.Size(124, 16);
             this.lblNazivProjekcije.TabIndex = 20;
-            this.lblNazivProjekcije.Text = "Naziv Projekcije:";
+            this.lblNazivProjekcije.Text = "Naziv projekcije:";
             // 
             // cbNazivProjekcije
             // 
@@ -584,6 +584,7 @@
             this.Controls.Add(this.shapeContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmUlaznica";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminArtikli));
             this.dgvSviArtikli = new System.Windows.Forms.DataGridView();
             this.btnDodajArtikl = new System.Windows.Forms.Button();
             this.btnOsvjeziArtikle = new System.Windows.Forms.Button();
@@ -113,7 +114,8 @@
             this.Controls.Add(this.btnOsvjeziArtikle);
             this.Controls.Add(this.btnDodajArtikl);
             this.Controls.Add(this.dgvSviArtikli);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmAdminArtikli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

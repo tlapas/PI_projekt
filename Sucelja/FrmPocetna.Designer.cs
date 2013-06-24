@@ -134,7 +134,7 @@
             // 
             // zaglavlje
             // 
-            this.zaglavlje.BackgroundImage = global::PI_projekt.Properties.Resources.zaglavlje2;
+            this.zaglavlje.BackgroundImage = global::PI_projekt.Properties.Resources.imgPocetna;
             this.zaglavlje.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.zaglavlje.Controls.Add(this.btnIzlaz);
             this.zaglavlje.Location = new System.Drawing.Point(12, 12);
@@ -161,14 +161,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PI_projekt.Properties.Resources.pozadina;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(457, 420);
+            this.BackgroundImage = global::PI_projekt.Properties.Resources.imgPozadina;
+            this.ClientSize = new System.Drawing.Size(457, 421);
             this.Controls.Add(this.zaglavlje);
             this.Controls.Add(this.podaci);
             this.Controls.Add(this.Ponisti);
             this.Controls.Add(this.Prijava);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximumSize = new System.Drawing.Size(473, 459);

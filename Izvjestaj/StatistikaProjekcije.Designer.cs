@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatistikaProjekcije));
             this.projekcijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kinoDBDataSet = new PI_projekt.KinoDBDataSet();
             this.filmBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -108,8 +109,11 @@
             this.Controls.Add(this.cbFilm);
             this.Controls.Add(this.lblOdaberiFilm);
             this.Controls.Add(this.reportViewer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StatistikaProjekcije";
-            this.Text = "StatistikaProjekcije";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Statistika projekcije";
             this.Load += new System.EventHandler(this.StatistikaProjekcije_Load);
             ((System.ComponentModel.ISupportInitialize)(this.projekcijaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kinoDBDataSet)).EndInit();

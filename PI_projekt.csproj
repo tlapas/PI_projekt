@@ -357,44 +357,43 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slike\BCKground_2.jpg" />
+    <None Include="Resources\imgPocetna.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slike\projekcije.JPG" />
+    <None Include="Resources\imgPozadina.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slike\admin.jpg" />
+    <None Include="Resources\imgOpcije.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slike\dvorana.jpg" />
+    <None Include="Resources\imgOdjava.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slike\kokice.gif" />
+    <None Include="Resources\imgIzlaz.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slike\Movies.gif" />
+    <None Include="Resources\imgSifarnici.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slike\tiket.gif" />
+    <None Include="Resources\imgZaposlenici.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slike\zaglavlje.jpg" />
+    <None Include="Resources\imgArtikli.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slike\zaglavlje2.jpg" />
+    <None Include="Resources\imgFilmovi.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slike\zaposlenik.jpg" />
+    <None Include="Resources\imgProjekcije.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slike\BCKground.jpg" />
+    <None Include="Resources\imgDvorane.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slike\sjedala.jpg" />
+    <None Include="Resources\imgStatistika.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slike\pozadina.jpg" />
-    <Content Include="Slike\ulaznica.jpg" />
+    <None Include="Resources\imgUlaznice.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
