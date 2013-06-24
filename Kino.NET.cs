@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace PI_projekt
 {
     class Kino
-    {   
+    {
         /// <summary>
         /// Pretvara zapis cijene iz floata u float oblik sa točkom potreban za unos u SQLite bazu podataka
         /// </summary>
@@ -33,10 +33,10 @@ namespace PI_projekt
         public static List<int> IzradiUlaznicu(List<int> odabranaSjedala, Projekcija odabranaProjekcija)
         {
             List<int> listaIdUlaznica = new List<int>();
-            
+
 
             foreach (int sjedalo in odabranaSjedala)
-            {   
+            {
                 listaIdUlaznica.Add(Ulaznice.UnesiUlaznicu(sjedalo, odabranaProjekcija.IdProjekcije));
             }
 
@@ -61,7 +61,7 @@ namespace PI_projekt
                 {
                     RacunUlaznica.UnesiRacunUlaznica(IdRacun, ID, popust.IdPopusta);
                 }
-               
+
                 //Poziva se report viewer UlaznicaIspis.cs za svaku kupljenu ulaznicu
                 foreach (int idUlaznice in listaIdUlaznica)
                 {
@@ -70,14 +70,87 @@ namespace PI_projekt
                 }
             }
 
-///ZA racun potrebno maknuti komentare ispod
-///
-///
+            ///ZA racun potrebno maknuti komentare ispod
+            ///
+            ///
 
             Izvjestaj.RacunIzvjestaj racun = new Izvjestaj.RacunIzvjestaj(IdRacun, ukupnaCijenaUlaznica, ukupnaCijenaArtikala);
             racun.Show();
         }
 
-     
+        /// <summary>
+        /// Metoda koja kao parametar prima datum i vraća ga kao string u formatu potrebnom za upis Sqlite bp
+        /// </summary>
+        /// <param name="stariDatum"></param>
+        /// <returns></returns>
+        public static string PretvoriDatum(DateTime stariDatum)
+        {
+            string noviDatum = "";
+            noviDatum = stariDatum.ToString("yyyy-MM-dd HH:mm:ss");
+            return noviDatum;
+        }
+
+
+        /// <summary>
+        /// Metoda koja za parametre prima količinu, cijenu i popust i računa ukupnu cijenu sa popustom
+        /// </summary>
+        /// <param name="kolicina">Količina proizvoda</param>
+        /// <param name="cijena">Cijena proizvoda</param>
+        /// <param name="popust">popust na proizvod</param>
+        /// <returns>Lista sa [0] sumom, [1] postotkom, [2] ukupnom cijenom. Ukoliko unos nije valjan vraća listu sa vrijednostima -1</returns>
+        public static List<float> IzracunajPopust(int kolicina, float cijena, float popust)
+        {
+            List<float> listaPopust = new List<float>();
+
+            //U slučaju da je količina manja od 1, cijena manja od 0 i popust manji od 0 metoda vraća lista sa elementima -1
+            if (kolicina < 1 || cijena <= 0 || popust < 0)
+            {
+                listaPopust.Add(-1);
+                listaPopust.Add(-1);
+                listaPopust.Add(-1);
+
+                return listaPopust;
+            }
+
+            float suma = kolicina * cijena;
+            float popustPostotak = popust * 100;
+            float ukupno = suma - (suma * popust);
+
+            listaPopust.Add(suma);
+            listaPopust.Add(popustPostotak);
+            listaPopust.Add(ukupno);
+
+            return listaPopust;
+        }
+
+        /// <summary>
+        /// Metoda koja provjerava jel korisnik sa korisničkim imenom i lozinkom postoji u bazi podataka 
+        /// </summary>
+        /// <param name="korisnickoIme">Korisničko ime</param>
+        /// <param name="lozinka">Lozinka</param>
+        /// <returns>IdUloge ako postoji korisnik sa korisničkim imenom i lozinkom, -1 ako ne postoji zaposlenik sa korisničkim imenom,-2 ako postoji korisnik, ali lozinka nije valjana</returns>
+        public static int ProvjeriKorisnika(string korisnickoIme, string lozinka)
+        {
+            List<Zaposlenici> listaKorisnika = Zaposlenici.DohvatiZaposlenike();
+            foreach (Zaposlenici zaposlenik in listaKorisnika)
+            {
+                if (korisnickoIme == zaposlenik.KorIme)
+                {
+                    if (lozinka == zaposlenik.Lozinka)
+                    {
+                        //postoji zaposlenik sa tim korisnickim imenom i lozinkom
+                        return zaposlenik.Uloga;
+                    }
+                    else
+                    {   //postoji zaposlenik sa tim korisničkim imenom, ali lozinka nije valjana
+                        return -2;
+                    }
+                }
+             
+            }
+            //ne postoji zaposlenik sa tim korisničkim imenom
+            return -1;
+        }
     }
+
 }

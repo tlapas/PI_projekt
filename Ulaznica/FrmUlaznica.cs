@@ -59,12 +59,22 @@ namespace PI_projekt.Ulaznica
         /// </summary>
         private void UracunajPopust()
         {
-            ukupno = lbOdabrana.Items.Count * odabranaProjekcija.Cijena;
-            suma = ukupno - (odabraniPopust.PopustPostotak * ukupno);
-            popust = odabraniPopust.PopustPostotak * 100;
-            txtSuma.Text = ukupno.ToString();
-            txtPopust.Text = popust.ToString() + "%";
-            txtUkupno.Text = suma.ToString();
+            //računamo cijenu sa popustom i sumu 
+            List<float> listaPopust = Kino.IzracunajPopust(lbOdabrana.Items.Count, odabranaProjekcija.Cijena, odabraniPopust.PopustPostotak);
+
+            //Ukoliko je odabran popust i ulaznica upisuje ukupnu cijenu ulaznica, inače prazni tekstualna polja
+            if (listaPopust[0] != -1 && listaPopust[1] != -1 && listaPopust[2] != -1)
+            {
+                txtSuma.Text = listaPopust[0].ToString();
+                txtPopust.Text = listaPopust[1].ToString() + "%";
+                txtUkupno.Text = listaPopust[2].ToString();
+            }
+            else
+            {
+                txtSuma.Text = "";
+                txtPopust.Text = "";
+                txtUkupno.Text = "";
+            }
         }
 
         public FrmUlaznica()

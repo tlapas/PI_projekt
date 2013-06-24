@@ -277,7 +277,7 @@ namespace PI_projekt
         {
             string sqlUpit = "INSERT INTO Projekcija ('broj_dvorane','id_filma','vrijeme_trajanja','broj_mjesta','prodano_ulaznica','cijena','datum') VALUES ('"
                 + novaProjekcija.BrojDvorane + "','" + novaProjekcija.IdFilma + "','" + novaProjekcija.VrijemeTrajanja + "','" + novaProjekcija.BrojMjesta
-                + "','" + novaProjekcija.ProdanoUlaznica + "','" + Kino.PretvoriCijenu(novaProjekcija.Cijena) + "','" + novaProjekcija.Datum.ToString("yyyy-MM-dd HH:mm:ss") + "');";
+                + "','" + novaProjekcija.ProdanoUlaznica + "','" + Kino.PretvoriCijenu(novaProjekcija.Cijena) + "','" + Kino.PretvoriDatum(novaProjekcija.Datum) + "');";
               int  IDProjekcije = DB.Instance.IzvrsiUpitID(sqlUpit);
 
             return IDProjekcije;

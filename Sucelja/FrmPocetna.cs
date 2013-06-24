@@ -19,53 +19,53 @@ namespace PI_projekt.Sucelja
 
         private bool pomOdjava = false;
 
+       /// <summary>
+       /// 
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
        private void Prijava_Click(object sender, EventArgs e)
         {
-            bool kor_ime = false;
-            List<Zaposlenici> listaKorisnika = Zaposlenici.DohvatiZaposlenike();
-            foreach (Zaposlenici zaposlenik in listaKorisnika)
-            {
-                if (KorIme.Text == zaposlenik.KorIme)
-                {
-                    kor_ime = true;
-                    SpremnikPodataka.Zaposlenik = KorIme.Text;
-                    if (Pass.Text == zaposlenik.Lozinka)
-                    {
-                        if (zaposlenik.Uloga == 2)
-                        {
+                int provjeraZaposlenika= Kino.ProvjeriKorisnika( KorIme.Text, Pass.Text);
+                SpremnikPodataka.Zaposlenik = KorIme.Text;
+
+                    if (provjeraZaposlenika==2)
+                    {     
                             SpremnikPodataka.Uloga = "administrator";
                             FrmAdmin admin = new FrmAdmin();
                             admin.Show();
                             this.Hide();
-                        }
-                        else if (zaposlenik.Uloga == 1)
-                        {
+                        
+                    }
+                    else if(provjeraZaposlenika == 1)
+                    {
                             SpremnikPodataka.Uloga = "prodavač";
                             FrmProdavac prodavac = new FrmProdavac();
                             prodavac.Show();
                             this.Hide();
-                        }
+                        
                     }
-                    else
+                    else if(provjeraZaposlenika == -2)
                     {
                         string message_2 = "Unijeli ste neispravnu lozinku.";
                         string caption_2 = "Greška!";
                         DialogResult result_2;
+                        KorIme.Text = "";
+                        Pass.Text = "";
 
                         // Displays the MessageBox.
                         result_2 = MessageBox.Show(this, message_2, caption_2);
                     }
-                }
-            }
-            if (!kor_ime)
-            {
-                string message_1 = "Unijeli ste nepostojeće korisničko ime.";
-                string caption_1 = "Greška!";
-                DialogResult result_1;
-
-                // Displays the MessageBox.
-                result_1 = MessageBox.Show(this, message_1, caption_1);
-            }
+                    else if (provjeraZaposlenika==-1)
+                    {
+                        string message_1 = "Unijeli ste nepostojeće korisničko ime.";
+                        string caption_1 = "Greška!";
+                        DialogResult result_1;
+                        KorIme.Text = "";
+                        Pass.Text = "";
+                        // Displays the MessageBox.
+                        result_1 = MessageBox.Show(this, message_1, caption_1);
+                    }
         }
 
        private void KorIme_KeyDown(object sender, KeyEventArgs e)
