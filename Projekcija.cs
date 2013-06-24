@@ -303,6 +303,27 @@ namespace PI_projekt
         }
 
 
+        /// <summary>
+        /// Provjerava jel postoji projekcija koja se prikazuje  i broj slobodnih mjesta je 5 ili manje
+        /// </summary>
+        /// <returns>Dohvaća projekcije koje imaj manje od 6 slobodnih mjesta</returns>
+        public static List<Projekcija> ProvjeriProjekcije()
+        {
+            List<Projekcija> lista = new List<Projekcija>();
+            DateTime sada = DateTime.Now;
+
+
+            string sqlUpit = "SELECT * FROM Projekcija WHERE (broj_mjesta-prodano_ulaznica)<6 AND  (broj_mjesta-prodano_ulaznica)>0 AND datum >= '" + sada.ToString("yyyy-MM-dd HH:mm:ss") + "';";
+            DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
+            while (dr.Read())
+            {
+                Projekcija projekcija = new Projekcija(dr);
+                lista.Add(projekcija);
+
+            }
+            dr.Close();     //Zatvaranje DataReader objekta.
+            return lista;
+        }
         
         #endregion
     }

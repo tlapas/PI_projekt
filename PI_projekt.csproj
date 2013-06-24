@@ -95,6 +95,12 @@
     <Compile Include="Racun.cs" />
     <Compile Include="RacunArtikl.cs" />
     <Compile Include="RacunUlaznica.cs" />
+    <Compile Include="Sucelja\CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucelja\CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sucelja\FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Sucelja\CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sucelja\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>

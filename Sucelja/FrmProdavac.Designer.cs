@@ -50,7 +50,7 @@
             this.miSifarnici});
             this.msIzbornik.Location = new System.Drawing.Point(0, 0);
             this.msIzbornik.Name = "msIzbornik";
-            this.msIzbornik.Size = new System.Drawing.Size(699, 29);
+            this.msIzbornik.Size = new System.Drawing.Size(699, 36);
             this.msIzbornik.TabIndex = 7;
             this.msIzbornik.Text = "Izbornik";
             // 
@@ -62,20 +62,20 @@
             this.miOpcije.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.miOpcije.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.miOpcije.Name = "miOpcije";
-            this.miOpcije.Size = new System.Drawing.Size(66, 25);
+            this.miOpcije.Size = new System.Drawing.Size(80, 32);
             this.miOpcije.Text = "Opcije";
             // 
             // miOpcijeOdjava
             // 
             this.miOpcijeOdjava.Name = "miOpcijeOdjava";
-            this.miOpcijeOdjava.Size = new System.Drawing.Size(152, 26);
+            this.miOpcijeOdjava.Size = new System.Drawing.Size(146, 32);
             this.miOpcijeOdjava.Text = "Odjava";
             this.miOpcijeOdjava.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miOpcijeOdjava_MouseUp);
             // 
             // miOpcijeIzlaz
             // 
             this.miOpcijeIzlaz.Name = "miOpcijeIzlaz";
-            this.miOpcijeIzlaz.Size = new System.Drawing.Size(152, 26);
+            this.miOpcijeIzlaz.Size = new System.Drawing.Size(146, 32);
             this.miOpcijeIzlaz.Text = "Izlaz";
             this.miOpcijeIzlaz.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miOpcijeIzlaz_MouseUp);
             // 
@@ -87,20 +87,20 @@
             this.miSifarnici.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.miSifarnici.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.miSifarnici.Name = "miSifarnici";
-            this.miSifarnici.Size = new System.Drawing.Size(78, 25);
+            this.miSifarnici.Size = new System.Drawing.Size(93, 32);
             this.miSifarnici.Text = "Šifranici";
             // 
             // miSifarniciUlaznica
             // 
             this.miSifarniciUlaznica.Name = "miSifarniciUlaznica";
-            this.miSifarniciUlaznica.Size = new System.Drawing.Size(152, 26);
+            this.miSifarniciUlaznica.Size = new System.Drawing.Size(157, 32);
             this.miSifarniciUlaznica.Text = "Ulaznica";
             this.miSifarniciUlaznica.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miSifarniciUlaznica_MouseUp);
             // 
             // miSifarniciArtikli
             // 
             this.miSifarniciArtikli.Name = "miSifarniciArtikli";
-            this.miSifarniciArtikli.Size = new System.Drawing.Size(152, 26);
+            this.miSifarniciArtikli.Size = new System.Drawing.Size(157, 32);
             this.miSifarniciArtikli.Text = "Artikli";
             this.miSifarniciArtikli.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miSifarniciArtikli_MouseUp);
             // 
@@ -109,9 +109,9 @@
             this.statusnaTraka.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sstext,
             this.ssUsername});
-            this.statusnaTraka.Location = new System.Drawing.Point(0, 401);
+            this.statusnaTraka.Location = new System.Drawing.Point(0, 394);
             this.statusnaTraka.Name = "statusnaTraka";
-            this.statusnaTraka.Size = new System.Drawing.Size(699, 26);
+            this.statusnaTraka.Size = new System.Drawing.Size(699, 33);
             this.statusnaTraka.TabIndex = 9;
             this.statusnaTraka.Text = "status";
             // 
@@ -120,7 +120,7 @@
             this.sstext.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.sstext.ForeColor = System.Drawing.Color.Black;
             this.sstext.Name = "sstext";
-            this.sstext.Size = new System.Drawing.Size(150, 21);
+            this.sstext.Size = new System.Drawing.Size(186, 28);
             this.sstext.Text = "Prijavljeni ste kao:";
             // 
             // ssUsername
@@ -128,12 +128,12 @@
             this.ssUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ssUsername.ForeColor = System.Drawing.Color.Red;
             this.ssUsername.Name = "ssUsername";
-            this.ssUsername.Size = new System.Drawing.Size(85, 21);
+            this.ssUsername.Size = new System.Drawing.Size(104, 28);
             this.ssUsername.Text = "username";
             // 
             // FrmProdavac
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PI_projekt.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -150,6 +150,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prodavač";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmProdavac_Load);
             this.msIzbornik.ResumeLayout(false);
             this.msIzbornik.PerformLayout();
             this.statusnaTraka.ResumeLayout(false);
