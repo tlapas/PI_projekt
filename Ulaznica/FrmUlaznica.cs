@@ -234,6 +234,8 @@ namespace PI_projekt.Ulaznica
                     odabranaSjedala.Add(int.Parse(lbOdabrana.Items[i].ToString()));
                 }
                 listaIdUlaznica = Kino.IzradiUlaznicu(odabranaSjedala, odabranaProjekcija);
+
+                ukupno = float.Parse(txtUkupno.Text);
                 Artikli.FrmArtikli formaArtikli = new Artikli.FrmArtikli(listaIdUlaznica, odabraniPopust.IdPopusta, ukupno);
                 formaArtikli.Show();     
              

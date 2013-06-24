@@ -50,9 +50,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
         <Top>2.02848cm</Top>
-        <Left>1.46522cm</Left>
+        <Left>1.33293cm</Left>
         <Height>0.6cm</Height>
-        <Width>0.9125cm</Width>
+        <Width>1.04479cm</Width>
         <ZIndex>1</ZIndex>
         <Visibility>
           <Hidden>=Sum(Fields!id_karte.Value, "Karta") = 0</Hidden>
@@ -145,7 +145,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>6.99792cm</Width>
+              <Width>7.04138cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -202,7 +202,7 @@
         <Top>2.06376cm</Top>
         <Left>2.44828cm</Left>
         <Height>0.6cm</Height>
-        <Width>6.99792cm</Width>
+        <Width>7.04138cm</Width>
         <ZIndex>3</ZIndex>
         <Visibility>
           <Hidden>=Sum(Fields!id_karte.Value, "Karta") = 0</Hidden>
@@ -503,9 +503,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
         <Top>3.113cm</Top>
-        <Left>10.03459cm</Left>
+        <Left>9.94766cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.44167cm</Width>
+        <Width>1.5286cm</Width>
         <ZIndex>6</ZIndex>
         <Visibility>
           <Hidden>=Sum(Fields!id_karte.Value, "Karta") = 0</Hidden>
@@ -536,9 +536,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
         <Top>2.44245cm</Top>
-        <Left>10.03459cm</Left>
+        <Left>9.94766cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.73812cm</Width>
+        <Width>2.82505cm</Width>
         <ZIndex>7</ZIndex>
         <Visibility>
           <Hidden>=Sum(Fields!id_karte.Value, "Karta") = 0</Hidden>
@@ -840,9 +840,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox27</rd:DefaultName>
         <Top>3.78355cm</Top>
-        <Left>10.03459cm</Left>
+        <Left>9.94766cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.85569cm</Width>
+        <Width>4.04845cm</Width>
         <ZIndex>12</ZIndex>
         <Visibility>
           <Hidden>=Sum(Fields!id_karte.Value, "Karta") = 0</Hidden>
@@ -861,7 +861,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.87919cm</Width>
+              <Width>1.77336cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -922,9 +922,9 @@
         </TablixRowHierarchy>
         <DataSetName>Popust</DataSetName>
         <Top>3.78355cm</Top>
-        <Left>13.96084cm</Left>
+        <Left>14.06667cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.87919cm</Width>
+        <Width>1.77336cm</Width>
         <ZIndex>13</ZIndex>
         <Visibility>
           <Hidden>=Sum(Fields!id_karte.Value, "Karta") = 0</Hidden>
@@ -1835,7 +1835,7 @@
   <Width>6.6235in</Width>
   <Page>
     <PageHeader>
-      <Height>3.71891cm</Height>
+      <Height>3.40141cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -2184,6 +2184,17 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Line Name="Line1">
+          <Top>3.2512cm</Top>
+          <Height>0cm</Height>
+          <Width>16.82369cm</Width>
+          <ZIndex>11</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -2263,6 +2274,18 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Line Name="Line2">
+          <Top>0.07056cm</Top>
+          <Left>0cm</Left>
+          <Height>0cm</Height>
+          <Width>16.82369cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>

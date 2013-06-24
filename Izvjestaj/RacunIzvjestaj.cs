@@ -30,15 +30,6 @@ namespace PI_projekt.Izvjestaj
 
         private void RacunIzvjestaj_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'kinoDBDataSet.CijenaArtikala' table. You can move, or remove it, as needed.
-            this.cijenaArtikalaTableAdapter.Fill(this.kinoDBDataSet.CijenaArtikala);
-            // TODO: This line of code loads data into the 'kinoDBDataSet.CijenaUlaznica' table. You can move, or remove it, as needed.
-            this.cijenaUlaznicaTableAdapter.Fill(this.kinoDBDataSet.CijenaUlaznica);
-            // TODO: This line of code loads data into the 'kinoDBDataSet.CijenaArtikala' table. You can move, or remove it, as needed.
-            this.cijenaArtikalaTableAdapter.Fill(this.kinoDBDataSet.CijenaArtikala);
-            // TODO: This line of code loads data into the 'kinoDBDataSet.CijenaUlaznica' table. You can move, or remove it, as needed.
-            this.cijenaUlaznicaTableAdapter.Fill(this.kinoDBDataSet.CijenaUlaznica);
-            // TODO: This line of code loads data into the 'kinoDBDataSet.CijenaArtikala' table. You can move, or remove it, as needed.
             this.cijenaArtikalaTableAdapter.Fill(this.kinoDBDataSet.CijenaArtikala);
             this.racunTableAdapter.FillByIdRacuna(this.kinoDBDataSet.Racun, IdRacuna);
             this.nacin_placanjaTableAdapter.Fill(this.kinoDBDataSet.Nacin_placanja, IdRacuna);
