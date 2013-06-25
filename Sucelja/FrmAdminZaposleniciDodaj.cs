@@ -84,17 +84,6 @@ namespace PI_projekt.Sucelja
                     }
                 }
             }
-
-            //ako je otvoren obrazac za dodavanje
-            else{
-            foreach (Uloga uloga in listaUloga)
-                {
-                    if (uloga.IdUloge == zaposlenikAzuriraj.Uloga)
-                    {
-                        cbUloga.SelectedIndex = cbUloga.FindStringExact(uloga.Naziv.ToString());
-                    }
-                }
-            }
         }
 
         /// <summary>
