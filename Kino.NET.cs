@@ -5,10 +5,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PI_projekt
 {
-    class Kino
+    public class Kino
     {
         /// <summary>
         /// Pretvara zapis cijene iz floata u float oblik sa točkom potreban za unos u SQLite bazu podataka
@@ -98,9 +99,9 @@ namespace PI_projekt
         /// <param name="cijena">Cijena proizvoda</param>
         /// <param name="popust">popust na proizvod</param>
         /// <returns>Lista sa [0] sumom, [1] postotkom, [2] ukupnom cijenom. Ukoliko unos nije valjan vraća listu sa vrijednostima -1</returns>
-        public static List<float> IzracunajPopust(int kolicina, float cijena, float popust)
+        public static List<decimal> IzracunajPopust(int kolicina, float cijena, float popust)
         {
-            List<float> listaPopust = new List<float>();
+            List<decimal> listaPopust = new List<decimal>();
 
             //U slučaju da je količina manja od 1, cijena manja od 0 i popust manji od 0 metoda vraća lista sa elementima -1
             if (kolicina < 1 || cijena <= 0 || popust < 0)
@@ -112,9 +113,13 @@ namespace PI_projekt
                 return listaPopust;
             }
 
-            float suma = kolicina * cijena;
-            float popustPostotak = popust * 100;
-            float ukupno = suma - (suma * popust);
+            decimal suma = (decimal)(kolicina * cijena);
+            decimal popustPostotak = (decimal)(popust * 100);
+            decimal ukupno = (suma - (suma * (decimal)popust));
+
+            Decimal.Round(suma, 2);
+            Decimal.Round(popustPostotak, 2);
+            Decimal.Round(ukupno, 2);
 
             listaPopust.Add(suma);
             listaPopust.Add(popustPostotak);
@@ -131,7 +136,9 @@ namespace PI_projekt
         /// <returns>IdUloge ako postoji korisnik sa korisničkim imenom i lozinkom, -1 ako ne postoji zaposlenik sa korisničkim imenom,-2 ako postoji korisnik, ali lozinka nije valjana</returns>
         public static int ProvjeriKorisnika(string korisnickoIme, string lozinka)
         {
+            DateTime sada = new DateTime();
             List<Zaposlenici> listaKorisnika = Zaposlenici.DohvatiZaposlenike();
+
             foreach (Zaposlenici zaposlenik in listaKorisnika)
             {
                 if (korisnickoIme == zaposlenik.KorIme)
@@ -146,7 +153,7 @@ namespace PI_projekt
                         return -2;
                     }
                 }
-             
+
             }
             //ne postoji zaposlenik sa tim korisničkim imenom
             return -1;

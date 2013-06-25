@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PI_projekt
 {
-    class Zaposlenici
+    public class Zaposlenici
     {
         #region Constructors
 

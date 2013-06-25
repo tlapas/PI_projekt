@@ -27,8 +27,8 @@ namespace PI_projekt.Ulaznica
         private int idProjekcije = 0;
         private Popust odabraniPopust;
         private float ukupno = 0;
-        private float popust = 0;
-        private float suma = 0;
+        //private float popust = 0;
+       // private float suma = 0;
         
         /// <summary>
         /// Metoda koja osvježava prikaz podataka koji se nalaze na ulaznici
@@ -60,7 +60,7 @@ namespace PI_projekt.Ulaznica
         private void UracunajPopust()
         {
             //računamo cijenu sa popustom i sumu 
-            List<float> listaPopust = Kino.IzracunajPopust(lbOdabrana.Items.Count, odabranaProjekcija.Cijena, odabraniPopust.PopustPostotak);
+            List<decimal> listaPopust = Kino.IzracunajPopust(lbOdabrana.Items.Count, odabranaProjekcija.Cijena, odabraniPopust.PopustPostotak);
 
             //Ukoliko je odabran popust i ulaznica upisuje ukupnu cijenu ulaznica, inače prazni tekstualna polja
             if (listaPopust[0] != -1 && listaPopust[1] != -1 && listaPopust[2] != -1)

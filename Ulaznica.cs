@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PI_projekt
 {
-    class Ulaznice
+    public class Ulaznice
     {
            
         #region Constructors
@@ -76,7 +76,7 @@ namespace PI_projekt
             {
                 return id_projekcije;
             }
-            private set
+            set
             {
                 if (id_projekcije != value)
                 {
@@ -93,7 +93,7 @@ namespace PI_projekt
             {
                 return sjedalo;
             }
-            private set
+             set
             {
                 if (sjedalo != value)
                 {
@@ -183,7 +183,20 @@ namespace PI_projekt
             }
             return idUlaznice;
         }
-        
+
+
+        /// <summary>
+        /// Briše ulaznicu iz baze podataka
+        /// </summary>
+        /// <param name="idUlaznice">Id ulaznice</param>
+        /// <returns>Broj zahvaćenih redaka</returns>
+        public static int IzbrisiUlaznicu(int idUlaznice)
+        {
+            string sqlUpit = "DELETE FROM Karta WHERE id_karte='" + idUlaznice + "';";
+            idUlaznice = DB.Instance.IzvrsiUpitID(sqlUpit);
+            return idUlaznice;
+        }
+
         #endregion
     }
 }

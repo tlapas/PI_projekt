@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PI_projekt
 {
-    class Popust
+    public class Popust
     {
 
         #region Constructors
@@ -77,7 +77,7 @@ namespace PI_projekt
             {
                 return popustPostotak;
             }
-            private set
+            set
             {
                 if (popustPostotak != value)
                 {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PI_projekt
 {
-    class Projekcija
+    public class Projekcija
     {
           #region Constructors
 
