@@ -15,7 +15,7 @@ namespace PI_projekt.Sucelja
         private Dvorana dvoranaAzuriraj = null;
 
         /// <summary>
-        /// Konstruktor koji se poziva u slucaju dodavanja nove dvorane
+        /// Konstruktor koji se poziva u slućaju dodavanja nove dvorane
         /// </summary>
         public FrmAdminDvoraneDodaj()
         {
@@ -47,11 +47,21 @@ namespace PI_projekt.Sucelja
             }
         }
 
+        /// <summary>
+        /// Gumb Odustani zatvara formu bez da doda dvoranu u bazu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOdustani_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Gumb Spremi dodaje zapis u bazu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSpremi_Click(object sender, EventArgs e)
         {
             Dvorana novaDvorana = new Dvorana();

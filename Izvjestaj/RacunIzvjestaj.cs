@@ -16,6 +16,13 @@ namespace PI_projekt.Izvjestaj
         private int IdRacuna = 0;
         private float ukupnaCijenaUlaznica, ukupnaCijenaArtikala;
         private bool popust = true;
+
+        /// <summary>
+        /// Kreiranje izvještaja (račun)
+        /// </summary>
+        /// <param name="IDRacuna">ID računa</param>
+        /// <param name="ukupnoUlaznice">Suma cijena odabranih ulaznica</param>
+        /// <param name="ukupnoArtikli">Suma cijena odabranih artikala</param>
         public RacunIzvjestaj(int IDRacuna, float ukupnoUlaznice, float ukupnoArtikli)
         {
             InitializeComponent();
@@ -28,6 +35,11 @@ namespace PI_projekt.Izvjestaj
             ukupnaCijenaArtikala = ukupnoArtikli;
         }
 
+        /// <summary>
+        /// Metoda koja se poziva pri pokretanju forme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RacunIzvjestaj_Load(object sender, EventArgs e)
         {
             this.cijenaArtikalaTableAdapter.Fill(this.kinoDBDataSet.CijenaArtikala);

@@ -96,6 +96,9 @@ namespace PI_projekt.Artikli
             this.Close();
         }
 
+        /// <summary>
+        /// Metoda za osvježavanje liste artikala
+        /// </summary>
         private void OsvjeziArtikle()
         {
             foreach (Artikl artikl in listaArtikala)
@@ -104,6 +107,11 @@ namespace PI_projekt.Artikli
             }
         }
 
+        /// <summary>
+        /// Metoda za daohvaćanje naziva artikla prema ID-u
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Naziv_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtCijena.Text = listaArtikala[cbNaziv.SelectedIndex].Cijena.ToString() + " kn";
@@ -111,6 +119,10 @@ namespace PI_projekt.Artikli
         }
 
         private int redak = 0;
+
+        /// <summary>
+        /// Metoda za dodavanje stavaka
+        /// </summary>
         private void DodajStavke()
         {
             try
@@ -149,6 +161,11 @@ namespace PI_projekt.Artikli
             }
         }
 
+        /// <summary>
+        /// Gumb za poništavanje (pražnjenje) liste odabranih stavki
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Ponisti_Click(object sender, EventArgs e)
         {
             Stavke.Rows.Clear();
@@ -159,6 +176,11 @@ namespace PI_projekt.Artikli
             numKolicina.Value = 1;
         }
 
+        /// <summary>
+        /// Odabir načina plaćanja prema ID-u selektiranog (naziv)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nacinPlacanja_SelectedIndexChanged(object sender, EventArgs e)
         {
             foreach (NaciniPlacanja nacin in listaNacinaPlacanja)

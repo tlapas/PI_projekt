@@ -17,8 +17,14 @@ namespace PI_projekt.Izvjestaj
             InitializeComponent();
         }
 
+        //Dohvaćanje svih filmova u listu filmova
         private List<Film> listaFilmova = Film.DohvatiFilmove();
 
+        /// <summary>
+        /// Pokreće se pri pokretanju forme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void StatistikaProjekcije_Load(object sender, EventArgs e)
         {
             OsvjeziFilmove();
@@ -28,6 +34,9 @@ namespace PI_projekt.Izvjestaj
             this.reportViewer1.RefreshReport();
         }
 
+        /// <summary>
+        /// Metoda za osvježavanje spiska filmova
+        /// </summary>
         private void OsvjeziFilmove()
         {
             foreach (Film film in listaFilmova)
@@ -36,6 +45,11 @@ namespace PI_projekt.Izvjestaj
             }
         }
 
+        /// <summary>
+        /// Prikaz statistike za odabrani film
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.projekcijaTableAdapter.FillByIdProjekcije(this.kinoDBDataSet.Projekcija, listaFilmova[cbFilm.SelectedIndex].IdFilma);

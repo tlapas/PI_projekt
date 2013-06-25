@@ -14,7 +14,7 @@ namespace PI_projekt.Sucelja
     {
  
         private Artikl artiklAzuriraj = null;
-
+        //lista mjernih jedinica
         List<MjernaJedinica> listaMjernihJedinica = MjernaJedinica.DohvatiMjerneJedinice();
 
         /// <summary>
@@ -62,6 +62,7 @@ namespace PI_projekt.Sucelja
 
             }
         }
+
 
         private void cbMjerneJedinice_SelectedIndexChanged(object sender, EventArgs e)
         {

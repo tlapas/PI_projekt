@@ -18,6 +18,7 @@ namespace PI_projekt.Sucelja
         List<Uloga> listaUloga = new List<Uloga>();
 
         /// <summary>
+        /// Inicijalizacija
         /// Konstruktor koji se poziva u slucaju dodavanja novog zaposlenika
         /// </summary> 
         public FrmAdminZaposleniciDodaj()
@@ -52,12 +53,13 @@ namespace PI_projekt.Sucelja
         }
 
         /// <summary>
-        /// Rukuje dogadajem pokretanja forme, ukoliko se radi o ažuriranju dvorane tada formu popunjava sa postojecim podacima
+        /// Rukuje dogadajem pokretanja forme, ukoliko se radi o ažuriranju zaposlenika tada formu popunjava sa postojećim podacima
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void FrmAdminZaposleniciDodaj_Load(object sender, EventArgs e)
         {
+            this.ActiveControl = txtZaposleniciDodajOIB;
             listaUloga = Uloga.DohvatiSveUloge();
             foreach (Uloga uloga in listaUloga) 
             {
