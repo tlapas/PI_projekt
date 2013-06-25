@@ -100,6 +100,32 @@ namespace PI_projekt.Sucelja
             {
                 MessageBox.Show("Molimo vas odaberite zaposlenika!");
             }
+        }
+
+        /// <summary>
+        /// brise zaposlenika iz baze podataka ukoliko nije izradio niti jedan račun
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+             //Provjera je li odabran zaposlenik u dgv
+            if (oib > -1)
+            {
+               int obrisano= Zaposlenici.ObrisiZaposlenika(oib);
+               if (obrisano == -1)
+               {
+                   MessageBox.Show("Nije moguće obrisati zaposlenika!\n Postoje unosi računa za zadanog zaposlenika.");
+               }
+               else
+               {
+                   OsvjeziZaposlenike();
+               }
+            }
+            else
+            {
+                MessageBox.Show("Molimo vas odaberite zaposlenika!");
+            }
         } 
     }
 }

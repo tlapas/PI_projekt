@@ -255,6 +255,33 @@ namespace PI_projekt
         }
 
 
+        /// <summary>
+        /// Provjerava jel Film ima upisane projekcije. Ukoliko nema briše sve žanrove i film iz baze podataka.
+        /// </summary>
+        /// <param name="idFilma">Id Filma</param>
+        /// <returns>Broj zahvaćenih redaka, -1 ako nije moguće obrisat film</returns>
+        public static int ObrisiFilm(int idFilma)
+        {
+
+            Racun racun = new Racun();
+            string sqlUpit = "SELECT * FROM Projekcija WHERE id_filma='" + idFilma + "';";
+            DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
+            while (dr.Read())
+            {
+                dr.Close();
+                return -1;
+            }
+            dr.Close();  //Zatvaranje DataReader objekta.
+
+            string sqlUpit2 = "DELETE FROM film_zanr  WHERE id_filma=" + idFilma + ";";
+            int izvrsenUpit = DB.Instance.IzvrsiUpit(sqlUpit2);
+
+            string sqlUpit3 = "DELETE FROM Film  WHERE id_filma=" + idFilma + ";";
+            izvrsenUpit = DB.Instance.IzvrsiUpit(sqlUpit3);
+
+            return izvrsenUpit;
+        }
+
 
         
         #endregion

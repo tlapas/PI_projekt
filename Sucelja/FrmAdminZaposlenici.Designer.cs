@@ -34,6 +34,7 @@
             this.btnZaposleniciDodaj = new System.Windows.Forms.Button();
             this.btnZaposleniciAzuriraj = new System.Windows.Forms.Button();
             this.lblSviZaposlenici = new System.Windows.Forms.Label();
+            this.btnObrisi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSviZaposlenici)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,13 +46,14 @@
             this.dgvSviZaposlenici.AllowUserToResizeRows = false;
             this.dgvSviZaposlenici.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvSviZaposlenici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSviZaposlenici.Location = new System.Drawing.Point(10, 40);
+            this.dgvSviZaposlenici.Location = new System.Drawing.Point(13, 49);
+            this.dgvSviZaposlenici.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvSviZaposlenici.MultiSelect = false;
             this.dgvSviZaposlenici.Name = "dgvSviZaposlenici";
             this.dgvSviZaposlenici.ReadOnly = true;
             this.dgvSviZaposlenici.RowHeadersVisible = false;
             this.dgvSviZaposlenici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSviZaposlenici.Size = new System.Drawing.Size(692, 235);
+            this.dgvSviZaposlenici.Size = new System.Drawing.Size(923, 289);
             this.dgvSviZaposlenici.TabIndex = 24;
             this.dgvSviZaposlenici.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSviZaposlenici_CellClick);
             this.dgvSviZaposlenici.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSviZaposlenici_CellClick);
@@ -59,9 +61,10 @@
             // btnZaposleniciOsvjezi
             // 
             this.btnZaposleniciOsvjezi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnZaposleniciOsvjezi.Location = new System.Drawing.Point(450, 290);
+            this.btnZaposleniciOsvjezi.Location = new System.Drawing.Point(488, 357);
+            this.btnZaposleniciOsvjezi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnZaposleniciOsvjezi.Name = "btnZaposleniciOsvjezi";
-            this.btnZaposleniciOsvjezi.Size = new System.Drawing.Size(80, 35);
+            this.btnZaposleniciOsvjezi.Size = new System.Drawing.Size(107, 43);
             this.btnZaposleniciOsvjezi.TabIndex = 27;
             this.btnZaposleniciOsvjezi.Text = "Osvježi";
             this.btnZaposleniciOsvjezi.UseVisualStyleBackColor = true;
@@ -70,9 +73,10 @@
             // btnZaposleniciDodaj
             // 
             this.btnZaposleniciDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnZaposleniciDodaj.Location = new System.Drawing.Point(536, 290);
+            this.btnZaposleniciDodaj.Location = new System.Drawing.Point(603, 357);
+            this.btnZaposleniciDodaj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnZaposleniciDodaj.Name = "btnZaposleniciDodaj";
-            this.btnZaposleniciDodaj.Size = new System.Drawing.Size(80, 35);
+            this.btnZaposleniciDodaj.Size = new System.Drawing.Size(107, 43);
             this.btnZaposleniciDodaj.TabIndex = 28;
             this.btnZaposleniciDodaj.Text = "Dodaj";
             this.btnZaposleniciDodaj.UseVisualStyleBackColor = true;
@@ -81,9 +85,10 @@
             // btnZaposleniciAzuriraj
             // 
             this.btnZaposleniciAzuriraj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnZaposleniciAzuriraj.Location = new System.Drawing.Point(622, 290);
+            this.btnZaposleniciAzuriraj.Location = new System.Drawing.Point(717, 357);
+            this.btnZaposleniciAzuriraj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnZaposleniciAzuriraj.Name = "btnZaposleniciAzuriraj";
-            this.btnZaposleniciAzuriraj.Size = new System.Drawing.Size(80, 35);
+            this.btnZaposleniciAzuriraj.Size = new System.Drawing.Size(107, 43);
             this.btnZaposleniciAzuriraj.TabIndex = 29;
             this.btnZaposleniciAzuriraj.Text = "Ažuriraj";
             this.btnZaposleniciAzuriraj.UseVisualStyleBackColor = true;
@@ -93,17 +98,31 @@
             // 
             this.lblSviZaposlenici.AutoSize = true;
             this.lblSviZaposlenici.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblSviZaposlenici.Location = new System.Drawing.Point(10, 10);
+            this.lblSviZaposlenici.Location = new System.Drawing.Point(13, 12);
+            this.lblSviZaposlenici.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSviZaposlenici.Name = "lblSviZaposlenici";
-            this.lblSviZaposlenici.Size = new System.Drawing.Size(200, 18);
+            this.lblSviZaposlenici.Size = new System.Drawing.Size(248, 24);
             this.lblSviZaposlenici.TabIndex = 30;
             this.lblSviZaposlenici.Text = "Pregled svih zaposlenika:";
             // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnObrisi.Location = new System.Drawing.Point(830, 356);
+            this.btnObrisi.Margin = new System.Windows.Forms.Padding(4);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(107, 43);
+            this.btnObrisi.TabIndex = 31;
+            this.btnObrisi.Text = "Obriši";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
+            // 
             // FrmAdminZaposlenici
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 337);
+            this.ClientSize = new System.Drawing.Size(952, 415);
+            this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.lblSviZaposlenici);
             this.Controls.Add(this.btnZaposleniciAzuriraj);
             this.Controls.Add(this.btnZaposleniciDodaj);
@@ -111,6 +130,7 @@
             this.Controls.Add(this.dgvSviZaposlenici);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmAdminZaposlenici";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zaposlenici";
@@ -128,6 +148,7 @@
         private System.Windows.Forms.Button btnZaposleniciDodaj;
         private System.Windows.Forms.Button btnZaposleniciAzuriraj;
         private System.Windows.Forms.Label lblSviZaposlenici;
+        private System.Windows.Forms.Button btnObrisi;
 
     }
 }

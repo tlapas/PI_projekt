@@ -95,6 +95,27 @@ namespace PI_projekt.Sucelja
                 formaAzuriraj.ShowDialog(this);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (IdFilma > -1)
+            {
+                    int obrisano = Film.ObrisiFilm(IdFilma);
+                    if (obrisano == -1)
+                    {
+                        MessageBox.Show("Nije moguće obrisati film!\n Postoje projekcije za film.");
+                    }
+                    else
+                    {
+                        OsvjeziFilmove();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Molimo vas odaberite film!");
+                }
+            
+        }
                        
     }
 }

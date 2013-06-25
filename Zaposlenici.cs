@@ -299,6 +299,32 @@ namespace PI_projekt
             
         }
 
+
+
+        /// <summary>
+        /// Provjerava je li zaposlenik kreirao koji računa, ukoliko nije briše zaposlenika iz baze podataka. 
+        /// </summary>
+        /// <param name="OIB">OIB zaposlenika</param>
+        /// <returns>-1 ako je zaposlenik kreirao račun, ako je obrisan onda broj zahvaćenih redova</returns>
+        public static int ObrisiZaposlenika(long OIB)
+        {
+
+            Racun racun = new Racun();
+            string sqlUpit = "SELECT * FROM Racun WHERE oib='" + OIB + "';";
+            DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
+            while (dr.Read())
+            {
+                dr.Close();
+                return -1;
+            }
+            dr.Close();  //Zatvaranje DataReader objekta.
+
+            string sqlUpit2 = "DELETE FROM Zaposlenik  WHERE OIB=" + OIB + ";";
+            int izvrsenUpit = DB.Instance.IzvrsiUpit(sqlUpit2);
+
+            return izvrsenUpit;
+        }
+
         #endregion
     }
 }
