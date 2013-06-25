@@ -32,6 +32,7 @@ namespace PI_projekt.Sucelja
         {
 
             odjavljivanje = 1;
+            pom = true;
             odjava();
         }
 

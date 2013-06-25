@@ -225,9 +225,9 @@
             this.lblOdabrane.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblOdabrane.Location = new System.Drawing.Point(212, 191);
             this.lblOdabrane.Name = "lblOdabrane";
-            this.lblOdabrane.Size = new System.Drawing.Size(154, 16);
+            this.lblOdabrane.Size = new System.Drawing.Size(119, 16);
             this.lblOdabrane.TabIndex = 62;
-            this.lblOdabrane.Text = "Odabrane projekcije:";
+            this.lblOdabrane.Text = "Odabrane vrste:";
             // 
             // dtDatum
             // 
