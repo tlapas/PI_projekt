@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace PI_projekt
 {
+    /// <summary>
+    /// Klasa za rad s filmovima
+    /// </summary>
     class Film
     {
        #region Constructors
@@ -123,7 +126,7 @@ namespace PI_projekt
         }
 
         /// <summary>
-        /// Godina kad je film snimljen
+        /// Godina kad je film izdan
         /// </summary>
         public int Godina {
             get {
@@ -173,7 +176,7 @@ namespace PI_projekt
         #region Methods
 
         /// <summary>
-        /// Dohvaća sve filmove iz baze i vrća ih u obliku generičke liste.
+        /// Metoda koja dohvaća sve filmove iz baze i vrća ih u obliku generičke liste.
         /// </summary>
         /// <returns>Lista filmova</returns>
         public static List<Film> DohvatiFilmove()
@@ -192,7 +195,7 @@ namespace PI_projekt
 
 
         /// <summary>
-        /// Dohvaća listu filmova koji imaju aktualne projekcije
+        /// Metoda koja dohvaća listu filmova koji imaju aktualne projekcije
         /// </summary>
         /// <returns>Broj zahvaćenih redova</returns>
         public static List<Film> DohvatiAktualneFilmove()
@@ -214,7 +217,7 @@ namespace PI_projekt
         }
 
         /// <summary>
-        /// Dohvaćanje filma prema određenom ID-u
+        /// Metoda koja dohvaća film prema određenom ID-u
         /// </summary>
         /// <param name="IdFilma"></param>
         /// <returns>Vraća objekt određen ID-om iz baze, ukoliko postoji, a ukoliko ne postoji, vraća null</returns>
@@ -230,7 +233,7 @@ namespace PI_projekt
         }
 
         /// <summary>
-        /// Dodaje novi film u bazu
+        /// Metoda oja dodaje novi film u bazu
         /// </summary>
         /// <param name="noviFilm">Objekt klase film</param>
         /// <returns>Vraća id dodanog filma</returns>
@@ -244,7 +247,7 @@ namespace PI_projekt
         }
 
         /// <summary>
-        /// Ažurira film u bazi podakaka
+        /// Metoda koja ažurira film u bazi podakaka
         /// </summary>
         /// <param name="odabraniFilm">Objekt klase Film</param>
         /// <returns>Broj zahvaćenih redova</returns>
@@ -254,15 +257,13 @@ namespace PI_projekt
             return izvrsenUpit;
         }
 
-
         /// <summary>
-        /// Provjerava jel Film ima upisane projekcije. Ukoliko nema briše sve žanrove i film iz baze podataka.
+        /// Metoda koja provjerava jel Film ima upisane projekcije. Ukoliko nema briše sve žanrove i film iz baze podataka.
         /// </summary>
         /// <param name="idFilma">Id Filma</param>
         /// <returns>Broj zahvaćenih redaka, -1 ako nije moguće obrisat film</returns>
         public static int ObrisiFilm(int idFilma)
         {
-
             Racun racun = new Racun();
             string sqlUpit = "SELECT * FROM Projekcija WHERE id_filma='" + idFilma + "';";
             DbDataReader dr = DB.Instance.DohvatiDataReader(sqlUpit);
@@ -280,14 +281,9 @@ namespace PI_projekt
             izvrsenUpit = DB.Instance.IzvrsiUpit(sqlUpit3);
 
             return izvrsenUpit;
-        }
-
-
-        
+        }        
         #endregion
     }
-
-
 }
 
     

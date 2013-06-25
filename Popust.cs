@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace PI_projekt
 {
+    /// <summary>
+    /// Klasa za rad s popustima
+    /// </summary>
     public class Popust
     {
 
@@ -110,9 +113,9 @@ namespace PI_projekt
         #region Methods
 
         /// <summary>
-        /// Dohvaća sve popuste
+        /// Metoda koja dohvaća sve popuste
         /// </summary>
-        /// <returns>Lista mjernih jedinica</returns>
+        /// <returns>Lista popusta</returns>
         public static List<Popust> DohvatiPopuste()
         {
             List<Popust> lista = new List<Popust>();
@@ -128,9 +131,9 @@ namespace PI_projekt
         }
 
         /// <summary>
-        /// Dohvati popust sa Id
+        /// Metoda koja dohvaća popust sa Id
         /// </summary>
-        /// <returns>Lista mjernih jedinica</returns>
+        /// <returns>Id odabranog popusta</returns>
         public static Popust DohvatiPopust(int idPopusta)
         {
              Popust popust = new Popust();

@@ -9,6 +9,9 @@ using System.Windows.Forms;
 
 namespace PI_projekt
 {
+    /// <summary>
+    /// Klasa za rad s različitim podacima
+    /// </summary>
     public class Kino
     {
         /// <summary>
@@ -26,7 +29,7 @@ namespace PI_projekt
 
 
         /// <summary>
-        /// Sprema kupljene ulaznice u bazu podataka, ispisuje ulaznicu u obliku pdf.a
+        /// Sprema kupljene ulaznice u bazu podataka, ispisuje ulaznicu u obliku pdf-a
         /// </summary>
         /// <param name="odabranaSjedala">Lista odabranih sjedala</param>
         /// <param name="odabranaProjekcija">Objekt odabrana projekcija</param>
@@ -44,7 +47,17 @@ namespace PI_projekt
             return listaIdUlaznica;
         }
 
-
+        /// <summary>
+        /// Sprema račun u bazu podataka i ispisuje ga u obliku pdf-a
+        /// </summary>
+        /// <param name="OIB">OIB zaposlenika koji je izdao račun</param>
+        /// <param name="idNacinaPlacanja">Gotovina ili kartica</param>
+        /// <param name="listaArtikala">lista odabranih artikala (stavke računa)</param>
+        /// <param name="listaKolicina">količina stavki</param>
+        /// <param name="listaIdUlaznica">ID ulaznica</param>
+        /// <param name="popust">popust (bez popusta, studenti, umirovljenici, moj ponedjeljak)</param>
+        /// <param name="ukupnaCijenaUlaznica">Ukupna suma cijena odabranih artikala</param>
+        /// <param name="ukupnaCijenaArtikala">Ukupna suma cijena odabranih ulaznica</param>
         public static void KreirajRacun(long OIB, int idNacinaPlacanja, List<Artikl> listaArtikala, List<int> listaKolicina, List<int> listaIdUlaznica, Popust popust, float ukupnaCijenaUlaznica, float ukupnaCijenaArtikala)
         {
             int IdRacun = Racun.UnesiRacun(OIB, idNacinaPlacanja);
@@ -70,11 +83,7 @@ namespace PI_projekt
                     ispisUlaznice.Show();
                 }
             }
-
-            ///ZA racun potrebno maknuti komentare ispod
-            ///
-            ///
-
+            ///Izvještaj - račun
             Izvjestaj.RacunIzvjestaj racun = new Izvjestaj.RacunIzvjestaj(IdRacun, ukupnaCijenaUlaznica, ukupnaCijenaArtikala);
             racun.Show();
         }
@@ -83,7 +92,7 @@ namespace PI_projekt
         /// Metoda koja kao parametar prima datum i vraća ga kao string u formatu potrebnom za upis Sqlite bp
         /// </summary>
         /// <param name="stariDatum"></param>
-        /// <returns></returns>
+        /// <returns>Novi datum</returns>
         public static string PretvoriDatum(DateTime stariDatum)
         {
             string noviDatum = "";
@@ -153,11 +162,9 @@ namespace PI_projekt
                         return -2;
                     }
                 }
-
             }
             //ne postoji zaposlenik sa tim korisničkim imenom
             return -1;
         }
     }
-
 }
