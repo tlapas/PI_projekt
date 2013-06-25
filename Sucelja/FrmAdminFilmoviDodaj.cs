@@ -39,6 +39,7 @@ namespace PI_projekt.Sucelja
         {
             InitializeComponent();
             filmAzuriraj = Film.DohvatiFilm(odabraniFilm);
+            
             txtDodajFilmNaziv.Text = filmAzuriraj.Naziv.ToString();
             txtFilmoviDodajTrajanje.Text = filmAzuriraj.VrijemeTrajanja.ToString();
             txtFilmoviDodajRedatelj.Text = filmAzuriraj.Redatelj.ToString();
