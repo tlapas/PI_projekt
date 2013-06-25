@@ -26,7 +26,12 @@ namespace PI_projekt.Artikli
             InitializeComponent();
         }
 
-
+        /// <summary>
+        /// Pokretanje forme FrmArtikli
+        /// </summary>
+        /// <param name="listaIdUlaznicaArg"></param>
+        /// <param name="idPopustArg"></param>
+        /// <param name="ukupno"></param>
         public FrmArtikli(List<int> listaIdUlaznicaArg, int idPopustArg, float ukupno)
         {
             InitializeComponent();
@@ -42,6 +47,11 @@ namespace PI_projekt.Artikli
         public List<int> listaKolicina = new List<int>();
         List<NaciniPlacanja> listaNacinaPlacanja = NaciniPlacanja.DohvatiNacinePlacanja();
 
+        /// <summary>
+        /// Metoda koja se pokreće kod pokretanja forme (osvježavnjae artikla)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmArtikli_Load(object sender, EventArgs e)
         {
             OsvjeziArtikle();
@@ -52,11 +62,21 @@ namespace PI_projekt.Artikli
             cbNacinPlacanja.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Klikom na gumb dodaju se stavke 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             DodajStavke();
         }
 
+        /// <summary>
+        /// Gumb dalje otvara račun
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Dalje_Click(object sender, EventArgs e)
         {
             Zaposlenici zaposlenik = Zaposlenici.DohvatiZaposlenika2(Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik);
