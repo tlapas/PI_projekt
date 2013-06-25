@@ -15,6 +15,7 @@ namespace PI_projekt.Sucelja
 {
     public partial class FrmProdavac : Form
     {
+        private bool pom = false; 
         public FrmProdavac()
         {
             InitializeComponent();
@@ -63,6 +64,7 @@ namespace PI_projekt.Sucelja
         private void miOpcijeIzlaz_MouseUp(object sender, MouseEventArgs e)
         {
             izlaz = 1;
+            pom = true;
             izlazak();
         }
 
@@ -136,6 +138,14 @@ namespace PI_projekt.Sucelja
             }
             
         }
-       
+
+        private void FrmProdavac_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            izlaz = 1;
+           if (!pom)
+            {
+                izlazak();
+            } 
+        }         
     }
 }

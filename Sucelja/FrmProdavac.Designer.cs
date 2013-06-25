@@ -161,11 +161,11 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.msIzbornik;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
             this.Name = "FrmProdavac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prodavač";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmProdavac_FormClosed);
             this.Load += new System.EventHandler(this.FrmProdavac_Load);
             this.msIzbornik.ResumeLayout(false);
             this.msIzbornik.PerformLayout();

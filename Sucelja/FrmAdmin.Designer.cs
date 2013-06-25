@@ -216,12 +216,12 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.msIzbornik;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(505, 354);
             this.Name = "FrmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrator";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAdmin_FormClosed);
             this.msIzbornik.ResumeLayout(false);
             this.msIzbornik.PerformLayout();
             this.statusnaTraka.ResumeLayout(false);

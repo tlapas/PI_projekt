@@ -12,9 +12,9 @@ namespace PI_projekt.Sucelja
 {
     public partial class FrmAdmin : Form
     {
+        private bool pom = false; 
         public FrmAdmin()
-        {
-            
+        {    
             InitializeComponent();
             ssUsername.Text = Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik;
         }
@@ -68,6 +68,14 @@ namespace PI_projekt.Sucelja
             Odabir.MdiParent = this;
             Odabir.WindowState = FormWindowState.Normal;
             Odabir.Show();
+        }
+
+        private void statistikaProjekcijaToolStripMenuItem_MouseUp(object sender, MouseEventArgs e)
+        {
+            Izvjestaj.StatistikaProjekcije Odabir = new Izvjestaj.StatistikaProjekcije();
+            Odabir.MdiParent = this;
+            Odabir.WindowState = FormWindowState.Normal;
+            Odabir.Show();
         }  
 
         /// <summary>
@@ -79,17 +87,9 @@ namespace PI_projekt.Sucelja
         private void miOpcijeOdjava_MouseUp(object sender, MouseEventArgs e)
         {
          
-            odjavljivanje = 1;
+            odjavljivanje = 1;;
             odjava();
         }
-
-        private void statistikaProjekcijaToolStripMenuItem_MouseUp(object sender, MouseEventArgs e)
-        {
-            Izvjestaj.StatistikaProjekcije Odabir = new Izvjestaj.StatistikaProjekcije();
-            Odabir.MdiParent = this;
-            Odabir.WindowState = FormWindowState.Normal;
-            Odabir.Show();
-        }  
 
         private void odjava()
         {
@@ -120,7 +120,9 @@ namespace PI_projekt.Sucelja
         private void miOpcijeIzlaz_MouseUp(object sender, MouseEventArgs e)
         {
             izlaz = 1;
-            izlazak(); 
+            pom = true;
+            izlazak();
+
         }
 
         private void izlazak()
@@ -140,6 +142,15 @@ namespace PI_projekt.Sucelja
                   Application.Exit();
                 }
             }
+        }
+
+        private void FrmAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            izlaz = 1;
+           if (!pom)
+            {
+                izlazak();
+            } 
         }  
     }
 }
