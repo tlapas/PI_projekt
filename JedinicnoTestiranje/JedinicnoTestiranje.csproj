@@ -55,7 +55,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CodedUITest1.cs" />
+    <Compile Include="UnosUlazniceUICoded.cs" />
     <Compile Include="KinoTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIMap.cs">
