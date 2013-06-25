@@ -878,11 +878,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Sum(Fields!ukupnaCijenaUlaznica.Value, "CijenaUlaznica") - Sum(Fields!ukupnaCijenaUlaznica.Value, "CijenaUlaznica")*Fields!popust.Value</Value>
-                              <Style />
-                            </TextRun>
-                            <TextRun>
-                              <Value> kn</Value>
-                              <Style />
+                              <Style>
+                                <Format>0.00'kn';(0.00'kn')</Format>
+                                <rd:FormatSymbolCulture>hr-HR</rd:FormatSymbolCulture>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -939,13 +938,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.50883cm</Width>
+              <Width>2.55293cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.21778cm</Width>
+              <Width>2.26188cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.49792cm</Width>
+              <Width>4.54202cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1160,120 +1159,10 @@
         </TablixRowHierarchy>
         <DataSetName>Artikl</DataSetName>
         <Top>5.67547cm</Top>
-        <Left>0.72313cm</Left>
+        <Left>1.67563cm</Left>
         <Height>1.2cm</Height>
-        <Width>9.22453cm</Width>
+        <Width>9.35682cm</Width>
         <ZIndex>14</ZIndex>
-        <Visibility>
-          <Hidden>=Sum(Fields!id_artikla.Value, "Artikl") = 0</Hidden>
-        </Visibility>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Tablix>
-      <Tablix Name="Tablix12">
-        <TablixBody>
-          <TablixColumns>
-            <TablixColumn>
-              <Width>2.66283cm</Width>
-            </TablixColumn>
-          </TablixColumns>
-          <TablixRows>
-            <TablixRow>
-              <Height>0.6cm</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox48">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Mjerna jedinica</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox48</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
-            <TablixRow>
-              <Height>0.6cm</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="naziv5">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!naziv.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>naziv5</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
-          </TablixRows>
-        </TablixBody>
-        <TablixColumnHierarchy>
-          <TablixMembers>
-            <TablixMember />
-          </TablixMembers>
-        </TablixColumnHierarchy>
-        <TablixRowHierarchy>
-          <TablixMembers>
-            <TablixMember>
-              <KeepWithGroup>After</KeepWithGroup>
-            </TablixMember>
-            <TablixMember>
-              <Group Name="Details8" />
-            </TablixMember>
-          </TablixMembers>
-        </TablixRowHierarchy>
-        <DataSetName>MjernaJedinica</DataSetName>
-        <Top>5.67547cm</Top>
-        <Left>9.94766cm</Left>
-        <Height>1.2cm</Height>
-        <Width>2.66283cm</Width>
-        <ZIndex>15</ZIndex>
         <Visibility>
           <Hidden>=Sum(Fields!id_artikla.Value, "Artikl") = 0</Hidden>
         </Visibility>
@@ -1380,10 +1269,10 @@
         </TablixRowHierarchy>
         <DataSetName>Artikl</DataSetName>
         <Top>5.67547cm</Top>
-        <Left>12.61049cm</Left>
+        <Left>11.03245cm</Left>
         <Height>1.2cm</Height>
         <Width>1.62687cm</Width>
-        <ZIndex>16</ZIndex>
+        <ZIndex>15</ZIndex>
         <Visibility>
           <Hidden>=Sum(Fields!id_artikla.Value, "Artikl") = 0</Hidden>
         </Visibility>
@@ -1490,10 +1379,10 @@
         </TablixRowHierarchy>
         <DataSetName>StavkaRacuna</DataSetName>
         <Top>5.67547cm</Top>
-        <Left>14.23737cm</Left>
+        <Left>12.65933cm</Left>
         <Height>1.2cm</Height>
         <Width>1.6666cm</Width>
-        <ZIndex>17</ZIndex>
+        <ZIndex>16</ZIndex>
         <Visibility>
           <Hidden>=Sum(Fields!id_artikla.Value, "Artikl") = 0</Hidden>
         </Visibility>
@@ -1515,16 +1404,16 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Left</TextAlign>
+              <TextAlign>Right</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox27</rd:DefaultName>
-        <Top>7.05185cm</Top>
-        <Left>9.94766cm</Left>
+        <Top>7.34289cm</Top>
+        <Left>9.88371cm</Left>
         <Height>0.6cm</Height>
         <Width>3.85569cm</Width>
-        <ZIndex>18</ZIndex>
+        <ZIndex>17</ZIndex>
         <Visibility>
           <Hidden>=Sum(Fields!id_artikla.Value, "Artikl") = 0</Hidden>
         </Visibility>
@@ -1602,11 +1491,11 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>CijenaArtikala</DataSetName>
-        <Top>7.05185cm</Top>
-        <Left>13.87391cm</Left>
+        <Top>7.34289cm</Top>
+        <Left>13.80996cm</Left>
         <Height>0.6cm</Height>
         <Width>2.03006cm</Width>
-        <ZIndex>19</ZIndex>
+        <ZIndex>18</ZIndex>
         <Visibility>
           <Hidden>=Sum(Fields!id_artikla.Value, "Artikl") = 0</Hidden>
         </Visibility>
@@ -1616,75 +1505,11 @@
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox73">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Cijena bez PDV-a (25 %):</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Right</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox73</rd:DefaultName>
-        <Top>7.82824cm</Top>
-        <Left>9.05563cm</Left>
-        <Height>0.6cm</Height>
-        <Width>4.76409cm</Width>
-        <ZIndex>20</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox74">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Cijena računa (+ PDV):</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Right</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox74</rd:DefaultName>
-        <Top>8.63396cm</Top>
-        <Left>9.05563cm</Left>
-        <Height>0.6cm</Height>
-        <Width>4.76409cm</Width>
-        <ZIndex>21</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Tablix Name="Tablix16">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.01369cm</Width>
+              <Width>2.03006cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1701,11 +1526,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Sum(Fields!ukupnaCijenaUlaznica.Value, "CijenaUlaznica") - Sum(Fields!ukupnaCijenaUlaznica.Value, "CijenaUlaznica")*Fields!popust.Value + Sum(Fields!ukupnaCijenaArtikala.Value, "CijenaArtikala")</Value>
-                              <Style />
-                            </TextRun>
-                            <TextRun>
-                              <Value> kn</Value>
-                              <Style />
+                              <Style>
+                                <Format>0.00'kn';(0.00'kn')</Format>
+                                <rd:FormatSymbolCulture>hr-HR</rd:FormatSymbolCulture>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -1744,11 +1568,11 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Popust</DataSetName>
-        <Top>8.63396cm</Top>
-        <Left>13.89028cm</Left>
+        <Top>8.925cm</Top>
+        <Left>13.80996cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.01369cm</Width>
-        <ZIndex>22</ZIndex>
+        <Width>2.03006cm</Width>
+        <ZIndex>19</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1759,7 +1583,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.01369cm</Width>
+              <Width>2.03006cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1776,14 +1600,15 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=(Sum(Fields!ukupnaCijenaUlaznica.Value, "CijenaUlaznica") - Sum(Fields!ukupnaCijenaUlaznica.Value, "CijenaUlaznica")*Fields!popust.Value + Sum(Fields!ukupnaCijenaArtikala.Value, "CijenaArtikala")) * 0.75</Value>
-                              <Style />
-                            </TextRun>
-                            <TextRun>
-                              <Value> kn</Value>
-                              <Style />
+                              <Style>
+                                <Format>0.00'kn';(0.00'kn')</Format>
+                                <rd:FormatSymbolCulture>hr-HR</rd:FormatSymbolCulture>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>popust1</rd:DefaultName>
@@ -1817,17 +1642,87 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Popust</DataSetName>
-        <Top>7.82824cm</Top>
-        <Left>13.89028cm</Left>
+        <Top>8.11928cm</Top>
+        <Left>13.80996cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.01369cm</Width>
-        <ZIndex>23</ZIndex>
+        <Width>2.03006cm</Width>
+        <ZIndex>20</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox33">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Cijena bez PDV-a (25%):</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox27</rd:DefaultName>
+        <Top>8.11928cm</Top>
+        <Left>8.64017cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.09924cm</Width>
+        <ZIndex>21</ZIndex>
+        <Visibility>
+          <Hidden>=Sum(Fields!id_artikla.Value, "Artikl") = 0</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox34">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Cijena računa (+PDV):</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox27</rd:DefaultName>
+        <Top>8.925cm</Top>
+        <Left>8.64017cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.09924cm</Width>
+        <ZIndex>22</ZIndex>
+        <Visibility>
+          <Hidden>=Sum(Fields!id_artikla.Value, "Artikl") = 0</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>4.0383in</Height>
     <Style />
@@ -2276,7 +2171,6 @@
         </Textbox>
         <Line Name="Line2">
           <Top>0.07056cm</Top>
-          <Left>0cm</Left>
           <Height>0cm</Height>
           <Width>16.82369cm</Width>
           <ZIndex>2</ZIndex>
