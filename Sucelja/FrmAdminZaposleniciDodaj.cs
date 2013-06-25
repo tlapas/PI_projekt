@@ -14,6 +14,7 @@ namespace PI_projekt.Sucelja
     {
 
         private Zaposlenici zaposlenikAzuriraj = null;
+        long kontrolnaSuma = 10000000000;
         List<Uloga> listaUloga = new List<Uloga>();
 
         /// <summary>
@@ -113,8 +114,8 @@ namespace PI_projekt.Sucelja
             noviZaposlenik.Lozinka = txtZaposleniciDodajLozinka.Text.ToString();
             noviZaposlenik.Uloga = listaUloga[cbUloga.SelectedIndex].IdUloge;
                 
-            //try
-            //{                
+            try
+            {                
                
             if (zaposlenikAzuriraj != null)
                 {
@@ -125,18 +126,26 @@ namespace PI_projekt.Sucelja
                 
             else 
                 {
+                    string oibTest =txtZaposleniciDodajOIB.Text.ToString();
                     noviZaposlenik.OIB = long.Parse(txtZaposleniciDodajOIB.Text.ToString());
-                    Zaposlenici.DodajZaposlenika(noviZaposlenik);
-                    this.Close();
+                    if (noviZaposlenik.OIB > kontrolnaSuma && oibTest.Length == 11)
+                    {
+                        Zaposlenici.DodajZaposlenika(noviZaposlenik);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Greška! Unijeli ste neispravan OIB");
+                    }
                 }
 
 
-            //}
+            }
 
-            //catch
-            //{
-            //    MessageBox.Show("Pogrešno uneseni podaci!");
-            //}
+            catch
+            {
+                MessageBox.Show("Pogrešno uneseni podaci!");
+            }
         }
 
         /// <summary>
