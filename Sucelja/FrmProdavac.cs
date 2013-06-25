@@ -15,6 +15,7 @@ namespace PI_projekt.Sucelja
 {
     public partial class FrmProdavac : Form
     {
+        Thread dretvaProjekcije = new Thread(DretvaProvjeriProjekcije);
         private bool pom = false; 
         public FrmProdavac()
         {
@@ -50,6 +51,8 @@ namespace PI_projekt.Sucelja
 
                 if (result == DialogResult.Yes)
                 {
+                    dretvaProjekcije.Abort();
+                    _shouldStop = false;
                     FrmPocetna pocetna = new FrmPocetna();
                     this.Close();
                     pocetna.Show();
@@ -73,18 +76,8 @@ namespace PI_projekt.Sucelja
         {
             if (izlaz == 1)
             {
-                string message = "Želite li ugasiti aplikaciju?";
-                string caption = "Gašenje aplikacije";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result;
-
-                // Displays the MessageBox.
-                result = MessageBox.Show(this, message, caption, buttons);
-
-                if (result == DialogResult.Yes)
-                {
-                    Application.Exit();
-                }
+                dretvaProjekcije.Abort();
+                Application.Exit();
             }
         }  
             
@@ -108,7 +101,6 @@ namespace PI_projekt.Sucelja
 
         private void FrmProdavac_Load(object sender, EventArgs e)
         {
-            Thread dretvaProjekcije = new Thread(DretvaProvjeriProjekcije);
             _shouldStop = false;
             dretvaProjekcije.Start();   
         }
@@ -142,7 +134,7 @@ namespace PI_projekt.Sucelja
 
         private void FrmProdavac_FormClosed(object sender, FormClosedEventArgs e)
         {
-            izlaz = 1;
+           izlaz = 1;
            if (!pom)
             {
                 izlazak();

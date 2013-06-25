@@ -163,18 +163,7 @@ namespace PI_projekt.Sucelja
         {
             if (izlaz == 1)
             {
-                string message = "Želite li ugasiti aplikaciju?";
-                string caption = "Gašenje aplikacije";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result;
-
-                // Displays the MessageBox.
-                result = MessageBox.Show(this, message, caption, buttons);
-
-                if (result == DialogResult.Yes)
-                {
-                  Application.Exit();
-                }
+                Application.Exit();
             }
         }
 
