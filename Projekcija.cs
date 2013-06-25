@@ -292,9 +292,9 @@ namespace PI_projekt
         public static int AzurirajProjekciju(Projekcija novaProjekcija)
         {
             string sqlUpit = "UPDATE  Projekcija SET broj_dvorane='"+novaProjekcija.BrojDvorane+"',id_filma='"+novaProjekcija.IdFilma
-                +"',vrijeme_trajanja='"+ novaProjekcija.VrijemeTrajanja+"',broj_mjesta='"+novaProjekcija.BrojMjesta
-                + "',prodano_ulaznica='" + novaProjekcija.ProdanoUlaznica + "',cijena='" + Kino.PretvoriCijenu(novaProjekcija.Cijena)
-                + "',datum='" + novaProjekcija.Datum.ToString("yyyy-MM-dd HH:mm:ss") + "' WHERE id_projekcije=" + novaProjekcija.IdProjekcije + ";";
+                +"',vrijeme_trajanja='"+ novaProjekcija.VrijemeTrajanja+"', prodano_ulaznica='" + novaProjekcija.ProdanoUlaznica 
+                + "',cijena='" + Kino.PretvoriCijenu(novaProjekcija.Cijena) + "',datum='" + novaProjekcija.Datum.ToString("yyyy-MM-dd HH:mm:ss")
+                + "' WHERE id_projekcije=" + novaProjekcija.IdProjekcije + ";";
           
             int zahvaceno = DB.Instance.IzvrsiUpit(sqlUpit);
 

@@ -55,29 +55,31 @@ namespace PI_projekt.Sucelja
         {
             Dvorana novaDvorana = new Dvorana();
             novaDvorana.Naziv = txtDodajDvoranuNaziv.Text.ToString();
-            //MessageBox.Show(txtCijenaDodajArtikl.Text.ToString());
-            try
+            if (novaDvorana.Naziv == "")
             {
-                novaDvorana.BrojSjedala = int.Parse(txtDodajDvoranuBrSjedala.Text.ToString());
-
-                if (dvoranaAzuriraj != null)
-                {
-                    novaDvorana.BrojDvorane = dvoranaAzuriraj.BrojDvorane;
-                    Dvorana.AzurirajDvoranu(novaDvorana);
-                }
-                else
-                {
-                    Dvorana.DodajDvoranu(novaDvorana);
-
-                }
-  
-                this.Close();
+                MessageBox.Show("Greška! Pogrešan unos podataka.");
             }
-            catch
+            else
             {
-                MessageBox.Show("Pogrešan unos podataka!");
+                try
+                {
+                    novaDvorana.BrojSjedala = int.Parse(txtDodajDvoranuBrSjedala.Text.ToString());
+                    if (dvoranaAzuriraj != null)
+                    {
+                        novaDvorana.BrojDvorane = dvoranaAzuriraj.BrojDvorane;
+                        Dvorana.AzurirajDvoranu(novaDvorana);
+                    }
+                    else
+                    {
+                        Dvorana.DodajDvoranu(novaDvorana);
+                    }
+                    this.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Greška! Pogrešan unos podataka.");
+                }
             }
         }
-
     }
 }

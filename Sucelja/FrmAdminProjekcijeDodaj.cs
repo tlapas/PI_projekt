@@ -127,7 +127,7 @@ namespace PI_projekt.Sucelja
             }
             else 
             {
-                MessageBox.Show("Odaberite vrstu projekcije!");
+                MessageBox.Show("Greška! Odaberite vrstu projekcije.");
             } 
         }
 
@@ -147,7 +147,7 @@ namespace PI_projekt.Sucelja
             }
             else
             {
-                MessageBox.Show("Odaberite vrstu projekcije!");
+                MessageBox.Show("Greška! Odaberite vrstu projekcije.");
             } 
         }
 
@@ -156,7 +156,7 @@ namespace PI_projekt.Sucelja
             //Pokušavamo parsirati korisnički unos, ukoliko je korisnički unos validan i dodana je vrsta projekcije nastavljamo sa unosom projekcije u bazu
             if (lbOdabrane.Items.Count == 0)
             {
-                MessageBox.Show("Greška! Niste odabrali vrstu projekcije.");
+                MessageBox.Show("Greška! Odaberite vrstu projekcije.");
             }
             else
             {
@@ -196,13 +196,13 @@ namespace PI_projekt.Sucelja
                     }
                     else //ako korisnik nije unio vrste projekcije ispisuje se poruka o pogrešci
                     {
-                        MessageBox.Show("Odaberite vrstu projekcije!");
+                        MessageBox.Show("Greška! Odaberite vrstu projekcije.");
                     }
                 }
                 //Ukoliko korisnički unos nije validan ispisuje se poruka o pogrešci
                 catch
                 {
-                    MessageBox.Show("Pogrešno uneseni podaci!");
+                    MessageBox.Show("Greška! Pogrešno uneseni podaci.");
                 }
             }
         }

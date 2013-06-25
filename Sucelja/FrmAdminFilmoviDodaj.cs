@@ -113,7 +113,7 @@ namespace PI_projekt.Sucelja
             }
             else
             {
-                MessageBox.Show("Odaberite Žanr!");
+                MessageBox.Show("Greška! Odaberite Žanr.");
             }
         }
         /// <summary>
@@ -130,7 +130,7 @@ namespace PI_projekt.Sucelja
             }
             else
             {
-                MessageBox.Show("Odaberite Žanr!");
+                MessageBox.Show("Greška! Odaberite Žanr.");
             }
         } 
 
@@ -165,7 +165,7 @@ namespace PI_projekt.Sucelja
                 if (noviFilm.Naziv == "" || noviFilm.VrijemeTrajanja == 0 || noviFilm.Redatelj == ""
                     || noviFilm.Godina == 0 || noviFilm.Glumci == "" || noviFilm.Sinopsis == "")
                 {
-                    MessageBox.Show("Pogrešan unos podataka!");
+                    MessageBox.Show("Greška! Pogrešan unos podataka.");
                 }
                 else
                 {
@@ -190,12 +190,12 @@ namespace PI_projekt.Sucelja
                     }
                     else //ako korisnik nije unio žanrove ispisuje se poruka o pogrešci
                     {
-                        MessageBox.Show("Odaberite žanr!");
+                        MessageBox.Show("Greška! Odaberite žanr.");
                     }
                 }
             }
             catch {
-                MessageBox.Show("Pogrešan unos podataka!");
+                MessageBox.Show("Greška! Pogrešan unos podataka.");
             }
         }   
     }

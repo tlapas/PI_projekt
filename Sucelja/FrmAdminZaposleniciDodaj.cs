@@ -135,7 +135,7 @@ namespace PI_projekt.Sucelja
                         }
                         else
                         {
-                            MessageBox.Show("Greška! Unijeli ste neispravan OIB");
+                            MessageBox.Show("Greška! Unijeli ste neispravan OIB.");
                         }
                     }
                     else
@@ -149,7 +149,7 @@ namespace PI_projekt.Sucelja
                         }
                         else
                         {
-                            MessageBox.Show("Greška! Unijeli ste neispravan OIB");
+                            MessageBox.Show("Greška! Unijeli ste neispravan OIB.");
                         }
                     }
                 }
