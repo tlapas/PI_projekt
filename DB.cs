@@ -24,15 +24,6 @@ namespace PI_projekt
             Connection.Open();
         }
 
-        /// <summary>
-        /// Destruktor klase.
-        /// </summary>
-        ~DB()
-        {
-            Connection.Close();
-            Connection = null;
-        }
-
         #endregion
 
         #region Private Fields
