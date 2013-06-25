@@ -53,6 +53,7 @@
             this.dgvSviArtikli.RowHeadersVisible = false;
             this.dgvSviArtikli.RowTemplate.Height = 24;
             this.dgvSviArtikli.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvSviArtikli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSviArtikli.Size = new System.Drawing.Size(305, 235);
             this.dgvSviArtikli.TabIndex = 0;
             this.dgvSviArtikli.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSviArtikli_CellClick);

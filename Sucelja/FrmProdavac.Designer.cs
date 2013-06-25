@@ -161,6 +161,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.msIzbornik;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FrmProdavac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prodavač";

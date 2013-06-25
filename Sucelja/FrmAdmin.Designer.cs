@@ -79,7 +79,7 @@
             this.miOpcijeOdjava.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.miOpcijeOdjava.Image = global::PI_projekt.Properties.Resources.imgOdjava;
             this.miOpcijeOdjava.Name = "miOpcijeOdjava";
-            this.miOpcijeOdjava.Size = new System.Drawing.Size(152, 26);
+            this.miOpcijeOdjava.Size = new System.Drawing.Size(130, 26);
             this.miOpcijeOdjava.Text = "Odjava";
             this.miOpcijeOdjava.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miOpcijeOdjava_MouseUp);
             // 
@@ -88,7 +88,7 @@
             this.miOpcijeIzlaz.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.miOpcijeIzlaz.Image = global::PI_projekt.Properties.Resources.imgIzlaz;
             this.miOpcijeIzlaz.Name = "miOpcijeIzlaz";
-            this.miOpcijeIzlaz.Size = new System.Drawing.Size(152, 26);
+            this.miOpcijeIzlaz.Size = new System.Drawing.Size(130, 26);
             this.miOpcijeIzlaz.Text = "Izlaz";
             this.miOpcijeIzlaz.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miOpcijeIzlaz_MouseUp);
             // 
@@ -216,6 +216,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.msIzbornik;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(505, 354);
             this.Name = "FrmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
