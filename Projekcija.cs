@@ -324,7 +324,7 @@ namespace PI_projekt
             dr.Close();     //Zatvaranje DataReader objekta.
             return lista;
         }
-        
+
         #endregion
     }
     
