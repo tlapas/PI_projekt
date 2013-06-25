@@ -25,7 +25,7 @@ namespace PI_projekt.Sucelja
         }
 
         /// <summary>
-        /// Kontruktor koji se poziva kada se poziva forma za ažuriranje projekcije
+        /// Gumb koji se poziva kada se poziva forma za ažuriranje projekcije
         /// </summary>
         /// <param name="IdProjekcije"></param>
         public FrmAdminProjekcijeDodaj(int IdProjekcije)
@@ -37,11 +37,21 @@ namespace PI_projekt.Sucelja
 
         }
 
+        /// <summary>
+        /// Gumb koji zatvara formu za dodavanje Projekcija
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnProjekcijeDodajOdustani_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Gumb koji se pokreće prilikom učitavanje forme FrmAdminProjeckijeDodaj
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmAdminProjekcijeDodaj_Load(object sender, EventArgs e)
         {
             listaVrste = VrstaProjekcije.DohvatiSveVrste();
@@ -113,7 +123,7 @@ namespace PI_projekt.Sucelja
 
 
         /// <summary>
-        /// Dodaje vrste projekcija za određeni film
+        /// Gumb koji dodaje vrste projekcija za određeni film
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -132,7 +142,7 @@ namespace PI_projekt.Sucelja
 
 
         /// <summary>
-        /// Uklanja vrste porjekcija za određeni film
+        /// Gumb koji uklanja vrste projekcija za određeni film
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -150,6 +160,11 @@ namespace PI_projekt.Sucelja
             } 
         }
 
+        /// <summary>
+        /// Event koji sprema unešene podatke u bazu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFilmoviDodajSpremi_Click(object sender, EventArgs e)
         {            
             //Pokušavamo parsirati korisnički unos, ukoliko je korisnički unos validan i dodana je vrsta projekcije nastavljamo sa unosom projekcije u bazu

@@ -23,12 +23,13 @@ namespace PI_projekt.Sucelja
             ssUsername.Text = Sucelja.FrmPocetna.SpremnikPodataka.Zaposlenik;
         }
 
+
         /// <summary>
-        /// funkcija za odjavu iz sustava, klikom na odjava se postavlja parametar na 1
-        /// i prosljeđuje funkciji koja će ispisati poruku i pitati želi li se korisnik odjaviti
-        /// u slučaju klika na yes, korisnik se odjavljuje i vraća na početnu stranicu (login)
+        /// Event koji poziva formu FrmPocetna kada korisnik u glavnom izborniku pod mogućnosti Opcije odabere Odjava
         /// </summary>
+
         int odjavljivanje = 0;
+        
         private void miOpcijeOdjava_MouseUp(object sender, MouseEventArgs e)
         {
 
@@ -37,6 +38,9 @@ namespace PI_projekt.Sucelja
             odjava();
         }
 
+        /// <summary>
+        /// Metoda koja služi za odjavu iz aplikacije
+        /// </summary>
         private void odjava()
         {
             if (odjavljivanje == 1)
@@ -46,7 +50,7 @@ namespace PI_projekt.Sucelja
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result;
 
-                // Displays the MessageBox.
+                //Prikaz poruke o odjavi (Message Box)
                 result = MessageBox.Show(this, message, caption, buttons);
 
                 if (result == DialogResult.Yes)
@@ -62,7 +66,7 @@ namespace PI_projekt.Sucelja
         }
 
         /// <summary>
-        ///funkcija za izlaz iz aplikacije 
+        /// Event koji zatvara otvorenu formu kada korisnik u glavnom izborniku pod mogućnosti Opcije odabere Izlaz
         /// </summary>
         int izlaz = 0;
         private void miOpcijeIzlaz_MouseUp(object sender, MouseEventArgs e)
@@ -72,6 +76,9 @@ namespace PI_projekt.Sucelja
             izlazak();
         }
 
+        /// <summary>
+        ///  /// Metoda koja služi za izlaz iz aplikacije
+        /// </summary>
         private void izlazak()
         {
             if (izlaz == 1)
@@ -81,6 +88,11 @@ namespace PI_projekt.Sucelja
             }
         }  
             
+        /// <summary>
+        /// Event koji poziva FrmUlaznica kada korisnik u glavnom izborniku pod mogućnosti Sifarnici odabere Ulaznica 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void miSifarniciUlaznica_MouseUp(object sender, MouseEventArgs e)
         {
             Ulaznica.FrmUlaznica Odabir = new Ulaznica.FrmUlaznica();
@@ -89,6 +101,11 @@ namespace PI_projekt.Sucelja
             Odabir.Show();
         }
 
+        /// <summary>
+        /// Event koji poziva FrmArtikli kada korisnik u glavnom izborniku pod mogućnosti Sifarnici odabere Artikli
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void miSifarniciArtikli_MouseUp(object sender, MouseEventArgs e)
         {
             Artikli.FrmArtikli Odabir = new Artikli.FrmArtikli();
@@ -99,12 +116,20 @@ namespace PI_projekt.Sucelja
 
         private static volatile bool _shouldStop;
 
+        /// <summary>
+        /// Metoda za pozivanje dretve
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmProdavac_Load(object sender, EventArgs e)
         {
             _shouldStop = false;
             dretvaProjekcije.Start();   
         }
 
+        /// <summary>
+        /// Dretva koja provjerava zauzeće projekcija
+        /// </summary>
         private static void DretvaProvjeriProjekcije()
         {
             Thread.Sleep(5000);   //odgodimo izvršavanje dretve prilikom pokretanja
@@ -132,6 +157,11 @@ namespace PI_projekt.Sucelja
             
         }
 
+        /// <summary>
+        /// /// Metoda za zatvaranje trenutno otvorene forme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmProdavac_FormClosed(object sender, FormClosedEventArgs e)
         {
            izlaz = 1;
