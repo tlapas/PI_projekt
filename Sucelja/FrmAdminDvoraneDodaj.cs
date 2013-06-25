@@ -39,6 +39,7 @@ namespace PI_projekt.Sucelja
         /// <param name="e"></param>
         private void FrmAdminDvoraneDodaj_Load(object sender, EventArgs e)
         {
+            this.ActiveControl = txtDodajDvoranuNaziv;
             if (dvoranaAzuriraj != null)
             {
                 txtDodajDvoranuNaziv.Text = dvoranaAzuriraj.Naziv.ToString();

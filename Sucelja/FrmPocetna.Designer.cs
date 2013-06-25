@@ -162,7 +162,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PI_projekt.Properties.Resources.imgPozadina;
-            this.ClientSize = new System.Drawing.Size(457, 421);
+            this.ClientSize = new System.Drawing.Size(457, 420);
             this.Controls.Add(this.zaglavlje);
             this.Controls.Add(this.podaci);
             this.Controls.Add(this.Ponisti);
@@ -176,6 +176,7 @@
             this.Name = "FrmPocetna";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
+            this.Load += new System.EventHandler(this.FrmPocetna_Load);
             this.podaci.ResumeLayout(false);
             this.podaci.PerformLayout();
             this.zaglavlje.ResumeLayout(false);

@@ -68,7 +68,7 @@
             this.txtProjekcijeDodajTrajanje.Location = new System.Drawing.Point(138, 91);
             this.txtProjekcijeDodajTrajanje.Name = "txtProjekcijeDodajTrajanje";
             this.txtProjekcijeDodajTrajanje.Size = new System.Drawing.Size(100, 20);
-            this.txtProjekcijeDodajTrajanje.TabIndex = 46;
+            this.txtProjekcijeDodajTrajanje.TabIndex = 56;
             // 
             // lblProjekcijeDodajTrajanje
             // 
@@ -96,7 +96,7 @@
             this.btnFilmoviDodajOdustani.Location = new System.Drawing.Point(297, 367);
             this.btnFilmoviDodajOdustani.Name = "btnFilmoviDodajOdustani";
             this.btnFilmoviDodajOdustani.Size = new System.Drawing.Size(80, 35);
-            this.btnFilmoviDodajOdustani.TabIndex = 42;
+            this.btnFilmoviDodajOdustani.TabIndex = 64;
             this.btnFilmoviDodajOdustani.Text = "Odustani";
             this.btnFilmoviDodajOdustani.UseVisualStyleBackColor = true;
             this.btnFilmoviDodajOdustani.Click += new System.EventHandler(this.btnProjekcijeDodajOdustani_Click);
@@ -107,7 +107,7 @@
             this.btnFilmoviDodajSpremi.Location = new System.Drawing.Point(210, 367);
             this.btnFilmoviDodajSpremi.Name = "btnFilmoviDodajSpremi";
             this.btnFilmoviDodajSpremi.Size = new System.Drawing.Size(80, 35);
-            this.btnFilmoviDodajSpremi.TabIndex = 41;
+            this.btnFilmoviDodajSpremi.TabIndex = 63;
             this.btnFilmoviDodajSpremi.Text = "Spremi";
             this.btnFilmoviDodajSpremi.UseVisualStyleBackColor = true;
             this.btnFilmoviDodajSpremi.Click += new System.EventHandler(this.btnFilmoviDodajSpremi_Click);
@@ -127,7 +127,7 @@
             this.txtProjekcijeDodajCijena.Location = new System.Drawing.Point(138, 121);
             this.txtProjekcijeDodajCijena.Name = "txtProjekcijeDodajCijena";
             this.txtProjekcijeDodajCijena.Size = new System.Drawing.Size(100, 20);
-            this.txtProjekcijeDodajCijena.TabIndex = 51;
+            this.txtProjekcijeDodajCijena.TabIndex = 57;
             // 
             // lblProjekcijeDodajCijena
             // 
@@ -174,7 +174,7 @@
             this.lbVrsteProjekcija.Location = new System.Drawing.Point(11, 221);
             this.lbVrsteProjekcija.Name = "lbVrsteProjekcija";
             this.lbVrsteProjekcija.Size = new System.Drawing.Size(120, 95);
-            this.lbVrsteProjekcija.TabIndex = 56;
+            this.lbVrsteProjekcija.TabIndex = 59;
             this.lbVrsteProjekcija.ValueMember = "IdVrste";
             // 
             // lbOdabrane
@@ -184,7 +184,7 @@
             this.lbOdabrane.Location = new System.Drawing.Point(215, 221);
             this.lbOdabrane.Name = "lbOdabrane";
             this.lbOdabrane.Size = new System.Drawing.Size(120, 95);
-            this.lbOdabrane.TabIndex = 57;
+            this.lbOdabrane.TabIndex = 61;
             this.lbOdabrane.ValueMember = "IdVrste";
             // 
             // lblDodaj
@@ -193,7 +193,7 @@
             this.lblDodaj.Location = new System.Drawing.Point(138, 231);
             this.lblDodaj.Name = "lblDodaj";
             this.lblDodaj.Size = new System.Drawing.Size(70, 30);
-            this.lblDodaj.TabIndex = 58;
+            this.lblDodaj.TabIndex = 60;
             this.lblDodaj.Text = "Dodaj";
             this.lblDodaj.UseVisualStyleBackColor = true;
             this.lblDodaj.Click += new System.EventHandler(this.lblDodaj_Click);
@@ -204,7 +204,7 @@
             this.lblUkloni.Location = new System.Drawing.Point(138, 276);
             this.lblUkloni.Name = "lblUkloni";
             this.lblUkloni.Size = new System.Drawing.Size(70, 30);
-            this.lblUkloni.TabIndex = 59;
+            this.lblUkloni.TabIndex = 62;
             this.lblUkloni.Text = "Ukloni";
             this.lblUkloni.UseVisualStyleBackColor = true;
             this.lblUkloni.Click += new System.EventHandler(this.lblUkloni_Click);
@@ -237,7 +237,7 @@
             this.dtDatum.Name = "dtDatum";
             this.dtDatum.ShowUpDown = true;
             this.dtDatum.Size = new System.Drawing.Size(200, 20);
-            this.dtDatum.TabIndex = 63;
+            this.dtDatum.TabIndex = 58;
             // 
             // panProjekcija
             // 

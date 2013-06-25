@@ -131,5 +131,10 @@ namespace PI_projekt.Sucelja
                 Application.Exit();
             }
         }
+
+         private void FrmPocetna_Load(object sender, EventArgs e)
+         {
+             this.ActiveControl = KorIme;
+         }
     }
 }

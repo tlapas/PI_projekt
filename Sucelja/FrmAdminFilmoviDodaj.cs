@@ -56,6 +56,8 @@ namespace PI_projekt.Sucelja
         private void FrmAdminFilmDodaj_Load(object sender, EventArgs e)
         {
             listaZanrova = Zanrovi.DohvatiZanrove();
+
+            this.ActiveControl = txtDodajFilmNaziv;
            
             //ukoliko se radi o ažuriranju
             if (filmAzuriraj != null)

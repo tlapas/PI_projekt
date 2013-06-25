@@ -44,7 +44,6 @@ namespace PI_projekt.Sucelja
 
         private void FrmAdminProjekcijeDodaj_Load(object sender, EventArgs e)
         {
-            
             listaVrste = VrstaProjekcije.DohvatiSveVrste();
             listaDvorana = Dvorana.DohvatiDvorane();
             listaFilmova = Film.DohvatiFilmove();
